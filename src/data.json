@@ -1,0 +1,550 @@
+{
+  "site": {
+    "name": "NexGen Digital",
+    "tagline": "Building Trust Through Digital Excellence",
+    "description": "We craft premium digital experiences that drive growth and build lasting trust with your customers.",
+    "email": "hello@nexgendigital.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Innovation Drive, Tech Valley, CA 94043"
+  },
+  "navigation": [
+    { "label": "Home", "path": "/" },
+    { "label": "About", "path": "/about" },
+    { "label": "Services", "path": "/services" },
+    { "label": "Work", "path": "/work" },
+    { "label": "Pricing", "path": "/pricing" },
+    { "label": "Careers", "path": "/careers" },
+    { "label": "Blog", "path": "/blog" },
+    { "label": "Contact", "path": "/contact" }
+  ],
+  "hero": {
+    "headline": "Building Trust Through Digital Excellence",
+    "subheadline": "We transform bold ideas into exceptional digital experiences that captivate, convert, and create lasting impact.",
+    "cta": {
+      "primary": "Start Your Project",
+      "secondary": "View Our Work"
+    }
+  },
+  "stats": [
+    { "value": 50, "suffix": "+", "label": "Projects Delivered" },
+    { "value": 98, "suffix": "%", "label": "Client Satisfaction" },
+    { "value": 5, "suffix": "", "label": "Expert Members" }
+  ],
+  "costEstimator": {
+    "title": "Project Cost Estimator",
+    "subtitle": "Get an instant estimate for your project",
+    "steps": [
+      {
+        "title": "Platform",
+        "description": "What type of platform do you need?",
+        "options": [
+          { "id": "web", "label": "Web Application", "icon": "Globe", "multiplier": 1 },
+          { "id": "mobile", "label": "Mobile App", "icon": "Smartphone", "multiplier": 1.5 },
+          { "id": "custom", "label": "Custom Solution", "icon": "Settings", "multiplier": 2 }
+        ]
+      },
+      {
+        "title": "Design Level",
+        "description": "What level of design do you require?",
+        "options": [
+          { "id": "mvp", "label": "MVP", "description": "Essential features to launch", "multiplier": 1 },
+          { "id": "premium", "label": "Premium", "description": "Polished, branded experience", "multiplier": 1.8 },
+          { "id": "enterprise", "label": "Enterprise", "description": "Full-scale, scalable solution", "multiplier": 3 }
+        ]
+      },
+      {
+        "title": "Features",
+        "description": "Select the features you need",
+        "options": [
+          { "id": "auth", "label": "Authentication", "icon": "Lock", "points": 10 },
+          { "id": "payments", "label": "Payments", "icon": "CreditCard", "points": 20 },
+          { "id": "ai", "label": "AI Integration", "icon": "Brain", "points": 30 },
+          { "id": "analytics", "label": "Analytics", "icon": "BarChart", "points": 15 },
+          { "id": "cms", "label": "CMS", "icon": "FileText", "points": 12 }
+        ]
+      }
+    ],
+    "result": {
+      "title": "Your Project Complexity Score",
+      "emailPlaceholder": "Enter your email for detailed quote",
+      "buttonText": "Get Full Quote"
+    }
+  },
+  "partners": [
+    { "name": "TechCorp", "logo": "/placeholder.svg" },
+    { "name": "InnovateCo", "logo": "/placeholder.svg" },
+    { "name": "FutureStack", "logo": "/placeholder.svg" },
+    { "name": "DataFlow", "logo": "/placeholder.svg" },
+    { "name": "CloudNine", "logo": "/placeholder.svg" },
+    { "name": "DigitalEdge", "logo": "/placeholder.svg" }
+  ],
+  "whyUs": [
+    {
+      "title": "Lightning Speed",
+      "description": "We deliver projects 40% faster than industry average without compromising quality. Our agile methodology ensures rapid iterations and quick time-to-market.",
+      "icon": "Zap"
+    },
+    {
+      "title": "Bank-Grade Security",
+      "description": "Your data is protected with enterprise-level security protocols. We implement best practices in cybersecurity to keep your digital assets safe.",
+      "icon": "Shield"
+    },
+    {
+      "title": "Full Transparency",
+      "description": "No hidden costs, no surprises. You get real-time access to project progress, clear communication, and detailed reporting throughout the development cycle.",
+      "icon": "Eye"
+    },
+    {
+      "title": "24/7 Support",
+      "description": "Our dedicated support team is available around the clock. From launch to scale, we're with you every step of the way to ensure smooth operations.",
+      "icon": "Headphones"
+    }
+  ],
+  "about": {
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower businesses with cutting-edge digital solutions that drive growth, foster innovation, and create meaningful connections with their audiences."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the most trusted digital partner for forward-thinking companies, setting new standards in quality, creativity, and technological excellence."
+    }
+  },
+  "team": [
+    {
+      "name": "Mujahid Raj",
+      "role": "Founder & Full Stack Developer",
+      "bio": "Visionary leader with 10+ years in web development. Passionate about creating scalable solutions that make a difference.",
+      "image": "/placeholder.svg"
+    },
+    {
+      "name": "Fidbi Hasan",
+      "role": "CEO & Full Stack Developer",
+      "bio": "Strategic thinker and technical expert. Drives company growth while staying hands-on with cutting-edge technologies.",
+      "image": "/placeholder.svg"
+    },
+    {
+      "name": "Asmaul Husna Mayad",
+      "role": "COO & CMS/WordPress Designer",
+      "bio": "Operations mastermind with exceptional WordPress expertise. Ensures smooth project delivery and client satisfaction.",
+      "image": "/placeholder.svg"
+    },
+    {
+      "name": "Alin Das",
+      "role": "CTO & UI/UX Designer",
+      "bio": "Creative technologist who bridges design and development. Creates intuitive interfaces that users love.",
+      "image": "/placeholder.svg"
+    },
+    {
+      "name": "Prappo Sarker",
+      "role": "Sales Head",
+      "bio": "Relationship builder with a knack for understanding client needs. Connects businesses with the perfect solutions.",
+      "image": "/placeholder.svg"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2020",
+      "title": "The Beginning",
+      "description": "Founded with a vision to transform digital experiences for businesses worldwide."
+    },
+    {
+      "year": "2021",
+      "title": "First Major Client",
+      "description": "Secured our first enterprise client and expanded the team to 5 members."
+    },
+    {
+      "year": "2022",
+      "title": "Service Expansion",
+      "description": "Added mobile development and AI integration to our service offerings."
+    },
+    {
+      "year": "2023",
+      "title": "Global Reach",
+      "description": "Served clients across 15 countries with a 98% satisfaction rate."
+    },
+    {
+      "year": "2024",
+      "title": "Innovation Hub",
+      "description": "Launched our innovation lab focusing on emerging technologies and R&D."
+    }
+  ],
+  "services": [
+    {
+      "id": "web-development",
+      "title": "Custom Website Development",
+      "shortDescription": "React, Node.js, and modern frameworks",
+      "description": "We build blazing-fast, scalable web applications using React, Node.js, and the latest technologies. From single-page apps to complex enterprise platforms.",
+      "icon": "Code",
+      "features": ["React & Next.js", "Node.js Backend", "API Development", "Database Design", "Cloud Deployment"]
+    },
+    {
+      "id": "wordpress",
+      "title": "WordPress Websites",
+      "shortDescription": "CMS solutions that scale",
+      "description": "Professional WordPress development with custom themes and plugins. Perfect for content-rich websites, blogs, and e-commerce platforms.",
+      "icon": "FileCode",
+      "features": ["Custom Themes", "Plugin Development", "WooCommerce", "Performance Optimization", "Security Hardening"]
+    },
+    {
+      "id": "graphics",
+      "title": "Graphics Designing",
+      "shortDescription": "Visual identity that stands out",
+      "description": "From brand identity to marketing materials, our design team creates visuals that capture attention and communicate your message effectively.",
+      "icon": "Palette",
+      "features": ["Brand Identity", "Marketing Materials", "Social Media Graphics", "Infographics", "Print Design"]
+    },
+    {
+      "id": "ui-ux",
+      "title": "UI/UX Designing",
+      "shortDescription": "User-centered design excellence",
+      "description": "We create intuitive, beautiful interfaces backed by user research and testing. Every pixel is purposeful, every interaction is delightful.",
+      "icon": "Layout",
+      "features": ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Design Systems"]
+    },
+    {
+      "id": "qa",
+      "title": "Quality Assurance",
+      "shortDescription": "Bug-free, reliable software",
+      "description": "Comprehensive testing services to ensure your product works flawlessly. From automated testing to manual QA, we catch bugs before your users do.",
+      "icon": "CheckCircle",
+      "features": ["Automated Testing", "Manual QA", "Performance Testing", "Security Audits", "Accessibility Testing"]
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile Applications",
+      "shortDescription": "iOS & Android excellence",
+      "description": "Native and cross-platform mobile apps that deliver exceptional user experiences. From concept to app store, we handle it all.",
+      "icon": "Smartphone",
+      "features": ["React Native", "iOS Development", "Android Development", "App Store Optimization", "Push Notifications"]
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "We dive deep into your business, goals, and target audience to understand exactly what you need.",
+      "icon": "Search"
+    },
+    {
+      "step": 2,
+      "title": "Strategy",
+      "description": "Our team crafts a comprehensive roadmap with clear milestones and deliverables.",
+      "icon": "Target"
+    },
+    {
+      "step": 3,
+      "title": "Development",
+      "description": "Agile development with regular updates and iterations based on your feedback.",
+      "icon": "Code"
+    },
+    {
+      "step": 4,
+      "title": "QA Testing",
+      "description": "Rigorous testing across devices and scenarios to ensure flawless performance.",
+      "icon": "CheckCircle"
+    },
+    {
+      "step": 5,
+      "title": "Launch",
+      "description": "Smooth deployment with ongoing monitoring and support to ensure success.",
+      "icon": "Rocket"
+    }
+  ],
+  "projects": [
+    {
+      "id": "fintech-dashboard",
+      "title": "FinTech Dashboard",
+      "category": "Web Application",
+      "thumbnail": "/placeholder.svg",
+      "challenge": "A leading fintech company needed a real-time dashboard to monitor millions of transactions while maintaining sub-second response times.",
+      "solution": "We built a React-based dashboard with WebSocket connections for real-time updates, optimized database queries, and implemented intelligent caching strategies.",
+      "techStack": ["React", "Node.js", "PostgreSQL", "Redis", "WebSocket"],
+      "results": [
+        { "metric": "Response Time", "value": "<100ms" },
+        { "metric": "Uptime", "value": "99.99%" },
+        { "metric": "User Adoption", "value": "+250%" }
+      ]
+    },
+    {
+      "id": "ecommerce-platform",
+      "title": "E-Commerce Platform",
+      "category": "Full Stack",
+      "thumbnail": "/placeholder.svg",
+      "challenge": "A retail brand wanted to launch a scalable e-commerce platform that could handle Black Friday traffic spikes.",
+      "solution": "Custom headless commerce solution with auto-scaling infrastructure, optimized checkout flow, and integrated inventory management.",
+      "techStack": ["Next.js", "Stripe", "MongoDB", "AWS", "Cloudflare"],
+      "results": [
+        { "metric": "Conversion Rate", "value": "+45%" },
+        { "metric": "Page Load", "value": "1.2s" },
+        { "metric": "Revenue Growth", "value": "+180%" }
+      ]
+    },
+    {
+      "id": "health-app",
+      "title": "Healthcare Mobile App",
+      "category": "Mobile",
+      "thumbnail": "/placeholder.svg",
+      "challenge": "A healthcare startup needed a HIPAA-compliant mobile app for patient-doctor communication and appointment scheduling.",
+      "solution": "React Native app with end-to-end encryption, secure video calls, and seamless integration with existing healthcare systems.",
+      "techStack": ["React Native", "Firebase", "Twilio", "Node.js", "PostgreSQL"],
+      "results": [
+        { "metric": "App Rating", "value": "4.9★" },
+        { "metric": "Downloads", "value": "100K+" },
+        { "metric": "Engagement", "value": "+320%" }
+      ]
+    },
+    {
+      "id": "saas-analytics",
+      "title": "SaaS Analytics Platform",
+      "category": "Web Application",
+      "thumbnail": "/placeholder.svg",
+      "challenge": "A B2B company needed to transform complex data into actionable insights with beautiful visualizations.",
+      "solution": "Custom analytics dashboard with drag-and-drop report builder, real-time data processing, and AI-powered insights.",
+      "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
+      "results": [
+        { "metric": "Data Processing", "value": "10M+ rows/s" },
+        { "metric": "Customer Retention", "value": "+60%" },
+        { "metric": "Time Saved", "value": "15hrs/week" }
+      ]
+    }
+  ],
+  "pricing": {
+    "toggle": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "discount": "Save 20%"
+    },
+    "tiers": [
+      {
+        "id": "starter",
+        "name": "Starter",
+        "description": "Perfect for small projects and MVPs",
+        "monthlyPrice": 999,
+        "yearlyPrice": 9590,
+        "features": [
+          "Up to 5 pages",
+          "Basic design",
+          "Mobile responsive",
+          "1 month support",
+          "Basic SEO"
+        ],
+        "cta": "Get Started",
+        "highlighted": false
+      },
+      {
+        "id": "basic",
+        "name": "Basic",
+        "description": "Great for growing businesses",
+        "monthlyPrice": 2499,
+        "yearlyPrice": 23990,
+        "features": [
+          "Up to 15 pages",
+          "Custom design",
+          "CMS integration",
+          "3 months support",
+          "Advanced SEO",
+          "Analytics setup"
+        ],
+        "cta": "Get Started",
+        "highlighted": false
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "description": "Most popular for established companies",
+        "monthlyPrice": 4999,
+        "yearlyPrice": 47990,
+        "features": [
+          "Unlimited pages",
+          "Premium design",
+          "Custom functionality",
+          "6 months support",
+          "E-commerce ready",
+          "Performance optimization",
+          "Security hardening"
+        ],
+        "cta": "Get Started",
+        "highlighted": true,
+        "badge": "Recommended"
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "description": "For complex, high-traffic applications",
+        "monthlyPrice": 9999,
+        "yearlyPrice": 95990,
+        "features": [
+          "Everything in Business",
+          "Custom integrations",
+          "12 months support",
+          "Dedicated account manager",
+          "Priority development",
+          "Load balancing",
+          "24/7 monitoring"
+        ],
+        "cta": "Get Started",
+        "highlighted": false
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "description": "Tailored solutions for large organizations",
+        "monthlyPrice": null,
+        "yearlyPrice": null,
+        "features": [
+          "Everything in Pro",
+          "Custom SLA",
+          "Dedicated team",
+          "On-premise options",
+          "White-label solutions",
+          "Compliance support",
+          "Executive reporting"
+        ],
+        "cta": "Contact Sales",
+        "highlighted": false
+      }
+    ]
+  },
+  "careers": {
+    "headline": "Build the Future with Us",
+    "subheadline": "Join our team of innovators, creators, and problem-solvers. We're always looking for talented individuals who share our passion for excellence.",
+    "perks": [
+      {
+        "title": "Remote Work",
+        "description": "Work from anywhere in the world. We believe in flexibility and trust.",
+        "icon": "Home"
+      },
+      {
+        "title": "Health Insurance",
+        "description": "Comprehensive health coverage for you and your family.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Learning Budget",
+        "description": "$2,000 annual budget for courses, conferences, and books.",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Flexible Hours",
+        "description": "Work when you're most productive. Results matter, not hours.",
+        "icon": "Clock"
+      },
+      {
+        "title": "Team Retreats",
+        "description": "Annual team gatherings in exciting locations worldwide.",
+        "icon": "Plane"
+      },
+      {
+        "title": "Latest Tech",
+        "description": "Top-of-the-line equipment and software to do your best work.",
+        "icon": "Laptop"
+      }
+    ],
+    "openings": [
+      {
+        "id": "senior-react-dev",
+        "title": "Senior React Developer",
+        "department": "Engineering",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "We're looking for an experienced React developer to lead frontend development on our most challenging projects."
+      },
+      {
+        "id": "growth-marketer",
+        "title": "Growth Marketer",
+        "department": "Marketing",
+        "location": "Remote",
+        "type": "Full-time",
+        "description": "Join our marketing team to drive growth through data-driven strategies and creative campaigns."
+      }
+    ]
+  },
+  "blog": {
+    "posts": [
+      {
+        "id": "future-of-web-development",
+        "title": "The Future of Web Development in 2024",
+        "excerpt": "Exploring the trends and technologies that will shape web development in the coming year.",
+        "category": "Engineering",
+        "author": "Mujahid Raj",
+        "date": "2024-01-15",
+        "readTime": "8 min",
+        "image": "/placeholder.svg"
+      },
+      {
+        "id": "design-systems-guide",
+        "title": "Building Scalable Design Systems",
+        "excerpt": "A comprehensive guide to creating design systems that grow with your product.",
+        "category": "Design",
+        "author": "Alin Das",
+        "date": "2024-01-10",
+        "readTime": "12 min",
+        "image": "/placeholder.svg"
+      },
+      {
+        "id": "react-performance-tips",
+        "title": "10 React Performance Tips You Need to Know",
+        "excerpt": "Optimize your React applications with these proven performance techniques.",
+        "category": "Engineering",
+        "author": "Fidbi Hasan",
+        "date": "2024-01-05",
+        "readTime": "10 min",
+        "image": "/placeholder.svg"
+      },
+      {
+        "id": "ux-psychology",
+        "title": "The Psychology Behind Great UX",
+        "excerpt": "Understanding human behavior to create more intuitive user experiences.",
+        "category": "Design",
+        "author": "Alin Das",
+        "date": "2023-12-28",
+        "readTime": "7 min",
+        "image": "/placeholder.svg"
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Let's Build Something Amazing",
+    "subheadline": "Ready to transform your digital presence? We'd love to hear about your project.",
+    "form": {
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "your@email.com",
+      "budgetLabel": "Budget Range",
+      "budgetOptions": [
+        "Under $5,000",
+        "$5,000 - $15,000",
+        "$15,000 - $50,000",
+        "$50,000+"
+      ],
+      "serviceLabel": "Service Type",
+      "serviceOptions": [
+        "Web Development",
+        "Mobile Development",
+        "UI/UX Design",
+        "WordPress",
+        "Other"
+      ],
+      "messagePlaceholder": "Tell us about your project...",
+      "submitButton": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "We craft premium digital experiences that drive growth and build lasting trust.",
+    "socialLinks": [
+      { "platform": "LinkedIn", "url": "https://linkedin.com" },
+      { "platform": "GitHub", "url": "https://github.com" },
+      { "platform": "Twitter", "url": "https://twitter.com" }
+    ],
+    "legalLinks": [
+      { "label": "Privacy Policy", "path": "/privacy" },
+      { "label": "Terms of Service", "path": "/terms" },
+      { "label": "Cookie Policy", "path": "/cookies" }
+    ]
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Oops! The page you're looking for seems to have wandered off into the digital void.",
+    "cta": "Back to Home"
+  }
+}
