@@ -1,11 +1,12 @@
 {
   "site": {
-    "name": "NexGen Digital",
-    "tagline": "Building Trust Through Digital Excellence",
+    "name": "TechWisdom Technologies",
+    "tagline": "We don't just code, we create solution.",
     "description": "We craft premium digital experiences that drive growth and build lasting trust with your customers.",
-    "email": "hello@nexgendigital.com",
-    "phone": "+1 (555) 123-4567",
-    "address": "123 Innovation Drive, Tech Valley, CA 94043"
+    "email": "twtech@gmail.com",
+    "phone": "+8801796059406",
+    "address": "Block-C, Bashundhara R/A, Dhaka",
+    "image" : "./assets/techwisdom.png"
   },
   "navigation": [
     { "label": "Home", "path": "/" },
@@ -18,7 +19,7 @@
     { "label": "Contact", "path": "/contact" }
   ],
   "hero": {
-    "headline": "Building Trust Through Digital Excellence",
+    "headline": "We don't just code, we create solution",
     "subheadline": "We transform bold ideas into exceptional digital experiences that captivate, convert, and create lasting impact.",
     "cta": {
       "primary": "Start Your Project",
@@ -26,9 +27,9 @@
     }
   },
   "stats": [
-    { "value": 50, "suffix": "+", "label": "Projects Delivered" },
+    { "value": 15, "suffix": "+", "label": "Projects Delivered" },
     { "value": 98, "suffix": "%", "label": "Client Satisfaction" },
-    { "value": 5, "suffix": "", "label": "Expert Members" }
+    { "value": 8, "suffix": "", "label": "Expert Members" }
   ],
   "costEstimator": {
     "title": "Project Cost Estimator",
@@ -71,17 +72,14 @@
     }
   },
   "partners": [
-    { "name": "TechCorp", "logo": "/placeholder.svg" },
-    { "name": "InnovateCo", "logo": "/placeholder.svg" },
-    { "name": "FutureStack", "logo": "/placeholder.svg" },
-    { "name": "DataFlow", "logo": "/placeholder.svg" },
-    { "name": "CloudNine", "logo": "/placeholder.svg" },
-    { "name": "DigitalEdge", "logo": "/placeholder.svg" }
+    { "name": "TechCorp", "logo": "https://techcorp.lk/wp-content/uploads/2021/02/Logo.png" },
+    { "name": "InnovateCo", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHz8vsjLhLRro7EGW2GUarqopRK99tJB9qTg&s" },
+    { "name": "FutureStack", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSIEA1iexFaGgyWxVPjrBStJMStUPVTnmh2Q&s" }
   ],
   "whyUs": [
     {
       "title": "Lightning Speed",
-      "description": "We deliver projects 40% faster than industry average without compromising quality. Our agile methodology ensures rapid iterations and quick time-to-market.",
+      "description": "We deliver projects 40% faster than industry average without compromising quality. Our Work methodology ensures rapid iterations and quick time-to-market.",
       "icon": "Zap"
     },
     {
@@ -103,71 +101,90 @@
   "about": {
     "mission": {
       "title": "Our Mission",
-      "content": "To empower businesses with cutting-edge digital solutions that drive growth, foster innovation, and create meaningful connections with their audiences."
+      "content": "We are dedicated to redefining the digital experience by merging technical excellence with human-centric strategy. We empower businesses to transcend traditional boundaries, utilizing state-of-the-art digital ecosystems to unlock new revenue streams. Ultimately, we strive to transform how brands interact with the world, turning passive users into loyal advocates through solutions that inspire, engage, and endure."
     },
     "vision": {
       "title": "Our Vision",
-      "content": "To be the most trusted digital partner for forward-thinking companies, setting new standards in quality, creativity, and technological excellence."
-    }
+      "content": "To become the unwavering cornerstone of success for visionary enterprises navigating the complexities of the digital age. We strive to build a legacy rooted in radical transparency and reliability, where 'partnership' implies a deep, strategic integration. Our vision is to empower forward-thinking companies with a competitive edge that is forged through a relentless pursuit of technical perfection, aesthetic brilliance, and operational excellence."
+    },
+   
+    "goals": [
+      "Deliver 100+ successful enterprise projects.",
+
+"Achieve carbon neutrality in all operations.",
+
+"Expand R&D into AI and emerging markets.",
+
+"Maintain a 95% client retention rate.",
+
+"Obtain ISO 27001 and SOC 2 security certifications.",
+
+"Launch operations in two new international regions.",
+
+"Build a global, top-tier engineering team."
+    ]
   },
   "team": [
     {
       "name": "Mujahid Raj",
       "role": "Founder & Full Stack Developer",
-      "bio": "Visionary leader with 10+ years in web development. Passionate about creating scalable solutions that make a difference.",
-      "image": "/placeholder.svg"
+      "bio": "A forward-thinking digital strategist and technologist. I bridge the gap between complex engineering and high-level business goals, designing scalable web ecosystems that drive growth. My focus is on merging technical precision with strategic foresight to create digital solutions that deliver lasting impact.",
+      "image": "../src/assets/Raj 1.png"
     },
     {
       "name": "Fidbi Hasan",
       "role": "CEO & Full Stack Developer",
-      "bio": "Strategic thinker and technical expert. Drives company growth while staying hands-on with cutting-edge technologies.",
-      "image": "/placeholder.svg"
+      "bio": "Driving operational excellence through technical innovation. I balance strategic foresight with practitioner-level skill, ensuring that every business decision is grounded in technical feasibility. My focus is on scaling company infrastructure and revenue simultaneously, leveraging cutting-edge tools to accelerate market expansion.",
+      "image": "../src/assets/Fidbi.png"
     },
     {
       "name": "Asmaul Husna Mayad",
       "role": "COO & CMS/WordPress Designer",
-      "bio": "Operations mastermind with exceptional WordPress expertise. Ensures smooth project delivery and client satisfaction.",
-      "image": "/placeholder.svg"
+      "bio": "Streamlining the digital delivery pipeline with expert oversight. I combine high-level operational planning with granular WordPress expertise to eliminate bottlenecks and mitigate risks. By fostering a culture of efficiency and quality, I ensure that projects are not just delivered, but are engineered for stability and performance.",
+      "image": "../src/assets/mayad.jpg"
     },
     {
       "name": "Alin Das",
       "role": "CTO & UI/UX Designer",
-      "bio": "Creative technologist who bridges design and development. Creates intuitive interfaces that users love.",
-      "image": "/placeholder.svg"
+      "bio": "Dedicated to humanizing technology through intuitive design and seamless functionality. I champion the user’s perspective throughout the entire product lifecycle, ensuring that every interaction is frictionless and meaningful. My goal is to transform static interfaces into dynamic experiences that foster engagement, loyalty, and delight.",
+      "image": "../src/assets/Alin.png"
     },
     {
       "name": "Prappo Sarker",
       "role": "Sales Head",
-      "bio": "Relationship builder with a knack for understanding client needs. Connects businesses with the perfect solutions.",
+      "bio": "Expert at bridging the gap between business aspirations and technical possibilities. I possess a holistic approach to needs analysis, decoding complex requirements to uncover the core of what drives your business. I don't just find solutions; I curate strategic pathways that fit your unique culture, goals, and market position.",
       "image": "/placeholder.svg"
     }
   ],
   "timeline": [
     {
-      "year": "2020",
+      "year": "April-2025",
       "title": "The Beginning",
       "description": "Founded with a vision to transform digital experiences for businesses worldwide."
     },
     {
-      "year": "2021",
+      "year": "September-2025",
       "title": "First Major Client",
       "description": "Secured our first enterprise client and expanded the team to 5 members."
     },
     {
-      "year": "2022",
+      "year": "November-2025",
       "title": "Service Expansion",
       "description": "Added mobile development and AI integration to our service offerings."
     },
     {
-      "year": "2023",
+      "year": "January-2026",
       "title": "Global Reach",
       "description": "Served clients across 15 countries with a 98% satisfaction rate."
-    },
-    {
-      "year": "2024",
-      "title": "Innovation Hub",
-      "description": "Launched our innovation lab focusing on emerging technologies and R&D."
     }
+  ],
+  "gallery": [
+    { "src": "https://www.rongininterior.com/images/commercial/corporate-office.jpg", "alt": "Our main office space" },
+    { "src": "https://flass.ewubd.edu/storage/app/uploads/public/682/d83/03a/682d8303abbe9587321543.jpg", "alt": "Strategic planning session" },
+    { "src": "https://www.cefalo.com/hubfs/cefalo-devs.jpg", "alt": "Developer workshop" },
+    { "src": "https://pbazaar.com/content/images/thumbs/0238398_new-office-sub-let-dhaka-bangladesh.jpeg", "alt": "Receiving Industry Award" },
+    { "src": "https://www.interioracebd.com/images/office-interior-design-in-bangladesh.webp", "alt": "Annual team retreat" },
+    { "src": "https://d2rw3as29v290b.cloudfront.net/instances/1/uploads/images/photo/image/14015/golden_0b6d634c-6a20-4ac4-a50e-2aa31a2a5aa2.JPG?v=1458621073", "alt": "Creative brainstorming" }
   ],
   "services": [
     {
@@ -253,12 +270,12 @@
   ],
   "projects": [
     {
-      "id": "fintech-dashboard",
-      "title": "FinTech Dashboard",
-      "category": "Web Application",
-      "thumbnail": "/placeholder.svg",
-      "challenge": "A leading fintech company needed a real-time dashboard to monitor millions of transactions while maintaining sub-second response times.",
-      "solution": "We built a React-based dashboard with WebSocket connections for real-time updates, optimized database queries, and implemented intelligent caching strategies.",
+      "id": "Agency",
+      "title": "Cambry-Study Abroad Consultancy",
+      "category": "Full Stack",
+      "thumbnail": "/src/assets/cambry.png",
+      "challenge": "Cambry International Admission Centre required a compelling digital interface to establish itself as a reliable bridge for students seeking global education opportunities. The core challenge was to design a hero section that balanced aspirational imagery with clear functionality to drive user engagement. We implemented a modern glassmorphism aesthetic for the central content card, allowing the backdrop of classic academic architecture to remain visible while ensuring the text Your Trusted Partner for Studying Abroad remained the focal point. To streamline the user journey, we prioritized two distinct calls to action—Book an appointment and Explore destinations—giving visitors immediate, intuitive pathways to interact with the service. The navigation was also simplified into key categories like Study Destinations and Countries to reduce cognitive load. This strategic design approach successfully creates an atmosphere of professionalism and clarity, positioning Cambry as an accessible expert in the competitive international education consultancy market.",
+      "solution": "A Trust-Building Digital Gateway To address the client's need for immediate credibility and user engagement, we engineered a high-impact hero section centered around the concept of transparency and opportunity. We utilized a high-resolution, aspirational background featuring European academic architecture to instantly visually communicate the Study Abroad promise. To ensure text legibility without obscuring this visual storytelling, we developed a glassmorphism UI container—a translucent, frosted overlay that highlights the core value proposition (Your Trusted Partner). We further optimized the user flow with a dual-CTA strategy: a high-contrast purple button for high-intent users (Book an appointment) and a subtle secondary button for browsing (Explore destinations). This design solves the friction of information overload by presenting a clean, focused entry point that guides prospective students effortlessly toward their next step.",
       "techStack": ["React", "Node.js", "PostgreSQL", "Redis", "WebSocket"],
       "results": [
         { "metric": "Response Time", "value": "<100ms" },
@@ -268,11 +285,11 @@
     },
     {
       "id": "ecommerce-platform",
-      "title": "E-Commerce Platform",
+      "title": "New Life Style",
       "category": "Full Stack",
-      "thumbnail": "/placeholder.svg",
-      "challenge": "A retail brand wanted to launch a scalable e-commerce platform that could handle Black Friday traffic spikes.",
-      "solution": "Custom headless commerce solution with auto-scaling infrastructure, optimized checkout flow, and integrated inventory management.",
+      "thumbnail": "/src/assets/new life style.png",
+      "challenge": "New Lifestyle needed to break through the noise of Bangladesh’s saturated e-commerce market, where customers often hesitate due to a lack of trust and generic user experiences. The core challenge was to design a digital storefront that felt premium and exclusive without feeling distant or inaccessible. They required a hero section that could instantly validate their brand promise of comfort and class while simultaneously overcoming the common trust deficit inherent in online fashion retail. The design needed to aggressively signal reliability—making contact channels like WhatsApp and Email immediately visible—without cluttering the interface or detracting from the sleek, high-end aesthetic required to sell premium fashion wear to a style-conscious audience.",
+      "solution": "A Trust-Centric Digital Boutique To establish New Lifestyle as a premium destination while conquering customer hesitation, we engineered a sophisticated dark-mode interface that instantly conveys luxury and exclusivity. We strategically prioritized Accessible Trust by integrating direct communication channels—specifically a prominent WhatsApp contact and Email support—directly into the hero section, sitting alongside the value proposition. This unconventional layout immediately reassures users of human backing before they even browse. To counterbalance the serious tone of the dark background, we utilized vibrant amber accents for the Shop Now CTA to drive high-contrast attention, and incorporated modern 3D isometric imagery to symbolize a seamless, tech-forward shopping experience, ultimately blending high-end aesthetics with local market approachability.",
       "techStack": ["Next.js", "Stripe", "MongoDB", "AWS", "Cloudflare"],
       "results": [
         { "metric": "Conversion Rate", "value": "+45%" },
@@ -281,12 +298,12 @@
       ]
     },
     {
-      "id": "health-app",
-      "title": "Healthcare Mobile App",
+      "id": "edu",
+      "title": "English Janala",
       "category": "Mobile",
-      "thumbnail": "/placeholder.svg",
-      "challenge": "A healthcare startup needed a HIPAA-compliant mobile app for patient-doctor communication and appointment scheduling.",
-      "solution": "React Native app with end-to-end encryption, secure video calls, and seamless integration with existing healthcare systems.",
+      "thumbnail": "/src/assets/learning.png",
+      "challenge": "Overcoming the Intimidation of Learning The primary challenge for this English learning platform was to dismantle the common psychological barrier among Bengali speakers that learning a new language is difficult, time-consuming, and intimidating. The brand needed a landing page that would instantly lower resistance and convince users—from absolute beginners to those wanting to improve—that the process could be straightforward and approachable. The design hurdle was to convert passive interest into immediate action by making the very first step feel effortless and risk-free, rather than feeling like the start of a burdensome academic commitment.",
+      "solution": "An Accessible and Instant Entry Point To overcome user hesitation, we engineered a minimalist landing page centered around the highly encouraging value proposition: English is Easy!. We supported this message visually with a clean, bright aesthetic and a smiling, friendly persona to project warmth and accessibility. Furthermore, the solution addresses the friction of starting by radically simplifying the onboarding process. Instead of a lengthy registration, the page presents an immediate login form where users only need to enter their name and a pre-provided password ('123456') to Get Started instantly. This strategic choice, combined with motivating Bengali copy urging users to start today removes barriers and encourages immediate engagement with their interactive lessons.",
       "techStack": ["React Native", "Firebase", "Twilio", "Node.js", "PostgreSQL"],
       "results": [
         { "metric": "App Rating", "value": "4.9★" },
@@ -295,12 +312,40 @@
       ]
     },
     {
-      "id": "saas-analytics",
-      "title": "SaaS Analytics Platform",
+      "id": "analytics",
+      "title": "New Portal",
       "category": "Web Application",
-      "thumbnail": "/placeholder.svg",
-      "challenge": "A B2B company needed to transform complex data into actionable insights with beautiful visualizations.",
-      "solution": "Custom analytics dashboard with drag-and-drop report builder, real-time data processing, and AI-powered insights.",
+      "thumbnail": "/src/assets/news.png",
+      "challenge": "Modernizing Legacy Journalism The Dragon News faced the critical task of translating its authoritative, traditional brand identity into a dynamic digital environment without overwhelming the reader. The primary design hurdle was to organize a high volume of real-time information—ranging from breaking tickers to categorized articles—while maintaining a clean, readable layout. The platform needed to balance the serious, classic aesthetic of print journalism with modern functional expectations, such as instant content filtering and seamless user authentication, to compete in the fast-paced 2026 news cycle.",
+      "solution": "A Hybrid Information Architecture To solve this, we engineered a structured interface that blends classic typography with modern UI utility. We anchored the brand's credibility by using a traditional blackletter font for the header, immediately establishing a newspaper feel. To manage content density, we implemented a disciplined three-column layout: a dedicated category sidebar on the left for quick navigation, a central feed for Top News Around the World, and a utility sidebar on the right. We enhanced user engagement by integrating a high-contrast red Latest news ticker for urgency and adding seamless social login options (Google and GitHub) to lower the barrier for reader interaction.",
+      "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
+      "results": [
+        { "metric": "Data Processing", "value": "10M+ rows/s" },
+        { "metric": "Customer Retention", "value": "+60%" },
+        { "metric": "Time Saved", "value": "15hrs/week" }
+      ]
+    },
+    {
+      "id": "health-care",
+      "title": "Doctor's Mind",
+      "category": "Web Application",
+      "thumbnail": "/src/assets/doctors.png",
+      "challenge": "Reducing Friction in Digital Healthcare Doctor's Mind faced the delicate task of digitizing the patient-doctor relationship without losing the human element of care and trust. The primary challenge was to design a platform that addressed two distinct user states: the anxiety of a patient seeking urgent help and the logistical need for routine scheduling. The interface needed to be clinically clean to project professionalism yet warm enough to reduce patient stress. Crucially, the design had to overcome the common user frustration of navigating complex directories by making the path to finding a verified specialist absolute and immediate, ensuring that technology acted as a bridge to care rather than a barrier.",
+      "solution": "A Calm, Search-Centric Interface To instill immediate confidence, we utilized a serene medical-blue color palette and high-quality imagery of medical instruments to psychologically signal hygiene, safety, and professionalism. We prioritized speed of access by engineering a search-first hero section, placing a prominent Search for doctor input field and Search Now button at the center of the user journey. This allows users to bypass navigation menus and find care instantly. To address different tiers of urgency, we separated the standard booking flow from critical needs by placing a distinct, high-visibility Emergency button in the top navigation bar. Finally, we anchored the user experience with reassuring copy—Dependable Care, Backed by Trusted Professionals—to immediately validate the platform's credibility.",
+      "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
+      "results": [
+        { "metric": "Data Processing", "value": "10M+ rows/s" },
+        { "metric": "Customer Retention", "value": "+60%" },
+        { "metric": "Time Saved", "value": "15hrs/week" }
+      ]
+    },
+    {
+      "id": "fintech",
+      "title": "Auction Connect",
+      "category": "Web Application",
+      "thumbnail": "/src/assets/auction.png",
+      "challenge": "Evoking the Thrill of the Hunt Connect Auction needed to differentiate itself in a market often dominated by cluttered, text-heavy listing sites that lack emotional appeal. The core challenge was to capture the visceral excitement of an auction—the speed of bidding and the thrill of discovery—while maintaining an aura of premium exclusivity. The brand needed a digital interface that would instantly communicate global reach and luxury, ensuring that visitors felt they were entering a sophisticated gallery for rare treasures rather than a chaotic marketplace. The design had to balance high-energy visuals with clear, intuitive navigation to prevent user drop-off.",
+      "solution": "A Dynamic, Immersive Experience To visualize the energy of real-time bidding, we designed an immersive dark-mode interface punctuated by dynamic, abstract golden light trails. This visual metaphor effectively represents both the speed of the auction process and the platform's global connectivity. We kept the interface intentionally minimal to let the message shine, using a bold, high-contrast white CTA button—Explore Auctions—to cut through the dark background and provide a singular, unmistakable focus for the user. By pairing aspirational copy (Unique Items from Around the World) with a streamlined navigation structure, we created a sophisticated entry point that promises both excitement and exclusivity.",
       "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
       "results": [
         { "metric": "Data Processing", "value": "10M+ rows/s" },
@@ -309,99 +354,138 @@
       ]
     }
   ],
-  "pricing": {
+ "pricing": {
     "toggle": {
       "monthly": "Monthly",
       "yearly": "Yearly",
       "discount": "Save 20%"
     },
-    "tiers": [
+    "projectTiers": [
       {
         "id": "starter",
-        "name": "Starter",
-        "description": "Perfect for small projects and MVPs",
-        "monthlyPrice": 999,
-        "yearlyPrice": 9590,
+        "name": "Landing Page",
+        "description": "A high-converting single page site.",
+        "price": 15000,
         "features": [
-          "Up to 5 pages",
-          "Basic design",
-          "Mobile responsive",
-          "1 month support",
-          "Basic SEO"
+          "One-page Scroll Layout",
+          "Mobile Responsive",
+          "Contact Form Integration",
+          "Social Media Links",
+          "Fast Loading Speed"
         ],
-        "cta": "Get Started",
+        "cta": "Start Project",
         "highlighted": false
       },
       {
         "id": "basic",
-        "name": "Basic",
-        "description": "Great for growing businesses",
-        "monthlyPrice": 2499,
-        "yearlyPrice": 23990,
+        "name": "Small Business",
+        "description": "Essential presence for startups.",
+        "price": 35000,
         "features": [
-          "Up to 15 pages",
-          "Custom design",
-          "CMS integration",
-          "3 months support",
-          "Advanced SEO",
-          "Analytics setup"
+          "Up to 5 Pages",
+          "Basic CMS (Admin Panel)",
+          "Google Maps Integration",
+          "Basic SEO Setup",
+          "1 Month Free Support"
         ],
-        "cta": "Get Started",
+        "cta": "Start Project",
         "highlighted": false
       },
       {
-        "id": "business",
-        "name": "Business",
-        "description": "Most popular for established companies",
-        "monthlyPrice": 4999,
-        "yearlyPrice": 47990,
+        "id": "standard",
+        "name": "Corporate",
+        "description": "Complete professional solution.",
+        "price": 65000,
         "features": [
-          "Unlimited pages",
-          "Premium design",
-          "Custom functionality",
-          "6 months support",
-          "E-commerce ready",
-          "Performance optimization",
-          "Security hardening"
+          "Up to 12 Pages",
+          "Advanced CMS",
+          "Blog / News Section",
+          "Live Chat Integration",
+          "Advanced SEO Structure",
+          "Google Analytics"
         ],
-        "cta": "Get Started",
+        "cta": "Start Project",
         "highlighted": true,
-        "badge": "Recommended"
+        "badge": "Best Seller"
       },
       {
-        "id": "pro",
-        "name": "Pro",
-        "description": "For complex, high-traffic applications",
-        "monthlyPrice": 9999,
-        "yearlyPrice": 95990,
+        "id": "ecommerce",
+        "name": "E-Commerce",
+        "description": "Sell your products online.",
+        "price": 120000,
         "features": [
-          "Everything in Business",
-          "Custom integrations",
-          "12 months support",
-          "Dedicated account manager",
-          "Priority development",
-          "Load balancing",
-          "24/7 monitoring"
+          "Up to 50 Products",
+          "Payment Gateway (Bkash/SSL)",
+          "Shopping Cart & Checkout",
+          "Order Management System",
+          "User Accounts",
+          "Inventory Tracking"
         ],
-        "cta": "Get Started",
+        "cta": "Start Store",
         "highlighted": false
       },
       {
         "id": "enterprise",
-        "name": "Enterprise",
-        "description": "Tailored solutions for large organizations",
-        "monthlyPrice": null,
-        "yearlyPrice": null,
+        "name": "Custom Web App",
+        "description": "Tailored software solutions.",
+        "price": 250000,
         "features": [
-          "Everything in Pro",
-          "Custom SLA",
-          "Dedicated team",
-          "On-premise options",
-          "White-label solutions",
-          "Compliance support",
-          "Executive reporting"
+          "Custom Functionality",
+          "React/Next.js Framework",
+          "API Development",
+          "High Performance Database",
+          "Complex User Roles",
+          "Scalable Architecture"
         ],
         "cta": "Contact Sales",
+        "highlighted": false
+      }
+    ],
+    "maintenanceTiers": [
+      {
+        "id": "basic_m",
+        "name": "Starter Care",
+        "description": "Hosting and basic security.",
+        "monthlyPrice": 1500,
+        "yearlyPrice": 14400,
+        "features": [
+          "Secure Hosting",
+          "SSL Certificate",
+          "Monthly Backups"
+        ],
+        "cta": "Subscribe",
+        "highlighted": false
+      },
+      {
+        "id": "standard_m",
+        "name": "Business Care",
+        "description": "Updates and content edits.",
+        "monthlyPrice": 4500,
+        "yearlyPrice": 43200,
+        "features": [
+          "Everything in Starter",
+          "Weekly Backups",
+          "Plugin/Core Updates",
+          "1 Hour Content Edits/mo"
+        ],
+        "cta": "Subscribe",
+        "highlighted": true,
+        "badge": "Popular"
+      },
+      {
+        "id": "premium_m",
+        "name": "Priority Care",
+        "description": "Full peace of mind.",
+        "monthlyPrice": 9500,
+        "yearlyPrice": 91200,
+        "features": [
+          "Everything in Business",
+          "Daily Backups",
+          "24/7 Uptime Monitoring",
+          "Priority Phone Support",
+          "Performance Optimization"
+        ],
+        "cta": "Subscribe",
         "highlighted": false
       }
     ]
@@ -464,43 +548,123 @@
     "posts": [
       {
         "id": "future-of-web-development",
-        "title": "The Future of Web Development in 2024",
-        "excerpt": "Exploring the trends and technologies that will shape web development in the coming year.",
+        "title": "The Future of Web Development: Trends to Watch in 2024",
+        "excerpt": "From AI-driven coding assistants to the rise of WebAssembly, we explore the technologies shaping the next generation of the web.",
         "category": "Engineering",
         "author": "Mujahid Raj",
         "date": "2024-01-15",
         "readTime": "8 min",
-        "image": "/placeholder.svg"
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+        "content": [
+          {
+            "heading": "The AI Revolution in Coding",
+            "text": "Artificial Intelligence is no longer just a buzzword; it is fundamentally rewriting how we write code. Tools like GitHub Copilot and ChatGPT are shifting developers from 'writers' to 'editors'. In 2024, we expect this to go further with autonomous agents that can scaffold entire projects, run tests, and even deploy applications with minimal human oversight. However, this raises critical questions about code quality and security that every engineering team must address."
+          },
+          {
+            "heading": "The Rise of Server Components",
+            "text": "React Server Components (RSC) have blurred the line between backend and frontend. By rendering components on the server, we can significantly reduce the JavaScript bundle size sent to the client. This leads to faster First Contentful Paint (FCP) and Time to Interactive (TTI) metrics. Frameworks like Next.js are leading this charge, making full-stack development more seamless than ever."
+          },
+          {
+            "heading": "WebAssembly (Wasm) hitting maturity",
+            "text": "For years, JavaScript has been the undisputed king of the browser. WebAssembly isn't replacing it, but it's becoming the go-to for performance-critical tasks. Video editing, complex image manipulation, and even gaming in the browser are becoming indistinguishable from native apps, thanks to Wasm allowing languages like Rust and C++ to run on the web."
+          }
+        ]
       },
       {
         "id": "design-systems-guide",
-        "title": "Building Scalable Design Systems",
-        "excerpt": "A comprehensive guide to creating design systems that grow with your product.",
+        "title": "Building Scalable Design Systems for Enterprise",
+        "excerpt": "A comprehensive guide to creating a design language that ensures consistency, efficiency, and beauty across fragmented product ecosystems.",
         "category": "Design",
         "author": "Alin Das",
         "date": "2024-01-10",
         "readTime": "12 min",
-        "image": "/placeholder.svg"
+        "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
+        "content": [
+          {
+            "heading": "Why Design Systems Fail",
+            "text": "Most design systems fail not because of visual aesthetics, but because of adoption friction. If a system is too rigid, developers will bypass it. If it's too loose, consistency is lost. The sweet spot lies in creating 'Design Tokens'—variables for colors, spacing, and typography that can be platform-agnostic, supporting Web, iOS, and Android simultaneously."
+          },
+          {
+            "heading": "Atomic Design Methodology",
+            "text": "We advocate for Brad Frost's Atomic Design. Start with Atoms (buttons, inputs), combine them into Molecules (search forms), build Organisms (headers), and finally Templates and Pages. This modular approach ensures that when you update a core 'Atom', the change propagates instantly across your entire enterprise application suite."
+          },
+          {
+            "heading": "Documentation is a Product",
+            "text": "A design system without documentation is just a UI kit. Treat your documentation site as a product in itself. It needs to include live code playgrounds, do's and don'ts, and clear accessibility guidelines. Tools like Storybook or Zeroheight are essential for bridging the gap between designers and developers."
+          }
+        ]
       },
       {
         "id": "react-performance-tips",
-        "title": "10 React Performance Tips You Need to Know",
-        "excerpt": "Optimize your React applications with these proven performance techniques.",
+        "title": "10 React Performance Optimizations You Might Be Missing",
+        "excerpt": "Stop unnecessary re-renders. We dive deep into useMemo, virtualization, and concurrent mode to make your apps fly.",
         "category": "Engineering",
         "author": "Fidbi Hasan",
         "date": "2024-01-05",
         "readTime": "10 min",
-        "image": "/placeholder.svg"
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+        "content": [
+          {
+            "heading": "The Cost of Re-renders",
+            "text": "React is fast, but it can be wasteful. Every time a parent component renders, its children render too, unless you tell them not to. Using React.memo() prevents this, but overusing it adds comparison overhead. The trick is to identify heavy computational components and isolate state as low in the tree as possible."
+          },
+          {
+            "heading": "Virtualization for Long Lists",
+            "text": "If you are rendering a list of 1,000 items, the DOM will choke. Libraries like react-window or tanstack-virtual only render the items currently visible in the viewport. This technique, called 'Windowing', keeps your memory footprint low and scroll performance buttery smooth, regardless of list size."
+          },
+          {
+            "heading": "Code Splitting with Lazy Load",
+            "text": "Don't ship the whole app at once. Use React.lazy() and Suspense to split your code into chunks. Load the heavy charting library or the admin dashboard ONLY when the user navigates to that route. This dramatically improves your Lighthouse performance score."
+          }
+        ]
       },
       {
         "id": "ux-psychology",
-        "title": "The Psychology Behind Great UX",
-        "excerpt": "Understanding human behavior to create more intuitive user experiences.",
+        "title": "The Psychology Behind Great UX: Cognitive Load",
+        "excerpt": "Understanding how the human brain processes information is the key to designing intuitive user interfaces that convert.",
         "category": "Design",
         "author": "Alin Das",
         "date": "2023-12-28",
         "readTime": "7 min",
-        "image": "/placeholder.svg"
+        "image": "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?auto=format&fit=crop&w=1200&q=80",
+        "content": [
+          {
+            "heading": "Hick's Law and Decision Fatigue",
+            "text": "Hick's Law states that the time it takes to make a decision increases with the number and complexity of choices. In UX, less is more. By removing navigation options or breaking complex forms into multi-step wizards, we reduce cognitive load and actually increase conversion rates."
+          },
+          {
+            "heading": "The F-Pattern Scanning",
+            "text": "Eye-tracking studies show users scan screens in an 'F' pattern. They look at the top headline, scan down the left side, and occasionally read across. Place your most critical CTA (Call to Action) and value propositions along these high-visibility lines to ensure they aren't missed."
+          },
+          {
+            "heading": "The Peak-End Rule",
+            "text": "Users judge an experience largely based on how they felt at its peak (most intense point) and at its end, rather than the total sum or average of every moment. Ensure your checkout success screen or 'task completed' animation is delightful. A positive ending can redeem a mediocre process."
+          }
+        ]
+      },
+      {
+        "id": "ai-driven-development",
+        "title": "Leveraging AI without Losing the Human Touch",
+        "excerpt": "How to integrate LLMs into your workflow to boost productivity while maintaining code quality and architectural integrity.",
+        "category": "Innovation",
+        "author": "Mujahid Raj",
+        "date": "2023-12-20",
+        "readTime": "9 min",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+        "content": [
+          {
+            "heading": "AI as a Pair Programmer",
+            "text": "Treat AI tools not as a replacement for developers, but as a junior pair programmer who types really fast. They are excellent at boilerplate, regex, and unit tests, but they lack context of the broader system architecture. The senior engineer's role shifts to code review and architectural guidance."
+          },
+          {
+            "heading": "The Ethics of Generated Code",
+            "text": "Who owns the code generated by an AI? As we integrate these tools, legal and ethical considerations regarding copyright and open-source licenses become paramount. Enterprise teams need clear policies on what data is shared with public models to prevent IP leakage."
+          },
+          {
+            "heading": "Prompt Engineering Skills",
+            "text": "The quality of the output depends on the quality of the input. Learning to write precise, context-rich prompts is becoming a hard skill for developers. Context windows are getting larger, allowing us to feed entire file structures to the AI for more accurate refactoring suggestions."
+          }
+        ]
       }
     ]
   },
