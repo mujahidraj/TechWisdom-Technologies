@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User, Sparkles, WifiOff, Zap } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User, Sparkles, WifiOff, AlertCircle } from 'lucide-react';
 import data from '@/data.json'; 
 
 // --- CONFIGURATION ---
@@ -52,7 +52,7 @@ const FloatingChatButton = () => {
 
   useEffect(() => { scrollToBottom(); }, [messages, isTyping, isOpen]);
 
-  // --- 🤖 LOCAL FALLBACK LOGIC (Works 100% of the time) ---
+  // --- 🤖 LOCAL FALLBACK LOGIC ---
   const generateLocalResponse = (text: string) => {
     const lower = text.toLowerCase();
     const { site, services } = data;
@@ -71,12 +71,13 @@ const FloatingChatButton = () => {
     return "Thanks for your message! Our team will review this and get back to you shortly. Is there anything else I can help with?";
   };
 
-  // --- 🧠 HYBRID HANDLER ---
+  // --- 🧠 HYBRID HANDLER (SELF-HEALING) ---
   const handleBotResponse = async (userMessage: string) => {
     setIsTyping(true);
 
-    // 1. If we already switched to local mode, use it immediately
+    // If local mode is already active, skip API
     if (useLocalLogic || !API_KEY) {
+      if (!API_KEY) console.warn("Gemini Warning: API Key missing.");
       setTimeout(() => {
         addBotMessage(generateLocalResponse(userMessage));
         setIsTyping(false);
@@ -84,37 +85,59 @@ const FloatingChatButton = () => {
       return;
     }
 
-    try {
-      // 2. Try Gemini API
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: `${SYSTEM_INSTRUCTION}\nUser: ${userMessage}\nModel:` }] }]
-          })
+    // LIST OF MODELS TO TRY (In order of preference)
+    const modelsToTry = [
+        "gemini-1.5-flash",
+        "gemini-1.0-pro",
+        "gemini-pro"
+    ];
+
+    let success = false;
+
+    // Try models one by one
+    for (const model of modelsToTry) {
+        try {
+            console.log(`Trying model: ${model}...`);
+            const response = await fetch(
+                `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `${SYSTEM_INSTRUCTION}\nUser: ${userMessage}\nModel:` }] }]
+                    })
+                }
+            );
+
+            const json = await response.json();
+
+            if (!response.ok || json.error) {
+                // If this model fails, throw error to trigger the next loop iteration
+                throw new Error(json.error?.message || "Model failed");
+            }
+
+            const botText = json.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!botText) throw new Error("No text returned");
+
+            // Success!
+            addBotMessage(botText);
+            success = true;
+            break; // Exit loop
+
+        } catch (error) {
+            console.warn(`Model ${model} failed:`, error);
+            // Continue to next model...
         }
-      );
-
-      const json = await response.json();
-      
-      if (json.error) throw new Error(json.error.message);
-      
-      const botText = json.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!botText) throw new Error("No response");
-
-      addBotMessage(botText);
-
-    } catch (error) {
-      console.warn("API Failed, switching to local mode:", error);
-      setUseLocalLogic(true); // Switch to local mode permanently for this session
-      
-      // Fallback immediately so user sees a response
-      addBotMessage(generateLocalResponse(userMessage));
-    } finally {
-      setIsTyping(false);
     }
+
+    // If ALL models failed, switch to Local Mode
+    if (!success) {
+        console.error("All Gemini models failed. Switching to Local Mode.");
+        setUseLocalLogic(true);
+        addBotMessage(generateLocalResponse(userMessage));
+    }
+
+    setIsTyping(false);
   };
 
   const addBotMessage = (text: string) => {
@@ -193,7 +216,7 @@ const FloatingChatButton = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* QUICK ACTIONS (Scrollable) */}
+            {/* QUICK ACTIONS */}
             <div className="px-4 py-2 bg-slate-50 border-t border-slate-100">
                <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar mask-fade">
                   {QUICK_ACTIONS.map((action, i) => (
@@ -238,14 +261,12 @@ const FloatingChatButton = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl bg-gradient-to-tr from-blue-600 to-purple-600 text-white relative z-50"
       >
-        {/* Ping Animation to attract attention */}
         {!isOpen && (
             <span className="absolute -top-1 -right-1 flex h-4 w-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 border-2 border-white"></span>
             </span>
         )}
-        
         <AnimatePresence mode="wait">
           {isOpen ? <X size={32} /> : <MessageCircle size={32} />}
         </AnimatePresence>
