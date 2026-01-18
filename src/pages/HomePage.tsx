@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -25,34 +26,41 @@ const iconMap: Record<string, any> = {
   Calendar, Megaphone, Blocks 
 };
 
-// --- MOCK TESTIMONIAL DATA ---
+// --- MOCK TESTIMONIAL DATA (Bangladeshi Context) ---
 const TESTIMONIALS = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    role: "CTO",
-    company: "FinStream",
-    content: "TechWisdom didn't just build a website; they architected a scalable platform that handles millions of transactions. Their engineering standards are absolutely world-class.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+    name: "Jahangir Hossain",
+    role: "CEO",
+    company: "Cambry Study Abroad Agency",
+    content: "আমাদের এজেন্সির জন্য এমন একটা ওয়েবসাইট দরকার ছিল যা দেখে ছাত্রছাত্রীরা ভরসা পায়। এই টিম আমাদের চাহিদা পুরোপুরি বুঝেছে এবং চমৎকার একটি প্ল্যাটফর্ম তৈরি করে দিয়েছে। এখন আমাদের স্টুডেন্ট ডাটাবেস ম্যানেজ করা অনেক সহজ হয়ে গেছে।",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" // Professional Male
   },
   {
     id: 2,
-    name: "David Chen",
+    name: "Nehal Fatin Sohan",
     role: "Founder",
-    company: "Healthify",
-    content: "The ROI we've seen since launching the new app is incredible. The team understood our business goals perfectly and delivered ahead of schedule.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+    company: "New Bangladesh Group",
+    content: "টেকউইসডমের টিমটি তরুণ হলেও তাদের কাজের মান আন্তর্জাতিক লেভেলের। আমাদের গ্রুপের ডিজিটাল ব্র্যান্ডিং এবং ওয়েবসাইটের স্পিড অপ্টিমাইজেশন নিয়ে তারা যে কাজ করেছে, তা সত্যিই প্রশংসনীয়। বেস্ট অফ লাক!",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" // Professional Male
   },
   {
     id: 3,
-    name: "Elena Rodriguez",
-    role: "Marketing Director",
-    company: "Global Retail",
-    content: "Finally, an agency that speaks plain English. They demystified the technical process and gave us a tool that our marketing team actually loves using.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+    name: "Nusrat Ferdaws",
+    role: "Managing Director",
+    company: "Juta Express",
+    content: "জুতা এক্সপ্রেসের ই-কমার্স সাইটটি এত ইউজার ফ্রেন্ডলি হবে ভাবিনি। কাস্টমাররা খুব সহজেই অর্ডার করতে পারছে এবং আমাদের সেলস আগের চেয়ে দ্বিগুণ বেড়েছে। বিশেষ করে ইনভেন্টরি সিস্টেমটা আমার ব্যবসার কাজ অনেক কমিয়ে দিয়েছে।",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" // Professional Female
+  },
+  {
+    id: 4,
+    name: "Sanjidul Islam Surjo",
+    role: "Managing Director",
+    company: "New Organic Food",
+    content: "অর্গানিক ফুড বিজনেসে কাস্টমারের বিশ্বাসটাই আসল। তারা আমাদের ওয়েবসাইটটি এত ক্লিন এবং ফাস্ট বানিয়েছে যে কাস্টমাররা ভিজিট করলেই ইমপ্রেসড হয়ে যায়। মোবাইল থেকে অর্ডার করা এখন পানির মতো সহজ।",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" // Professional Male
   }
 ];
-
 // Animated Counter Component
 const AnimatedCounter = ({ value, suffix }: { value: number; suffix: string }) => {
   const [count, setCount] = useState(0);
@@ -228,6 +236,62 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* ==================== 0. ANNOUNCEMENT MARQUEE ==================== */}
+      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white py-3 overflow-hidden relative z-50 border-b border-white/10 shadow-lg">
+        <motion.div
+          className="flex whitespace-nowrap items-center"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 40, // Slightly slower so people can read the news
+          }}
+          style={{ width: "max-content" }}
+        >
+          {/* Duplicated content for seamless loop */}
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center gap-8 mx-4">
+              
+              {/* --- MAIN OFFER (ALL SERVICES) --- */}
+              <span className="flex items-center gap-2 text-sm md:text-base font-semibold text-yellow-400">
+                🎉 GRAND LAUNCH OFFER: <span className="text-white font-normal">Flat <span className="font-bold text-yellow-300">35% - 50% DISCOUNT</span> on Web Design, App Development, UI/UX & SEO!</span>
+              </span>
+              
+              <span className="text-blue-500">•</span>
+
+              {/* --- DEADLINE --- */}
+              <span className="text-sm md:text-base text-blue-100 flex items-center gap-2">
+                ⏳ <span className="font-medium">Offer ends in 30 Days</span>
+              </span>
+
+              <span className="text-blue-500">•</span>
+
+              {/* --- NEWS UPDATE 1 --- */}
+              <span className="text-sm md:text-base text-white flex items-center gap-2">
+                📢 <span className="font-bold text-sky-300">NEWS:</span> TechWisdom is now hiring new member across different departments. 
+              </span>
+
+              <span className="text-blue-500">•</span>
+
+              {/* --- NEWS UPDATE 2 / FEATURE --- */}
+              <span className="text-sm md:text-base text-slate-200">
+                🚀 <span className="text-white font-medium">New Service:</span> Digital Marketing is now available
+              </span>
+
+              <span className="text-blue-500">•</span>
+
+              {/* --- BONUS --- */}
+              <span className="text-sm md:text-base text-emerald-300 font-medium">
+                🛡️ FREE 1-Month Maintenance with every Premium Package
+              </span>
+              
+              {/* Spacing for the loop */}
+              <div className="w-12"></div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
       {/* ==================== 2. TRUST BAR ==================== */}
       <section className="py-10 bg-white border-b border-slate-100">
@@ -428,21 +492,27 @@ const HomePage = () => {
       </section>
 
       {/* ==================== 6. UNIQUE VALUE PROP ==================== */}
-      <section className="py-24 bg-white">
+      {/* ==================== 6. UNIQUE VALUE PROP ==================== */}
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="container px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-slate-900">
+          {/* Changed grid layout for better mobile stacking */}
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Column: Text Content */}
+            <div className="space-y-8 order-2 lg:order-1">
+               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-slate-900 text-center lg:text-left">
                  Why industry leaders choose us.
                </h2>
-               <p className="text-slate-500 text-xl leading-relaxed">
+               <p className="text-slate-500 text-lg md:text-xl leading-relaxed text-center lg:text-left">
                  We bridge the gap between creative design and technical engineering. No outsourcing, no shortcuts.
                </p>
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+               
+               {/* Grid for Icon Boxes */}
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                  {whyUs.map((item, i) => {
                    const Icon = iconMap[item.icon];
                    return (
-                     <div key={i} className="flex gap-4">
+                     <div key={i} className="flex gap-4 items-start">
                        <div className="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
                           {Icon && <Icon size={24} />}
                        </div>
@@ -455,21 +525,38 @@ const HomePage = () => {
                  })}
                </div>
             </div>
-            <div className="relative">
-               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-2xl opacity-20 transform rotate-3"></div>
-               <div className="relative bg-slate-900 border border-slate-700 rounded-2xl p-8 shadow-2xl">
-                  <div className="flex items-center gap-4 mb-8">
-                     <div className="w-3 h-3 rounded-full bg-red-500" />
-                     <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                     <div className="w-3 h-3 rounded-full bg-green-500" />
+
+            {/* Right Column: Code Editor Visual */}
+            <div className="relative order-1 lg:order-2 w-full">
+               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-2xl opacity-20 transform rotate-3 scale-95 lg:scale-100"></div>
+               <div className="relative bg-slate-900 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl w-full mx-auto max-w-lg lg:max-w-none">
+                  {/* Mac Window Dots */}
+                  <div className="flex items-center gap-2 md:gap-4 mb-6 md:mb-8">
+                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500" />
+                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500" />
+                     <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500" />
                   </div>
-                  <div className="space-y-4 font-mono text-sm">
-                     <div className="flex gap-4"><span className="text-blue-400">import</span> <span className="text-white">{'{ Future }'}</span> <span className="text-blue-400">from</span> <span className="text-emerald-400">'@TechWisdom/Technologies'</span>;</div>
-                     <div className="text-slate-400 pl-4">// Delivering excellence since 2024</div>
-                     <div className="flex gap-4 pl-4"><span className="text-purple-400">const</span> <span className="text-yellow-200">results</span> <span className="text-white">=</span> <span className="text-blue-300">await</span> <span className="text-white">TechWisdom.build();</span></div>
+                  
+                  {/* Code Content - Responsive Text Size */}
+                  <div className="space-y-3 md:space-y-4 font-mono text-xs md:text-sm overflow-x-auto">
+                     <div className="flex gap-2 md:gap-4 whitespace-nowrap">
+                        <span className="text-blue-400">import</span> 
+                        <span className="text-white">{'{ Future }'}</span> 
+                        <span className="text-blue-400">from</span> 
+                        <span className="text-emerald-400">'@TechWisdom/Tech'</span>;
+                     </div>
+                     <div className="text-slate-400 pl-2 md:pl-4 whitespace-nowrap">// Delivering excellence since 2024</div>
+                     <div className="flex gap-2 md:gap-4 pl-2 md:pl-4 whitespace-nowrap">
+                        <span className="text-purple-400">const</span> 
+                        <span className="text-yellow-200">results</span> 
+                        <span className="text-white">=</span> 
+                        <span className="text-blue-300">await</span> 
+                        <span className="text-white">TechWisdom.build();</span>
+                     </div>
                   </div>
                </div>
             </div>
+
           </div>
         </div>
       </section>

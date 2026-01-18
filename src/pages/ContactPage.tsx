@@ -170,7 +170,13 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
                     </div>
                     <div>
                       <p className="text-sm font-medium text-slate-500 mb-1">Business Hours</p>
-                      <p className="text-slate-900 font-medium">Mon - Fri: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Saturday: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Sunday: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Monday: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Tuesday: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Wednesday: 9am - 6pm</p>
+                      <p className="text-slate-900 font-medium">Thursday: 9am - 3pm</p>
+                      <p className="text-slate-900 font-medium">Friday: No Working Day</p>
                     </div>
                   </div>
                 </CardContent>

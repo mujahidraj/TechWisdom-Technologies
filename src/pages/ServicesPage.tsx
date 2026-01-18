@@ -5,7 +5,18 @@ import {
   CheckCircle, Smartphone, Search, Target, Rocket, 
   Terminal, Database, Globe, Cloud, Shield, Zap,
   ArrowRight, Layers, Cpu, Server, GitBranch,
-  HelpCircle, RefreshCw, Lock, Clock, FileText, Settings
+  HelpCircle, RefreshCw, Lock, Clock, FileText, Settings,
+  Film,
+  PenToolIcon,
+  LucidePenTool,
+  BarChart,
+  Mail,
+  Share2,
+  Megaphone,
+  ShoppingBag,
+  Send,
+  Activity,
+  ShieldCheck
 } from 'lucide-react';
 import { type LucideIcon } from 'lucide-react';
 
@@ -88,10 +99,10 @@ const ServicesPage = () => {
       icon: Server,
       tools: [
         { name: "Node.js", desc: "Runtime Environment", icon: Terminal },
-        { name: "Python", desc: "AI & Scripting", icon: Code },
+        { name: "Nest.js", desc: "Backend Framework", icon: Code },
         { name: "PostgreSQL", desc: "Relational DB", icon: Database },
-        { name: "GraphQL", desc: "Flexible APIs", icon: Globe },
-        { name: "Redis", desc: "Caching", icon: Zap },
+        { name: "MongoDB", desc: "Flexible DB", icon: Globe },
+        { name: "Python", desc: "AI & Scripting", icon: Code },
       ]
     },
     mobile: {
@@ -100,7 +111,7 @@ const ServicesPage = () => {
       tools: [
         { name: "React Native", desc: "Cross-Platform", icon: Code },
         { name: "Flutter", desc: "Native Performance", icon: Layers },
-        { name: "Expo", desc: "Rapid Iteration", icon: Rocket },
+        { name: "Kotlin", desc: "Android Native", icon: Rocket },
         { name: "Swift", desc: "iOS Native", icon: Smartphone },
       ]
     },
@@ -114,14 +125,55 @@ const ServicesPage = () => {
         { name: "Vercel", desc: "Edge Deployment", icon: Globe },
         { name: "GitHub Actions", desc: "CI/CD Pipelines", icon: Terminal },
       ]
+    },
+    design: {
+      label: "Graphics & Design",
+      icon: LucidePenTool, // Requires import
+      tools: [
+        { name: "Figma", desc: "UI/UX Design", icon: PenToolIcon },
+        { name: "Adobe Photoshop", desc: "Image Editing", icon: FileText },
+        { name: "Adobe Illustrator", desc: "Vector Graphics", icon: PenToolIcon },
+        { name: "Canva", desc: "Rapid Design", icon: Palette },
+        { name: "Capcut", desc: "Motion Graphics", icon: Film },
+      ]
+    },marketing: {
+      label: "Digital Marketing",
+      icon: Megaphone, // Requires import
+      tools: [
+        { name: "Google Analytics", desc: "Data Insights", icon: BarChart },
+        { name: "SEO", desc: "Search Optimization", icon: Search },
+        { name: "Google Ads", desc: "PPC Campaigns", icon: Target },
+        { name: "Meta Ads", desc: "Social Advertising", icon: Share2 },
+      ]
+    },
+    wordpress: {
+      label: "WordPress & CMS",
+      icon: FileText, // Requires import
+      tools: [
+        { name: "Elementor", desc: "Visual Builder", icon: LayoutIcon },
+        { name: "WooCommerce", desc: "E-Commerce", icon: ShoppingBag },
+        { name: "Yoast SEO", desc: "On-Page SEO", icon: Search },
+        { name: "WP Rocket", desc: "Performance", icon: Zap },
+      ]
+    },
+    qa: {
+      label: "Quality Assurance",
+      icon: ShieldCheck, // Requires import
+      tools: [
+        { name: "Insomnia", desc: "API Testing", icon: Mail },
+        { name: "Selenium", desc: "Browser Automation", icon: Terminal },
+        { name: "Postman", desc: "API Testing", icon: Send },
+        { name: "Jest", desc: "Unit Testing", icon: FileCode },
+        { name: "JMeter", desc: "Load Testing", icon: Activity },
+      ]
     }
   };
 
   // --- STATS DATA ---
   const stats = [
-    { label: "Projects Delivered", value: "150+", icon: Rocket },
+    { label: "Projects Delivered", value: "15+", icon: Rocket },
     { label: "Client Retention", value: "98%", icon: Target },
-    { label: "Uptime Guarantee", value: "99.9%", icon: Cloud },
+    { label: "Uptime Guarantee", value: "99.8%", icon: Cloud },
     { label: "Support", value: "24/7", icon: Shield },
   ];
 

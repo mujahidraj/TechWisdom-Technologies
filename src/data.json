@@ -5,7 +5,7 @@
     "description": "We craft premium digital experiences that drive growth and build lasting trust with your customers.",
     "email": "twtech@gmail.com",
     "phone": "+8801796059406",
-    "address": "Block-C, Bashundhara R/A, Dhaka",
+    "address": "AIUB Gate-1, Block-C, Bashundhara R/A, Dhaka",
     "image" : "./assets/techwisdom.png"
   },
   "navigation": [
@@ -109,18 +109,16 @@
     },
    
     "goals": [
-      "Deliver 100+ successful enterprise projects.",
+      "Deliver 15+ successful enterprise projects.",
 
-"Achieve carbon neutrality in all operations.",
-
+"Launch operations in two new international regions.",
 "Expand R&D into AI and emerging markets.",
 
 "Maintain a 95% client retention rate.",
 
-"Obtain ISO 27001 and SOC 2 security certifications.",
+"Hire 10 freelancer or intern to help with task.",
 
-"Launch operations in two new international regions.",
-
+"Achieve carbon neutrality in all operations.",
 "Build a global, top-tier engineering team."
     ]
   },
@@ -129,31 +127,25 @@
       "name": "Mujahid Raj",
       "role": "Founder & Full Stack Developer",
       "bio": "A forward-thinking digital strategist and technologist. I bridge the gap between complex engineering and high-level business goals, designing scalable web ecosystems that drive growth. My focus is on merging technical precision with strategic foresight to create digital solutions that deliver lasting impact.",
-      "image": "../src/assets/Raj 1.png"
+      "image": "https://i.postimg.cc/d0LwTwVh/Raj-1.png"
     },
     {
       "name": "Fidbi Hasan",
       "role": "CEO & Full Stack Developer",
       "bio": "Driving operational excellence through technical innovation. I balance strategic foresight with practitioner-level skill, ensuring that every business decision is grounded in technical feasibility. My focus is on scaling company infrastructure and revenue simultaneously, leveraging cutting-edge tools to accelerate market expansion.",
-      "image": "../src/assets/Fidbi.png"
+      "image": "https://i.postimg.cc/vHbytWm9/Fidbi.png"
     },
     {
       "name": "Asmaul Husna Mayad",
       "role": "COO & CMS/WordPress Designer",
       "bio": "Streamlining the digital delivery pipeline with expert oversight. I combine high-level operational planning with granular WordPress expertise to eliminate bottlenecks and mitigate risks. By fostering a culture of efficiency and quality, I ensure that projects are not just delivered, but are engineered for stability and performance.",
-      "image": "../src/assets/mayad.jpg"
+      "image": "https://i.postimg.cc/NjnZSTQ6/mayad.jpg"
     },
     {
       "name": "Alin Das",
       "role": "CTO & UI/UX Designer",
       "bio": "Dedicated to humanizing technology through intuitive design and seamless functionality. I champion the user’s perspective throughout the entire product lifecycle, ensuring that every interaction is frictionless and meaningful. My goal is to transform static interfaces into dynamic experiences that foster engagement, loyalty, and delight.",
-      "image": "../src/assets/Alin.png"
-    },
-    {
-      "name": "Prappo Sarker",
-      "role": "Sales Head",
-      "bio": "Expert at bridging the gap between business aspirations and technical possibilities. I possess a holistic approach to needs analysis, decoding complex requirements to uncover the core of what drives your business. I don't just find solutions; I curate strategic pathways that fit your unique culture, goals, and market position.",
-      "image": "/placeholder.svg"
+      "image": "https://i.postimg.cc/Bbc0Gvm3/Alin.png"
     }
   ],
   "timeline": [
@@ -237,49 +229,67 @@
     }
   ],
   "process": [
-    {
-      "step": 1,
-      "title": "Discovery",
-      "description": "We dive deep into your business, goals, and target audience to understand exactly what you need.",
-      "icon": "Search"
-    },
-    {
-      "step": 2,
-      "title": "Strategy",
-      "description": "Our team crafts a comprehensive roadmap with clear milestones and deliverables.",
-      "icon": "Target"
-    },
-    {
-      "step": 3,
-      "title": "Development",
-      "description": "Agile development with regular updates and iterations based on your feedback.",
-      "icon": "Code"
-    },
-    {
-      "step": 4,
-      "title": "QA Testing",
-      "description": "Rigorous testing across devices and scenarios to ensure flawless performance.",
-      "icon": "CheckCircle"
-    },
-    {
-      "step": 5,
-      "title": "Launch",
-      "description": "Smooth deployment with ongoing monitoring and support to ensure success.",
-      "icon": "Rocket"
-    }
-  ],
+  {
+    "step": 1,
+    "title": "Discovery",
+    "description": "We begin by immersing ourselves in your business ecosystem. Through stakeholder interviews, market research, and competitor analysis, we uncover the core challenges and opportunities to ensure our solution aligns perfectly with your long-term business goals.",
+    "icon": "Search"
+  },
+  {
+    "step": 2,
+    "title": "Requirement",
+    "description": "We translate high-level concepts into a concrete technical blueprint. This involves defining detailed user stories, functional specifications, third-party integrations, and data architecture to eliminate ambiguity and set a clear path forward.",
+    "icon": "ClipboardList"
+  },
+  {
+    "step": 3,
+    "title": "Strategy",
+    "description": "Our team develops a comprehensive roadmap that balances innovation with feasibility. We select the optimal technology stack, define scalable architecture, and plan sprint milestones to ensure the project is delivered on time and within budget.",
+    "icon": "Map"
+  },
+  {
+    "step": 4,
+    "title": "Design",
+    "description": "We create user-centric interfaces that blend aesthetics with functionality. From wireframing user flows to crafting high-fidelity prototypes and accessible design systems, we ensure the final product is intuitive, engaging, and on-brand.",
+    "icon": "PenTool"
+  },
+  {
+    "step": 5,
+    "title": "Development",
+    "description": "Our engineering team brings the designs to life using clean, semantic code and modern frameworks. We follow Agile methodologies with iterative sprints, allowing for regular feedback loops and ensuring the application is robust, secure, and scalable.",
+    "icon": "Code"
+  },
+  {
+    "step": 6,
+    "title": "QA Testing",
+    "description": "We enforce a zero-tolerance policy for errors. Our quality assurance process includes automated unit tests, cross-browser compatibility checks, performance stress testing, and security audits to guarantee a flawless user experience across all devices.",
+    "icon": "ShieldCheck"
+  },
+  {
+    "step": 7,
+    "title": "Deployment",
+    "description": "We execute a calculated launch strategy to ensure a smooth transition to production. Using CI/CD pipelines and cloud infrastructure best practices, we deploy your application with zero downtime, ensuring it is instantly available to your audience.",
+    "icon": "Rocket"
+  },
+  {
+    "step": 8,
+    "title": "Maintenance",
+    "description": "Our partnership extends beyond the launch. We provide ongoing support, real-time server monitoring, security patches, and iterative feature enhancements to ensure your digital product evolves alongside your growing business needs.",
+    "icon": "Settings"
+  }
+],
   "projects": [
     {
       "id": "Agency",
       "title": "Cambry-Study Abroad Consultancy",
       "category": "Full Stack",
-      "thumbnail": "/src/assets/cambry.png",
+      "thumbnail": "https://i.postimg.cc/W4XTdtVg/cambry.png",
       "challenge": "Cambry International Admission Centre required a compelling digital interface to establish itself as a reliable bridge for students seeking global education opportunities. The core challenge was to design a hero section that balanced aspirational imagery with clear functionality to drive user engagement. We implemented a modern glassmorphism aesthetic for the central content card, allowing the backdrop of classic academic architecture to remain visible while ensuring the text Your Trusted Partner for Studying Abroad remained the focal point. To streamline the user journey, we prioritized two distinct calls to action—Book an appointment and Explore destinations—giving visitors immediate, intuitive pathways to interact with the service. The navigation was also simplified into key categories like Study Destinations and Countries to reduce cognitive load. This strategic design approach successfully creates an atmosphere of professionalism and clarity, positioning Cambry as an accessible expert in the competitive international education consultancy market.",
       "solution": "A Trust-Building Digital Gateway To address the client's need for immediate credibility and user engagement, we engineered a high-impact hero section centered around the concept of transparency and opportunity. We utilized a high-resolution, aspirational background featuring European academic architecture to instantly visually communicate the Study Abroad promise. To ensure text legibility without obscuring this visual storytelling, we developed a glassmorphism UI container—a translucent, frosted overlay that highlights the core value proposition (Your Trusted Partner). We further optimized the user flow with a dual-CTA strategy: a high-contrast purple button for high-intent users (Book an appointment) and a subtle secondary button for browsing (Explore destinations). This design solves the friction of information overload by presenting a clean, focused entry point that guides prospective students effortlessly toward their next step.",
-      "techStack": ["React", "Node.js", "PostgreSQL", "Redis", "WebSocket"],
+      "techStack": ["React", "Node.js", "PostgreSQL", "Tailwind CSS", "TypeScript"],
       "results": [
         { "metric": "Response Time", "value": "<100ms" },
-        { "metric": "Uptime", "value": "99.99%" },
+        { "metric": "Uptime", "value": "99.97%" },
         { "metric": "User Adoption", "value": "+250%" }
       ]
     },
@@ -287,13 +297,13 @@
       "id": "ecommerce-platform",
       "title": "New Life Style",
       "category": "Full Stack",
-      "thumbnail": "/src/assets/new life style.png",
+      "thumbnail": "https://i.postimg.cc/XXS0RCK0/new-life-style.png",
       "challenge": "New Lifestyle needed to break through the noise of Bangladesh’s saturated e-commerce market, where customers often hesitate due to a lack of trust and generic user experiences. The core challenge was to design a digital storefront that felt premium and exclusive without feeling distant or inaccessible. They required a hero section that could instantly validate their brand promise of comfort and class while simultaneously overcoming the common trust deficit inherent in online fashion retail. The design needed to aggressively signal reliability—making contact channels like WhatsApp and Email immediately visible—without cluttering the interface or detracting from the sleek, high-end aesthetic required to sell premium fashion wear to a style-conscious audience.",
       "solution": "A Trust-Centric Digital Boutique To establish New Lifestyle as a premium destination while conquering customer hesitation, we engineered a sophisticated dark-mode interface that instantly conveys luxury and exclusivity. We strategically prioritized Accessible Trust by integrating direct communication channels—specifically a prominent WhatsApp contact and Email support—directly into the hero section, sitting alongside the value proposition. This unconventional layout immediately reassures users of human backing before they even browse. To counterbalance the serious tone of the dark background, we utilized vibrant amber accents for the Shop Now CTA to drive high-contrast attention, and incorporated modern 3D isometric imagery to symbolize a seamless, tech-forward shopping experience, ultimately blending high-end aesthetics with local market approachability.",
-      "techStack": ["Next.js", "Stripe", "MongoDB", "AWS", "Cloudflare"],
+      "techStack": ["ReactJs", "Stripe", "MongoDB", "Firebase", "Tailwind CSS", "TypeScript"],
       "results": [
-        { "metric": "Conversion Rate", "value": "+45%" },
-        { "metric": "Page Load", "value": "1.2s" },
+        { "metric": "Conversion Rate", "value": "+31%" },
+        { "metric": "Page Load", "value": "1.8s" },
         { "metric": "Revenue Growth", "value": "+180%" }
       ]
     },
@@ -301,7 +311,7 @@
       "id": "edu",
       "title": "English Janala",
       "category": "Mobile",
-      "thumbnail": "/src/assets/learning.png",
+      "thumbnail": "https://i.postimg.cc/V6Jv1XC3/learning.png",
       "challenge": "Overcoming the Intimidation of Learning The primary challenge for this English learning platform was to dismantle the common psychological barrier among Bengali speakers that learning a new language is difficult, time-consuming, and intimidating. The brand needed a landing page that would instantly lower resistance and convince users—from absolute beginners to those wanting to improve—that the process could be straightforward and approachable. The design hurdle was to convert passive interest into immediate action by making the very first step feel effortless and risk-free, rather than feeling like the start of a burdensome academic commitment.",
       "solution": "An Accessible and Instant Entry Point To overcome user hesitation, we engineered a minimalist landing page centered around the highly encouraging value proposition: English is Easy!. We supported this message visually with a clean, bright aesthetic and a smiling, friendly persona to project warmth and accessibility. Furthermore, the solution addresses the friction of starting by radically simplifying the onboarding process. Instead of a lengthy registration, the page presents an immediate login form where users only need to enter their name and a pre-provided password ('123456') to Get Started instantly. This strategic choice, combined with motivating Bengali copy urging users to start today removes barriers and encourages immediate engagement with their interactive lessons.",
       "techStack": ["React Native", "Firebase", "Twilio", "Node.js", "PostgreSQL"],
@@ -315,7 +325,7 @@
       "id": "analytics",
       "title": "New Portal",
       "category": "Web Application",
-      "thumbnail": "/src/assets/news.png",
+      "thumbnail": "https://i.postimg.cc/fR5R98jN/news.png",
       "challenge": "Modernizing Legacy Journalism The Dragon News faced the critical task of translating its authoritative, traditional brand identity into a dynamic digital environment without overwhelming the reader. The primary design hurdle was to organize a high volume of real-time information—ranging from breaking tickers to categorized articles—while maintaining a clean, readable layout. The platform needed to balance the serious, classic aesthetic of print journalism with modern functional expectations, such as instant content filtering and seamless user authentication, to compete in the fast-paced 2026 news cycle.",
       "solution": "A Hybrid Information Architecture To solve this, we engineered a structured interface that blends classic typography with modern UI utility. We anchored the brand's credibility by using a traditional blackletter font for the header, immediately establishing a newspaper feel. To manage content density, we implemented a disciplined three-column layout: a dedicated category sidebar on the left for quick navigation, a central feed for Top News Around the World, and a utility sidebar on the right. We enhanced user engagement by integrating a high-contrast red Latest news ticker for urgency and adding seamless social login options (Google and GitHub) to lower the barrier for reader interaction.",
       "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
@@ -329,7 +339,7 @@
       "id": "health-care",
       "title": "Doctor's Mind",
       "category": "Web Application",
-      "thumbnail": "/src/assets/doctors.png",
+      "thumbnail": "https://i.postimg.cc/wxsMGcHk/doctors.png",
       "challenge": "Reducing Friction in Digital Healthcare Doctor's Mind faced the delicate task of digitizing the patient-doctor relationship without losing the human element of care and trust. The primary challenge was to design a platform that addressed two distinct user states: the anxiety of a patient seeking urgent help and the logistical need for routine scheduling. The interface needed to be clinically clean to project professionalism yet warm enough to reduce patient stress. Crucially, the design had to overcome the common user frustration of navigating complex directories by making the path to finding a verified specialist absolute and immediate, ensuring that technology acted as a bridge to care rather than a barrier.",
       "solution": "A Calm, Search-Centric Interface To instill immediate confidence, we utilized a serene medical-blue color palette and high-quality imagery of medical instruments to psychologically signal hygiene, safety, and professionalism. We prioritized speed of access by engineering a search-first hero section, placing a prominent Search for doctor input field and Search Now button at the center of the user journey. This allows users to bypass navigation menus and find care instantly. To address different tiers of urgency, we separated the standard booking flow from critical needs by placing a distinct, high-visibility Emergency button in the top navigation bar. Finally, we anchored the user experience with reassuring copy—Dependable Care, Backed by Trusted Professionals—to immediately validate the platform's credibility.",
       "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
@@ -343,7 +353,7 @@
       "id": "fintech",
       "title": "Auction Connect",
       "category": "Web Application",
-      "thumbnail": "/src/assets/auction.png",
+      "thumbnail": "https://i.postimg.cc/s2Nfn1Nb/auction.png",
       "challenge": "Evoking the Thrill of the Hunt Connect Auction needed to differentiate itself in a market often dominated by cluttered, text-heavy listing sites that lack emotional appeal. The core challenge was to capture the visceral excitement of an auction—the speed of bidding and the thrill of discovery—while maintaining an aura of premium exclusivity. The brand needed a digital interface that would instantly communicate global reach and luxury, ensuring that visitors felt they were entering a sophisticated gallery for rare treasures rather than a chaotic marketplace. The design had to balance high-energy visuals with clear, intuitive navigation to prevent user drop-off.",
       "solution": "A Dynamic, Immersive Experience To visualize the energy of real-time bidding, we designed an immersive dark-mode interface punctuated by dynamic, abstract golden light trails. This visual metaphor effectively represents both the speed of the auction process and the platform's global connectivity. We kept the interface intentionally minimal to let the message shine, using a bold, high-contrast white CTA button—Explore Auctions—to cut through the dark background and provide a singular, unmistakable focus for the user. By pairing aspirational copy (Unique Items from Around the World) with a streamlined navigation structure, we created a sophisticated entry point that promises both excitement and exclusivity.",
       "techStack": ["React", "Python", "TensorFlow", "BigQuery", "D3.js"],
@@ -363,81 +373,236 @@
     "projectTiers": [
       {
         "id": "starter",
-        "name": "Landing Page",
-        "description": "A high-converting single page site.",
-        "price": 15000,
+        "name": "The Starter",
+        "description": "For Personal Portfolios, Small F-Commerce, Photographers. (Range: ৳8k - ৳12k)",
+        "price": 10000,
         "features": [
-          "One-page Scroll Layout",
-          "Mobile Responsive",
-          "Contact Form Integration",
-          "Social Media Links",
-          "Fast Loading Speed"
+          "1 Page (Long Scroll) & Hero Section",
+          "Gallery/Portfolio & Contact Form",
+          "Floating WhatsApp Chat Button",
+          "Tech: WordPress (Elementor) or HTML/CSS",
+          "Timeline: 3 - 5 Days",
+          "Maintenance: ৳1000/Month (if needed)"
         ],
         "cta": "Start Project",
         "highlighted": false
       },
       {
-        "id": "basic",
-        "name": "Small Business",
-        "description": "Essential presence for startups.",
-        "price": 35000,
+        "id": "corporate",
+        "name": "The Corporate",
+        "description": "For Agencies, Law Chambers, NGOs, Interior Design. (Range: ৳15k - ৳25k)",
+        "price": 20000,
         "features": [
-          "Up to 5 Pages",
-          "Basic CMS (Admin Panel)",
-          "Google Maps Integration",
+          "5 - 8 Pages & Trust Elements",
+          "Dynamic Blog & Team Profile",
           "Basic SEO Setup",
-          "1 Month Free Support"
+          "Tech: WordPress (Premium) or React.js",
+          "Timeline: 5 - 7 Days",
+          "Maintenance: ৳1,500 - 2,500/month"
         ],
         "cta": "Start Project",
         "highlighted": false
       },
       {
-        "id": "standard",
-        "name": "Corporate",
-        "description": "Complete professional solution.",
-        "price": 65000,
+        "id": "service_hub",
+        "name": "The Service Hub",
+        "description": "For Dental Clinics, Parlors, Car Rental, Cleaning Services. (Range: ৳25k - ৳35k)",
+        "price": 30000,
         "features": [
-          "Up to 12 Pages",
-          "Advanced CMS",
-          "Blog / News Section",
-          "Live Chat Integration",
-          "Advanced SEO Structure",
-          "Google Analytics"
+          "8 - 10 Pages + Booking Engine",
+          "Appointment System & Rate Chart",
+          "Automated Emails & Quote Forms",
+          "Tech: WP Booking Plugins or MERN",
+          "Timeline: 7 - 14 Days",
+          "Maintenance: ৳2,500 - 3,500/month"
         ],
         "cta": "Start Project",
         "highlighted": true,
-        "badge": "Best Seller"
+        "badge": "Popular"
       },
       {
-        "id": "ecommerce",
-        "name": "E-Commerce",
-        "description": "Sell your products online.",
-        "price": 120000,
+        "id": "estore",
+        "name": "The E-Store",
+        "description": "For Fashion Brands, Gadget Shops, Organic Food. (Range: ৳30k - ৳50k+)",
+        "price": 40000,
         "features": [
-          "Up to 50 Products",
-          "Payment Gateway (Bkash/SSL)",
-          "Shopping Cart & Checkout",
-          "Order Management System",
-          "User Accounts",
-          "Inventory Tracking"
+          "Full E-Commerce & 20 Product Upload",
+          "Cart, Checkout & Payment Gateway",
+          "Admin Dashboard & FB Pixel",
+          "Tech: WooCommerce or MERN Stack",
+          "Timeline: 10 - 14 Days",
+          "Maintenance: ৳4,000 - 5,000/month"
         ],
         "cta": "Start Store",
         "highlighted": false
       },
       {
-        "id": "enterprise",
-        "name": "Custom Web App",
-        "description": "Tailored software solutions.",
-        "price": 250000,
+        "id": "portal",
+        "name": "The Portal",
+        "description": "For News Portals, Coaching Centers, Community Blogs. (Range: ৳20k - ৳40k)",
+        "price": 30000,
         "features": [
-          "Custom Functionality",
-          "React/Next.js Framework",
-          "API Development",
-          "High Performance Database",
-          "Complex User Roles",
-          "Scalable Architecture"
+          "High-Volume Content Layout",
+          "Ad Spaces, News Ticker & Categories",
+          "User Engagement Features",
+          "Tech: WordPress (News Theme) or Next.js",
+          "Timeline: 7 - 12 Days",
+          "Maintenance: ৳6,000 - 7,000/month"
         ],
-        "cta": "Contact Sales",
+        "cta": "Start Project",
+        "highlighted": false
+      }
+    ],
+    "appTiers": [
+      {
+        "id": "app_mvp",
+        "name": "App MVP",
+        "description": "Validate your idea with a core feature set.",
+        "price": 30000,
+        "features": [
+          "Cross-Platform (Flutter/React Native)",
+          "Up to 5-7 Screens",
+          "User Authentication (Google/FB)",
+          "Basic API Integration",
+          "Play Store Submission",
+          "Timeline: 15 - 20 Days"
+        ],
+        "cta": "Start App",
+        "highlighted": false
+      },
+      {
+        "id": "app_business",
+        "name": "Business App",
+        "description": "Dynamic app for service/product businesses.",
+        "price": 60000,
+        "features": [
+          "Dynamic Content & Admin Panel",
+          "Push Notifications (Firebase)",
+          "Payment Gateway Integration",
+          "Google Maps & Location Services",
+          "Chat Support Integration",
+          "Timeline: 30 - 45 Days"
+        ],
+        "cta": "Start App",
+        "highlighted": true,
+        "badge": "Best Value"
+      },
+      {
+        "id": "app_ecommerce",
+        "name": "E-Com Super App",
+        "description": "Full-fledged shopping experience.",
+        "price": 90000,
+        "features": [
+          "Advanced Product Filtering",
+          "Cart, Wishlist & Order Tracking",
+          "Wallet & Coupon System",
+          "Multi-Vendor Capability (Optional)",
+          "High Performance Backend",
+          "Timeline: 45 - 60 Days"
+        ],
+        "cta": "Start App",
+        "highlighted": false
+      }
+    ],
+    "graphicsTiers": [
+      {
+        "id": "gfx_starter",
+        "name": "Identity Lite",
+        "description": "Essentials for new startups.",
+        "price": 4000,
+        "features": [
+          "2 Logo Concepts",
+          "Business Card Design",
+          "Letterhead Design",
+          "Social Media Profile Pic",
+          "Source Files (AI, EPS, PNG)",
+          "Timeline: 2 - 3 Days"
+        ],
+        "cta": "Order Now",
+        "highlighted": false
+      },
+      {
+        "id": "gfx_social",
+        "name": "Social Suite",
+        "description": "Make your Facebook/Insta look pro.",
+        "price": 10000,
+        "features": [
+          "5 Post Templates (Canva/PS)",
+          "Cover Photos (FB, LinkedIn, YT)",
+          "Story Highlight Icons",
+          "Ad Banner Designs (3 variations)",
+          "Brand Color Palette",
+          "Timeline: 4 - 5 Days"
+        ],
+        "cta": "Order Now",
+        "highlighted": true,
+        "badge": "Hot"
+      },
+      {
+        "id": "gfx_brand",
+        "name": "Full Branding",
+        "description": "Complete visual overhaul.",
+        "price": 20000,
+        "features": [
+          "Logo & Brand Guidelines Book",
+          "Complete Stationery Kit",
+          "Social Media Kit (Full)",
+          "Packaging/Label Design",
+          "Email Signature & Invoice Design",
+          "Timeline: 7 - 10 Days"
+        ],
+        "cta": "Order Now",
+        "highlighted": false
+      }
+    ],
+    "marketingTiers": [
+      {
+        "id": "mkt_social",
+        "name": "Social Starter",
+        "description": "Keep your pages active and alive.",
+        "price": 15000,
+        "features": [
+          "Manage FB & Instagram",
+          "12 Static Posts / Month",
+          "Basic Community Management",
+          "Monthly Performance Report",
+          "1 Ad Campaign Setup (Ad spend extra)",
+          "Contract: Monthly"
+        ],
+        "cta": "Subscribe",
+        "highlighted": false
+      },
+      {
+        "id": "mkt_growth",
+        "name": "Growth Engine",
+        "description": "Focus on leads and sales.",
+        "price": 30000,
+        "features": [
+          "Manage FB, Insta & LinkedIn",
+          "8 Static Posts + 4 Reels / Month",
+          "Advanced Ad Targeting & Retargeting",
+          "Competitor Analysis",
+          "Copywriting for Ads",
+          "Contract: Monthly"
+        ],
+        "cta": "Subscribe",
+        "highlighted": true,
+        "badge": "ROI Focused"
+      },
+      {
+        "id": "mkt_seo",
+        "name": "SEO & Dominance",
+        "description": "Long-term organic traffic.",
+        "price": 40000,
+        "features": [
+          "Full Website SEO Audit",
+          "On-Page & Technical SEO",
+          "4 Blog Posts / Month (SEO Optimized)",
+          "Backlink Building Strategy",
+          "Keyword Ranking Report",
+          "Contract: Monthly"
+        ],
+        "cta": "Subscribe",
         "highlighted": false
       }
     ],
@@ -470,7 +635,7 @@
         ],
         "cta": "Subscribe",
         "highlighted": true,
-        "badge": "Popular"
+        "badge": "Recommended"
       },
       {
         "id": "premium_m",
@@ -506,7 +671,7 @@
       },
       {
         "title": "Learning Budget",
-        "description": "$2,000 annual budget for courses, conferences, and books.",
+        "description": "BDT 3,500 annual budget for courses, conferences, and books.",
         "icon": "BookOpen"
       },
       {
@@ -525,24 +690,96 @@
         "icon": "Laptop"
       }
     ],
-    "openings": [
-      {
-        "id": "senior-react-dev",
-        "title": "Senior React Developer",
-        "department": "Engineering",
-        "location": "Remote",
-        "type": "Full-time",
-        "description": "We're looking for an experienced React developer to lead frontend development on our most challenging projects."
-      },
-      {
-        "id": "growth-marketer",
-        "title": "Growth Marketer",
-        "department": "Marketing",
-        "location": "Remote",
-        "type": "Full-time",
-        "description": "Join our marketing team to drive growth through data-driven strategies and creative campaigns."
-      }
-    ]
+   "openings": [
+    {
+      "id": "senior-react-dev",
+      "title": "React Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "We're looking for an React developer to lead frontend development on our most challenging projects."
+    },
+    {
+      "id": "ft-backend-dev",
+      "title": "Backend Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Architect and build scalable server-side logic, optimize APIs, and manage databases for high-performance applications."
+    },
+    {
+      "id": "ft-fullstack-dev",
+      "title": "Full Stack Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Handle end-to-end development, bridging the gap between user-facing interfaces and complex backend infrastructure."
+    },
+    {
+      "id": "mobile-app-dev",
+      "title": "Mobile App Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Build cross-platform mobile applications (Flutter/React Native) that provide seamless user experiences on iOS and Android."
+    },
+    {
+      "id": "pt-frontend-dev",
+      "title": "Frontend Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "description": "Collaborate with our team 20hrs/week to implement pixel-perfect UI designs and interactive web components."
+    },
+    {
+      "id": "pt-backend-dev",
+      "title": "Backend Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "description": "Support our core engineering team by maintaining API endpoints and assisting with database management on a flexible schedule."
+    },
+    {
+      "id": "pt-fullstack-dev",
+      "title": "Full Stack Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "description": "A flexible role for a versatile developer to tackle various feature requests and bug fixes across the entire stack."
+    },
+    {
+      "id": "web-intern",
+      "title": "Web Development Intern",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Internship",
+      "description": "A 3-6 month learning opportunity for aspiring developers to gain hands-on experience in modern web technologies and agile workflows."
+    },
+    {
+      "id": "growth-marketer",
+      "title": "Growth Marketer",
+      "department": "Marketing",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Join our marketing team to drive growth through data-driven strategies, SEO optimization, and creative campaigns."
+    },
+    {
+      "id": "sales-exec",
+      "title": "Sales Executive",
+      "department": "Sales",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Drive revenue by identifying new business opportunities, managing client relationships, and closing deals for our tech services."
+    },
+    {
+      "id": "biz-dev-mgr",
+      "title": "Business Development Manager",
+      "department": "Sales",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "Strategize and lead our market expansion efforts, forming strategic partnerships and overseeing the sales pipeline."
+    }
+  ]
   },
   "blog": {
     "posts": [
@@ -676,10 +913,12 @@
       "emailPlaceholder": "your@email.com",
       "budgetLabel": "Budget Range",
       "budgetOptions": [
-        "Under $5,000",
-        "$5,000 - $15,000",
-        "$15,000 - $50,000",
-        "$50,000+"
+        "Under BDT5,000",
+        "BDT5,000 - BDT15,000",
+        "BDT15,000 - BDT25,000",
+        "BDT25,000 - BDT40,000",
+        "BDT40,000 - BDT50,000",
+        "BDT50,000+"
       ],
       "serviceLabel": "Service Type",
       "serviceOptions": [
@@ -687,6 +926,12 @@
         "Mobile Development",
         "UI/UX Design",
         "WordPress",
+        "E-Commerce",
+        "Maintenance",
+        "SEO",
+        "Digital Marketing",
+        "Consulting",
+        "Graphics Design",
         "Other"
       ],
       "messagePlaceholder": "Tell us about your project...",
@@ -700,10 +945,19 @@
       { "platform": "GitHub", "url": "https://github.com" },
       { "platform": "Twitter", "url": "https://twitter.com" }
     ],
-    "legalLinks": [
-      { "label": "Privacy Policy", "path": "/privacy" },
-      { "label": "Terms of Service", "path": "/terms" },
-      { "label": "Cookie Policy", "path": "/cookies" }
+   "legalLinks": [
+      {
+        "label": "Privacy Policy",
+        "path": "/privacy-policy"
+      },
+      {
+        "label": "Terms & Conditions",
+        "path": "/terms-conditions"
+      },
+      {
+        "label": "Cookie Policy",
+        "path": "/cookie-policy"
+      }
     ]
   },
   "notFound": {

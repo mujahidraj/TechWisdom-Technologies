@@ -3,6 +3,7 @@ import { Target, Compass, Flag, ImageIcon, ArrowDown, Calendar } from 'lucide-re
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
+import logo from "../assets/techwisdom.png"
 
 // --- UI COMPONENTS ---
 import { Button } from '@/components/ui/button';
@@ -217,7 +218,10 @@ const AboutPage = () => {
                 transition={{ delay: i * 0.1 }} 
               >
                 <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300">
-                  <div className="h-32 bg-gradient-to-r from-blue-600 to-purple-600"></div>
+                  <div className="h-32 bg-gradient-to-r  from-blue-600 to-purple-600">
+                    <img src={logo} className="h-28 mx-auto" alt="TechWisdom Technologies" />
+                   
+                  </div>
                   <CardContent className="pt-0 relative px-6 pb-6">
                     <div className="-mt-12 mb-4 flex justify-center">
                        <Avatar className="w-24 h-24 border-4 border-background shadow-lg">
