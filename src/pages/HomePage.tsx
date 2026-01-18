@@ -238,7 +238,7 @@ const HomePage = () => {
       </section>
 
       {/* ==================== 0. ANNOUNCEMENT MARQUEE ==================== */}
-      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white py-3 overflow-hidden relative z-50 border-b border-white/10 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white py-3 overflow-hidden relative z-49 border-b border-white/10 shadow-lg">
         <motion.div
           className="flex whitespace-nowrap items-center"
           animate={{ x: ["0%", "-50%"] }}

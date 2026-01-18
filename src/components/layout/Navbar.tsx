@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight, Sun } from 'lucide-react';
 import data from '@/data.json';
 import logo from "../../assets//techwisdom.png"
 
@@ -23,11 +23,9 @@ const Navbar = () => {
             {/* --- Logo --- */}
             <Link to="/" className="flex items-center gap-1 group">
               
-              <img src={logo} className='w-20' alt="" />
+              <img src={logo} className='w-32 h-12' alt="" />
                
-              <span className="text-lg font-bold tracking-tight text-white">
-                Tech<span className="text-orange-500">Wisdom</span>
-              </span>
+              
             </Link>
 
             {/* --- Desktop Navigation --- */}
@@ -54,9 +52,9 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <Link
                 to="/contact"
-                className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-medium text-sm hover:bg-blue-500 transition-colors shadow-md shadow-blue-500/20"
+                className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 text-white font-medium text-sm hover:bg-blue-500 transition-colors shadow-md shadow-blue-500/20"
               >
-                <span>Start Project</span>
+                <span className='flex gap-1.5'><Sun size={20}></Sun>Start Project</span>
               </Link>
 
               <button

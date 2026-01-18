@@ -38,7 +38,7 @@ const AboutPage = () => {
             </Badge>
             
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
-              We Are <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">{data.site.name}</span>
+              We Are <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">{data.site.name}</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light">

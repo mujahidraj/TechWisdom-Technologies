@@ -150,7 +150,7 @@ const Footer = () => {
         </div>
 
         {/* --- Bottom Bar --- */}
-        <div className="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-evenly items-center gap-4">
           <p className="text-slate-500 text-sm text-center md:text-left">
             © {currentYear} <span className="text-slate-300 font-medium">{companyName}</span>. All rights reserved.
           </p>
