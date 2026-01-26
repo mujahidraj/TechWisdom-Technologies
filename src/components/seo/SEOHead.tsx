@@ -30,7 +30,7 @@ const SEOHead = ({
   const pageImage = image ? `${siteUrl}${image}` : `${siteUrl}/social-preview.png`; // Fallback to a default image
   
   // 2. Merge Default Keywords with Page Keywords
-  const baseKeywords = ["Web Development", "TechWisdom", "Software Agency", "Bangladesh","Web Development agency", "Tech Wisdom", "Software Agency in Bangladesh", "Bangladesh website development"];
+  const baseKeywords = ["Web Development", "TechWisdom", "Software Agency", "Bangladesh","Web Development agency", "Tech Wisdom", "Software Agency in Bangladesh", "Bangladesh website development", "TechWisdom Technologies", "Tech Wisdom", "Twtech", "Web Development Agency", "Custom Software Development", "Mobile App Development", "React Developer", "Node.js Expert", "Digital Trust Solutions", "UI/UX Design", "Graphics Designing", "Digital Marketing Agency", "SEO Services", "Full Stack Developer", "MERN Stack", "Software Company Bangladesh", "Tech Consultancy", "Enterprise Software", "E-commerce Solutions", "Mujahid Rashid Raj", "Website Redesign", "API Integration", "Cloud Solutions", "SaaS Development", "IT Support", "Startup Tech Partner", "Agile Development", "CMS Development" , 	"Responsive Web Design" , 	"Tech Solutions Global" , 	"Offshore Development" , 	"Software Outsourcing" , 	"Tech Innovation" , 	"Web Application Development"];
   const allKeywords = [...baseKeywords, ...keywords].join(", ");
 
   // 3. Structured Data (JSON-LD) for Google Rich Results
