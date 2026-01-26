@@ -22,7 +22,7 @@ const SEOHead = ({ title, description, path = '' }: SEOHeadProps) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <link rel="canonical" href={`https://nexgendigital.com${path}`} />
+      <link rel="canonical" href={`https://techwisdom.site/`} />
     </Helmet>
   );
 };
