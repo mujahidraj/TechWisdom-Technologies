@@ -9,7 +9,9 @@ import {
   Phone, 
   Heart, 
   ArrowRight,
-  Send
+  Send,
+  PhoneCall,
+  MessageCircle
 } from 'lucide-react';
 import data from '@/data.json';
 import logo from "../../assets/techwisdom.png"
@@ -141,10 +143,16 @@ const Footer = () => {
                 <MapPin size={18} className="text-blue-500 mt-0.5 shrink-0" />
                 <span>{site.address}</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-slate-400">
+              <div className='flex gap-2'>
+                <li className="flex items-start gap-3 text-sm text-slate-400">
                 <Phone size={18} className="text-blue-500 mt-0.5 shrink-0" />
                 <span>{site.phone}</span>
               </li>
+              <li className="flex items-start gap-3 text-sm text-slate-400">
+                <MessageCircle size={18} className="text-blue-500 mt-0.5 shrink-0" />
+                <span>{site.phone}</span>
+              </li>
+              </div>
             </ul>
           </div>
         </div>
