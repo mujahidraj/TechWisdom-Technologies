@@ -299,11 +299,11 @@ const HomePage = () => {
           <p className="text-center text-slate-400 text-sm font-semibold uppercase tracking-widest mb-6">
             Trusted by industry leaders
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
             {partners.map((p, i) => (
-              <div key={i} className="text-xl md:text-2xl font-bold text-slate-800 flex items-center gap-2">
-                 <div className="w-8 h-8 bg-slate-200 rounded-full" /> 
+              <div key={i} className="text-xl md:text-xl font-bold text-slate-800 flex flex-col-reverse items-center gap-2">
                  {p.name}
+                 <img src={p.logo} className='h-10 rounded-full' alt={p.name} />
               </div>
             ))}
           </div>

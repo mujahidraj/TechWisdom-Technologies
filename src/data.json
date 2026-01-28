@@ -73,9 +73,11 @@
     }
   },
   "partners": [
-    { "name": "TechCorp", "logo": "https://techcorp.lk/wp-content/uploads/2021/02/Logo.png" },
-    { "name": "InnovateCo", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHz8vsjLhLRro7EGW2GUarqopRK99tJB9qTg&s" },
-    { "name": "FutureStack", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSIEA1iexFaGgyWxVPjrBStJMStUPVTnmh2Q&s" }
+    { "name": "New Life Style", "logo": "https://i.postimg.cc/13QXt4ys/Untitled-design.png" },
+    { "name": "InnovateCo Tech", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHz8vsjLhLRro7EGW2GUarqopRK99tJB9qTg&s" },
+    { "name": "New Bangladesh Group", "logo": "https://i.postimg.cc/MHzxwfyR/logo.png" },
+    { "name": "Juta Express", "logo": "https://i.postimg.cc/yY5hrmhx/juta-express.jpg" },
+    { "name": "Cambry BD", "logo": "https://i.postimg.cc/QCz7wD7B/cambry.jpg" }
   ],
   "whyUs": [
     {
