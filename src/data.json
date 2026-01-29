@@ -963,6 +963,333 @@
       }
     ]
   },
+  
+  "demoProjects": [
+    {
+    "id": "sa-demo-1",
+    "title": "Pathfinder Global",
+    "category": "Consultancy",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000",
+    "shortDescription": "Lead-conversion engine for study abroad aspirants.",
+    "fullDescription": "A high-performance recruitment portal for international students. It features a split-hero layout with a floating lead form and a dynamic partner university logo marquee for instant credibility.",
+    "liveLink": "https://techwisdom-study-abroad-demo-1.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript", "AOS.js"],
+    "features": [
+      "Dynamic Hero Marquee",
+      "Interactive Consultation Form",
+      "Service Cards with Icon Hover",
+      "Scroll-Reveal Animations"
+    ],
+    "designUnique": "Utilized a 'Professional Blue' palette with sharp, corporate edges to convey trust and academic reliability.",
+    "developmentProcess": "Implemented asynchronous loading for the university marquee to ensure zero impact on page load speed."
+  },
+  {
+    "id": "sa-demo-2",
+    "title": "ScholarGate",
+    "category": "Consultancy",
+    "image": "https://kennedyeducation.com/wp-content/uploads/2021/04/banner-m.jpg",
+    "shortDescription": "Information-rich university exploration dashboard.",
+    "fullDescription": "Demo 2 focuses on data density. It provides detailed country guides and an interactive university search bar, designed for students in the deep research phase of their application.",
+    "liveLink": "https://techwisdom-study-abroad-demo-2.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript", "Typed.js"],
+    "features": [
+      "Typed.js Search Integration",
+      "Comprehensive Country Grids",
+      "Scholarship Availability Badges",
+      "Multi-Branch Footer Navigation"
+    ],
+    "designUnique": "Academic minimalist style using 'Scholar Gold' accents on a crisp, bright layout for readability.",
+    "developmentProcess": "Created a lightweight JavaScript object-search to filter through country categories instantly."
+  },
+  {
+    "id": "sa-demo-3",
+    "title": "VisaBridge",
+    "category": "Consultancy",
+    "image": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1000",
+    "shortDescription": "Logistics hub for visa processing and document vetting.",
+    "fullDescription": "This portal simplifies the complex document chain required for global visas. It features interactive roadmaps, document checklists, and embassy interview resources.",
+    "liveLink": "https://techwisdom-study-abroad-demo-3.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Step-by-Step Roadmap UI",
+      "Interactive Document Checklists",
+      "Embedded Google Maps Locator",
+      "Process FAQ Accordions"
+    ],
+    "designUnique": "Instructional design style using 'Safety Teal' to reduce student anxiety throughout the legal process.",
+    "developmentProcess": "Developed a custom accordion system in vanilla JS to manage heavy information without vertical clutter."
+  },
+  {
+    "id": "sa-demo-4",
+    "title": "GlobalLife Student Hub",
+    "category": "Consultancy",
+    "image": "https://blog.adventus.io/hs-fs/hubfs/image%201.png?width=2101&height=1051&name=image%201.png",
+    "shortDescription": "Community-focused pre-departure portal.",
+    "fullDescription": "Demo 4 focuses on student lifestyle after landing. It covers student alumni networks, job hunting tips, and accommodation search in a vibrant, community-first layout.",
+    "liveLink": "https://techwisdom-study-abroad-demo-4.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Alumni Success Grid",
+      "WhatsApp Chat Routing",
+      "Pre-departure Toolkits",
+      "Student Life Video Hub"
+    ],
+    "designUnique": "Vibrant and energetic design using rounded corners and warm gradients to appeal to the Gen-Z demographic.",
+    "developmentProcess": "Optimized mobile navigation for a 'one-thumb' user experience, prioritizing instant social connectivity."
+  },
+  {
+    "id": "re-demo-1",
+    "title": "Canvas Real Estate",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000",
+    "shortDescription": "Art-gallery inspired property marketplace.",
+    "fullDescription": "Canvas treats every home as a masterpiece. It uses high whitespace and oversized typography to create a sophisticated architectural feel.",
+    "liveLink": "https://canvas-real-estate-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Gallery-Style Property Cards",
+      "Oversized Visual Headers",
+      "Architectural Detail Tabs",
+      "Minimalist Grid System"
+    ],
+    "designUnique": "Blank slate philosophy: Pure white backgrounds with charcoal typography to let property photos dominate.",
+    "developmentProcess": "Utilized advanced CSS grid systems to create a non-uniform masonry layout for visually striking previews."
+  },
+  {
+    "id": "re-demo-2",
+    "title": "UrbanAddress",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000",
+    "shortDescription": "Connectivity-first urban search engine.",
+    "fullDescription": "Focused on the practicalities of Dhaka living, UrbanAddress highlights metro rail access, commute efficiency, and neighborhood safety rankings.",
+    "liveLink": "https://urbanaddress-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Commute-Time Search Logic",
+      "Metro Station Proximity Filter",
+      "Neighborhood Safety Badges",
+      "Simplified Property Listings"
+    ],
+    "designUnique": "Corporate efficiency design using 'Transit Blue' and high-readability sans-serif fonts.",
+    "developmentProcess": "Built a JavaScript sorting engine that prioritizes listings based on coordinate proximity to business hubs."
+  },
+  {
+    "id": "re-demo-3",
+    "title": "Vista Properties",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=1000",
+    "shortDescription": "Scenic and panoramic property showcase.",
+    "fullDescription": "Vista focuses on the 'View-First' experience. It prioritizes penthouses, lake-facing units, and high-rise panoramic apartments with an immersive UI.",
+    "liveLink": "https://vista-properties-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Full-Bleed Visual Sections",
+      "Sunlight Exposure Data",
+      "Panoramic Video Backgrounds",
+      "Site-Visit Booking Module"
+    ],
+    "designUnique": "Immersive frameless design where every image stretches the full width of the browser.",
+    "developmentProcess": "Applied CSS aspect-ratio hacks to maintain panoramic scale across mobile and desktop screens."
+  },
+  {
+    "id": "re-demo-4",
+    "title": "Greenleaf Estate",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1000",
+    "shortDescription": "Sustainable and eco-conscious housing portal.",
+    "fullDescription": "The green-standard for real estate in Bangladesh. It emphasizes energy efficiency, vertical gardens, and LEED-certified building standards.",
+    "liveLink": "https://greenleaf-estate-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Energy Efficiency Rating Filter",
+      "Solar Potential Calculator",
+      "Green-Space Percentage View",
+      "Sustainability Audit Badges"
+    ],
+    "designUnique": "Organic Modernism using a palette of Sage Green, Charcoal, and Off-White.",
+    "developmentProcess": "Created a custom 'Eco-Meter' JS logic that visualizes long-term utility savings per property."
+  },
+  {
+    "id": "re-demo-5",
+    "title": "Nexus Real Estate",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000",
+    "shortDescription": "Smart-home and tech-ready living portal.",
+    "fullDescription": "Nexus targets tech-savvy professionals. Listings focus on IoT readiness, fiber optics, and automated building management systems.",
+    "liveLink": "https://nexus-real-estate-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Home Automation Checklist",
+      "Smart-Tech Capability Badges",
+      "Interactive Tech-Plan Viewer",
+      "High-Speed Connectivity Stats"
+    ],
+    "designUnique": "High-tech aesthetic with sharp edges, deep grays, and neon-emerald accents.",
+    "developmentProcess": "Built an interactive 'Smart-Feature' toggle that changes floorplan visuals to show gadget placement."
+  },
+  {
+    "id": "re-demo-6",
+    "title": "Urban Elite",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1000",
+    "shortDescription": "Luxury villa and gated community portal.",
+    "fullDescription": "Urban Elite focuses on horizontal living: private villas, duplexi, and secured gated estates with high-level amenity analysis.",
+    "liveLink": "https://urban-elite-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Amenity Spotlight Interaction",
+      "Security Grade Visualization",
+      "Private Land Title Verification",
+      "VIP Concierge Booking Form"
+    ],
+    "designUnique": "Prestigious Navy-and-Gold color scheme with large, elegant serif typography.",
+    "developmentProcess": "Coded a 'Gated' content section that requires lead-capture to view specific community map details."
+  },
+  {
+    "id": "re-demo-7",
+    "title": "Nogor Real Estate",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=1000",
+    "shortDescription": "Affordable housing and apartment hub.",
+    "fullDescription": "Focused on the middle-income segment in Uttara, Mirpur, and Bashundhara. Prioritizes bank-loan projects and easy installment plans.",
+    "liveLink": "https://nogor-real-estate-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Installment Plan Generator",
+      "Loan Eligibility Wizard",
+      "Ready-to-Move Filter",
+      "Local Area-wise Pricing Tool"
+    ],
+    "designUnique": "Warm, approachable UI using local cultural tones and high-readability layout.",
+    "developmentProcess": "Implemented a simplified mortgage calculator using a 'Single-Field' entry for mass-market accessibility."
+  },
+  {
+    "id": "re-demo-8",
+    "title": "Legacy Holding",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000",
+    "shortDescription": "Trust-centric corporate real estate portal.",
+    "fullDescription": "A platform for long-term investors. It focuses on freehold land and heritage properties with massive appreciation potential and clean titles.",
+    "liveLink": "https://legacy-holding-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Historical Appreciation Charts",
+      "Title Deed Verification Desk",
+      "Joint Venture Analysis Hub",
+      "Investor Portfolio Tracker"
+    ],
+    "designUnique": "Stable corporate aesthetic with heavy borders and emerald tones to convey permanent value.",
+    "developmentProcess": "Built a specialized 'Audit Timeline' that shows the legal progress of properties in real-time."
+  },
+  {
+    "id": "re-demo-9",
+    "title": "Brick & Beams",
+    "category": "Real Estate",
+    "image": "https://media.istockphoto.com/id/2006238006/photo/real-estate-agent-showing-a-new-home-to-prospective-buyers.jpg?s=612x612&w=0&k=20&c=_jRsxLqVVyWMRS8-JxvhetdAgk5crzOQS55JLCElMzI=",
+    "shortDescription": "Technical and structural project showcase.",
+    "fullDescription": "Focused on construction quality. It provides deep-dives into materials used, beam strength, and finish standards for engineering-conscious buyers.",
+    "liveLink": "https://brickandbeams-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Before/After Build Slider",
+      "Material Specification Breakdown",
+      "Structural Safety Badges",
+      "Site-Log Video Integration"
+    ],
+    "designUnique": "Blueprint-inspired UI with grid-line backgrounds and technical monospaced fonts.",
+    "developmentProcess": "Developed a custom vanilla JS slider to visualize the layering of building finishes (Raw to Ready)."
+  },
+  {
+    "id": "re-demo-10",
+    "title": "MetroSpace",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1000",
+    "shortDescription": "Dhaka Metro Rail-centric property portal.",
+    "fullDescription": "Capitalizing on the new transit infrastructure. MetroSpace helps users find properties within walking distance of any Metro station.",
+    "liveLink": "https://metrospace-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "MRT Station-Proximity Engine",
+      "Walking-Time Estimation Logic",
+      "ROI Comparison Map",
+      "Transit-Connected Badges"
+    ],
+    "designUnique": "Modern transit-style UI with 'Signal Green' highlights and fast-paced layout.",
+    "developmentProcess": "Scripted a coordinate-based logic that calculates walking time between listings and the nearest MRT exit."
+  },
+  {
+    "id": "re-demo-11",
+    "title": "Onyx Realty",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000",
+    "shortDescription": "Elite dark-mode penthouse portal.",
+    "fullDescription": "A boutique agency portal for the top 1% of the market. Onyx focuses on bespoke penthouses, private elevators, and diplomatic zone listings.",
+    "liveLink": "https://onyx-realty-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Privacy-Shield Pricing Logic",
+      "Private Viewing Concierge",
+      "Cinematic Section Reveals",
+      "Expat Document Support Desk"
+    ],
+    "designUnique": "Bold black-on-black aesthetic with 'Onyx Gold' highlights and deep drop-shadows.",
+    "developmentProcess": "Used the Intersection Observer API to create a cinematic 'fade-and-scale' reveal for property headers."
+  },
+  {
+    "id": "re-demo-12",
+    "title": "Urban Void",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000",
+    "shortDescription": "Avant-garde minimalist dark-mode real estate.",
+    "fullDescription": "The pinnacle of dark luxury. Urban Void uses 'Negative Space' as a primary element, making property photography feel curated and elite.",
+    "liveLink": "https://urbanvoid-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Zinc-Cyan Palette Integration",
+      "Dynamic BDT Mortgage Engine",
+      "Via Dalil Chain Visualizer",
+      "Registration Fee Calculator"
+    ],
+    "designUnique": "Pure Zinc-950 background with Electric Cyan accents. Minimalist text, high-impact visuals.",
+    "developmentProcess": "Developed a custom BDT calculation engine for registration fees based on current government tax SROs."
+  },
+  {
+    "id": "re-demo-13",
+    "title": "Zenith Estates",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000",
+    "shortDescription": "Light-minimalist luxury life-style portal.",
+    "fullDescription": "Zenith focuses on 'Organic Luxury'. It features high-trust legal vetting, a sand-and-terracotta palette, and sophisticated editorial guides.",
+    "liveLink": "https://zenith-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Live Interest Rate Ticker",
+      "50% DBR Eligibility Checker",
+      "Document Checklist Switcher",
+      "Construction Progress Tracking"
+    ],
+    "designUnique": "Editorial magazine layout using warm natural tones and high-end serif typography.",
+    "developmentProcess": "Implemented a scroll-based construction progress visualizer using pure CSS transitions and JS observers."
+  },
+  {
+    "id": "re-demo-14",
+    "title": "Aura Realty",
+    "category": "Real Estate",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000",
+    "shortDescription": "Organic modernism in property management.",
+    "fullDescription": "Aura Realty blends urban life with nature. Designed for modern buyers who prioritize eco-ethics, clean aesthetics, and sustainable luxury.",
+    "liveLink": "https://aura-realty-twtech.netlify.app/",
+    "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
+    "features": [
+      "Organic Scroll Reveal Tech",
+      "ROI Projection Growth Engine",
+      "Via Dalil Chain Visualizer",
+      "Branch Navigation Map"
+    ],
+    "designUnique": "Utilizes large 60px border-radii, forest green accents, and a pearl-white backdrop.",
+    "developmentProcess": "Scripted a 5-year capital growth calculator in JS based on neighborhood-specific historical growth data."
+  }
+  ],
   "notFound": {
     "title": "Page Not Found",
     "description": "Oops! The page you're looking for seems to have wandered off into the digital void.",

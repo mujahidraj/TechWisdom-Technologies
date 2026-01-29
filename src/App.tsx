@@ -17,6 +17,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import DemoProjects from './pages/DemoProjects';
+import DemoProjectDetails from './pages/DemoProjectDetails';
 
 const queryClient = new QueryClient();
 
@@ -39,7 +41,9 @@ const App = () => (
             <Route path="/blog/:id" element={<BlogPostPage></BlogPostPage>} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route path="/demo-projects" element={<DemoProjects />} />
+            <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
