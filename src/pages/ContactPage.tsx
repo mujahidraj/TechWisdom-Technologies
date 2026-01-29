@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, MessageSquare, ArrowRight, Clock } from 'lucide-react';
-import emailjs from '@emailjs/browser'; // Import EmailJS
+import emailjs from '@emailjs/browser'; 
 
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
 
-// --- YOUR UI COMPONENTS ---
+// --- UI COMPONENTS ---
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -17,7 +17,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { toast } from 'sonner'; // Optional: Use a toast library if you have one, or stick to alert
 
 const ContactPage = () => {
   const { contact, site } = data;
@@ -37,13 +36,10 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // --- EMAILJS CONFIGURATION ---
-    // Replace these strings with your actual IDs from the EmailJS dashboard
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Prepare the data object to match your EmailJS template variables
     const templateParams = {
       to_name: 'Mujahid Raj',
       from_name: formData.name,
@@ -55,10 +51,8 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
-      
-      // Success Feedback
       alert('Message sent successfully! We will get back to you soon.'); 
-      setFormData({ name: '', email: '', budget: '', service: '', message: '' }); // Reset form
+      setFormData({ name: '', email: '', budget: '', service: '', message: '' }); 
     } catch (error) {
       console.error('Email Error:', error);
       alert('Failed to send message. Please try again or email us directly.');
@@ -71,9 +65,8 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     <Layout>
       <SEOHead title="Contact Us - Let's Talk" description={contact.subheadline} path="/contact" />
       
-      {/* ==================== 1. HERO SECTION (No Overlap) ==================== */}
+      {/* ==================== 1. HERO SECTION ==================== */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-[#0f172a] text-white">
-        {/* Background Effects */}
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none" />
@@ -275,7 +268,7 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full h-14 text-lg font-semibold bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/20"
+                      className="w-full h-14 text-lg font-semibold bg-blue-600 hover:bg-blue-50 shadow-lg shadow-blue-600/20"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : (
@@ -293,7 +286,26 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
         </div>
       </section>
 
-      {/* ==================== 3. ALTERNATIVE CTA SECTION ==================== */}
+      {/* ==================== 3. FULL WIDTH MAP SECTION (AIUB) ==================== */}
+      <section className="w-full h-[500px] bg-slate-100 border-t border-slate-200 relative z-10">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299.801090513912!2d90.41885220760057!3d23.822135370841533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c711d13bbec7%3A0xc47f7c3e8e2263f2!2sAmerican%20International%20University%20-%20Bangladesh%20(AIUB)!5e0!3m2!1sen!2sbd!4v1769725882857!5m2!1sen!2sbd"
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen={true} 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="grayscale hover:grayscale-0 transition-all duration-700"
+          title="AIUB Campus Map"
+        ></iframe>
+        
+        {/* Optional Overlay to make map interact on click/hover if needed, 
+            removed for now to allow scrolling over it 
+        */}
+      </section>
+
+      {/* ==================== 4. ALTERNATIVE CTA SECTION ==================== */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container text-center px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-3">Not ready to start a project?</h2>
