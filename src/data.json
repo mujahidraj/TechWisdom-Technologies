@@ -966,6 +966,29 @@
   
   "demoProjects": [
     {
+  "id": "nova-strategy",
+  "title": "Nova Strategy",
+  "category": "Corporate Agency",
+  "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
+  "shortDescription": "Clean, trust-focused portfolio for B2B & corporate clients.",
+  "fullDescription": "A 7-page 'Clean Corporate' website designed for high-end B2B clients in Bangladesh. It features a transparent pricing model, a project cost estimator, and a formal 'Company Profile' page, utilizing a 'Trust Blue & Slate Gray' palette to signal stability.",
+  "liveLink": "https://twtech-hub.github.io/NOVA.-Digital-Marketing-D5/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "Google Maps API"
+  ],
+  "features": [
+    "Project Cost Estimator",
+    "Sticky Service Navigation",
+    "Before/After Case Study Slider",
+    "Detailed Service Accordions"
+  ],
+  "designUnique": "Adopted a 'Clarity & Growth' philosophy with generous whitespace, the Plus Jakarta Sans typeface, and a restrained color palette to appeal to corporate decision-makers (Banks, Real Estate, FMCG).",
+  "developmentProcess": "Built a custom tab-switching logic for the services page and a dynamic budget calculator in vanilla JS to provide immediate value to potential leads without page reloads."
+},
+    {
     "id": "sa-demo-1",
     "title": "Pathfinder Global",
     "category": "Consultancy",
@@ -983,6 +1006,98 @@
     "designUnique": "Utilized a 'Professional Blue' palette with sharp, corporate edges to convey trust and academic reliability.",
     "developmentProcess": "Implemented asynchronous loading for the university marquee to ensure zero impact on page load speed."
   },
+  {
+  "id": "vortex-digital",
+  "title": "Vortex Digital",
+  "category": "Performance Agency",
+  "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
+  "shortDescription": "Cyber-industrial portfolio for a high-performance ad agency.",
+  "fullDescription": "An 8-page 'Cyber-Industrial' agency website designed for high-growth Bangladeshi brands. Features a command-center aesthetic with glitch effects, live ROI calculators, and a tactical service matrix, wrapped in a 'Deep Carbon & Neon Lime' dark mode.",
+  "liveLink": "https://twtech-hub.github.io/VORTEX.-Digital-Agency-D2/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "Canvas API"
+  ],
+  "features": [
+    "Live Ad Budget Simulator",
+    "Holo-Tab Service Matrix",
+    "Glitch-Reveal Team Cards",
+    "Command-Line Resource Search"
+  ],
+  "designUnique": "Utilized a 'Deep Carbon' (#09090b) background with 'Neon Lime' (#ccff00) accents, featuring a custom cursor and monospaced typography to simulate a high-tech tactical interface.",
+  "developmentProcess": "Implemented vanilla JS for the complex 'Budget Allocator' logic and used the HTML5 Canvas API for the 'Matrix Rain' effect to ensure high performance without heavy libraries."
+},
+{
+  "id": "synapse-systems",
+  "title": "Synapse Systems",
+  "category": "MarTech Agency",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
+  "shortDescription": "Algorithmic marketing portfolio with SaaS-style architecture.",
+  "fullDescription": "An 8-page 'Quantum Tech' agency website designed to look like a high-end software dashboard. It features a developer-docs style resource hub, a 'Tech Radar' visualization, and a 'Resource Allocator' calculator, wrapped in a 'Midnight Navy & Plasma Blue' aesthetic.",
+  "liveLink": "https://twtech-hub.github.io/SYNAPSE.SYS-Digital-System-D3/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "Canvas API"
+  ],
+  "features": [
+    "Grid Torch Cursor Effect",
+    "Interactive Tech Radar",
+    "Resource Allocator Calculator",
+    "Documentation-Style Blog"
+  ],
+  "designUnique": "Adopted a 'Digital Grid' philosophy using JetBrains Mono typography, glassmorphism panels, and a reactive background grid to appeal to tech-savvy founders.",
+  "developmentProcess": "Engineered a custom 'ScrollSpy' navigation for the services page and a vanilla JS 'Torch' effect to simulate a dynamic lighting system on the grid background."
+},
+{
+  "id": "lumina-creative",
+  "title": "Lumina Creative",
+  "category": "Creative Agency",
+  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
+  "shortDescription": "Vibrant, artistic portfolio for a high-energy creative agency.",
+  "fullDescription": "An 8-page 'Prismatic Pop' agency website designed to stand out in the Bangladeshi market. Features include a chameleon background that shifts colors, a masonry grid portfolio, and a 'Vibe Meter' for team culture, all wrapped in a 'Royal Purple & Solar Orange' aesthetic.",
+  "liveLink": "https://twtech-hub.github.io/LUMINA.-Digital-Marketing-D4/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "CSS Gradients"
+  ],
+  "features": [
+    "Chameleon Background Effect",
+    "Masonry Grid Gallery",
+    "Interactive Vibe Meter",
+    "Floating Input Animations"
+  ],
+  "designUnique": "Utilized a 'Prismatic Pop' philosophy with deep purple backgrounds and vibrant gradients (Solar Orange, Laser Pink) to convey high energy and artistic flair.",
+  "developmentProcess": "Implemented a vanilla JS scroll listener to dynamically change the background gradient based on the active section, creating an immersive 'chameleon' effect without heavy libraries."
+},
+  {
+  "id": "nexus-growth",
+  "title": "Nexus Growth Agency",
+  "category": "Digital Agency",
+  "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000",
+  "shortDescription": "High-performance digital agency portfolio with ROI tools.",
+  "fullDescription": "A 7-page 'Neo-Minimalist' agency website designed for the Bangladeshi market. Features include an interactive service ecosystem, real-time ad budget ROI calculator, and a dynamic case study filtering system, all wrapped in a 'Frost & Indigo' glassmorphism aesthetic.",
+  "liveLink": "https://twtech-hub.github.io/NEXUS-GROWTH.-Digital-D1/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "FontAwesome"
+  ],
+  "features": [
+    "Real-Time Ad ROI Calculator",
+    "Interactive Service Stack Tabs",
+    "Masonry Case Study Grid",
+    "Smart Office Map Switcher"
+  ],
+  "designUnique": "Utilized a 'Neo-Minimalist' philosophy with Frost White backgrounds and Indigo accents (#4f46e5) to signal high-tech performance and data precision.",
+  "developmentProcess": "Built custom vanilla JS modules for the pricing toggles and ROI logic to ensure instant interactivity without heavy framework overhead."
+},
   {
     "id": "sa-demo-2",
     "title": "ScholarGate",
@@ -1008,7 +1123,7 @@
     "image": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=1000",
     "shortDescription": "Logistics hub for visa processing and document vetting.",
     "fullDescription": "This portal simplifies the complex document chain required for global visas. It features interactive roadmaps, document checklists, and embassy interview resources.",
-    "liveLink": "https://techwisdom-study-abroad-demo-3.netlify.app/",
+    "liveLink": "https://twtech-hub.github.io/Sonar-Bangla-Education-Consultancy-D4/",
     "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
     "features": [
       "Step-by-Step Roadmap UI",
@@ -1038,13 +1153,36 @@
     "developmentProcess": "Optimized mobile navigation for a 'one-thumb' user experience, prioritizing instant social connectivity."
   },
   {
+  "id": "traffic-matrix",
+  "title": "Traffic Matrix",
+  "category": "Performance Agency",
+  "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
+  "shortDescription": "Neo-Brutalist, high-contrast portfolio for a performance marketing agency.",
+  "fullDescription": "A 7-page 'Neo-Brutalist' website that rejects modern design trends for a raw, high-conversion aesthetic. Featuring sharp borders, high-contrast colors (Yellow/Black), and utilitarian interactions, it is designed for agencies that focus purely on ROI and Sales data.",
+  "liveLink": "https://twtech-hub.github.io/TRAFFICMATRIX-Digital-D6/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript",
+    "CSS Filters"
+  ],
+  "features": [
+    "ROAS Calculator",
+    "Terminal-Style Interactions",
+    "Confidential Case File Modals",
+    "Glitch Text Effects"
+  ],
+  "designUnique": "Utilizes a 'Anti-Design' philosophy with 0px border radius, thick 3px outlines, and hard shadows to convey a 'no-nonsense' approach to business.",
+  "developmentProcess": "Implemented vanilla JS for raw, snappy tab switching and a typewriter effect for form submission to mimic a command-line interface."
+},
+  {
     "id": "re-demo-1",
     "title": "Canvas Real Estate",
     "category": "Real Estate",
     "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000",
     "shortDescription": "Art-gallery inspired property marketplace.",
     "fullDescription": "Canvas treats every home as a masterpiece. It uses high whitespace and oversized typography to create a sophisticated architectural feel.",
-    "liveLink": "https://canvas-real-estate-twtech.netlify.app/",
+    "liveLink": "https://twtech-hub.github.io/Canvas-Real-Estate-D1/",
     "techStack": ["HTML5", "Tailwind CSS", "JavaScript"],
     "features": [
       "Gallery-Style Property Cards",
