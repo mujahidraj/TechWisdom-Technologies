@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User, WifiOff, Zap } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User, WifiOff, Zap, Sparkles } from 'lucide-react';
 import data from '@/data.json'; 
 
 // --- CONFIGURATION ---
@@ -152,6 +152,7 @@ const FloatingChatButton = () => {
   };
 
   return (
+ 
     <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4 font-sans">
       <AnimatePresence>
         {isOpen && (
@@ -159,49 +160,68 @@ const FloatingChatButton = () => {
             initial={{ opacity: 0, scale: 0.9, y: 20, transformOrigin: "bottom right" }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="w-[90vw] md:w-[22rem] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col h-[500px] max-h-[80vh]"
+            className="w-[90vw] md:w-[24rem] bg-[#020617]/90 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 flex flex-col h-[600px] max-h-[80vh] ring-1 ring-white/5"
           >
             {/* HEADER */}
-            <div className="bg-[#0f172a] p-4 flex items-center justify-between shrink-0">
+            <div className="bg-slate-900/50 p-4 flex items-center justify-between shrink-0 border-b border-white/10">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-500/20 ring-1 ring-white/10">
                     <Bot size={20} />
                   </div>
-                  <span className={`absolute bottom-0 right-0 w-3 h-3 border-2 border-[#0f172a] rounded-full ${useLocalLogic ? 'bg-yellow-500' : 'bg-green-500 animate-pulse'}`}></span>
+                  <span className={`absolute bottom-0 right-0 w-3 h-3 border-2 border-slate-900 rounded-full ${useLocalLogic ? 'bg-yellow-500' : 'bg-emerald-500 shadow-[0_0_8px_#10b981]'}`}>
+                    {!useLocalLogic && <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75"></span>}
+                  </span>
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-sm">{data.site.name} Support</h3>
-                  <div className="flex items-center gap-1 text-blue-200 text-xs">
-                    {useLocalLogic ? <WifiOff size={10} /> : <Zap size={10} />}
-                    <span>{useLocalLogic ? 'TechWisdom AI Sleeping' : 'TechWisdom AI Online'}</span>
+                  <h3 className="text-white font-bold text-sm tracking-wide">{data.site.name} AI</h3>
+                  <div className="flex items-center gap-1.5 text-xs">
+                    {useLocalLogic ? (
+                      <span className="text-yellow-400 flex items-center gap-1"><WifiOff size={10} /> Offline Mode</span>
+                    ) : (
+                      <span className="text-emerald-400 flex items-center gap-1"><Zap size={10} /> Online & Ready</span>
+                    )}
                   </div>
                 </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-colors bg-white/10 p-1.5 rounded-full">
+              <button 
+                onClick={() => setIsOpen(false)} 
+                className="text-slate-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full"
+              >
                 <X size={18} />
               </button>
             </div>
             
             {/* MESSAGES */}
-            <div className="flex-1 overflow-y-auto p-4 bg-slate-50/50 space-y-4">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-transparent scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+              <div className="text-center text-xs text-slate-500 my-4 flex items-center gap-2 justify-center">
+                <Sparkles size={12} /> Powered by TechWisdom AI
+              </div>
+
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div className={`flex items-end gap-2 max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] text-white ${msg.sender === 'user' ? 'bg-slate-400' : 'bg-blue-600'}`}>
+                    <div className={`w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] text-white shadow-sm ${
+                      msg.sender === 'user' 
+                        ? 'bg-slate-700' 
+                        : 'bg-gradient-to-br from-blue-600 to-purple-600'
+                    }`}>
                       {msg.sender === 'user' ? <User size={12} /> : <Bot size={12} />}
                     </div>
-                    <div className={`rounded-2xl px-4 py-3 text-sm shadow-sm ${
-                      msg.sender === 'user' ? 'bg-slate-900 text-white rounded-br-none' : 'bg-white text-slate-700 rounded-bl-none border border-slate-100'
+                    <div className={`rounded-2xl px-4 py-3 text-sm shadow-md leading-relaxed border ${
+                      msg.sender === 'user' 
+                        ? 'bg-blue-600 border-blue-500 text-white rounded-br-none' 
+                        : 'bg-slate-800/80 border-white/10 text-slate-200 rounded-bl-none backdrop-blur-md'
                     }`}>
                       <span className="whitespace-pre-wrap">{msg.text}</span>
                     </div>
                   </div>
                 </div>
               ))}
+              
               {isTyping && (
                 <div className="flex justify-start">
-                   <div className="bg-white border border-slate-100 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm flex gap-1 items-center ml-8">
+                   <div className="bg-slate-800/80 border border-white/10 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm flex gap-1.5 items-center ml-8 backdrop-blur-md">
                       <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
                       <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
                       <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
@@ -212,13 +232,13 @@ const FloatingChatButton = () => {
             </div>
 
             {/* QUICK ACTIONS */}
-            <div className="px-4 py-2 bg-slate-50 border-t border-slate-100">
-               <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar mask-fade">
+            <div className="px-4 py-3 bg-slate-900/30 border-t border-white/5 backdrop-blur-sm">
+               <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar mask-fade">
                   {QUICK_ACTIONS.map((action, i) => (
                     <button 
                        key={i}
                        onClick={() => handleSendMessage(action.text)}
-                       className="whitespace-nowrap flex items-center gap-1.5 px-3 py-1.5 bg-white border border-blue-100 text-blue-600 text-xs font-medium rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-sm"
+                       className="whitespace-nowrap flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/60 border border-white/10 text-blue-300 text-xs font-medium rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all shadow-sm hover:shadow-blue-500/20"
                     >
                        {action.label}
                     </button>
@@ -226,23 +246,27 @@ const FloatingChatButton = () => {
                </div>
             </div>
 
-            {/* INPUT */}
-            <div className="p-3 bg-white border-t border-slate-100 shrink-0">
-              <div className="flex items-center gap-2 bg-slate-50 rounded-full px-4 py-2 border border-slate-200 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100 transition-all">
+            {/* INPUT AREA */}
+            <div className="p-4 bg-slate-900/90 border-t border-white/10 shrink-0 backdrop-blur-xl">
+              <div className="flex items-center gap-2 bg-slate-950 rounded-full px-4 py-2 border border-white/10 focus-within:border-blue-500/50 focus-within:ring-1 focus-within:ring-blue-500/50 transition-all shadow-inner">
                 <input
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Ask anything..."
-                  className="flex-1 bg-transparent border-none outline-none text-sm text-slate-800 placeholder:text-slate-400"
+                  placeholder="Ask me anything..."
+                  className="flex-1 bg-transparent border-none outline-none text-sm text-slate-200 placeholder:text-slate-500"
                 />
                 <button 
                   onClick={() => handleSendMessage()}
                   disabled={!inputValue.trim() || isTyping}
-                  className={`p-2 rounded-full transition-all flex items-center justify-center ${inputValue.trim() ? 'bg-blue-600 text-white shadow-md' : 'bg-slate-200 text-slate-400'}`}
+                  className={`p-2 rounded-full transition-all flex items-center justify-center ${
+                    inputValue.trim() 
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30 hover:bg-blue-500' 
+                      : 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                  }`}
                 >
-                  <Send size={16} />
+                  <Send size={16} className={inputValue.trim() ? 'translate-x-0.5' : ''} />
                 </button>
               </div>
             </div>
@@ -250,22 +274,39 @@ const FloatingChatButton = () => {
         )}
       </AnimatePresence>
 
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl bg-gradient-to-tr from-blue-600 to-purple-600 text-white relative z-50"
-      >
+      {/* --- FLOATING TOGGLE BUTTON WITH EXTERNAL PULSE --- */}
+      <div className="relative z-50 group">
+        {/* Pulse Animation (Outside the button to avoid overflow clipping) */}
         {!isOpen && (
-            <span className="absolute -top-1 -right-1 flex h-4 w-4">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 border-2 border-white"></span>
-            </span>
+          <>
+            <span className="absolute inset-0 rounded-full bg-blue-600 opacity-20 animate-ping duration-[1.5s]"></span>
+            <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 animate-pulse duration-[2s]"></span>
+          </>
         )}
-        <AnimatePresence mode="wait">
-          {isOpen ? <X size={32} /> : <MessageCircle size={32} />}
-        </AnimatePresence>
-      </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(79,70,229,0.5)] bg-[#0f172a] text-white relative border border-white/10 overflow-hidden"
+        >
+          {/* Animated Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          {/* Inner Circle for Depth */}
+          <div className="absolute inset-[2px] bg-[#0f172a] rounded-full z-0 flex items-center justify-center">
+             <div className="absolute inset-0 bg-blue-500/20 blur-xl opacity-50 rounded-full"></div>
+          </div>
+
+          <AnimatePresence mode="wait">
+            {isOpen ? (
+              <X size={28} className="relative z-10 text-white" />
+            ) : (
+              <MessageCircle size={28} className="relative z-10 text-blue-400 group-hover:text-white transition-colors fill-current" />
+            )}
+          </AnimatePresence>
+        </motion.button>
+      </div>
     </div>
   );
 };
