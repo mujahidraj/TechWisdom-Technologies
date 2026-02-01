@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Gavel, AlertCircle, CheckCircle, Scale, ShieldAlert, Globe, Info } from 'lucide-react';
+import { 
+  Gavel, AlertCircle, CheckCircle, Scale, ShieldAlert, Globe, 
+  Info, BookOpen, Link as LinkIcon, XCircle, FileText, Mail, Phone, MapPin 
+} from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 
-// --- INTERACTIVE BACKGROUND ---
+// --- INTERACTIVE BACKGROUND (Same as before) ---
 const InteractiveBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -80,7 +83,7 @@ const TermsConditions = () => {
               <Scale className="text-purple-400 w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Terms & Conditions</h1>
-            <p className="text-slate-400 text-lg">Please read these terms carefully before using our services.</p>
+            <p className="text-slate-400 text-lg">Last updated: February 01, 2026</p>
           </motion.div>
 
           {/* Main Legal Container */}
@@ -88,80 +91,169 @@ const TermsConditions = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl space-y-12"
+            className="bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl space-y-12 text-sm md:text-base"
           >
             
-            {/* 1. Acceptance */}
-            <section className="relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400">
-                  <CheckCircle size={24} />
-                </div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">1. Acceptance of Terms</h2>
+            {/* 1. Interpretation & Definitions */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400"><BookOpen size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Interpretation and Definitions</h2>
               </div>
-              <p className="leading-relaxed text-slate-400 text-lg">
-                By accessing and using the website of <span className="text-white font-medium">TechWisdom Technologies</span>, you accept and agree to be bound by the terms and provisions of this agreement. Our services are intended for professional use, and usage signifies your consent to our operational guidelines.
+              <div className="space-y-4 text-slate-400 leading-relaxed">
+                <p><strong>Interpretation:</strong> The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                <p className="text-white font-medium mb-2 mt-4">Definitions:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-blue-500">
+                  <li><strong>Affiliate:</strong> An entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+                  <li><strong>Country:</strong> Refers to Bangladesh.</li>
+                  <li><strong>Company:</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to <span className="text-blue-400">TechWisdom Technologies</span>, SADHIN GATE , BLOCK-C, BASHUNDHARA R/A, Dhaka - 1212.</li>
+                  <li><strong>Device:</strong> Any device that can access the Service such as a computer, a cell phone or a digital tablet.</li>
+                  <li><strong>Service:</strong> Refers to the Website.</li>
+                  <li><strong>Terms and Conditions:</strong> (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</li>
+                  <li><strong>Third-Party Social Media Service:</strong> Any services or content (including data, information, products or services) provided by a third-party that is displayed, included or made available by the Service.</li>
+                  <li><strong>Website:</strong> Refers to techwisdom, accessible from <a href="https://techwisdom.site/" className="text-blue-400 hover:underline">https://techwisdom.site/</a></li>
+                  <li><strong>You:</strong> The individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+                </ul>
+              </div>
+            </section>
+
+            {/* 2. Acknowledgment */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400"><CheckCircle size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Acknowledgment</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                These are the Terms and Conditions governing the use of this Service and the agreement between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+                <br /><br />
+                Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service. By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+                <br /><br />
+                You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service. Your access to and use of the Service is also subject to Our Privacy Policy.
               </p>
             </section>
 
-            {/* 2. Intellectual Property */}
-            <section className="relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400">
-                  <Gavel size={24} />
-                </div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">2. Intellectual Property</h2>
+            {/* 3. Links to Other Websites */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400"><LinkIcon size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Links to Other Websites</h2>
               </div>
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-4">
-                <p className="leading-relaxed text-slate-400">
-                  All original content, features, and functionality provided on this site are the exclusive property of TechWisdom Technologies. This includes:
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {['Source Code', 'Design UI', 'Branding', 'Graphics'].map((item) => (
-                    <div key={item} className="px-3 py-2 rounded-lg bg-slate-800/50 border border-white/5 text-center text-xs font-mono text-blue-300">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-slate-500 italic">Protected by international copyright, trademark, and trade secret laws.</p>
-              </div>
-            </section>
-
-            {/* 3. Limitation of Liability */}
-            <section className="relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-red-500/10 rounded-lg text-red-400">
-                  <ShieldAlert size={24} />
-                </div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">3. Limitation of Liability</h2>
-              </div>
-              <div className="bg-red-500/5 border border-red-500/10 p-6 rounded-2xl">
-                <p className="leading-relaxed text-slate-400">
-                  TechWisdom Technologies, its directors, and affiliates shall not be liable for any indirect, incidental, or consequential damages resulting from your use of the Service. This includes, without limitation, loss of profits, data, or goodwill. We provide our services "as is" without warranties of any kind.
-                </p>
-              </div>
-            </section>
-
-            {/* 4. Governing Law */}
-            <section className="relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
-                  <Globe size={24} />
-                </div>
-                <h2 className="text-2xl font-bold text-white tracking-tight">4. Governing Law</h2>
-              </div>
-              <p className="leading-relaxed text-slate-400 text-lg">
-                These Terms shall be governed and construed in accordance with the laws of <span className="text-emerald-400 font-medium">Bangladesh</span>. Any disputes arising from these terms will be handled under the jurisdiction of the courts of Bangladesh.
+              <p className="text-slate-400 leading-relaxed">
+                Our Service may contain links to third-party websites or services that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.
+                <br /><br />
+                We strongly advise You to read the terms and conditions and privacy policies of any third-party websites or services that You visit.
               </p>
             </section>
 
-            {/* Footer Note */}
+            {/* 4. Termination */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-red-500/10 rounded-lg text-red-400"><XCircle size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Termination</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, Your right to use the Service will cease immediately.
+              </p>
+            </section>
+
+            {/* 5. Limitation of Liability */}
+            <section className="bg-red-500/5 border border-red-500/10 p-6 rounded-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-red-500/10 rounded-lg text-red-400"><ShieldAlert size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Limitation of Liability</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+                <br /><br />
+                To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+              </p>
+            </section>
+
+            {/* 6. "AS IS" and "AS AVAILABLE" Disclaimer */}
+            <section className="bg-orange-500/5 border border-orange-500/10 p-6 rounded-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-orange-500/10 rounded-lg text-orange-400"><AlertCircle size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">"AS IS" Disclaimer</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company expressly disclaims all warranties, whether express, implied, statutory or otherwise, including implied warranties of merchantability, fitness for a particular purpose, title and non-infringement.
+                <br /><br />
+                Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+              </p>
+            </section>
+
+            {/* 7. Governing Law & Disputes */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400"><Gavel size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Governing Law</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+                <br /><br />
+                <strong>Disputes Resolution:</strong> If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+              </p>
+            </section>
+
+            {/* 8. Compliance & Legal */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400"><Globe size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Compliance & Severability</h2>
+              </div>
+              <div className="space-y-4 text-slate-400 leading-relaxed">
+                <p><strong>For European Union (EU) Users:</strong> If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.</p>
+                <p><strong>United States Legal Compliance:</strong> You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.</p>
+                <p><strong>Severability:</strong> If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+                <p><strong>Waiver:</strong> Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.</p>
+              </div>
+            </section>
+
+            {/* 9. Changes to Terms */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400"><FileText size={24} /></div>
+                <h2 className="text-2xl font-bold text-white">Changes to These Terms</h2>
+              </div>
+              <p className="text-slate-400 leading-relaxed">
+                We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion. By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms.
+              </p>
+            </section>
+
+            {/* 10. Contact Us */}
             <section className="pt-8 border-t border-white/10">
-              <div className="flex items-start gap-4 p-5 rounded-2xl bg-slate-950/50 border border-white/5">
-                <Info className="text-blue-400 shrink-0 mt-1" size={20} />
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  TechWisdom Technologies reserves the right to modify these conditions at any time. Your continued use of the site signifies your acceptance of any adjustments. We recommend reviewing this page periodically for updates.
-                </p>
+              <div className="bg-slate-950/50 border border-white/5 p-8 rounded-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400"><Info size={24} /></div>
+                  <h2 className="text-2xl font-bold text-white">Contact Us</h2>
+                </div>
+                <p className="text-slate-400 mb-6">If you have any questions about these Terms and Conditions, You can contact us:</p>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-3">
+                    <Mail className="text-blue-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="text-white font-medium">Email</h4>
+                      <a href="mailto:twtech.contact@gmail.com" className="text-slate-400 hover:text-white transition-colors">twtech.contact@gmail.com</a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <Phone className="text-blue-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="text-white font-medium">Phone</h4>
+                      <a href="tel:+8801799269699" className="text-slate-400 hover:text-white transition-colors">01799269699</a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 md:col-span-2">
+                    <MapPin className="text-blue-400 mt-1 shrink-0" size={20} />
+                    <div>
+                      <h4 className="text-white font-medium">Office Address</h4>
+                      <p className="text-slate-400">SADHIN GATE , BLOCK-C, Bashundhara R/A, Dhaka - 1212</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 

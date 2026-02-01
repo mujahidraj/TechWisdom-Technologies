@@ -21,6 +21,7 @@ import DemoProjects from './pages/DemoProjects';
 import DemoProjectDetails from './pages/DemoProjectDetails';
 import ServiceDetails from './pages/ServiceDetails';
 import ManifestoPage from './pages/ManifestoPage';
+import CookiesPolicy from './pages/CookiesPolicy';
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/services/:id" element={<ServiceDetails />} />
             <Route path="/manifesto" element={<ManifestoPage />} />
+            <Route path="/cookies-policy" element={<CookiesPolicy />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
