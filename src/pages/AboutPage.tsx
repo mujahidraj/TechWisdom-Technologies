@@ -371,7 +371,7 @@ const AboutPage = () => {
                     Every project is an opportunity to push the boundaries of what is possible on the web. We treat your business as our own.
                   </p>
                   {/* Fixed Button: Use Link if it's internal, otherwise style as link */}
-                  <Link to="/about">
+                  <Link to="/manifesto">
                     <Button variant="link" className="text-purple-400 p-0 hover:text-purple-300">Read our Manifesto &rarr;</Button>
                   </Link>
                 </div>

@@ -20,6 +20,7 @@ import TermsConditions from './pages/TermsConditions';
 import DemoProjects from './pages/DemoProjects';
 import DemoProjectDetails from './pages/DemoProjectDetails';
 import ServiceDetails from './pages/ServiceDetails';
+import ManifestoPage from './pages/ManifestoPage';
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
             <Route path="/services/:id" element={<ServiceDetails />} />
+            <Route path="/manifesto" element={<ManifestoPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
