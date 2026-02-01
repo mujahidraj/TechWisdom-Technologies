@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, FolderOpen, Layers, Zap } from 'lucide-react';
+import { ArrowUpRight, FolderOpen, Layers, Zap, CheckCircle2, MessageSquare, Briefcase, HelpCircle, ChevronDown, Rocket, Users, Globe, Lock, ShieldCheck, PenTool, ShieldCheckIcon, ShoppingBagIcon, ActivityIcon, CloudAlert, SearchCheck, PenToolIcon, Code2, RocketIcon , ShoppingBag, Activity, Cloud, GraduationCap, Megaphone, 
+  BarChart3,  Building2, Plane, Handshake, Stethoscope, 
+  Hotel, Scale, BookOpen, Heart, Utensils, Sun, Leaf, Wrench, 
+  Dumbbell, Printer, SprayCan, Newspaper, UserPlus, Car, Factory, 
+  Armchair, PaintBucket, Globe2 } from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -10,7 +14,7 @@ import data from '@/data.json';
 // --- UI COMPONENTS ---
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
@@ -62,17 +66,84 @@ const InteractiveBackground = () => {
   );
 };
 
+// --- FAQ ACCORDION COMPONENT ---
+const FaqItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
+  return (
+    <div className="border-b border-white/10 last:border-0">
+      <button 
+        onClick={onClick}
+        className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
+      >
+        <span className={`text-lg font-medium transition-colors ${isOpen ? 'text-blue-400' : 'text-slate-200 group-hover:text-white'}`}>
+          {question}
+        </span>
+        <ChevronDown 
+          className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180 text-blue-400' : 'group-hover:text-white'}`} 
+        />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <p className="pb-6 text-slate-400 leading-relaxed">
+              {answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const WorkPage = () => {
   const { projects } = data;
   
   // Extract unique categories
   const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
   const [activeCategory, setActiveCategory] = useState("All");
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   // Filter logic
   const filteredProjects = activeCategory === "All" 
     ? projects 
     : projects.filter(p => p.category === activeCategory);
+
+  // --- NEW DATA FOR EXTRA SECTIONS ---
+  const processSteps = [
+    { title: "Discovery", desc: "We dive deep into your business goals.", icon: SearchCheck },
+    { title: "Design", desc: "Wireframing and prototyping the UX.", icon: PenToolIcon },
+    { title: "Development", desc: "Agile sprints with clean code.", icon: Code2 },
+    { title: "Launch", desc: "Deployment and post-launch support.", icon: RocketIcon },
+  ];
+
+  const testimonials = [
+    { text: "They transformed our outdated site into a lead generation machine.", author: "Sarah J., CEO TechFlow" },
+    { text: "Best development team we've ever worked with. Truly professional.", author: "Mark D., Founder EduSmart" },
+    { text: "Delivered on time and under budget. Highly recommended.", author: "Emily R., CTO HealthPlus" },
+  ];
+
+
+
+  const faqs = [
+    { q: "What is your typical project timeline?", a: "Timelines vary by complexity. A simple website takes 2-4 weeks, while a custom web app can take 8-12 weeks." },
+    { q: "Do you provide post-launch support?", a: "Yes, we offer 30 days of free support and various monthly maintenance packages thereafter." },
+    { q: "What technologies do you use?", a: "We specialize in the MERN stack (MongoDB, Express, React, Node.js), Next.js, and WordPress." },
+    { q: "Will I own the source code?", a: "Yes, once the final payment is made, you own 100% of the IP and source code." },
+    { q: "Can you help with SEO?", a: "Absolutely. All our websites are built with SEO best practices (meta tags, fast loading, mobile responsive)." },
+    { q: "Do you work with startups?", a: "Yes! We love working with startups to build MVPs and scalable products." },
+    { q: "How do you handle payments?", a: "We typically require a 50% deposit to start, with the remaining 50% due upon completion." },
+    { q: "Can you update my existing website?", a: "Yes, we can audit your current site and propose a redesign or refactoring plan." },
+    { q: "Do you design mobile apps?", a: "Yes, we design and build cross-platform mobile apps using React Native." },
+    { q: "Where is your team located?", a: "We are a distributed team with our HQ in Bangladesh, serving clients globally." },
+  ];
+
+  
+
 
   return (
     <Layout>
@@ -146,15 +217,12 @@ const WorkPage = () => {
                         {/* Image Area */}
                         <CardHeader className="p-0 border-b border-white/5">
                           <AspectRatio ratio={4 / 3} className="bg-slate-800 relative overflow-hidden">
-                            {/* Project thumbnail image */}
                             <img 
                               src={project.thumbnail} 
                               alt={project.title} 
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
                               onError={(e) => {e.currentTarget.src = `https://placehold.co/800x600/1e293b/ffffff?text=${project.title}`}}
                             />
-                            
-                            {/* Overlay Button */}
                             <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
                                <Button className="rounded-full gap-2 pointer-events-none bg-white text-slate-900 hover:bg-white">
                                  View Case Study <ArrowUpRight size={16} />
@@ -182,7 +250,7 @@ const WorkPage = () => {
                           </CardDescription>
                         </CardContent>
 
-                        {/* Footer Tags (Tech Stack) */}
+                        {/* Footer Tags */}
                         <CardFooter className="p-6 pt-0 flex flex-wrap gap-2">
                           {project.techStack && project.techStack.slice(0, 3).map((tag: string) => (
                             <Badge key={tag} variant="secondary" className="bg-slate-800/80 text-slate-300 hover:bg-slate-700 border border-white/5 font-normal">
@@ -225,7 +293,56 @@ const WorkPage = () => {
           </div>
         </section>
 
-        {/* ==================== 3. CTA SECTION ==================== */}
+        {/* ======================================================= */}
+        {/* --- NEW SECTION 1: OUR PROCESS (ADDED) --- */}
+        {/* ======================================================= */}
+        <section className="py-24 bg-slate-900/30 border-y border-white/5">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">How We Deliver Results</h2>
+              <p className="text-slate-400">Our proven methodology for success.</p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8">
+              {processSteps.map((step, i) => (
+                <div key={i} className="relative p-6 border border-white/5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors">
+                  <div className="absolute -top-6 left-6 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center border-4 border-[#020617] text-white">
+                    <step.icon size={20} />
+                  </div>
+                  <h3 className="mt-6 text-xl font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-slate-400 text-sm">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+     
+
+        {/* ======================================================= */}
+        {/* --- NEW SECTION 3: FAQ ACCORDION (ADDED) --- */}
+        {/* ======================================================= */}
+        <section className="py-24 bg-slate-900/20 border-t border-white/5">
+          <div className="container px-4 md:px-6 max-w-3xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-slate-400">Everything you need to know about working with us.</p>
+            </div>
+            
+            <div className="space-y-2">
+              {faqs.map((faq, i) => (
+                <FaqItem 
+                  key={i}
+                  question={faq.q}
+                  answer={faq.a}
+                  isOpen={openFaqIndex === i}
+                  onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ==================== CTA SECTION ==================== */}
         <section className="py-24 bg-transparent border-t border-white/5">
           <div className="container px-4 md:px-6">
             <div className="relative rounded-[2.5rem] bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 overflow-hidden px-6 py-20 text-center md:px-12 md:py-24 shadow-2xl backdrop-blur-xl group">
@@ -237,7 +354,7 @@ const WorkPage = () => {
               
               <div className="relative z-10 max-w-3xl mx-auto space-y-8">
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-600/30 rotate-3 group-hover:rotate-6 transition-transform">
-                   <Zap className="w-8 h-8 text-white" />
+                    <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                   Have a project in mind?

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, HelpCircle, Server, Code, Layers, Smartphone, Palette, Megaphone, Zap, ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Check, HelpCircle, Server, Code, Layers, Smartphone, Palette, Megaphone, Zap, ArrowRight, Sparkles, TrendingUp, ShieldCheck, Clock, RocketIcon, Rocket } from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -13,6 +13,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -62,13 +63,22 @@ const InteractiveBackground = () => {
   );
 };
 
-// --- FAQ DATA ---
+// --- UPDATED FAQ DATA (10 Items) ---
 const FAQS = [
   { question: "Do I need a maintenance plan?", answer: "Not strictly. However, websites require hosting, security updates, and backups. If you don't choose a plan, you will need to manage hosting, SSL renewals, and security patches yourself.", icon: HelpCircle },
   { question: "Are there hidden fees?", answer: "No. The development price is a one-time fee. Third-party costs (like domain names approx ৳1000/yr or specific paid plugins/ad spend) are purchased directly by you, so you retain full ownership.", icon: Layers },
   { question: "How long does it take to build?", answer: "A standard landing page takes 3-5 days. A corporate site takes 2-3 weeks, and E-commerce/App projects typically take 4-6 weeks depending on the complexity and number of features.", icon: Zap },
-  { question: "What is the payment schedule?", answer: "We typically require a 50% deposit to start the project. The remaining 50% is due only after you have reviewed the final product and we are ready to launch.", icon: Server }
+  { question: "What is the payment schedule?", answer: "We typically require a 50% deposit to start the project. The remaining 50% is due only after you have reviewed the final product and we are ready to launch.", icon: Server },
+  { question: "Can I upgrade my plan later?", answer: "Absolutely. You can start with a basic package (MVP) and upgrade to a more advanced plan as your business grows. You only pay the difference in features.", icon: TrendingUp },
+  { question: "Do you offer refunds?", answer: "If we haven't started work, yes. Once work begins, the deposit covers the initial design and setup costs. However, we offer unlimited revisions during the design phase to ensuring satisfaction.", icon: ShieldCheck },
+  { question: "Is hosting included in the price?", answer: "Hosting is included only in our monthly maintenance packages. For one-time builds, we will help you set up your own hosting account (AWS, Vercel, etc.) so you own it.", icon: Cloud },
+  { question: "Do you charge VAT/Tax?", answer: "Our listed prices are exclusive of VAT. Applicable taxes will be added to the final invoice based on local regulations.", icon: FileText },
+  { question: "What if I need a custom feature?", answer: "Our packages cover standard features. Any custom functionality (like AI integration, complex algorithms) will be quoted separately as an add-on.", icon: Code },
+  { question: "Do you offer discounts for non-profits?", answer: "Yes, we offer special pricing for registered NGOs and educational institutions. Please contact our sales team for details.", icon: Heart }
 ];
+
+// Helper icons needed locally
+import { Cloud, FileText, Heart } from 'lucide-react';
 
 const PricingPage = () => {
   const [isYearly, setIsYearly] = useState(true);
@@ -147,6 +157,7 @@ const PricingPage = () => {
           </CardContent>
           
           <CardFooter className="pb-8">
+           <Link to="/contact" className="w-full">
             <Button className={`w-full h-12 font-semibold text-lg transition-all duration-300 ${
               tier.highlighted 
                 ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/20' 
@@ -154,6 +165,7 @@ const PricingPage = () => {
             }`}>
               {tier.cta} <ArrowRight size={16} className="ml-2" />
             </Button>
+            </Link>
           </CardFooter>
         </Card>
       </motion.div>
@@ -309,6 +321,126 @@ const PricingPage = () => {
               </TabsContent>
 
             </Tabs>
+          </div>
+        </section>
+
+        {/* ======================================================= */}
+        {/* --- NEW SECTION 1: VALUE PROPOSITION (ADDED) --- */}
+        {/* ======================================================= */}
+        <section className="py-24 bg-slate-900/30 border-y border-white/5">
+          <div className="container px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <Badge variant="outline" className="mb-4 text-emerald-400 border-emerald-500/30">Why Invest?</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Why "Cheap" Development is Actually Expensive
+                </h2>
+                <p className="text-slate-400 leading-relaxed mb-6">
+                  Cutting corners on development leads to security breaches, slow loading times, and lost customers. Our pricing reflects the quality of code, security standards, and scalable architecture we provide.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center text-red-400 shrink-0">
+                      <Zap size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">The Cost of Downtime</h4>
+                      <p className="text-sm text-slate-500">A cheap site that crashes during traffic spikes loses revenue instantly.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
+                      <TrendingUp size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">The ROI of Speed</h4>
+                      <p className="text-sm text-slate-500">A 1-second delay in mobile load times can impact conversion rates by up to 20%.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-600/20 blur-[100px] rounded-full" />
+                <Card className="relative bg-slate-900/80 border border-white/10 p-8">
+                  <h3 className="text-xl font-bold text-white mb-6">Total Cost of Ownership (3 Years)</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="text-white">Freelancer / Cheap Agency</span>
+                        <span className="text-red-400">৳2,50,000+</span>
+                      </div>
+                      <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                        <div className="h-full w-[80%] bg-red-500/50" />
+                      </div>
+                      <p className="text-xs text-slate-500 mt-1">Initial build + fixes + hacks + lost sales</p>
+                    </div>
+                    <div>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="text-white">TechWisdom Professional Build</span>
+                        <span className="text-emerald-400">৳1,50,000</span>
+                      </div>
+                      <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                        <div className="h-full w-[40%] bg-emerald-500" />
+                      </div>
+                      <p className="text-xs text-slate-500 mt-1">One-time build + standard maintenance. No surprises.</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================= */}
+        {/* --- NEW SECTION 2: PAYMENT TIMELINE (ADDED) --- */}
+        {/* ======================================================= */}
+        <section className="py-24 bg-transparent">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Simple Payment Structure</h2>
+              <p className="text-slate-400">We keep it fair and transparent.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { step: "01", title: "Kickoff", desc: "Hosting acess Or 10%  Upfront Deposit to secure resources and start design.", icon: Zap },
+                { step: "02", title: "Development", desc: "Weekly updates and demos. No payment required during this phase.", icon: Code },
+                { step: "03", title: "Launch", desc: "Final 90% due only after your approval and delivery.", icon: Rocket }
+              ].map((item, i) => (
+                <div key={i} className="relative p-8 border border-white/10 rounded-2xl bg-slate-900/40 text-center group hover:bg-slate-800/60 transition-colors">
+                  <div className="w-16 h-16 mx-auto bg-blue-600/10 rounded-full flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                    <item.icon size={32} />
+                  </div>
+                  <div className="text-5xl font-bold text-white/5 absolute top-4 right-6">{item.step}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-slate-400">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ======================================================= */}
+        {/* --- NEW SECTION 3: GUARANTEE (ADDED) --- */}
+        {/* ======================================================= */}
+        <section className="py-16 bg-slate-900/30 border-y border-white/5">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+              <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/20 shrink-0">
+                <ShieldCheck className="w-12 h-12 text-white" />
+              </div>
+              <div className="max-w-2xl">
+                <h3 className="text-2xl font-bold text-white mb-2">100% Satisfaction Guarantee</h3>
+                <p className="text-slate-400">
+                  We are confident in our code. If we miss a deadline or deliverables don't match the scope, we fix it at our own cost. We offer a 30-day bug-free warranty on all delivered code.
+                </p>
+              </div>
+              <Link to="/contact">
+                <Button variant="outline" className="border-white/10 text-black hover:bg-white/5">
+                  Read Terms
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -231,6 +231,327 @@
       "features": ["React Native", "iOS Development", "Android Development", "App Store Optimization", "Push Notifications"]
     }
   ],
+  "serviceDetails": {
+    "web-development": {
+      "tagline": "Architecting the Digital Future",
+      "heroImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2070",
+      "overview": "In an era where your digital presence defines your brand value, standard websites no longer suffice. We engineer robust, scalable, and high-performance web ecosystems tailored to your specific business logic. We move beyond simple coding to provide full-cycle web development—from architectural planning and database design to frontend interactivity and cloud deployment. Whether you require a complex SaaS platform, a dynamic Single Page Application (SPA), or an enterprise-grade portal, our full-stack team delivers pixel-perfect experiences backed by bank-grade security standards.",
+      "deliverables": [
+        "Fully Responsive Web Application",
+        "Admin Dashboard & CMS",
+        "API Documentation (Swagger/Postman)",
+        "Source Code with IP Rights",
+        "30 Days Post-Launch Support",
+        "Deployment to Cloud (AWS, Vercel, Netlify, Azure)",
+        "Performance Optimization Report",
+        "User Training Session",
+        "Security Hardening Setup",
+        "Comprehensive Testing Report",
+        "SEO Best Practices Implementation",
+        "Analytics & Monitoring Setup",
+        "Custom Integrations with 3rd Party Services",
+        "Backup & Disaster Recovery Plan",
+        "Comprehensive Documentation",
+        "Future Scalability Blueprint"
+      ],
+      "process": [
+        { "title": "Discovery & Blueprint", "desc": "We analyze requirements, define user personas, and create a technical architectural blueprint." },
+        { "title": "UI/UX Design", "desc": "Creating wireframes and high-fidelity prototypes to visualize the user journey before coding." },
+        { "title": "Agile Development", "desc": "Two-week sprints with regular updates, building the frontend and backend simultaneously." },
+        { "title": "QA & Security", "desc": "Automated testing, load balancing checks, and OWASP security auditing." },
+        { "title": "Deployment", "desc": "CI/CD pipeline setup for zero-downtime deployment to AWS, Vercel, or Azure." }
+      ],
+      "techStack": ["React", "Next.js", "TypeScript", "Node.js", "NestJS", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS"],
+      "benefits": [
+        "Sub-second page load speeds",
+        "SEO-optimized semantic architecture",
+        "Scalable to millions of users",
+        "Bank-grade data encryption",
+        "24/7 monitoring & alerts",
+        "Custom integrations with 3rd party APIs",
+        "Mobile-first responsive design",
+        "Comprehensive documentation & training",
+        "Dedicated post-launch support",
+        "Future-proof architecture for easy feature expansion"
+
+      ],
+      "faqs": [
+        { "q": "Do you use templates or custom code?", "a": "We build 100% custom solutions tailored to your unique requirements. We do not use pre-bought templates for custom web development projects." },
+        { "q": "Will I own the source code?", "a": "Yes. Upon final payment, 100% of the intellectual property and source code is transferred to you." },
+        { "q": "How do you handle website security?", "a": "We implement SSL, data encryption, secure HTTP headers, and follow OWASP top 10 security guidelines to prevent SQL injection and XSS attacks." },
+        { "q": "Can you integrate 3rd party APIs?", "a": "Absolutely. We have extensive experience integrating Stripe, PayPal, Google Maps, Twilio, HubSpot, and custom REST/GraphQL APIs." },
+        { "q": "Is the website SEO friendly?", "a": "Yes. We build with semantic HTML5, optimize meta tags, ensure fast Core Web Vitals, and generate dynamic sitemaps." },
+        { "q": "What happens after the website is launched?", "a": "We offer a 30-day warranty period for bug fixes. After that, we offer monthly maintenance packages for updates and monitoring." },
+        { "q": "Can you migrate my legacy app to modern tech?", "a": "Yes, we specialize in legacy modernization, moving apps from older PHP/.NET frameworks to modern React/Node.js stacks." },
+        { "q": "How long does a project take?", "a": "A standard business web app takes 4-8 weeks. Complex SaaS platforms may take 3-6 months depending on features." },
+        { "q": "Do you provide hosting?", "a": "We assist in setting up your hosting (AWS, Vercel, DigitalOcean) under your own accounts so you maintain full control." },
+        { "q": "Is the site mobile responsive?", "a": "Yes, we follow a mobile-first approach ensuring the site looks perfect on phones, tablets, laptops, and 4k screens." }
+      ]
+    },
+    "wordpress": {
+      "tagline": "Enterprise-Grade CMS Solutions",
+      "heroImage": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=2070",
+      "overview": "WordPress powers over 40% of the web, but a generic template won't cut it for a serious business. We strip WordPress down to its core and rebuild it as a high-performance Content Management System. We specialize in custom theme development, bespoke plugin creation, and Headless WordPress architectures using React. We turn WordPress from a simple blogging tool into a secure, scalable enterprise asset.",
+      "deliverables": [
+        "Custom WordPress Theme",
+        "Premium Plugin Configuration",
+        "Speed Optimization Report",
+        "Security Hardening Setup",
+        "Training Session for Staff",
+        "30 Days Post-Launch Support",
+        "E-commerce Setup with WooCommerce (if applicable)"
+      ],
+      "process": [
+        { "title": "Strategy", "desc": "Analyzing your content strategy and selecting the right stack (Traditional vs Headless)." },
+        { "title": "Design", "desc": "Creating a unique visual identity that aligns with your brand guidelines." },
+        { "title": "Development", "desc": "Coding the theme from scratch using PHP and React, minimizing bloatware." },
+        { "title": "Optimization", "desc": "Implementing server-side caching, image compression, and database cleanup." },
+        { "title": "Training", "desc": "Teaching your team how to easily manage and update content." }
+      ],
+      "techStack": ["PHP 8", "MySQL", "React (Headless)", "Gutenberg", "WooCommerce", "Elementor", "WP-CLI", "ACF Pro"],
+      "benefits": [
+        "Easy content management for non-techies",
+        "Custom functionality without plugin bloat",
+        "Google Core Web Vitals Ready",
+        "Secure E-commerce integration",
+        "Scalable to high traffic volumes",
+        "Headless option for ultimate performance",
+        "Regular backups and updates"
+      ],
+      "faqs": [
+        { "q": "Will my WordPress site be slow?", "a": "Not with us. We optimize assets, use caching, and avoid heavy page builders to ensure sub-second load times." },
+        { "q": "Can you fix a hacked WordPress site?", "a": "Yes, we offer malware removal, blacklist cleanup, and security hardening services." },
+        { "q": "Do you use Elementor or Divi?", "a": "We can, but we prefer building with Gutenberg or custom code for better performance and longevity." },
+        { "q": "Can I manage the content myself?", "a": "Yes, WordPress is designed for ease of use. We provide a simplified dashboard tailored to your needs." },
+        { "q": "Do you handle WooCommerce?", "a": "Yes, we build custom e-commerce stores with payment gateways, shipping calculators, and inventory management." },
+        { "q": "What is Headless WordPress?", "a": "It separates the backend (content) from the frontend (design), allowing us to use React for a faster, more secure site." },
+        { "q": "How do you handle backups?", "a": "We set up automated daily cloud backups so your data is never lost." },
+        { "q": "Can you update my existing theme?", "a": "Yes, we can refactor code, fix bugs, or add new features to your current theme." },
+        { "q": "Is WordPress secure?", "a": "Out of the box, it has vulnerabilities. We harden it by disabling XML-RPC, changing login URLs, and adding firewalls." },
+        { "q": "Do you offer monthly maintenance?", "a": "Yes, we update plugins, core files, and monitor security monthly to prevent crashes." }
+      ]
+    },
+    "graphics": {
+      "tagline": "Visual Storytelling that Converts",
+      "heroImage": "https://www.dicsinnovatives.com/blog/wp-content/uploads/2024/09/python-external-blog-image-1.jpg",
+      "overview": "Design is the silent ambassador of your brand. Our graphics team combines artistic flair with marketing psychology to create visuals that don't just look good—they convert. Whether you need a complete rebrand, engaging social media assets, or polished print materials, we ensure consistency and impact across every touchpoint. We move beyond aesthetics to create functional design that communicates your core message instantly.",
+      "deliverables": [
+        "Brand Guidelines Book",
+        "Logo Suite (Vector/Raster)",
+        "Social Media Kits",
+        "Marketing Collateral",
+        "Print-Ready Files",
+        "Infographics & Data Visualization",
+        "Packaging Design (if applicable)",
+        "30 Days Post-Delivery Support",
+        "Source Files (AI, PSD, EPS)",
+        "Favicon & App Icons",
+        "Email Newsletter Templates",
+        "Presentation Deck Templates",
+        "Ad Banners (Web & Print)",
+        "Event Booth Design (if applicable)",
+        "Custom Illustrations (if applicable)",
+        "Business Stationery (Letterhead, Envelope)",
+        "Brand Photography Direction (if applicable)",
+        "Website Graphics & Icons",
+        "Merchandise Design (T-shirts, Mugs, etc.)",
+        "Annual Report Design (if applicable)",
+        "Signage & Outdoor Advertising (if applicable)",
+        "Vehicle Wrap Design (if applicable)",
+        "Trade Show Materials (if applicable)",
+        "Custom Typography (if applicable)",
+        "Digital Product Mockups (if applicable)"        
+      ],
+      "process": [
+        { "title": "Discovery", "desc": "Understanding your target audience, competitors, and brand voice." },
+        { "title": "Moodboarding", "desc": "Curating visual styles, color palettes, and typography directions." },
+        { "title": "Drafting", "desc": "Creating initial concepts and iterating based on your feedback." },
+        { "title": "Refinement", "desc": "Polishing the chosen direction to perfection." },
+        { "title": "Delivery", "desc": "Exporting all asset formats (AI, EPS, PNG, SVG, PDF)." }
+      ],
+      "techStack": ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Figma", "Blender", "Canva Pro"],
+      "benefits": [
+        "Consistent brand identity across all channels",
+        "High-conversion marketing assets",
+        "Unique, non-stock visual language",
+        "Print-ready precision",
+        "Scalable vector logos",
+        "Social media optimized graphics",
+        "Expert color theory application",
+        "Comprehensive brand guidelines",
+        "Versatile asset formats for all uses"
+      ],
+      "faqs": [
+        { "q": "Do I get the source files?", "a": "Yes, we deliver fully editable AI, PSD, and EPS files upon project completion." },
+        { "q": "How many revisions do I get?", "a": "Our standard packages include up to 3 rounds of major revisions to ensure you love the result." },
+        { "q": "Can you design a logo?", "a": "Absolutely. We specialize in vector logo design and full branding kits." },
+        { "q": "Do you do print design?", "a": "Yes, we design business cards, brochures, flyers, banners, and packaging." },
+        { "q": "What is a Brand Guideline?", "a": "It is a document defining your fonts, colors, and logo usage to ensure consistency in the future." },
+        { "q": "Can you design social media posts?", "a": "Yes, we create templates or monthly content calendars for Instagram, LinkedIn, and Facebook." },
+        { "q": "Do you use AI art?", "a": "We primarily use human creativity for branding. We may use AI for concepting, but final deliverables are hand-crafted." },
+        { "q": "What if I don't like the design?", "a": "We start with a mood board to align styles. If the first draft misses, we pivot based on your feedback." },
+        { "q": "Can you refresh an old logo?", "a": "Yes, we can modernize your existing logo while keeping its core recognition." },
+        { "q": "How long does branding take?", "a": "A full brand identity project typically takes 2-4 weeks depending on complexity." }
+      ]
+    },
+    "ui-ux": {
+      "tagline": "Designing Intuitive Digital Experiences",
+      "heroImage": "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?semt=ais_hybrid&w=740&q=80",
+      "overview": "We don't just make things look pretty; we make them work. Our user-centered design process focuses on empathy, clarity, and efficiency. We map out user journeys, reduce friction points, and create interfaces that are a joy to use. By combining behavioral science with modern aesthetics, we ensure your product retains users and drives engagement.",
+      "deliverables": [
+        "User Personas & Journey Maps",
+        "Low-Fidelity Wireframes",
+        "High-Fidelity Interactive Prototypes",
+        "Design System & Component Library",
+        "Developer Handoff File",
+        "Usability Testing Report",
+        "Accessibility Compliance Checklist",
+        "30 Days Post-Delivery Support",
+        "Source Files (Figma, Sketch)",
+        "Style Guide (Colors, Typography, Icons)",
+        "Mobile & Desktop Layouts",
+        "Micro-Interaction Designs",
+        "User Flow Diagrams",
+        "Clickable Prototypes (Figma/Protopie)",
+        "Design Rationale Document",
+        "User Testing Videos & Feedback",
+        "Responsive Design Specifications"
+
+      ],
+      "process": [
+        { "title": "Research", "desc": "User interviews, heatmaps, and competitor analysis to find pain points." },
+        { "title": "Wireframing", "desc": "Sketching the layout and information architecture without distraction." },
+        { "title": "Prototyping", "desc": "Building clickable mockups to test flows and interactions." },
+        { "title": "Visual Design", "desc": "Applying colors, typography, and micro-interactions." },
+        { "title": "Testing", "desc": "Usability testing with real users to validate decisions." }
+      ],
+      "techStack": ["Figma", "Adobe XD", "Sketch", "Protopie"],
+      "benefits": [
+        "Higher user retention rates",
+        "Lower development costs via prototyping",
+        "Accessibility compliance (WCAG)",
+        "Data-driven design decisions",
+        "Consistent design system",
+        "Improved user satisfaction scores",
+        "Faster developer handoff",
+        "Mobile-first responsive layouts",
+        "Reduced user errors and friction"
+      ],
+      "faqs": [
+        { "q": "What is the difference between UI and UX?", "a": "UX is how it works and feels (flow). UI is how it looks (colors, buttons). We do both." },
+        { "q": "Do you design mobile apps?", "a": "Yes, we design for iOS (Human Interface Guidelines) and Android (Material Design)." },
+        { "q": "What tool do you use?", "a": "We primarily use Figma for real-time collaboration and easy developer handoff." },
+        { "q": "Do you code the designs?", "a": "This service is for design only, but our development team can code them if you buy the full package." },
+        { "q": "Do you offer user testing?", "a": "Yes, we can run usability tests to see how real people interact with the prototype." },
+        { "q": "What is a Design System?", "a": "It's a library of reusable components (buttons, inputs) that ensures consistency across your product." },
+        { "q": "Can you redesign my existing app?", "a": "Yes, we specialize in UI audits and modernization of outdated interfaces." },
+        { "q": "How do you handle developer handoff?", "a": "We provide a clean Figma file with CSS code snippets, assets, and spacing guides." },
+        { "q": "Do you design for dark mode?", "a": "Yes, we create color palettes that support both light and dark themes." },
+        { "q": "How long does a design project take?", "a": "A typical app design takes 3-6 weeks depending on the number of screens." }
+      ]
+    },
+    "qa": {
+      "tagline": "Ensuring Flawless Performance",
+      "heroImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2070",
+      "overview": "Bugs cost money and reputation. Our Quality Assurance team ensures your software is bulletproof before it hits the market. We employ a mix of automated scripts for regression testing and manual exploratory testing to catch edge cases. From functionality and performance to security and accessibility, we verify that your product meets the highest standards of engineering.",
+      "deliverables": [
+        "Test Strategy & Plan",
+        "Bug Reports (Jira/Trello)",
+        "Automated Test Scripts",
+        "Performance Benchmark Report",
+        "Security Audit Summary",
+        "Accessibility Compliance Report",
+        "30 Days Post-Delivery Support",
+        "Test Cases Documentation",
+        "Cross-Browser Testing Results",
+        "API Testing Reports",
+        "Load Testing Results",
+        "Regression Testing Summary",
+        "Usability Testing Feedback"
+      ],
+      "process": [
+        { "title": "Planning", "desc": "Defining test cases, environment setup, and success criteria." },
+        { "title": "Automation", "desc": "Writing scripts for repetitive tasks and regression testing." },
+        { "title": "Manual Testing", "desc": "Human exploration to find usability issues and edge cases." },
+        { "title": "Load Testing", "desc": "Simulating high traffic to ensure server stability." },
+        { "title": "Reporting", "desc": "Detailed reporting of bugs and verification of fixes." }
+      ],
+      "techStack": ["Selenium", "Jest", "Cypress", "Appium", "Jira", "Postman"],
+      "benefits": [
+        "Bug-free product launches",
+        "Enhanced user satisfaction",
+        "Security assurance",
+        "Reliable performance under load",
+        "Cross-browser/device compatibility",
+        "Comprehensive test documentation",
+        "Faster time-to-market with fewer post-launch issues",
+        "Reduced maintenance costs",
+        "Improved development team efficiency"
+      ],
+      "faqs": [
+        { "q": "What is the difference between manual and automated QA?", "a": "Manual is human testing for usability. Automated uses code to test repetitive tasks quickly." },
+        { "q": "Do you test mobile apps?", "a": "Yes, we test on real devices and emulators for both iOS and Android." },
+        { "q": "Is security testing included?", "a": "We offer basic security testing. Advanced Penetration Testing is a separate service." },
+        { "q": "How do you report bugs?", "a": "We use tools like Jira, Trello, or ClickUp with screenshots, videos, and reproduction steps." },
+        { "q": "Can you test an existing live site?", "a": "Yes, we can perform a QA audit on a production site to find existing issues." },
+        { "q": "Do you do API testing?", "a": "Yes, we use Postman to verify that your backend APIs are returning correct data." },
+        { "q": "What is regression testing?", "a": "It ensures that new code updates haven't broken existing functionality." },
+        { "q": "Do you provide cross-browser testing?", "a": "Yes, we test on Chrome, Safari, Firefox, and Edge to ensure compatibility." },
+        { "q": "Do you check for accessibility?", "a": "Yes, we check for WCAG compliance (screen readers, contrast, etc.)." },
+        { "q": "When should QA start?", "a": "QA should start as early as possible in the development lifecycle to save costs." }
+      ]
+    },
+    "mobile": {
+      "tagline": "Mobile Apps That Engage",
+      "heroImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2070",
+      "overview": "In a mobile-first world, your app needs to be fast, intuitive, and accessible. From startup MVPs to enterprise solutions, we build native and cross-platform mobile applications that provide seamless experiences. We handle the entire lifecycle: from initial concept and UI design to development, testing, and successful submission to the Apple App Store and Google Play Store.",
+      "deliverables": [
+        "iOS & Android App (.ipa/.apk)",
+        "Source Code",
+        "Admin Panel for App Management",
+        "App Store Submission",
+        "API Integration",
+        "30 Days Post-Launch Support",
+        "Push Notification Setup",
+        "Offline Functionality (if applicable)",
+        "User Analytics Integration",
+        "Performance Optimization Report"
+
+      ],
+      "process": [
+        { "title": "Validation", "desc": "Validating the app idea, features, and monetization strategy." },
+        { "title": "UI/UX Design", "desc": "Designing mobile-first interfaces optimized for touch." },
+        { "title": "Development", "desc": "Coding the app using React Native, Flutter, or Native languages." },
+        { "title": "Testing", "desc": "Testing on various device sizes and OS versions." },
+        { "title": "Launch", "desc": "Handling the complex submission process for App Stores." }
+      ],
+      "techStack": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase",  "GraphQL"],
+      "benefits": [
+        "Cross-platform cost efficiency",
+        "Native-like performance",
+        "Offline capabilities",
+        "Push notification engagement",
+        "Seamless API integration",
+        "User analytics for growth tracking",
+        "Regular updates and maintenance",
+        "App Store optimization",
+        "Scalable architecture for future features"
+
+      ],
+      "faqs": [
+        { "q": "Should I build Native or Cross-Platform?", "a": "We recommend React Native/Flutter for 90% of apps as it saves time and cost. Native is for high-performance gaming." },
+        { "q": "How much does an app cost?", "a": "It varies widely. A simple MVP starts lower, while a 'Uber-like' app costs significantly more." },
+        { "q": "Do you handle App Store submission?", "a": "Yes, we handle the entire strict approval process for Apple and Google." },
+        { "q": "Will the app work offline?", "a": "We can build offline capabilities using local databases like Realm or SQLite." },
+        { "q": "Can you add Push Notifications?", "a": "Yes, we integrate Firebase or OneSignal for targeted push campaigns." },
+        { "q": "Who owns the code?", "a": "You own 100% of the code and intellectual property." },
+        { "q": "Do you provide maintenance?", "a": "Yes, OS updates often break apps. We offer maintenance plans to keep it running." },
+        { "q": "Can you monetize the app?", "a": "Yes, we can integrate In-App Purchases, Subscriptions, or AdMob advertisements." },
+        { "q": "How long does development take?", "a": "An MVP usually takes 2-4 months. Full-scale apps take 4-6+ months." },
+        { "q": "Can you integrate my website with the app?", "a": "Yes, we can connect the app to your existing website's database via API." }
+      ]
+    }
+  },
   "process": [
   {
     "step": 1,
@@ -984,6 +1305,7 @@
     "Sticky Service Navigation",
     "Before/After Case Study Slider",
     "Detailed Service Accordions"
+
   ],
   "designUnique": "Adopted a 'Clarity & Growth' philosophy with generous whitespace, the Plus Jakarta Sans typeface, and a restrained color palette to appeal to corporate decision-makers (Banks, Real Estate, FMCG).",
   "developmentProcess": "Built a custom tab-switching logic for the services page and a dynamic budget calculator in vanilla JS to provide immediate value to potential leads without page reloads."

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+// --- ADDED NEW ICONS HERE ---
 import { 
   Home, Heart, BookOpen, Clock, Plane, Laptop, 
   MapPin, Briefcase, ArrowRight, Sparkles, Send,
+  Coffee, Globe, Zap, Smile, Users, Award, ShieldCheck,
   type LucideIcon
 } from 'lucide-react';
 
@@ -15,8 +17,11 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-// Icon mapping
-const iconMap: Record<string, LucideIcon> = { Home, Heart, BookOpen, Clock, Plane, Laptop };
+// Updated Icon mapping with new icons
+const iconMap: Record<string, LucideIcon> = { 
+  Home, Heart, BookOpen, Clock, Plane, Laptop, 
+  Coffee, Globe, Zap, Smile, Users, Award, ShieldCheck 
+};
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -68,6 +73,41 @@ const InteractiveBackground = () => {
 
 const CareersPage = () => {
   const { careers } = data;
+
+  // --- EXPANDED PERKS LIST (Merged existing JSON data with new items) ---
+  const allPerks = [
+    ...(careers.perks || []),
+    {
+      title: "Global Retreats",
+      description: "We fly the whole team out once a year to a new destination. Connect with colleagues, explore new cultures, and recharge in style.",
+      icon: "Plane"
+    },
+    {
+      title: "Mental Health Support",
+      description: "Comprehensive wellness packages including therapy subscriptions, meditation apps, and 'no-questions-asked' mental health days.",
+      icon: "Heart"
+    },
+    {
+      title: "Home Office Stipend",
+      description: "Get a generous budget to set up your dream workspace. Ergonomic chairs, standing desks, or noise-canceling headphones – it's on us.",
+      icon: "Laptop"
+    },
+    {
+      title: "Profit Sharing",
+      description: "When the company wins, you win. We distribute a percentage of annual profits to all eligible employees as a year-end bonus.",
+      icon: "Award"
+    },
+    {
+      title: "Flexible Hours",
+      description: "Not a morning person? No problem. Set your own schedule as long as you attend core meetings and deliver quality work.",
+      icon: "Clock"
+    },
+    {
+      title: "Top-Tier Hardware",
+      description: "Choose your weapon. Every new joiner gets the latest MacBook Pro or high-end Windows machine, plus a 4K monitor.",
+      icon: "Zap"
+    }
+  ];
 
   const handleApplyClick = (jobTitle: string) => {
     const email = "mujahidraj65@gmail.com";
@@ -134,21 +174,21 @@ const CareersPage = () => {
               <p className="text-slate-400 mt-2 text-lg">Perks that make your life easier and your work better.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {careers.perks.map((perk, i) => {
-                const Icon = iconMap[perk.icon];
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {allPerks.map((perk, i) => {
+                const Icon = iconMap[perk.icon] || Sparkles; // Fallback icon
                 return (
                   <motion.div 
                     key={i} 
                     initial={{ opacity: 0, y: 20 }} 
                     whileInView={{ opacity: 1, y: 0 }} 
                     viewport={{ once: true }} 
-                    transition={{ delay: i * 0.1 }}
+                    transition={{ delay: i * 0.05 }}
                   >
                     <Card className="h-full border border-white/10 bg-slate-900/40 backdrop-blur-sm shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all duration-300 hover:-translate-y-1">
                       <CardHeader>
                         <div className="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center mb-4 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
-                          {Icon && <Icon className="w-6 h-6" />}
+                          <Icon className="w-6 h-6" />
                         </div>
                         <CardTitle className="text-xl font-bold text-white">{perk.title}</CardTitle>
                       </CardHeader>

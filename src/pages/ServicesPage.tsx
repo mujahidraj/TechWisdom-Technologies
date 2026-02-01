@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code, FileCode, Palette, Layout as LayoutIcon, 
-  CheckCircle, Smartphone, Search, Target, Rocket, 
+import {
+  Code, FileCode, Palette, Layout as LayoutIcon,
+  CheckCircle, Smartphone, Search, Target, Rocket,
   Terminal, Database, Globe, Cloud, Shield, Zap,
   ArrowRight, Layers, Cpu, Server, GitBranch,
   Lock, Clock, FileText, Settings,
   Film, PenToolIcon, LucidePenTool, BarChart,
   Mail, Share2, Megaphone, ShoppingBag, Send,
-  Activity, ShieldCheck, RefreshCw
+    RefreshCw,ShieldCheck,  Activity,  GraduationCap, 
+  BarChart3, Briefcase, Building2, Plane, Handshake, Stethoscope, 
+  Hotel, Scale, BookOpen, Users, Heart, Utensils, Sun, Leaf, Wrench, 
+  Dumbbell, Printer, SprayCan, Newspaper, UserPlus, Car, Factory, 
+  Armchair, PaintBucket, Globe2
 } from 'lucide-react';
 import { type LucideIcon } from 'lucide-react';
 
@@ -22,6 +26,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
+import { Link } from 'react-router-dom';
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = { Code, FileCode, Palette, Layout: LayoutIcon, CheckCircle, Smartphone, Search, Target, Rocket };
@@ -49,7 +54,7 @@ const InteractiveBackground = () => {
       <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-blue-600/20 via-purple-600/5 to-transparent blur-[120px]" />
       <div className="absolute bottom-0 inset-x-0 h-[500px] bg-gradient-to-t from-indigo-600/20 via-blue-600/5 to-transparent blur-[120px]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-      <div 
+      <div
         className="absolute inset-0 transition-opacity duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 40%)`,
@@ -86,50 +91,96 @@ const SERVICE_FAQS = [
   { question: "How do you handle data security?", answer: "Security is baked in from day one. We use encrypted databases, secure API authentication (OAuth/JWT), and follow OWASP top 10 security guidelines.", icon: Lock }
 ];
 
+ const industries = [
+  { name: "EdTech", icon: GraduationCap },
+  { name: "MarTech", icon: Megaphone },
+  { name: "Digital Marketing", icon: BarChart3 },
+  { name: "Agencies", icon: Briefcase },
+  { name: "Real Estate", icon: Building2 },
+  { name: "Hajj & Umrah", icon: Plane },
+  { name: "E-Commerce", icon: ShoppingBag },
+  { name: "B2B Service Partners", icon: Handshake },
+  { name: "Specialized Clinics", icon: Stethoscope },
+  { name: "Resorts & Hotels", icon: Hotel },
+  { name: "Law Chambers", icon: Scale },
+  { name: "Coaching Centers", icon: BookOpen },
+  { name: "Convention Centers", icon: Users },
+  { name: "NGOs & Non-Profits", icon: Heart },
+  { name: "Security Services", icon: ShieldCheck },
+  { name: "Catering & Food", icon: Utensils },
+  { name: "Solar & Energy", icon: Sun },
+  { name: "Organic Food", icon: Leaf },
+  { name: "Vocational Training", icon: Wrench },
+  { name: "Gyms & Fitness", icon: Dumbbell },
+  { name: "Packaging & Printing", icon: Printer },
+  { name: "Pest Control", icon: SprayCan },
+  { name: "News Portals", icon: Newspaper },
+  { name: "Recruiting Agencies", icon: UserPlus },
+  { name: "Rent-A-Car", icon: Car },
+  { name: "Export Factories", icon: Factory },
+  { name: "Furniture Showrooms", icon: Armchair },
+  { name: "Interior Design", icon: PaintBucket },
+  { name: "Study Abroad & Visa", icon: Globe2 },
+  { name: "Fintech", icon: Activity },
+  { name: "SaaS", icon: Cloud },
+];
+
 const ServicesPage = () => {
   const { services, process } = data;
 
   const techStack = {
-    frontend: { label: "Frontend & UI", icon: LayoutIcon, tools: [
-      { name: "React", desc: "Interactive UIs", icon: Code },
-      { name: "Next.js", desc: "Production Framework", icon: Globe },
-      { name: "Tailwind CSS", desc: "Rapid Styling", icon: Palette },
-      { name: "TypeScript", desc: "Type Safety", icon: FileCode },
-      { name: "Framer Motion", desc: "Animations", icon: Zap },
-    ]},
-    backend: { label: "Backend & API", icon: Server, tools: [
-      { name: "Node.js", desc: "Runtime Environment", icon: Terminal },
-      { name: "Nest.js", desc: "Backend Framework", icon: Code },
-      { name: "PostgreSQL", desc: "Relational DB", icon: Database },
-      { name: "MongoDB", desc: "Flexible DB", icon: Globe },
-      { name: "Python", desc: "AI & Scripting", icon: Code },
-    ]},
-    mobile: { label: "Mobile Apps", icon: Smartphone, tools: [
-      { name: "React Native", desc: "Cross-Platform", icon: Code },
-      { name: "Flutter", desc: "Native Performance", icon: Layers },
-      { name: "Kotlin", desc: "Android Native", icon: Rocket },
-      { name: "Swift", desc: "iOS Native", icon: Smartphone },
-    ]},
-    devops: { label: "DevOps & Cloud", icon: Cloud, tools: [
-      { name: "AWS", desc: "Cloud Infrastructure", icon: Cloud },
-      { name: "Docker", desc: "Containerization", icon: Layers },
-      { name: "Kubernetes", desc: "Orchestration", icon: GitBranch },
-      { name: "Vercel", desc: "Edge Deployment", icon: Globe },
-      { name: "GitHub Actions", desc: "CI/CD Pipelines", icon: Terminal },
-    ]},
-    design: { label: "Graphics & Design", icon: LucidePenTool, tools: [
-      { name: "Figma", desc: "UI/UX Design", icon: PenToolIcon },
-      { name: "Adobe Photoshop", desc: "Image Editing", icon: FileText },
-      { name: "Adobe Illustrator", desc: "Vector Graphics", icon: PenToolIcon },
-      { name: "Canva", desc: "Rapid Design", icon: Palette },
-      { name: "Capcut", desc: "Motion Graphics", icon: Film },
-    ]},
-    marketing: { label: "Digital Marketing", icon: Megaphone, tools: [
-      { name: "Google Analytics", desc: "Data Insights", icon: BarChart },
-      { name: "SEO", desc: "Search Optimization", icon: Search },
-      { name: "Google Ads", desc: "PPC Campaigns", icon: Target },
-      { name: "Meta Ads", desc: "Social Advertising", icon: Share2 },
-    ]}
+    frontend: {
+      label: "Frontend & UI", icon: LayoutIcon, tools: [
+        { name: "React", desc: "Interactive UIs", icon: Code },
+        { name: "Next.js", desc: "Production Framework", icon: Globe },
+        { name: "Tailwind CSS", desc: "Rapid Styling", icon: Palette },
+        { name: "TypeScript", desc: "Type Safety", icon: FileCode },
+        { name: "Framer Motion", desc: "Animations", icon: Zap },
+      ]
+    },
+    backend: {
+      label: "Backend & API", icon: Server, tools: [
+        { name: "Node.js", desc: "Runtime Environment", icon: Terminal },
+        { name: "Nest.js", desc: "Backend Framework", icon: Code },
+        { name: "PostgreSQL", desc: "Relational DB", icon: Database },
+        { name: "MongoDB", desc: "Flexible DB", icon: Globe },
+        { name: "Python", desc: "AI & Scripting", icon: Code },
+      ]
+    },
+    mobile: {
+      label: "Mobile Apps", icon: Smartphone, tools: [
+        { name: "React Native", desc: "Cross-Platform", icon: Code },
+        { name: "Flutter", desc: "Native Performance", icon: Layers },
+        { name: "Kotlin", desc: "Android Native", icon: Rocket },
+        { name: "Swift", desc: "iOS Native", icon: Smartphone },
+      ]
+    },
+    devops: {
+      label: "DevOps & Cloud", icon: Cloud, tools: [
+        { name: "AWS", desc: "Cloud Infrastructure", icon: Cloud },
+        { name: "Docker", desc: "Containerization", icon: Layers },
+        { name: "Kubernetes", desc: "Orchestration", icon: GitBranch },
+        { name: "Vercel", desc: "Edge Deployment", icon: Globe },
+        { name: "GitHub Actions", desc: "CI/CD Pipelines", icon: Terminal },
+      ]
+    },
+    design: {
+      label: "Graphics & Design", icon: LucidePenTool, tools: [
+        { name: "Figma", desc: "UI/UX Design", icon: PenToolIcon },
+        { name: "Adobe Photoshop", desc: "Image Editing", icon: FileText },
+        { name: "Adobe Illustrator", desc: "Vector Graphics", icon: PenToolIcon },
+        { name: "Canva", desc: "Rapid Design", icon: Palette },
+        { name: "Capcut", desc: "Motion Graphics", icon: Film },
+      ]
+    },
+    marketing: {
+      label: "Digital Marketing", icon: Megaphone, tools: [
+        { name: "Google Analytics", desc: "Data Insights", icon: BarChart },
+        { name: "SEO", desc: "Search Optimization", icon: Search },
+        { name: "Google Ads", desc: "PPC Campaigns", icon: Target },
+        { name: "Meta Ads", desc: "Social Advertising", icon: Share2 },
+      ]
+    }
   };
 
   const stats = [
@@ -139,15 +190,23 @@ const ServicesPage = () => {
     { label: "Support", value: "24/7", icon: Shield },
   ];
 
+  // --- HELPER FUNCTION FOR SCROLLING ---
+  const scrollToServices = () => {
+    const element = document.getElementById('services-grid');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Layout>
       <SEOHead title="Services - Digital Solutions" description="Comprehensive web and software services tailored to your business needs." path="/services" />
-      
+
       {/* --- BACKGROUND --- */}
       <InteractiveBackground />
 
       <div className="relative z-10 text-slate-100">
-        
+
         {/* ==================== 1. HERO SECTION ==================== */}
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="container relative z-10 px-4 py-10 text-center">
@@ -160,21 +219,31 @@ const ServicesPage = () => {
               <Badge variant="outline" className="text-blue-400 border-blue-400/30 px-4 py-1 text-sm uppercase tracking-widest backdrop-blur-md bg-slate-900/30">
                 World-Class Engineering
               </Badge>
-              
+
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight text-white">
                 We Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400">Digital Engines</span> <br />
                 That Drive Growth.
               </h1>
-              
+
               <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
                 Stop worrying about technology. We provide the strategy, design, and code to take your business from idea to market leader.
               </p>
 
               <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-12 text-base shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
-                  Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="text-white border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full px-8 h-12 text-base">
+                {/* --- FIXED: Added Link --- */}
+                <Link to="/contact">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-12 text-base shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
+                    Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                
+                {/* --- FIXED: Added onClick scroll --- */}
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="text-white border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-full px-8 h-12 text-base"
+                  onClick={scrollToServices}
+                >
                   Explore Services
                 </Button>
               </div>
@@ -183,7 +252,8 @@ const ServicesPage = () => {
         </section>
 
         {/* ==================== 2. SERVICE LIST ==================== */}
-        <section className="py-24 bg-transparent relative z-20">
+        {/* --- FIXED: Added ID for scrolling --- */}
+        <section id="services-grid" className="py-24 bg-transparent relative z-20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-20">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white mb-4">Our Expertise</h2>
@@ -196,11 +266,11 @@ const ServicesPage = () => {
               {services.map((service, i) => {
                 const Icon = iconMap[service.icon];
                 return (
-                  <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, y: 20 }} 
-                    whileInView={{ opacity: 1, y: 0 }} 
-                    viewport={{ once: true }} 
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                   >
                     <Card className="h-full bg-slate-900/40 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all duration-300 group">
@@ -222,9 +292,12 @@ const ServicesPage = () => {
                         </ul>
                       </CardContent>
                       <CardFooter>
-                        <Button variant="ghost" className="w-full justify-between text-blue-400 hover:text-white hover:bg-blue-500/10">
-                          Learn more <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" />
-                        </Button>
+                        {/* Link to the new dynamic route */}
+                        <Link to={`/services/${service.id}`} className="w-full">
+                          <Button variant="ghost" className="w-full justify-between text-blue-400 hover:text-white hover:bg-blue-500/10">
+                            Learn more <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-all" />
+                          </Button>
+                        </Link>
                       </CardFooter>
                     </Card>
                   </motion.div>
@@ -233,6 +306,30 @@ const ServicesPage = () => {
             </div>
           </div>
         </section>
+
+
+
+                  <section className="py-24 bg-transparent">
+          <div className="container px-4 md:px-6 grid lg:grid-cols-1 gap-16">
+            <div>
+              <div className='mb-12 text-center'>
+                <Badge variant="secondary" className="mb-4 bg-green-500/10 text-green-300 border border-green-500/20">Serving Industries</Badge>
+                <h2 className="text-3xl mb-2 font-bold tracking-tighter sm:text-4xl text-white">Industries We Serve</h2>
+                <p className="text-slate-400 max-w-2xl mx-auto">We specialize in delivering tailored digital solutions across a wide range of industries, helping businesses transform and thrive in the digital landscape.</p>
+              </div>
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {industries.map((ind, i) => (
+                  <div key={i} className="p-6 bg-slate-900/50 border border-white/10 rounded-xl flex flex-col items-center justify-center gap-3 hover:bg-slate-800 transition-colors group text-center h-full">
+                    <ind.icon className="w-10 h-10 text-slate-500 group-hover:text-blue-400 transition-colors shrink-0" />
+                    <span className="text-white font-medium text-sm">{ind.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
 
         {/* ==================== 3. TECH STACK ==================== */}
         <section className="py-24 bg-transparent overflow-hidden">
@@ -246,20 +343,18 @@ const ServicesPage = () => {
                 </p>
               </div>
               <div className="hidden md:flex gap-4">
-                 <Cpu className="w-12 h-12 text-slate-700 opacity-50 animate-pulse" />
-                 <Database className="w-12 h-12 text-slate-700 opacity-50" />
-                 <Cloud className="w-12 h-12 text-slate-700 opacity-50" />
+                <Cpu className="w-12 h-12 text-slate-700 opacity-50 animate-pulse" />
+                <Database className="w-12 h-12 text-slate-700 opacity-50" />
+                <Cloud className="w-12 h-12 text-slate-700 opacity-50" />
               </div>
             </div>
-
-            
 
             <Tabs defaultValue="frontend" className="w-full">
               <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-slate-900/60 border border-white/10 p-1 rounded-xl mb-12 h-auto backdrop-blur-md">
                 {Object.entries(techStack).map(([key, data]) => (
-                  <TabsTrigger 
-                    key={key} 
-                    value={key} 
+                  <TabsTrigger
+                    key={key}
+                    value={key}
                     className="rounded-lg py-3 data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-400 hover:text-white transition-colors"
                   >
                     <div className="flex items-center gap-2">
@@ -269,11 +364,11 @@ const ServicesPage = () => {
                   </TabsTrigger>
                 ))}
               </TabsList>
-              
+
               <AnimatePresence mode="wait">
                 {Object.entries(techStack).map(([key, data]) => (
                   <TabsContent key={key} value={key} className="mt-0">
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
@@ -305,7 +400,7 @@ const ServicesPage = () => {
         <section className="py-24 bg-transparent relative">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              
+
               {/* Left: Sticky Header */}
               <div className="lg:sticky lg:top-24 space-y-8">
                 <Badge variant="secondary" className="px-4 py-1 bg-blue-500/10 text-blue-300 border border-blue-500/20">How We Work</Badge>
@@ -316,26 +411,28 @@ const ServicesPage = () => {
                 <p className="text-lg text-slate-400 leading-relaxed">
                   We believe in keeping you in the loop. Our agile methodology ensures you know exactly what is happening at every stage of development, eliminating surprises.
                 </p>
-                
-                
+
+                {/* 
 
 [Image of agile software development lifecycle diagram]
-
+ */}
 
                 <div className="grid grid-cols-2 gap-6 pt-4">
                   <div className="flex flex-col gap-2 p-4 rounded-xl bg-slate-900/50 border border-white/5">
-                     <span className="text-4xl font-bold text-blue-400">100%</span>
-                     <span className="text-sm text-slate-400 font-medium uppercase tracking-wide">Transparency</span>
+                    <span className="text-4xl font-bold text-blue-400">100%</span>
+                    <span className="text-sm text-slate-400 font-medium uppercase tracking-wide">Transparency</span>
                   </div>
                   <div className="flex flex-col gap-2 p-4 rounded-xl bg-slate-900/50 border border-white/5">
-                     <span className="text-4xl font-bold text-purple-400">2-Week</span>
-                     <span className="text-sm text-slate-400 font-medium uppercase tracking-wide">Sprints</span>
+                    <span className="text-4xl font-bold text-purple-400">2-Week</span>
+                    <span className="text-sm text-slate-400 font-medium uppercase tracking-wide">Sprints</span>
                   </div>
                 </div>
 
-                <Button size="lg" className="mt-4 bg-white text-slate-900 hover:bg-slate-200 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                  Book a Process Walkthrough
-                </Button>
+                <Link to="/contact" className="inline-block mt-6">
+                  <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
 
               {/* Right: Vertical Step Timeline */}
@@ -343,7 +440,7 @@ const ServicesPage = () => {
                 {process.map((p, i) => {
                   const Icon = iconMap[p.icon];
                   return (
-                    <motion.div 
+                    <motion.div
                       key={i}
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -353,13 +450,13 @@ const ServicesPage = () => {
                     >
                       {/* Timeline Dot */}
                       <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-slate-900 bg-blue-500 shadow-[0_0_10px_#3b82f6] z-10" />
-                      
+
                       <div className="flex flex-col gap-4">
                         <div className="flex items-center gap-3">
                           <span className="text-sm font-bold text-blue-400 uppercase tracking-wider">Step 0{i + 1}</span>
                           <Separator className="w-12 bg-white/10" />
                         </div>
-                        
+
                         <Card className="bg-slate-900/60 backdrop-blur-md border border-white/10 hover:border-blue-500/30 transition-all duration-300">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3 mb-2">
@@ -410,27 +507,27 @@ const ServicesPage = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-               {SERVICE_FAQS.map((faq, index) => (
-                 <motion.div
-                   key={index}
-                   initial={{ opacity: 0, y: 10 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: index * 0.05 }}
-                 >
-                   <Card className="bg-slate-900/40 backdrop-blur-sm border border-white/10 hover:bg-slate-800/50 hover:border-blue-500/30 transition-all duration-300 h-full">
-                      <CardHeader>
-                         <CardTitle className="text-lg flex items-start gap-3 leading-snug text-slate-200">
-                           <faq.icon className="w-5 h-5 text-blue-400 mt-1 shrink-0" /> 
-                           {faq.question}
-                         </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-slate-400 text-sm leading-relaxed pl-14">
-                         {faq.answer}
-                      </CardContent>
-                   </Card>
-                 </motion.div>
-               ))}
+              {SERVICE_FAQS.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <Card className="bg-slate-900/40 backdrop-blur-sm border border-white/10 hover:bg-slate-800/50 hover:border-blue-500/30 transition-all duration-300 h-full">
+                    <CardHeader>
+                      <CardTitle className="text-lg flex items-start gap-3 leading-snug text-slate-200">
+                        <faq.icon className="w-5 h-5 text-blue-400 mt-1 shrink-0" />
+                        {faq.question}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-slate-400 text-sm leading-relaxed pl-14">
+                      {faq.answer}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -441,7 +538,7 @@ const ServicesPage = () => {
             <div className="relative rounded-[2.5rem] bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 overflow-hidden px-6 py-20 text-center md:px-12 md:py-24 shadow-2xl backdrop-blur-xl">
               <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px] pointer-events-none" />
-              
+
               <div className="relative z-10 max-w-3xl mx-auto space-y-8">
                 <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                   Ready to Scale Your Business?
@@ -450,12 +547,18 @@ const ServicesPage = () => {
                   Join hundreds of satisfied clients who have transformed their digital presence with us.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white h-14 px-8 text-lg font-semibold rounded-full shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-                    Get a Free Consultation
-                  </Button>
-                  <Button size="lg" variant="outline" className="text-white border-white/10 bg-white/5 hover:bg-white/10 h-14 px-8 text-lg font-semibold rounded-full">
-                    View Case Studies
-                  </Button>
+                  <Link to="/contact" className="inline-block">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-14 text-lg font-semibold shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                      Get Started Today
+                    </Button>
+                  </Link>
+                  
+                  {/* --- FIXED: Added Link for Case Studies --- */}
+                  <Link to="/demo-projects">
+                    <Button size="lg" variant="outline" className="text-white border-white/10 bg-white/5 hover:bg-white/10 h-14 px-8 text-lg font-semibold rounded-full">
+                      View Case Studies
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

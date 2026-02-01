@@ -368,7 +368,7 @@ const ContactPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                <Link to="/work">
-                 <Button variant="outline" className="h-12 px-6 border-white/10 text-slate-300 hover:text-white hover:bg-white/10 w-full sm:w-auto">
+                 <Button variant="outline" className="h-12 px-6 border-white/10 text-black hover:text-white hover:bg-white/10 w-full sm:w-auto">
                    View Portfolio
                  </Button>
                </Link>
