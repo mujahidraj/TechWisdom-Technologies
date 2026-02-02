@@ -45,7 +45,7 @@ const SEOHead = ({
       "name": site.name,
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/favicon.ico`
+        "url": `${siteUrl}/app-icon.ico`
       }
     }
   };
