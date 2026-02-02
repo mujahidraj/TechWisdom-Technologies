@@ -5,7 +5,7 @@ import logo from "@/assets/techwisdom.png";
 
 const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
-  const [statusText, setStatusText] = useState("INITIALIZING SYSTEM...");
+  const [statusText, setStatusText] = useState("LOADING CORE ASSETS...");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,14 +17,13 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
         }
 
         // Update Status Text based on progress milestones
-        if (prev === 20) setStatusText("LOADING CORE ASSETS...");
-        if (prev === 50) setStatusText("ESTABLISHING SECURE CONNECTION...");
-        if (prev === 80) setStatusText("RENDERING INTERFACE...");
-        if (prev === 98) setStatusText("ACCESS GRANTED");
+        if (prev === 30) setStatusText("ESTABLISHING SECURE CONNECTION...");
+        if (prev === 60) setStatusText("RENDERING INTERFACE...");
+        if (prev === 95) setStatusText("ACCESS GRANTED");
 
         return prev + 1;
       });
-    }, 25); // 2.5s duration
+    }, 15); // 2.5s duration
 
     return () => clearInterval(timer);
   }, [onComplete]);
@@ -84,7 +83,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              TECHWISDOM TECHNOLOGIES
+              TECHWISDOM <span className="text-amber-600">TECHNOLOGIES</span>
             </motion.h1>
 
             {/* Dynamic Status Text */}
