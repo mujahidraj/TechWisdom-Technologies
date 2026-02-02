@@ -1,54 +1,40 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
+import { useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 
-// --- Component Imports ---
-import Loader from './components/ui/Loader'; // Your generic loader
-import SplashScreen from './components/ui/SplashScreen'; // The new boot screen
+// --- Page Imports ---
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ServicesPage from "./pages/ServicesPage";
+import WorkPage from "./pages/WorkPage";
+import CaseStudyPage from "./pages/CaseStudyPage";
+import PricingPage from "./pages/PricingPage";
+import CareersPage from "./pages/CareersPage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import BlogPostPage from './pages/BlogPostPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
+import DemoProjects from './pages/DemoProjects';
+import DemoProjectDetails from './pages/DemoProjectDetails';
+import ServiceDetails from './pages/ServiceDetails';
+import ManifestoPage from './pages/ManifestoPage';
+import CookiesPolicy from './pages/CookiesPolicy';
 
-// --- Page Imports (Lazy Loaded) ---
-const HomePage = lazy(() => import("./pages/HomePage"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-const WorkPage = lazy(() => import("./pages/WorkPage"));
-const CaseStudyPage = lazy(() => import("./pages/CaseStudyPage"));
-const PricingPage = lazy(() => import("./pages/PricingPage"));
-const CareersPage = lazy(() => import("./pages/CareersPage"));
-const BlogPage = lazy(() => import("./pages/BlogPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
-const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
-const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const TermsConditions = lazy(() => import('./pages/TermsConditions'));
-const DemoProjects = lazy(() => import('./pages/DemoProjects'));
-const DemoProjectDetails = lazy(() => import('./pages/DemoProjectDetails'));
-const ServiceDetails = lazy(() => import('./pages/ServiceDetails'));
-const ManifestoPage = lazy(() => import('./pages/ManifestoPage'));
-const CookiesPolicy = lazy(() => import('./pages/CookiesPolicy'));
-const LoaderPage = lazy(() => import('./pages/LoaderPage'));
+// --- Splash Screen Import ---
+import SplashScreen from './components/ui/SplashScreen';
 
 const queryClient = new QueryClient();
 
-// Helper to scroll top on navigation
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
 const App = () => {
+  // 1. State to track if the splash screen should be visible
   const [isLoading, setIsLoading] = useState(true);
-
-  const handleLoadComplete = () => {
-    setIsLoading(false);
-  };
 
   return (
     <HelmetProvider>
@@ -57,39 +43,39 @@ const App = () => {
           <Toaster />
           <Sonner />
           
-          {/* AnimatePresence handles the exit animation of the Splash Screen */}
+          {/* 2. Splash Screen Logic */}
           <AnimatePresence mode="wait">
-            {isLoading ? (
-              <SplashScreen key="splash" onComplete={handleLoadComplete} />
-            ) : (
-              <BrowserRouter>
-                <ScrollToTop />
-                <Suspense fallback={<Loader />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/work" element={<WorkPage />} />
-                    <Route path="/work/:id" element={<CaseStudyPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/blog/:id" element={<BlogPostPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="/demo-projects" element={<DemoProjects />} />
-                    <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
-                    <Route path="/terms-conditions" element={<TermsConditions />} />
-                    <Route path="/services/:id" element={<ServiceDetails />} />
-                    <Route path="/manifesto" element={<ManifestoPage />} />
-                    <Route path="/cookies-policy" element={<CookiesPolicy />} />
-                    <Route path="/loader" element={<LoaderPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                  </Routes>
-                </Suspense>
-              </BrowserRouter>
+            {isLoading && (
+              <SplashScreen onComplete={() => setIsLoading(false)} />
             )}
           </AnimatePresence>
+
+          {/* 3. Main Website (Always rendered or rendered after, depending on preference) */}
+          {/* Note: Rendering it only after loading prevents "double scrollbar" issues during fade-out */}
+          {!isLoading && (
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/work" element={<WorkPage />} />
+                <Route path="/work/:id" element={<CaseStudyPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:id" element={<BlogPostPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/demo-projects" element={<DemoProjects />} />
+                <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
+                <Route path="/terms-conditions" element={<TermsConditions />} />
+                <Route path="/services/:id" element={<ServiceDetails />} />
+                <Route path="/manifesto" element={<ManifestoPage />} />
+                <Route path="/cookies-policy" element={<CookiesPolicy />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </BrowserRouter>
+          )}
 
         </TooltipProvider>
       </QueryClientProvider>
