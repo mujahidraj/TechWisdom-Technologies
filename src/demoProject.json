@@ -1,5 +1,74 @@
 [
-    {
+  {
+  "id": "titan-x",
+  "title": "Titan X - Mujahid's Portfolio",
+  "category": "Developer Portfolio",
+  "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1600",
+  "shortDescription": "High-performance dark mode portfolio for a Full Stack Engineer.",
+  "fullDescription": "An 8-page 'Cyber-Mercenary' style portfolio designed for a computer engineer. It features a deep dark theme with neon cyan/green accents, a terminal-style contact form, and a 'Tech Radar' to showcase skills. The site includes a custom JavaScript engine ('The Brain') that allows the user to update their CV details (Name, Bio, Projects) in one single script block, which then populates the entire website dynamically.",
+  "liveLink": "https://twtech-hub.github.io/Portfolio-D1/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Glassmorphism"
+  ],
+  "features": [
+    "Dynamic Content Injection Engine",
+    "Terminal-Style Contact Form",
+    "Holographic Project Modals",
+    "Interactive Tech Stack Radar"
+  ],
+  "designUnique": "Uses a 'System UI' aesthetic with monospace fonts, blinking cursors, and circuit board patterns to appeal to technical recruiters and clients looking for modern web solutions.",
+  "developmentProcess": "Implemented a centralized data object in vanilla JS to manage content state, simulating a headless CMS experience without any backend dependencies."
+},
+{
+  "id": "nexus-fidbi",
+  "title": "Nexus - Engineer Portfolio",
+  "category": "Developer Portfolio",
+  "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1600",
+  "shortDescription": "High-performance dark mode portfolio for a Full Stack Engineer.",
+  "fullDescription": "A 9-page 'Cyber-Architect' style portfolio designed for Fidbi Hasan. It features a deep dark theme with neon cyan accents, a terminal-style contact form, and a 'Tech Matrix' to showcase full-stack skills. The design mimics a developer's command center with code snippets and system diagnostics.",
+  "liveLink": "https://twtech-hub.github.io/Portfolio-D3/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Terminal UI"
+  ],
+  "features": [
+    "Terminal-Style Contact Form",
+    "Live Code Typing Animation",
+    "Interactive Tech Stack Matrix",
+    "Research Paper Data Visualization"
+  ],
+  "designUnique": "Uses a 'System UI' aesthetic with monospace fonts, blinking cursors, and circuit board patterns to appeal to technical recruiters and clients looking for robust backend solutions.",
+  "developmentProcess": "Implemented a 'Kernel' data object in vanilla JS to manage content state, allowing for easy updates to the CV data without touching the HTML structure."
+},
+{
+  "id": "aurora-mayad",
+  "title": "Aurora - HCI Portfolio",
+  "category": "Design Portfolio",
+  "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1600",
+  "shortDescription": "Aesthetic glassmorphism portfolio for UI/UX & HCI researchers.",
+  "fullDescription": "A 9-page 'Soft UI' portfolio designed for Asmaul Husna Mayad. It features a custom interactive cursor, a masonry gallery for Dribbble shots, and a dedicated 'Research' page for academic papers. The design uses pastel gradients and frosted glass effects to reflect empathy and modern design principles.",
+  "liveLink": "https://twtech-hub.github.io/Portfolio-D2/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Glassmorphism"
+  ],
+  "features": [
+    "Custom Circle Cursor",
+    "Masonry Layout Gallery",
+    "Research Paper Viewer (Focus Mode)",
+    "Interactive Service Packages"
+  ],
+  "designUnique": "Moves away from the typical 'dark mode' developer aesthetic to a light, airy, and human-centric design that aligns with HCI principles.",
+  "developmentProcess": "Implemented a custom cursor logic in vanilla JS and a CSS-only masonry grid for the gallery page to ensure high performance and smooth animations."
+},
+  {
       "id": "nova-strategy",
       "title": "Nova Strategy",
       "category": "Digital Agency",
@@ -22,6 +91,7 @@
       "designUnique": "Adopted a 'Clarity & Growth' philosophy with generous whitespace, the Plus Jakarta Sans typeface, and a restrained color palette to appeal to corporate decision-makers (Banks, Real Estate, FMCG).",
       "developmentProcess": "Built a custom tab-switching logic for the services page and a dynamic budget calculator in vanilla JS to provide immediate value to potential leads without page reloads."
     },
+
     {
   "id": "elevate-global",
   "title": "Elevate Global",
