@@ -6,10 +6,12 @@ import {
   Sparkles, MonitorPlay, Smartphone, Palette, TrendingUp, Cpu, Server, PenTool, Eye
 } from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
-import data from '@/data.json';
 import Layout from '@/components/layout/Layout';
 import FloatingChatButton from '@/components/layout/FloatingChatButton'; 
 import FloatingSpeedButton from '@/components/layout/FloatingSpeedButton';
+
+// 👇 IMPORT FROM YOUR NEW FILE
+import demoProjects from '@/demoProject.json'; 
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -60,7 +62,7 @@ const InteractiveBackground = () => {
 };
 
 const DemoProjects = () => {
-  const { demoProjects } = data;
+  // 👇 DIRECT USAGE OF IMPORTED ARRAY
   const categories = ['All', ...new Set(demoProjects.map(item => item.category))];
   const [activeCategory, setActiveCategory] = useState('All');
   const [openFaq, setOpenFaq] = useState<number | null>(null);

@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ExternalLink, CheckCircle, Layers, Palette, Terminal, Code2, Rocket, HelpCircle, Plus, Minus } from 'lucide-react';
-import data from '@/data.json';
 import SEOHead from '@/components/seo/SEOHead';
-import Layout from '@/components/layout/Layout'; // Switched to Layout for consistency
+import Layout from '@/components/layout/Layout';
 import FloatingSpeedButton from '@/components/layout/FloatingSpeedButton';
 import FloatingChatButton from '@/components/layout/FloatingChatButton';
+
+// 👇 CHANGED: Import directly from the new file
+import demoProjects from '@/demoProject.json'; 
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -59,7 +61,10 @@ const InteractiveBackground = () => {
 const DemoProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const project = data.demoProjects.find((p) => p.id === id);
+  
+  // 👇 CHANGED: Use the imported array directly instead of data.json
+  const project = demoProjects.find((p) => p.id === id);
+  
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
