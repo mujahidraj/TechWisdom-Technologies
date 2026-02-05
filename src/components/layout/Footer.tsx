@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Github, 
   Linkedin, 
-  Twitter, 
+  
   Mail, 
   MapPin, 
   Phone, 
@@ -11,7 +11,10 @@ import {
   ArrowRight,
   Send,
   PhoneCall,
-  MessageCircle
+  MessageCircle,
+  Brush,
+  Code,
+  Facebook
 } from 'lucide-react';
 import data from '@/data.json';
 import logo from "../../assets/techwisdom.png"
@@ -27,7 +30,7 @@ const Footer = () => {
     switch (platform.toLowerCase()) {
       case 'linkedin': return <Linkedin size={18} />;
       case 'github': return <Github size={18} />;
-      case 'twitter': return <Twitter size={18} />;
+      case 'facebook': return <Facebook size={18} />;
       default: return null;
     }
   };
@@ -165,11 +168,11 @@ const Footer = () => {
           
           {/* Requested 'Developed by' Section */}
           <div className="flex items-center gap-2 text-sm font-medium bg-slate-900/80 px-4 py-2 rounded-full border border-slate-800 hover:border-blue-500/30 transition-colors shadow-sm">
-            <span className="text-slate-400">Developed by</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-bold">
+            <span className="text-slate-400">Design & Developed by</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-bold animate-pulse">
               TechWisdom Technologies
             </span>
-            <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" />
+          
           </div>
         </div>
       </div>

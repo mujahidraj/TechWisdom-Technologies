@@ -6,7 +6,7 @@
     "email": "twtech.contact@gmail.com",
     "phone": "+8801799269699",
     "whatsapp": "https://wa.me/message/XNAQSGDMKN7OD1",
-    "address": "AIUB Gate-1, Block-C, Bashundhara R/A, Dhaka",
+    "address": "158/Cha, Kuratoli Rd, Dhaka 1229, Bangladesh",
     "image": "./assets/techwisdom.png"
   },
   "navigation": [
@@ -1828,15 +1828,15 @@
     "socialLinks": [
       {
         "platform": "LinkedIn",
-        "url": "https://linkedin.com"
+        "url": "https://www.linkedin.com/company/techwisdom-technologies/"
       },
       {
         "platform": "GitHub",
-        "url": "https://github.com"
+        "url": "https://github.com/twtech-Hub"
       },
       {
-        "platform": "Twitter",
-        "url": "https://twitter.com"
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/techWisdomTech"
       }
     ],
     "legalLinks": [
