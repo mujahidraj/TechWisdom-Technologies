@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Check, HelpCircle, Server, Code, Layers, Smartphone, Palette, Megaphone, Zap, ArrowRight, Sparkles, TrendingUp, ShieldCheck, Clock, RocketIcon, Rocket } from 'lucide-react';
+import { Check, HelpCircle, Server, Code, Layers, Smartphone, Palette, Megaphone, Zap, ArrowRight, Sparkles, TrendingUp, ShieldCheck, Clock, RocketIcon, Rocket, Wrench } from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -401,11 +401,12 @@ const PricingPage = () => {
               <p className="text-slate-400">We keep it fair and transparent.</p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
               {[
-                { step: "01", title: "Kickoff", desc: "Hosting acess Or 10%  Upfront Deposit to secure resources and start design.", icon: Zap },
+                { step: "01", title: "Kickoff", desc: "Hosting acess and 25%  Upfront Deposit to secure resources and start design.", icon: Zap },
                 { step: "02", title: "Development", desc: "Weekly updates and demos. No payment required during this phase.", icon: Code },
-                { step: "03", title: "Launch", desc: "Final 90% due only after your approval and delivery.", icon: Rocket }
+                { step: "03", title: "Launch", desc: "Final 75% due only after your approval and delivery.", icon: Rocket },
+                { step: "04", title: "Post-Launch", desc: "Optional maintenance and support package.", icon: Wrench }
               ].map((item, i) => (
                 <div key={i} className="relative p-8 border border-white/10 rounded-2xl bg-slate-900/40 text-center group hover:bg-slate-800/60 transition-colors">
                   <div className="w-16 h-16 mx-auto bg-blue-600/10 rounded-full flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">

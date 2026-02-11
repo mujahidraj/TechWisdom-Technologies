@@ -151,12 +151,14 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0, clipPath: "circle(150% at 100% 0%)" }}
             exit={{ opacity: 0, y: -20, clipPath: "circle(0% at 100% 0%)" }}
             transition={{ type: "spring", stiffness: 80, damping: 20, mass: 1 }}
-            className="fixed inset-0 z-40 bg-[#0f172a]/98 backdrop-blur-3xl lg:hidden flex flex-col pt-28 px-6 overflow-hidden"
+            // 👇 FIXED: Changed 'overflow-hidden' to 'overflow-y-auto' and added 'pb-20'
+            className="fixed inset-0 z-40 bg-[#0f172a]/98 backdrop-blur-3xl lg:hidden flex flex-col pt-28 px-6 overflow-y-auto"
           >
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
             
-            <div className="flex flex-col gap-2 relative z-10">
+            {/* 👇 ADDED pb-20 here for bottom spacing */}
+            <div className="flex flex-col gap-2 relative z-10 pb-20">
               {navigation.map((item, i) => (
                 <motion.div
                   key={item.path}
