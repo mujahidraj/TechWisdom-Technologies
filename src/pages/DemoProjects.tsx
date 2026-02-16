@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Layout as LayoutIcon, Code2, Layers, MessageSquare, Plus, Minus, HelpCircle, 
-  Sparkles, MonitorPlay, Smartphone, Palette, TrendingUp, Cpu, Server, PenTool, Eye
+  Sparkles, MonitorPlay, Smartphone, Palette, TrendingUp, Cpu, Server, PenTool, Eye,
+  
+  Lock,
+  BarChart3
 } from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -171,6 +174,9 @@ const DemoProjects = () => {
                   { icon: Smartphone, color: "text-purple-400", title: "Mobile Apps", desc: "iOS & Android Interfaces" },
                   { icon: Palette, color: "text-pink-400", title: "Graphic Design", desc: "Branding & Visual Identity" },
                   { icon: TrendingUp, color: "text-orange-400", title: "Digital Marketing", desc: "SEO & Conversion Strategy" },
+                  { icon: Cpu, color: "text-orange-400", title: "Ai Automation", desc: "Intelligent Automation & Optimization" },
+                  { icon: BarChart3, color: "text-orange-400", title: "Web Analytics", desc: "Performance Monitoring & Insights" },
+                  { icon: Lock, color: "text-orange-400", title: "BlockChain", desc: "Secure & Decentralized Data Management" },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/50 border border-white/5 hover:bg-slate-800 hover:border-white/10 transition-all duration-300 group">
                     <div className={`p-3 rounded-xl bg-slate-900 shadow-inner border border-white/5 group-hover:scale-110 transition-transform ${item.color}`}>
@@ -195,9 +201,10 @@ const DemoProjects = () => {
                   </h4>
                   <p className="text-slate-400 leading-relaxed text-sm md:text-base">
                     To ensure instant loading speeds and public accessibility, these demos run in a <strong>Frontend-First environment</strong>. 
-                    Real-world functionalities (Authentication, Database Storage, Payments) are <strong>simulated visually</strong>. 
+                    Real-world functionalities (Authentication, Database Storage, Payments) are <strong>simulated visually</strong>. These demos are not connected to a live backend, and any data entered is not stored or processed. Only for showcasing UI/UX and frontend interactions. 
                     <br className="mt-2" />
-                    <span className="text-white font-semibold">For client projects:</span> We build fully functional, secure, and scalable Backends (APIs & Databases) tailored to your specific business logic.
+                    <br />
+                    <span className="text-white font-semibold">For client projects:</span> We build fully functional, secure, and scalable Backends (APIs & Databases) tailored to your specific business logic. Every project we deliver includes a robust backend engineered for production, which is not reflected in these public demos to maintain performance and security. 
                   </p>
                 </div>
               </div>

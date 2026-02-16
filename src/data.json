@@ -387,6 +387,118 @@
         "App Store Optimization",
         "Push Notifications"
       ]
+    },
+    {
+      "id": "ai-automation",
+      "title": "AI & Automation",
+      "shortDescription": "LLMs, Chatbots, and Workflow Automation",
+      "description": "Transform your business with intelligent AI solutions. We integrate Large Language Models and custom automation scripts to streamline repetitive tasks and enhance decision-making.",
+      "icon": "Cpu",
+      "features": [
+        "Custom GPT Integration",
+        "Process Automation",
+        "AI Chatbot Systems",
+        "Predictive Analytics",
+        "NLP Solutions"
+      ]
+    },
+    {
+      "id": "web-analytics",
+      "title": "Web Analytics & Data",
+      "shortDescription": "GA4, GTM, and Conversion Tracking",
+      "description": "Data-driven insights to fuel your growth. We implement advanced tracking systems that turn user behavior into actionable intelligence for your marketing and product teams.",
+      "icon": "BarChart3",
+      "features": [
+        "GA4 Implementation",
+        "Event Tracking",
+        "Heatmap Analysis",
+        "Custom Dashboards",
+        "ROI Monitoring"
+      ]
+    },
+    {
+      "id": "motion-graphics",
+      "title": "Motion Graphics",
+      "shortDescription": "2D/3D Animation and Visual Effects",
+      "description": "Bring your brand to life with high-impact visual storytelling. We create professional motion graphics and video content that engages audiences and simplifies complex ideas.",
+      "icon": "Play",
+      "features": [
+        "Explainer Videos",
+        "UI/UX Animation",
+        "3D Product Renders",
+        "Logo Animation",
+        "Video Editing"
+      ]
+    },
+    {
+      "id": "blockchain",
+      "title": "Blockchain Solutions",
+      "shortDescription": "Smart Contracts and Web3 Apps",
+      "description": "Secure, decentralized applications built for the future. From smart contract development to full Web3 integrations, we ensure your business is ready for the blockchain era.",
+      "icon": "ShieldCheck",
+      "features": [
+        "Smart Contracts",
+        "DApp Development",
+        "Tokenomics Design",
+        "NFT Ecosystems",
+        "Wallet Integration"
+      ]
+    },
+    {
+      "id": "saas-development",
+      "title": "SaaS Development",
+      "shortDescription": "Multi-tenant Software Architecture",
+      "description": "Turn your software idea into a profitable subscription product. We design and build scalable SaaS platforms with secure billing, user management, and cloud infrastructure.",
+      "icon": "Layers",
+      "features": [
+        "Subscription Systems",
+        "Multi-tenancy Architecture",
+        "Stripe Integration",
+        "User Dashboards",
+        "Scalable Infrastructure"
+      ]
+    },
+    {
+      "id": "erp-solutions",
+      "title": "Enterprise Resource Planning",
+      "shortDescription": "Integrated Business Management",
+      "description": "Unified systems to manage your entire operation. Our ERP solutions connect finance, HR, and supply chain data into a single, high-performance source of truth.",
+      "icon": "Briefcase",
+      "features": [
+        "Inventory Management",
+        "Financial Modules",
+        "HR Management",
+        "Supply Chain Tracking",
+        "Resource Planning"
+      ]
+    },
+    {
+      "id": "crm-systems",
+      "title": "Custom CRM Systems",
+      "shortDescription": "Lead Management and Sales Pipelines",
+      "description": "Build stronger relationships with your customers. We create custom CRM platforms that track leads, manage communication, and automate your entire sales funnel.",
+      "icon": "Users",
+      "features": [
+        "Lead Scoring",
+        "Sales Pipeline",
+        "Email Automation",
+        "Customer History",
+        "Mobile Integration"
+      ]
+    },
+    {
+      "id": "cms-development",
+      "title": "Content Management Systems",
+      "shortDescription": "Headless CMS and Custom Backends",
+      "description": "Take control of your content without the technical headache. We build intuitive, powerful CMS solutions that allow your team to update your site in real-time.",
+      "icon": "FileText",
+      "features": [
+        "Headless CMS",
+        "Sanity & Strapi",
+        "Custom Dashboards",
+        "SEO Optimization",
+        "Role-based Access"
+      ]
     }
   ],
   "serviceDetails": {
@@ -501,6 +613,604 @@
         }
       ]
     },
+    "ai-automation": {
+      "tagline": "Powering Intelligence, Automating Growth",
+      "heroImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070",
+      "overview": "Generic automation is a thing of the past. We build bespoke AI-driven ecosystems that transform how your business operates. By leveraging Large Language Models (LLMs), Generative AI, and custom robotic process automation (RPA), we eliminate manual bottlenecks and unlock predictive insights. Our solutions integrate deeply with your existing workflows to provide intelligent decision-making support and 24/7 automated customer engagement that feels authentically human.",
+      "deliverables": [
+        "Custom Trained AI Models/LLMs",
+        "Automated Workflow Scripts",
+        "Intelligent Chatbot Interface",
+        "API Integration Documentation",
+        "Model Accuracy & Bias Report",
+        "Data Processing Pipeline Setup",
+        "30 Days Model Monitoring",
+        "User Training on AI Tools",
+        "Security & Privacy Compliance Audit",
+        "Scalability & Latency Report",
+        "Prompt Engineering Playbook",
+        "Automated Reporting Dashboard",
+        "Legacy System AI Integration",
+        "Data Encryption & Safety Protocol",
+        "Technical Maintenance Manual",
+        "AI Strategy Roadmap"
+      ],
+      "process": [
+        {
+          "title": "Data Audit",
+          "desc": "We analyze your existing data structures and manual workflows to identify high-impact automation opportunities."
+        },
+        {
+          "title": "Model Selection",
+          "desc": "Choosing the right LLM (GPT-4, Claude, Llama) or training custom neural networks based on your specific needs."
+        },
+        {
+          "title": "Integration Build",
+          "desc": "Developing the middleware and connectors to link AI logic with your current business software and databases."
+        },
+        {
+          "title": "Testing & Tuning",
+          "desc": "Rigorous testing for 'hallucinations', response latency, and edge-case handling to ensure reliability."
+        },
+        {
+          "title": "Deployment",
+          "desc": "Launching into production with real-time monitoring and automated feedback loops for continuous learning."
+        }
+      ],
+      "techStack": [
+        "Python",
+        "OpenAI / Anthropic APIs",
+        "LangChain",
+        "TensorFlow / PyTorch",
+        "Pinecone (Vector DB)",
+        "Node.js",
+        "FastAPI",
+        "Docker",
+        "Hugging Face",
+        "AWS SageMaker"
+      ],
+      "benefits": [
+        "Up to 80% reduction in manual tasks",
+        "24/7 intelligent customer support",
+        "Data-driven predictive forecasting",
+        "Zero-latency workflow automation",
+        "Elimination of human entry errors",
+        "Seamless scaling of operations",
+        "Enhanced employee productivity",
+        "Advanced data privacy controls",
+        "Proprietary AI knowledge base",
+        "Rapid ROI through operational savings"
+      ],
+      "faqs": [
+        {
+          "q": "Will AI replace my employees?",
+          "a": "Our goal is augmentation. We automate repetitive 'grunt work' so your team can focus on high-value creative and strategic tasks."
+        },
+        {
+          "q": "How secure is my data with AI?",
+          "a": "We use private VPCs and enterprise-grade APIs where data is not used for training public models, ensuring 100% data sovereignty."
+        },
+        {
+          "q": "Can you automate legacy software?",
+          "a": "Yes, we use custom APIs and RPA (Robotic Process Automation) to bridge the gap between modern AI and older legacy systems."
+        }
+      ]
+    },
+    "blockchain": {
+      "tagline": "Decentralizing the Future of Trust",
+      "heroImage": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=2070",
+      "overview": "Blockchain is more than just crypto; it's the foundation for the new internet. We develop decentralized applications (dApps) and secure smart contracts that bring transparency and security to your enterprise. Whether you're launching a DeFi platform, an NFT marketplace, or a private supply chain ledger, our blockchain engineers ensure your code is immutable, audited, and optimized for gas efficiency across major networks.",
+      "deliverables": [
+        "Audited Smart Contracts",
+        "Web3 Frontend (dApp)",
+        "Wallet Integration (MetaMask, etc.)",
+        "Tokenomics Whitepaper",
+        "Security Audit Report",
+        "Deployment to Mainnet/Testnet",
+        "IPFS Data Storage Setup",
+        "SubGraph/Indexing Setup",
+        "Governance Protocol Design",
+        "Multi-sig Wallet Setup",
+        "Technical Documentation",
+        "Post-Launch Gas Monitoring"
+      ],
+      "process": [
+        {
+          "title": "Protocol Design",
+          "desc": "Defining tokenomics, consensus mechanisms, and the economic structure of the decentralized system."
+        },
+        {
+          "title": "Smart Contract Dev",
+          "desc": "Writing secure, gas-optimized code in Solidity or Rust followed by extensive unit testing."
+        },
+        {
+          "title": "Frontend Web3",
+          "desc": "Building the user interface and connecting it to the blockchain via Ethers.js or Web3.js."
+        },
+        {
+          "title": "Audit & Security",
+          "desc": "Internal and external security audits to ensure there are no vulnerabilities like re-entrancy attacks."
+        },
+        {
+          "title": "Launch",
+          "desc": "Deployment to the chosen network with verified source code on Etherscan/Polygonscan."
+        }
+      ],
+      "techStack": [
+        "Solidity",
+        "Rust",
+        "Ethereum",
+        "Polygon",
+        "Solana",
+        "Hardhat",
+        "Ethers.js",
+        "IPFS",
+        "The Graph",
+        "Alchemy"
+      ],
+      "benefits": [
+        "Immutable and transparent records",
+        "Elimination of central intermediaries",
+        "Highest level of cryptographic security",
+        "Automated trust via Smart Contracts",
+        "Global, borderless transactions",
+        "Verifiable digital ownership",
+        "Resilience against server downtime",
+        "Enhanced user privacy",
+        "Direct peer-to-peer interactions",
+        "Future-ready Web3 architecture"
+      ],
+      "faqs": [
+        {
+          "q": "Which blockchain should I use?",
+          "a": "It depends on your project. Ethereum is most secure, Polygon is cost-effective, and Solana is extremely fast. we help you choose."
+        },
+        {
+          "q": "Are Smart Contracts reversible?",
+          "a": "No. Once deployed, they are immutable. This is why our auditing phase is so rigorous—we ensure the logic is perfect before launch."
+        }
+      ]
+    },
+    "saas-development": {
+      "tagline": "Building Scalable Cloud Empires",
+      "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2070",
+      "overview": "Building a SaaS (Software as a Service) requires more than just a website; it requires a robust multi-tenant architecture designed for scale. We specialize in building cloud-native products with complex subscription logic, secure user data isolation, and high-concurrency backends. From MVP to enterprise scale, we handle the infrastructure, the billing, and the user experience so you can focus on growing your MRR.",
+      "deliverables": [
+        "Multi-tenant SaaS Architecture",
+        "Subscription & Billing System",
+        "User Roles & Permissions (RBAC)",
+        "API First Infrastructure",
+        "Admin Analytics Dashboard",
+        "Automated Onboarding Flow",
+        "Scalable Database Schema",
+        "Customer Support Integration",
+        "Security Compliance Setup",
+        "Custom Domain Management",
+        "Automated Backup Systems",
+        "Uptime Monitoring Setup"
+      ],
+      "process": [
+        {
+          "title": "MVP Definition",
+          "desc": "Identifying core features required to go to market and attract early adopters."
+        },
+        {
+          "title": "Tenant Architecture",
+          "desc": "Designing the database to ensure complete data isolation between different customers."
+        },
+        {
+          "title": "Billing Integration",
+          "desc": "Setting up recurring payments, trials, and usage-based billing via Stripe or Chargebee."
+        },
+        {
+          "title": "Infrastructure Dev",
+          "desc": "Building auto-scaling cloud environments to handle thousands of concurrent users."
+        },
+        {
+          "title": "Launch & Iterate",
+          "desc": "Deploying the product and setting up feedback loops for feature requests."
+        }
+      ],
+      "techStack": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe",
+        "Auth0 / Clerk",
+        "Kubernetes",
+        "Terraform",
+        "Redis",
+        "SendGrid",
+        "AWS / GCP"
+      ],
+      "benefits": [
+        "Recurring revenue ready",
+        "Elastic scaling (Pay as you grow)",
+        "Centralized updates and maintenance",
+        "Lower entry cost for your customers",
+        "High data availability and security",
+        "Easy integration with 3rd party tools",
+        "Automated customer lifecycle",
+        "Real-time analytics and insights",
+        "Cross-device compatibility",
+        "Quick time-to-market for new features"
+      ],
+      "faqs": [
+        {
+          "q": "How do you handle data isolation?",
+          "a": "We use row-level security or separate schemas to ensure one customer can never access another customer's data."
+        },
+        {
+          "q": "Can you help with Stripe integration?",
+          "a": "Yes, we handle the full billing cycle including taxes, invoices, failed payment handling, and upgrades."
+        }
+      ]
+    },
+    "crm-systems": {
+    "tagline": "Unifying Customer Relationships",
+    "heroImage": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=80&w=2070",
+    "overview": "Generic CRMs often force you to change your workflow to fit their software. We do the opposite. We build custom CRM platforms that mirror your specific sales process, from lead capture to final closing. By centralizing communication, automating follow-ups, and providing real-time sales intelligence, our CRM solutions empower your team to close deals faster and build deeper customer loyalty through data-driven personalization.",
+    "deliverables": [
+      "Custom Lead & Contact Management",
+      "Sales Pipeline Visualization",
+      "Email & Communication Tracking",
+      "Automated Follow-up Workflows",
+      "Reporting & Sales Forecasting",
+      "User Access Control (RBAC)",
+      "Mobile-Responsive CRM Interface",
+      "Third-Party Tool Integrations",
+      "Data Migration from Legacy CRM",
+      "API for External Marketing Tools",
+      "Customer Activity Logs",
+      "Daily/Weekly Performance Briefs"
+    ],
+    "process": [
+      {
+        "title": "Funnel Mapping",
+        "desc": "We map your current sales stages, lead sources, and customer touchpoints to define the CRM logic."
+      },
+      {
+        "title": "Data Architecture",
+        "desc": "Designing a flexible database that allows for complex relationships between leads, deals, and accounts."
+      },
+      {
+        "title": "Automation Engine",
+        "desc": "Building the 'brains' of the system to handle automated triggers, tasks, and notifications."
+      },
+      {
+        "title": "Security & Testing",
+        "desc": "Ensuring strict data privacy and testing the system under heavy data loads."
+      },
+      {
+        "title": "Team Onboarding",
+        "desc": "Deployment followed by comprehensive training to ensure high adoption rates among your staff."
+      }
+    ],
+    "techStack": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "SendGrid API",
+      "Twilio",
+      "AWS",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "benefits": [
+      "360-degree view of every customer",
+      "Elimination of lost leads",
+      "Automated administrative tasks",
+      "Accurate sales forecasting",
+      "Enhanced team collaboration",
+      "Seamless mobile access",
+      "Data-driven marketing insights",
+      "Scalable as your lead volume grows",
+      "Direct integration with your website",
+      "Complete ownership of customer data"
+    ],
+    "faqs": [
+      {
+        "q": "Can you import my data from Excel or Salesforce?",
+        "a": "Yes. We specialize in data cleansing and migration to ensure you don't lose any history when moving to your custom CRM."
+      },
+      {
+        "q": "Can it integrate with my email?",
+        "a": "Absolutely. We can sync with Gmail, Outlook, and other providers to track all conversations automatically."
+      }
+    ]
+  },
+  "erp-solutions": {
+    "tagline": "The Central Nervous System of Your Enterprise",
+    "heroImage": "https://www.cio.com/wp-content/uploads/2025/03/272362-0-27498000-1741330535-enterprise_resource_planning-ERP.jpg?quality=50&strip=all&w=1024",
+    "overview": "Inconsistency between departments is the enemy of efficiency. Our custom ERP solutions act as a single source of truth for your entire organization. We integrate finance, inventory, human resources, and supply chain management into a unified dashboard. By breaking down data silos, we enable cross-departmental automation and provide executives with real-time analytics to make high-stakes decisions with confidence.",
+    "deliverables": [
+      "Unified Business Dashboard",
+      "Inventory & Asset Tracking",
+      "Financial Management Module",
+      "HR & Payroll Integration",
+      "Supply Chain Monitoring",
+      "Procurement & Vendor Management",
+      "Real-time Data Analytics",
+      "Custom Reporting Engine",
+      "Multi-currency/Language Support",
+      "Mobile Inventory Scanning App",
+      "Document Management System",
+      "Full System Audit Trail"
+    ],
+    "process": [
+      {
+        "title": "Ops Analysis",
+        "desc": "Deep-dive into every department's workflow to understand how data flows through the company."
+      },
+      {
+        "title": "Module Design",
+        "desc": "Designing modular components for Finance, HR, and Operations to ensure long-term flexibility."
+      },
+      {
+        "title": "Integration Phase",
+        "desc": "Connecting the new ERP core with existing bank feeds, shipping APIs, and legacy databases."
+      },
+      {
+        "title": "Stress Testing",
+        "desc": "Simulating high-volume transactions and multi-user access to ensure zero downtime."
+      },
+      {
+        "title": "Phased Rollout",
+        "desc": "Deploying department by department to ensure smooth transition and zero business interruption."
+      }
+    ],
+    "techStack": [
+      "Next.js",
+      "Python/Django",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Redis",
+      "AWS Cloud",
+      "SAP/Oracle API Bridges"
+    ],
+    "benefits": [
+      "Real-time operational visibility",
+      "Reduced operational overhead",
+      "Seamless departmental coordination",
+      "Automated financial compliance",
+      "Optimized inventory turnover",
+      "Data-backed strategic planning",
+      "Secure centralized data storage",
+      "Improved regulatory reporting",
+      "Automated procurement cycles",
+      "Universal access from any device"
+    ],
+    "faqs": [
+      {
+        "q": "How long does ERP implementation take?",
+        "a": "Due to its complexity, a custom ERP typically takes 3-6 months for a full rollout, usually done in phases."
+      },
+      {
+        "q": "Is the system secure enough for financial data?",
+        "a": "Yes. We implement bank-grade encryption, multi-factor authentication, and strict audit logs for every transaction."
+      }
+    ]
+  },
+  "cms-development": {
+    "tagline": "Empowering Content Without Constraints",
+    "heroImage": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=2070",
+    "overview": "Stop fighting with rigid templates and complicated backends. We build custom and Headless CMS solutions that give your marketing team total control while keeping your developers happy. Our CMS platforms are designed for speed, security, and extreme ease of use. Whether you need to manage a high-traffic blog, a multilingual corporate site, or a complex media library, we provide the tools to publish content in seconds across any platform.",
+    "deliverables": [
+      "Custom Content Dashboard",
+      "Headless CMS Integration",
+      "Media Asset Management",
+      "SEO Management Suite",
+      "Multilingual Content Support",
+      "Content Versioning & Rollback",
+      "Role-Based Editing Workflow",
+      "Dynamic Page Builder",
+      "API-First Content Delivery",
+      "Automated Image Optimization",
+      "Newsletter & Social Integration",
+      "Technical Documentation"
+    ],
+    "process": [
+      {
+        "title": "Schema Design",
+        "desc": "We define how your content is structured so it can be reused across websites, apps, and emails."
+      },
+      {
+        "title": "Backend Setup",
+        "desc": "Building the editing interface using custom solutions or Headless platforms like Sanity/Strapi."
+      },
+      {
+        "title": "Frontend Connection",
+        "desc": "Linking the CMS to a blazing-fast React or Next.js frontend via high-performance APIs."
+      },
+      {
+        "title": "Performance Tuning",
+        "desc": "Optimizing asset delivery and caching to ensure the site stays fast regardless of content size."
+      },
+      {
+        "title": "Editor Training",
+        "desc": "Showing your non-technical team how to manage the site without writing a single line of code."
+      }
+    ],
+    "techStack": [
+      "Sanity.io",
+      "Strapi",
+      "Next.js",
+      "GraphQL",
+      "Cloudinary",
+      "Vercel",
+      "PostgreSQL",
+      "Contentful"
+    ],
+    "benefits": [
+      "Total freedom over site layout",
+      "Lightning-fast page loads",
+      "Superior SEO performance",
+      "Extremely secure architecture",
+      "Omnichannel content delivery",
+      "No technical knowledge required",
+      "Reduced long-term maintenance",
+      "Instant content updates",
+      "Future-proof technology stack",
+      "Custom workflows for large teams"
+    ],
+    "faqs": [
+      {
+        "q": "What is a Headless CMS?",
+        "a": "It separates the content (backend) from the design (frontend). This makes your site much faster and allows you to use your content on mobile apps too."
+      },
+      {
+        "q": "Can I manage multiple sites from one CMS?",
+        "a": "Yes, our custom architectures allow for multi-site management from a single, unified dashboard."
+      }
+    ]
+  },
+  "web-analytics": {
+    "tagline": "Turning Raw Data Into Growth Intelligence",
+    "heroImage": "https://media.licdn.com/dms/image/v2/D5612AQHojt7bqzkodA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1710509149220?e=2147483647&v=beta&t=2QNzyrgwnCGUkwDqkH26VyqUuWQAvZ5Gvrnc4nimSOc",
+    "overview": "Measuring 'traffic' is no longer enough. We implement sophisticated analytics ecosystems that track every meaningful interaction on your site. By integrating Google Analytics 4 (GA4), Tag Manager, and custom event tracking, we turn anonymous clicks into detailed user journeys. We provide you with the clarity to see exactly where your customers are coming from, why they are converting, and—more importantly—why they aren't.",
+    "deliverables": [
+      "GA4 & GTM Implementation",
+      "Custom Conversion Tracking",
+      "E-commerce Revenue Tracking",
+      "User Behavior Heatmaps",
+      "Marketing Attribution Setup",
+      "Custom Looker Studio Reports",
+      "Privacy/GDPR Compliance Setup",
+      "A/B Testing Framework",
+      "Server-Side Tagging Setup",
+      "Data Layer Documentation",
+      "Funnel Leakage Analysis",
+      "Monthly Insight Reports"
+    ],
+    "process": [
+      {
+        "title": "KPI Definition",
+        "desc": "We identify the specific metrics that actually drive your revenue and business growth."
+      },
+      {
+        "title": "Tag Architecture",
+        "desc": "Designing a clean Google Tag Manager setup to track events without slowing down your site."
+      },
+      {
+        "title": "Dashboard Build",
+        "desc": "Creating visual, easy-to-read reports in Looker Studio or PowerBI for your stakeholders."
+      },
+      {
+        "title": "Data Validation",
+        "desc": "Testing all triggers and tags to ensure the data being collected is 100% accurate."
+      },
+      {
+        "title": "Optimization Strategy",
+        "desc": "Analyzing the first week of data to provide your first set of CRO (Conversion Rate Optimization) tips."
+      }
+    ],
+    "techStack": [
+      "GA4",
+      "Google Tag Manager",
+      "Looker Studio",
+      "Hotjar / Clarity",
+      "BigQuery",
+      "Python",
+      "Server-side GTM"
+    ],
+    "benefits": [
+      "Complete visibility into ROI",
+      "Identify high-value user paths",
+      "Lower customer acquisition costs",
+      "Data-backed marketing spend",
+      "Predictive user behavior",
+      "Improved website conversion",
+      "Clean, accurate reporting",
+      "Full privacy compliance",
+      "Reduced 'guesswork' in design",
+      "Automated performance alerts"
+    ],
+    "faqs": [
+      {
+        "q": "Is my data private and compliant?",
+        "a": "Yes. We implement consent mode and follow GDPR/CCPA guidelines to ensure you collect data legally and ethically."
+      },
+      {
+        "q": "Can you track my sales back to the original ad?",
+        "a": "Yes, we set up multi-touch attribution so you know exactly which marketing channel deserves the credit for a sale."
+      }
+    ]
+  },
+  "motion-graphics": {
+    "tagline": "Visual Storytelling in Motion",
+    "heroImage": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070",
+    "overview": "Static images can't compete with the power of motion. We create high-end motion graphics and animations that explain complex products, capture social media attention, and elevate your brand identity. From sleek UI/UX animations for your app to cinematic explainer videos and 3D product reveals, we combine technical precision with creative artistry to make your brand impossible to ignore.",
+    "deliverables": [
+      "Explainer Video (2D/3D)",
+      "UI/UX App Animations",
+      "Animated Logo & Branding",
+      "Social Media Motion Assets",
+      "3D Product Renderings",
+      "Broadcast-Ready TV Spots",
+      "Lottie Files for Web",
+      "Custom Character Animation",
+      "Visual Effects (VFX)",
+      "Sound Design & Voiceover",
+      "Storyboards & Concepts",
+      "High-Res Source Projects"
+    ],
+    "process": [
+      {
+        "title": "Concept & Script",
+        "desc": "Defining the narrative and writing a script that resonates with your target audience."
+      },
+      {
+        "title": "Storyboarding",
+        "desc": "Creating static frames to map out the visual flow and timing of the animation."
+      },
+      {
+        "title": "Design & Style",
+        "desc": "Developing the visual language, colors, and characters that match your brand."
+      },
+      {
+        "title": "Animation Phase",
+        "desc": "Bringing the designs to life using After Effects, Cinema 4D, or Blender."
+      },
+      {
+        "title": "Sound & Polish",
+        "desc": "Adding sound effects, music, and voiceovers to finalize the emotional impact."
+      }
+    ],
+    "techStack": [
+      "After Effects",
+      "Cinema 4D",
+      "Blender",
+      "Premiere Pro",
+      "Lottie / Rive",
+      "Figma",
+      "Illustrator",
+      "Redshift / Octane"
+    ],
+    "benefits": [
+      "Higher audience engagement",
+      "Simplifies complex concepts",
+      "Premium brand perception",
+      "Increased social media shares",
+      "Improved information retention",
+      "Versatile across all platforms",
+      "Fast-loading web animations",
+      "High-impact sales pitches",
+      "Unique visual identity",
+      "Professional audio-visual polish"
+    ],
+    "faqs": [
+      {
+        "q": "Can these animations be used on my website?",
+        "a": "Yes! We use Lottie and Rive to export animations as code, making them lightweight and interactive for your site or app."
+      },
+      {
+        "q": "Do you provide the voiceover and music?",
+        "a": "Yes, we handle the full production including professional voice talent and licensed soundtracks."
+      }
+    ]
+  },
     "wordpress": {
       "tagline": "Enterprise-Grade CMS Solutions",
       "heroImage": "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=2070",
@@ -1854,7 +2564,6 @@
       }
     ]
   },
-
   "notFound": {
     "title": "Page Not Found",
     "description": "Oops! The page you're looking for seems to have wandered off into the digital void.",

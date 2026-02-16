@@ -1,4 +1,129 @@
 [ 
+  {
+  "id": "zenith-wellness-hub",
+  "title": "Zenith Wellness Hub",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "A traditional yet modern high-end holistic fitness ecosystem for premium Dhaka demographics.",
+  "fullDescription": "A comprehensive 9-page website built for Zenith Wellness Hub, a premier holistic fitness center in Bangladesh (Dhanmondi, Gulshan, Uttara). The project departs from aggressive 'hardcore gym' marketing, opting for a 'Modern Holistic' design system featuring a slate-and-mint palette, clean typography (Plus Jakarta Sans), and large high-quality imagery. The site features deeply interactive elements including a dual-filter operational grid (schedule), a suite of clinical health analytics tools (BMI, BMR, Macro engines), and specialized sections for Women's Privacy and Corporate B2B wellness, all powered by optimized Vanilla JavaScript.",
+  "liveLink": "https://twtech-hub.github.io/Zenith-Fitness-D7/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Dual-Filter Branch & Day Schedule Grid",
+    "Functional Bio-Metric Analytical Tools (TDEE/BMI/Macros)",
+    "Goal-Based Interactive Journey Selector",
+    "Simulated Live Facility Capacity Trackers",
+    "B2B Corporate Wellness Intake Terminal",
+    "Interactive Growth Timeline & Faculty Roster"
+  ],
+  "designUnique": "Utilizes a 'Structured Premium' philosophy that balances traditional navigation with highly interactive content sections. It employs smooth transitions, glassmorphic navigation, and bento-box service layouts to signal trust and high value to corporate professionals and health enthusiasts in Bangladesh.",
+  "developmentProcess": "Developed with a modular Vanilla JS engine to handle dynamic schedule rendering and biometric calculations without external framework bloat. Integrated local market considerations such as 'Jumuah Observance' and 'Membership Freeze Protocols' directly into the UX to ensure 100% relevance to the Bangladeshi consumer."
+},
+  {
+  "id": "titan-forge-gym",
+  "title": "TITAN FORGE GYM",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "An industrial, high-intensity gym portfolio targeting powerlifters and combat athletes in Dhaka.",
+  "fullDescription": "An 8-page raw, industrial-themed website built for an elite combat sports and heavy lifting facility in Bangladesh (Bashundhara R/A & Dhanmondi). The UI abandons soft 'commercial gym' aesthetics in favor of Matte Black, Forged Amber, and Steel Gray, utilizing the aggressive 'Teko' font. The site features highly interactive Vanilla JS elements, including an interactive 'War Room' with algorithms calculating 1-Rep Max and Fight Camp Macros (TDEE), a dual-filter Timetable for managing complex class schedules, and terminal-styled booking modals to maximize lead generation.",
+  "liveLink": "https://twtech-hub.github.io/Titan-Forge-Fitness-D4/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Interactive War Room Calculators (1RM, TDEE, Hydration)",
+    "Terminal-Styled Encrypted Deployment Modals (Booking)",
+    "Dual-Filter Battle Plan (Schedule) Interface",
+    "Dynamic Base Selector for Branch Info",
+    "Scroll-Triggered 'Construction' Timeline",
+    "Annual vs Monthly BDT Contract Engine"
+  ],
+  "designUnique": "Employs an 'Industrial Grit & Iron' design language characterized by hazard stripes, heavy block shadows (`shadow-[8px_8px_0px_#FFB300]`), terminal-styled input fields, and monochromatic imagery overlaid with deep gradients. The copy heavily leans into military/combat terminology (e.g., 'Commanders' instead of trainers, 'Enlistment' instead of membership) to attract serious athletes.",
+  "developmentProcess": "Developed with purely functional Vanilla JS to handle dynamic data rendering for schedules and trainer rosters, eliminating the need for heavy frameworks. Built custom logic for health metric algorithms (Epley Formula, Mifflin-St Jeor) directly into the UI, pairing them with simulated 'terminal processing' animations for an immersive user experience."
+},
+{
+  "id": "sync-fitness-lab",
+  "title": "SYNC Fitness Lab",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "A cyberpunk-inspired, data-driven gym portfolio utilizing glassmorphism and bento-box layouts.",
+  "fullDescription": "An 8-page highly unconventional fitness website designed for a tech-integrated gym in Dhaka's premier corporate hubs (Banani & Gulshan). Shunning traditional 'hardcore gym' aesthetics, SYNC Fitness Lab utilizes a 'Cyber-Glassmorphism' design language—featuring Deep Space Black, Electric Cyan (`#00E5FF`), Neon Purple, and frosted glass panels. The site treats fitness like a software update ('Bio-hacking', 'Modules', 'System Initialization'). It is engineered for high engagement, replacing the standard hero image with an interactive Bento Grid dashboard featuring a live (simulated) capacity tracker, module countdowns, and quick-access BMI tools.",
+  "liveLink": "https://twtech-hub.github.io/Sync-Fitness-D5/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Extended Config)",
+    "JavaScript (Vanilla)",
+    "CSS Glassmorphism & Keyframes"
+  ],
+  "features": [
+    "Interactive Bento Box Dashboard Hero",
+    "Terminal-Styled Fitness Calculators (TDEE, 1RM)",
+    "Dual-Filter Live Grid Timetable (Hubs & Days)",
+    "Simulated Live Member Feed (JS Output)",
+    "Custom Glowing Cyber Cursor & Progress Scroll",
+    "Encrypted Data Transmission Forms (Lead Gen)"
+  ],
+  "designUnique": "Abandons standard typography for `Rajdhani` (headings) and `Orbitron` (data/numbers) to create an immersive 'operating system' feel. It extensively uses CSS `backdrop-filter: blur`, neon box-shadows, and a custom CSS cyber-grid background to mimic a high-tech software interface rather than a physical space.",
+  "developmentProcess": "Built entirely with Vanilla JS to maintain lightweight performance despite complex UI interactions. Developed custom logic to simulate real-time API fetches (e.g., Live Gym Capacity bar, scrolling matrix text preloader, and auto-updating community feeds) to sell the 'tech-startup' illusion, alongside mathematically accurate health formulas (Mifflin-St Jeor)."
+},
+{
+  "id": "oxygen-reserve",
+  "title": "OXYGEN | The Fitness Reserve",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600",
+  "shortDescription": "An editorial-style, minimalist brutalist portfolio for a high-end air-purified gym in Dhaka.",
+  "fullDescription": "An 8-page premium fitness sanctuary website designed for a high-net-worth demographic in Bangladesh (Gulshan & Banani). Shunning traditional navigation, the site utilizes an 'Editorial Minimalist' design language with a floating bottom dock, massive 'Clash Display' typography, and a Deep Forest Green & Bone White palette. The project focuses on the 'Oxygen Reserve' concept, positioning the gym as a clean-air sanctuary using H13 HEPA filtration. It features functional stepped-calculators (TDEE, 1RM), a live capacity-tracking schedule, and editorial-style Master Guide profiles, all powered by lightweight Vanilla JavaScript.",
+  "liveLink": "https://twtech-hub.github.io/Oxygen-Fitness-D6/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Navbar-less UI with Floating Bottom Dock",
+    "Live Class Capacity Simulation Engine",
+    "Stepped Clinical Fitness Calculators (Mifflin-St Jeor & Epley)",
+    "Split-Scroll Program Visualization",
+    "Sticky Vertical Sidebar Progress Navigation",
+    "Localized Dhaka AQI Environment Context"
+  ],
+  "designUnique": "Adopts a 'Magazine Brutalism' aesthetic—replacing traditional headers with asymmetric layouts and huge display type. The UX is optimized for high-end mobile users, placing all critical navigation within thumb-reach via a floating dock and prioritizing clean, high-contrast imagery with custom slide-reveal masks.",
+  "developmentProcess": "Engineered without a standard navbar to force focus on high-conversion editorial content. Built a custom Vanilla JS state manager for the dual-hub schedule and interactive metrics tools, ensuring smooth cross-fades and transitions without the bloat of external libraries."
+},
+  {
+  "id": "fitnex-arena",
+  "title": "FITNEX Arena",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "High-energy, tech-driven commercial gym website optimized for modern professionals.",
+  "fullDescription": "An 8-page modern fitness center website designed for a scalable gym franchise in Bangladesh (with branches in Mirpur and Uttara). The design utilizes a high-energy palette of Vibrant Orange and Deep Navy, with 'Montserrat' providing bold, sporty typography. The site is engineered for high conversion rates, featuring a live BMI and TDEE macro calculator to capture leads, an interactive multi-branch schedule filter, dynamic booking modals, and seamless WhatsApp integration. It leverages the local context heavily, offering corporate squad plans for Dhaka tech hubs and addressing the 'Dhaka Diet' (macros around local staples like rice and biryani).",
+  "liveLink": "https://twtech-hub.github.io/Fitnex-Fitness-D3/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Interactive Branch & Class Schedule Filter",
+    "Real-Time BMI & TDEE Lead Gen Calculators",
+    "Dynamic Trainer & Class Booking Modals",
+    "Interactive Scroll-Triggered Timeline",
+    "Bespoke Vanilla JS Testimonial Slider",
+    "Annual vs Monthly BDT Pricing Engine"
+  ],
+  "designUnique": "Blends the aesthetic of a high-end commercial gym with the UI/UX of a modern tech startup. Utilizes sharp, slanted clipping paths (`slant-top`, `slant-bottom`) to create dynamic forward momentum on the page, paired with glowing neon drop shadows to emphasize interactive elements.",
+  "developmentProcess": "Developed a robust Vanilla JavaScript architecture to handle multi-dimensional filtering (e.g., filtering schedules by both Day and Branch simultaneously). Implemented complex health algorithms (Epley Formula for 1RM, Mifflin-St Jeor for BMR) securely on the client side without relying on external UI or math libraries."
+},
 {
   "id": "oxygen-wellness",
   "title": "OXYGEN Wellness & Spa",
@@ -6,7 +131,7 @@
   "image": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600",
   "shortDescription": "An ultra-premium, 5-star wellness club website targeting elite clients in Dhaka.",
   "fullDescription": "An 8-page ultra-luxury wellness and spa portfolio designed for high-net-worth individuals in Gulshan and Banani, Bangladesh. It shifts away from aggressive gym aesthetics, opting instead for a 'Champagne Gold and Forest Night' color palette with elegant serif typography. The site is highly interactive without feeling cluttered, featuring an intuitive Program Matcher quiz, an interactive Facility Zone navigator, a bespoke BMI/TDEE calculator tailored for the local 'Dhaka Diet', and a high-end application system for memberships and private tours.",
-  "liveLink": "https://oxygen-wellness-twtech.netlify.app/",
+  "liveLink": "https://twtech-hub.github.io/Oxygen-Breathe-Fitness-D2/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -31,7 +156,7 @@
   "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
   "shortDescription": "High-energy, neon brutalist website for a premium gym in Dhaka.",
   "fullDescription": "An 8-page premium fitness center website designed for the Bangladeshi market (Banani/Dhanmondi). It features a striking 'Neon Brutalist' aesthetic using deep blacks and neon yellow. The site is highly interactive, featuring a live BMI and BMR macro calculator tailored for local diets, a dynamic class schedule filter, and interactive trainer booking modals. It includes localized context like BDT pricing, Ramadan freezing policies, and corporate squad plans.",
-  "liveLink": "https://ironcore-fitness-twtech.netlify.app/",
+  "liveLink": "https://twtech-hub.github.io/IronCore-Fitness-D1/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -213,7 +338,7 @@
     {
   "id": "empire-legal-v1",
   "title": "Empire Legal: Advocates & Solicitors",
-  "category": "Law Firm",
+  "category": "Legal Firm",
   "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070",
   "shortDescription": "A 'Sovereign Red & Ivory' high-end digital headquarters for Bangladesh's top-tier legal practitioners.",
   "fullDescription": "Empire Legal is a benchmark 8-page digital ecosystem designed for the elite echelon of the Bangladeshi legal market. Moving away from standard minimalist or dark themes, this project utilizes a 'Sovereign Red & Ivory' palette to signal institutional history, unyielding authority, and transparency. The site functions as a comprehensive operational hub, featuring a multi-step appointment engine that pre-vetts cases, an interactive Reported Judgment archive with procedural strategy breakdowns, and a live-searchable legislative repository. Built on a zero-dependency pure Vanilla stack (HTML5/Tailwind/JS), it achieves extreme performance scores on local mobile networks while providing high-resolution visual polish. From the forensic case-merit calculator to the sepia-toned interactive HQ mapping, every element is meticulously engineered to position the firm as the primary sovereign authority for Multinational Corporations and High-Net-Worth Individuals.",
@@ -263,7 +388,7 @@
     {
       "id": "justice-chambers",
       "title": "Justice Chambers",
-      "category": "Law Firm",
+      "category": "Legal Firm",
       "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1600",
       "shortDescription": "Prestigious, authoritative portfolio for a top-tier law firm.",
       "fullDescription": "A 7-page 'Gilded Slate' website designed for a premier Bangladeshi law firm. It communicates authority through a Deep Navy & Gold palette, Serif typography, and specific features like a 'Case Verdict Archive', 'Attorney Profiles' with modal bios, and a downloadable 'Legal Resource' center.",
@@ -286,7 +411,7 @@
     {
       "id": "legal-nexus-bd",
       "title": "Legal Nexus & Associates",
-      "category": "Law Firm",
+      "category": "Legal Firm",
       "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1000",
       "shortDescription": "A prestigious, high-conversion digital headquarters for a top-tier Bangladeshi Law Chamber.",
       "fullDescription": "Legal Nexus is a comprehensive 9-page digital ecosystem engineered specifically for the Bangladeshi legal landscape. Recognizing that trust is the primary currency in law, the site utilizes a 'Trust Blue & Slate Gray' palette, reinforced by professional gold accents to signify authority. The architecture includes specialized pages for 'Practice Areas', 'Land Dispute Expertise', 'Corporate Law', and a dedicated 'Supreme Court Case Tracker' interface. To drive conversions, we integrated a custom-built Vanilla JS 'Legal Fee Estimator' and an interactive 'Consultation Booking System'. The design balances the gravity of legal services with modern UI trends, ensuring a seamless experience for both local corporate entities and international clients seeking legal representation in Bangladesh.",
@@ -312,7 +437,7 @@
     {
       "id": "vertex-chambers",
       "title": "Vertex Chambers & Partners",
-      "category": "Law Firm",
+      "category": "Legal Firm",
       "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070",
       "shortDescription": "A sovereign, authoritative digital presence for a top-tier Bangladeshi law firm.",
       "fullDescription": "Vertex Chambers is an 8-page, high-density website engineered to establish immediate institutional trust. Moving away from generic corporate designs, this project adopts a 'Justice Navy & Sovereign Gold' palette (`#0f172a` & `#b45309`) to reflect the gravity of the legal profession in Bangladesh. The site acts as a functional digital office, featuring a dynamic legal service filter, a real-time blog search for legal precedents, and a smart appointment booking system. Content is deeply localized, referencing specific Bangladeshi courts (Artha Rin Adalat, High Court Division) and regulatory bodies (RJSC, BIDA), ensuring it resonates with local corporate clients and individuals seeking serious counsel. The architecture prioritizes speed and clarity, utilizing Vanilla JS for all interactive elements to ensure seamless performance on mobile networks across Dhaka and Chittagong.",
@@ -337,7 +462,7 @@
     {
       "id": "lexicon-chambers",
       "title": "Lexicon Chambers & Partners",
-      "category": "Law Firm",
+      "category": "Legal Firm",
       "image": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070",
       "shortDescription": "A digitally engineered fortress of legal authority for a premier Bangladeshi law firm.",
       "fullDescription": "Lexicon Chambers is an 8-page, 100+ section digital ecosystem designed to translate the weight and prestige of a traditional law firm into the digital age. Unlike generic templates, this project captures the 'Statutory Heritage' aesthetic required by high-end Bangladeshi advocates. It utilizes a 'Charcoal & Antique Gold' palette to signify stability and features a 'Merriweather' serif typography to evoke the feel of legal deeds. The site functions as a fully operational digital clerk: it includes a smart booking system that distinguishes between corporate and individual clients, a searchable library of Bangladeshi legal precedents, and an interactive map system guiding clients to their Motijheel headquarters. Built entirely on a Vanilla stack (HTML5/Tailwind/JS), it ensures lightning-fast load times even on mobile data networks in Dhaka courts, providing zero-latency access to bail numbers and case records.",
@@ -362,7 +487,7 @@
     {
       "id": "heritage-nexus-chamber",
       "title": "Heritage & Nexus Law Chamber",
-      "category": "Law Firm",
+      "category": "Legal Firm",
       "image": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1000",
       "shortDescription": "A warm, high-end digital headquarters for a premier law chamber in Bangladesh.",
       "fullDescription": "The Heritage & Nexus Chamber website is a meticulously engineered 8-page digital ecosystem designed to reflect the prestige, tradition, and authority required by the Bangladeshi legal sector. Recognizing that legal decisions in Bangladesh are deeply rooted in trust and seniority, we abandoned the cold, generic corporate blue for a 'Rich Mahogany & Parchment' theme. This palette evokes the atmosphere of a historic Supreme Court library, instilling immediate confidence in potential clients. The platform serves as both a portfolio and a high-conversion tool, featuring custom-built interactive elements like a Legal Fee Estimator, dynamic Practice Area filters, and an automated Consultation Booking System. Every line of code is written in Vanilla JS to ensure lightning-fast performance even on limited mobile data connections, while the content is deeply localized to address specific Bangladeshi legal bodies such as RJSC, BIDA, and the Anti-Corruption Commission. The result is a website that doesn't just display services, but builds a bridge of empathy and expertise between the advocate and the seeker of justice.",

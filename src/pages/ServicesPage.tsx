@@ -5,14 +5,33 @@ import {
   CheckCircle, Smartphone, Search, Target, Rocket,
   Terminal, Database, Globe, Cloud, Shield, Zap,
   ArrowRight, Layers, Cpu, Server, GitBranch,
-  Lock, Clock, FileText, Settings,
+  Lock, Clock, FileText, Settings,Play,
   Film, PenToolIcon, LucidePenTool, BarChart,
   Mail, Share2, Megaphone, ShoppingBag, Send,
     RefreshCw,ShieldCheck,  Activity,  GraduationCap, 
   BarChart3, Briefcase, Building2, Plane, Handshake, Stethoscope, 
   Hotel, Scale, BookOpen, Users, Heart, Utensils, Sun, Leaf, Wrench, 
   Dumbbell, Printer, SprayCan, Newspaper, UserPlus, Car, Factory, 
-  Armchair, PaintBucket, Globe2
+  Armchair, PaintBucket, Globe2,
+  Truck,
+  Microscope,
+  Sprout,
+  HardHat,
+  Gamepad2,
+  CarFront,
+  Dog,
+  TowerControl,
+  Gem,
+  Compass,
+  Brain,
+  CalendarCheck,
+  Anchor,
+  Shirt,
+  Recycle,
+  Sparkles,
+  Dna,
+  MapPin,
+  Clock1
 } from 'lucide-react';
 import { type LucideIcon } from 'lucide-react';
 
@@ -29,7 +48,7 @@ import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
 
 // Icon mapping
-const iconMap: Record<string, LucideIcon> = { Code, FileCode, Palette, Layout: LayoutIcon, CheckCircle, Smartphone, Search, Target, Rocket };
+const iconMap: Record<string, LucideIcon> = { Code, FileCode, Palette, Layout: LayoutIcon, CheckCircle, Smartphone, Search, Target, Rocket ,Cpu, Play,BarChart3,ShieldCheck,Layers,Briefcase,Users,FileText};
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -123,6 +142,26 @@ const SERVICE_FAQS = [
   { name: "Study Abroad & Visa", icon: Globe2 },
   { name: "Fintech", icon: Activity },
   { name: "SaaS", icon: Cloud },
+  { name: "Logistics", icon: Truck },
+  { name: "Healthcare", icon: Microscope },
+  { name: "Agritech", icon: Sprout },
+  { name: "Construction", icon: HardHat },
+  { name: "Gaming & Esports", icon: Gamepad2 },
+  { name: "Automobile", icon: CarFront },
+  { name: "Pet Care", icon: Dog },
+  { name: "Cybersecurity", icon: Lock },
+  { name: "Telecommunications", icon: TowerControl },
+  { name: "Luxury Goods", icon: Gem },
+  { name: "Architecture", icon: Compass },
+  { name: "Mental Health", icon: Brain },
+  { name: "Event Planning", icon: CalendarCheck },
+  { name: "Maritime", icon: Anchor },
+  { name: "Fashion Labels", icon: Shirt },
+  { name: "Waste Management", icon: Recycle },
+  { name: "Beauty & Spas", icon: Sparkles },
+  { name: "Manufacturing", icon: Settings },
+  { name: "BioTech", icon: Dna },
+  { name: "Aerospace", icon: Rocket }
 ];
 
 const ServicesPage = () => {
@@ -248,6 +287,60 @@ const ServicesPage = () => {
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+                {/* ==================== 5.5 GLOBAL ECOSYSTEM ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5">
+          <div className="container px-4">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              
+              {/* Left Side: Stats */}
+              <div className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+                <Badge variant="outline" className="bg-sky-500/10 text-sky-400 border border-sky-500/20">Global Reach</Badge>
+                <h2 className="text-3xl md:text-5xl font-bold text-white">Borderless engineering for a global market.</h2>
+                <p className="text-slate-400 text-lg leading-relaxed">
+                  TechWisdom operates as a hyper-connected, remote-native ecosystem. We serve visionaries across multiple continents, bringing international standards to every line of code we write.
+                </p>
+                
+                <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10">
+                  <div>
+                    <div className="text-3xl font-bold text-white flex items-center gap-2 mb-2">
+                      <MapPin size={24} className="text-sky-400" /> 15+
+                    </div>
+                    <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Countries Served</p>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-white flex items-center gap-2 mb-2">
+                      <Clock1 size={24} className="text-sky-400" /> 24/7
+                    </div>
+                    <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Monitoring Support</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Abstract Map/Globe Visual */}
+              <div className="w-full lg:w-1/2 order-1 lg:order-2 relative h-[400px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-sky-600/5 blur-[100px] rounded-full" />
+                
+                {/* Stylized UI representation of a global connection */}
+                <div className="relative w-full max-w-sm aspect-square rounded-full border border-white/5 flex items-center justify-center">
+                  <div className="absolute inset-4 rounded-full border border-sky-500/20 flex items-center justify-center animate-[spin_60s_linear_infinite]">
+                    {/* Dots representing cities */}
+                    <div className="absolute top-0 w-3 h-3 bg-sky-400 rounded-full shadow-[0_0_15px_#38bdf8]" />
+                    <div className="absolute bottom-10 right-10 w-2 h-2 bg-blue-500 rounded-full" />
+                    <div className="absolute top-20 left-4 w-2 h-2 bg-purple-400 rounded-full" />
+                  </div>
+                  <div className="absolute inset-16 rounded-full border border-white/5 flex items-center justify-center animate-[spin_40s_linear_infinite_reverse]">
+                     <div className="absolute bottom-0 w-2 h-2 bg-emerald-400 rounded-full shadow-[0_0_10px_#34d399]" />
+                  </div>
+                  <div className="absolute inset-28 rounded-full border border-blue-500/30 flex items-center justify-center bg-slate-900/80 backdrop-blur-xl shadow-2xl z-10">
+                    <Globe2 size={48} className="text-sky-400 opacity-80" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </section>
 

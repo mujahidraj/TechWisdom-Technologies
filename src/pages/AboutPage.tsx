@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Compass, Flag, ImageIcon, ArrowDown, Calendar, User, Lightbulb, Coffee, Globe, Briefcase, Heart, BookOpen, Zap, Smile, Laptop, Users } from 'lucide-react';
+import { Target, Compass, Flag, ImageIcon, ArrowDown, Calendar, User, Lightbulb, Coffee, Globe, Briefcase, Heart, BookOpen, Zap, Smile, Laptop, Users, TrendingDown, XCircle, TrendingUp, CheckCircle } from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
@@ -201,6 +201,75 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+
+                {/* ==================== 2.5 PAIN VS SOLUTION ==================== */}
+                <section className="py-24 bg-transparent relative overflow-hidden">
+                  <div className="container px-4">
+                    <div className="text-center mb-16">
+                      <Badge variant="outline" className="mb-4 bg-red-500/10 text-red-400 border border-red-500/20">The Challenge</Badge>
+                      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Standard</h2>
+                      <p className="text-slate-400 max-w-2xl mx-auto">
+                        Slow load times, broken user journeys, and outdated tech stacks are silently killing your conversion rates.
+                      </p>
+                    </div>
+        
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                      {/* The Old Way (Pain) */}
+                      <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-red-950/20 border border-red-500/20 rounded-3xl p-8 relative overflow-hidden group"
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-3xl rounded-full" />
+                        <h3 className="text-xl font-bold text-red-400 mb-6 flex items-center gap-3">
+                          <TrendingDown size={24} /> The Old Way
+                        </h3>
+                        <ul className="space-y-4">
+                          {[
+                            "Templates that look like everyone else",
+                            "Spaghetti code that breaks on every update",
+                            "3+ second page load speeds (losing 50% of traffic)",
+                            "Vulnerable to basic security threats",
+                            "Developers who vanish after launch"
+                          ].map((pain, i) => (
+                            <li key={i} className="flex items-start gap-3 text-slate-300">
+                              <XCircle size={20} className="text-red-500/70 shrink-0 mt-0.5" />
+                              <span className="text-sm leading-relaxed">{pain}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
+        
+                      {/* The TechWisdom Way (Solution) */}
+                      <motion.div 
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-emerald-950/20 border border-emerald-500/30 rounded-3xl p-8 relative overflow-hidden group shadow-[0_0_30px_rgba(16,185,129,0.05)]"
+                      >
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl rounded-full" />
+                        <h3 className="text-xl font-bold text-emerald-400 mb-6 flex items-center gap-3">
+                          <TrendingUp size={24} /> The TechWisdom Standard
+                        </h3>
+                        <ul className="space-y-4">
+                          {[
+                            "100% Custom architecture built for your exact needs",
+                            "Clean, documented code that scales effortlessly",
+                            "Sub-second load times optimized for Core Web Vitals",
+                            "Bank-grade security and data encryption",
+                            "Long-term partnership with proactive maintenance"
+                          ].map((solution, i) => (
+                            <li key={i} className="flex items-start gap-3 text-slate-200">
+                              <CheckCircle size={20} className="text-emerald-500 shrink-0 mt-0.5" />
+                              <span className="text-sm leading-relaxed">{solution}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    </div>
+                  </div>
+                </section>
 
         <Separator className="bg-white/10" />
 

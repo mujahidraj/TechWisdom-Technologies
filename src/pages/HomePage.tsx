@@ -2,15 +2,39 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
+import {Infinity as InfinityIcon, // Renamed to avoid TypeScript error,
   Zap, Shield, Eye, Headphones, Globe, Smartphone, Settings,
   Lock, CreditCard, Brain, BarChart, FileText, ArrowRight,
   CheckCircle, Calculator, ChevronRight, Server, Calendar,
-  Megaphone, Blocks, Quote, Star, ChevronLeft, User, ShieldCheck, ShoppingBag, Activity, Cloud, GraduationCap,
-  BarChart3, Briefcase, Building2, Plane, Handshake, Stethoscope,
+  Megaphone, Blocks, Quote, Star, ChevronLeft, User, ShieldCheck, ShoppingBag, Activity, Cloud, GraduationCap,LayoutTemplate,  Code2, Database,  
+  BrainCircuit, LayoutDashboard, Figma, HardDrive, Box, Cpu, 
+  BarChart3, Hexagon, MonitorPlay, TestTube, Wind, Palette,
+   Briefcase, Building2, Plane, Handshake, Stethoscope,
   Hotel, Scale, BookOpen, Users, Heart, Utensils, Sun, Leaf, Wrench,
   Dumbbell, Printer, SprayCan, Newspaper, UserPlus, Car, Factory,
-  Armchair, PaintBucket, Globe2
+  Armchair, PaintBucket, Globe2,
+  ChevronDown,
+ 
+
+
+  Search,
+  Rocket,
+  CheckCircle2,
+  Link2,
+  MessageSquare,
+  Mail,
+  MessageSquareCode,
+  Send,
+  MapPin,
+  Clock,
+  Clock1,
+  TrendingUp,
+  XCircle,
+  TrendingDown,
+  FileKey,
+  Fingerprint,
+  ShieldAlert,
+  ShoppingCart
 } from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
@@ -213,6 +237,38 @@ const AnimatedCounter = ({ value, suffix }: { value: number; suffix: string }) =
     return () => clearInterval(timer);
   }, [value]);
   return <span>{count}{suffix}</span>;
+};
+
+// --- NEW HELPER COMPONENT FOR FAQ ---
+const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-white/10 rounded-2xl bg-slate-900/20 backdrop-blur-sm overflow-hidden transition-all duration-300">
+      <button 
+        onClick={() => setIsOpen(!isOpen)} 
+        className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group"
+      >
+        <span className="font-semibold text-white group-hover:text-blue-400 transition-colors">{question}</span>
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
+          <ChevronDown className="text-slate-400 group-hover:text-blue-400 transition-colors" size={20} />
+        </motion.div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="px-6 pb-5 text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
 };
 
 const HomePage = () => {
@@ -429,6 +485,8 @@ const HomePage = () => {
           </div>
         </section>
 
+
+
         {/* ==================== 3. SERVICES TEASER ==================== */}
         <section className="py-24 bg-transparent">
           <div className="container px-4">
@@ -590,6 +648,136 @@ const HomePage = () => {
           </div>
         </section>
 
+{/* ==================== 4.8 SEAMLESS INTEGRATIONS ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5">
+          <div className="container px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+                <Badge variant="outline" className="bg-blue-500/10 text-blue-300 border border-blue-500/20">Ecosystem</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-white">We play nicely with others.</h2>
+                <p className="text-slate-400 text-lg leading-relaxed">
+                  A powerful digital product doesn't live in isolation. We build robust APIs and webhooks to seamlessly connect your new platform with the tools you already use every day.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">
+                  {["Payment Gateways", "CRM Systems", "Email Marketing", "ERP Software", "Social APIs"].map((tag, i) => (
+                    <Badge key={i} variant="secondary" className="bg-slate-800 text-slate-300 border-white/5">{tag}</Badge>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="w-full lg:w-2/5 relative h-[350px] flex items-center justify-center mt-10 lg:mt-0">
+                {/* Central Node */}
+                <div className="absolute z-20 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.5)] border-4 border-[#020617]">
+                  <Link2 size={32} className="text-white" />
+                </div>
+                
+                {/* 8 Orbiting/Connected Nodes */}
+                {[
+                  // Original 4 (Corners)
+                  { icon: CreditCard, color: "text-green-400", pos: "-top-6 left-10" },
+                  { icon: MessageSquare, color: "text-blue-400", pos: "top-4 -right-4" },
+                  { icon: Mail, color: "text-red-400", pos: "-bottom-4 right-10" },
+                  { icon: Database, color: "text-purple-400", pos: "bottom-6 -left-4" },
+                  
+                  // New 4 (Top, Bottom, Left, Right edges)
+                  { icon: ShoppingCart, color: "text-orange-400", pos: "top-1/2 -left-12 -translate-y-1/2" },
+                  { icon: Cloud, color: "text-sky-400", pos: "top-1/2 -right-12 -translate-y-1/2" },
+                  { icon: Activity, color: "text-yellow-400", pos: "-top-12 left-1/2 -translate-x-1/2" },
+                  { icon: Shield, color: "text-emerald-400", pos: "-bottom-12 left-1/2 -translate-x-1/2" },
+                ].map((node, i) => (
+                  <motion.div 
+                    key={i}
+                    animate={{ 
+                      y: [0, -10, 0],
+                    }}
+                    transition={{ 
+                      duration: 4, 
+                      repeat: Infinity, 
+                      delay: i * 0.3, // staggered floating effect
+                      ease: "easeInOut" 
+                    }}
+                    className={`absolute z-10 w-14 h-14 bg-slate-800 border border-white/10 rounded-2xl flex items-center justify-center shadow-lg ${node.pos}`}
+                  >
+                    <node.icon size={24} className={node.color} />
+                  </motion.div>
+                ))}
+
+                {/* Connecting Lines (SVG) - Updated with 8 lines */}
+                <svg className="absolute inset-0 w-full h-full z-0 opacity-20" style={{ strokeDasharray: "4 4" }}>
+                  {/* Lines to corners */}
+                  <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="75%" y2="30%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="25%" y2="70%" stroke="white" strokeWidth="2" />
+                  
+                  {/* Lines to edges */}
+                  <line x1="50%" y1="50%" x2="0%" y2="50%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="100%" y2="50%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="50%" y2="0%" stroke="white" strokeWidth="2" />
+                  <line x1="50%" y1="50%" x2="50%" y2="100%" stroke="white" strokeWidth="2" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+{/* ==================== 4.5 OUR TECH STACK ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+          
+          <div className="container px-4 relative z-10">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4 bg-purple-500/10 text-purple-300 border border-purple-500/20">Technology</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Powered by Modern Tech</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">
+                From frontend frameworks to AI models and blockchain architecture, we use enterprise-grade stacks to build your digital assets.
+              </p>
+            </div>
+
+            {/* Grid expanded to fit 18 items (3 rows of 6 on large screens) */}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {[
+                // Web, Fullstack, & SaaS
+                { name: "React & Next.js", icon: LayoutTemplate, color: "text-cyan-400" },
+                { name: "Node & NestJS", icon: Server, color: "text-green-500" },
+                { name: "TypeScript", icon: Code2, color: "text-blue-500" },
+                { name: "PostgreSQL", icon: Database, color: "text-indigo-400" },
+                { name: "AWS Cloud", icon: Cloud, color: "text-orange-400" },
+                { name: "Tailwind CSS", icon: Wind, color: "text-cyan-300" },
+                
+                // Mobile, CMS, UI/UX & DBs
+                { name: "React Native", icon: Smartphone, color: "text-sky-400" },
+                { name: "WordPress CMS", icon: LayoutDashboard, color: "text-blue-400" },
+                { name: "Figma UI/UX", icon: Figma, color: "text-purple-400" },
+                { name: "MongoDB", icon: HardDrive, color: "text-emerald-500" },
+                { name: "Docker & CI/CD", icon: Box, color: "text-blue-400" },
+                { name: "Automated QA", icon: TestTube, color: "text-green-400" },
+
+                // AI, Data, Web3, & Graphics
+                { name: "Python & Data", icon: BrainCircuit, color: "text-yellow-400" },
+                { name: "OpenAI & LLMs", icon: Cpu, color: "text-emerald-400" },
+                { name: "GA4 Analytics", icon: BarChart3, color: "text-yellow-500" },
+                { name: "Web3 & Solidity", icon: Hexagon, color: "text-slate-300" },
+                { name: "Motion & VFX", icon: MonitorPlay, color: "text-red-400" },
+                { name: "Adobe Creative", icon: Palette, color: "text-pink-400" }
+              ].map((tech, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }} // Faster delay for smoother cascade
+                  className="bg-slate-900/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 hover:bg-slate-800 hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] group cursor-default"
+                >
+                  <tech.icon className={`w-8 h-8 ${tech.color} opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`} />
+                  <span className="text-slate-300 font-medium text-sm text-center">{tech.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
         {/* ==================== 5. TESTIMONIALS SLIDER ==================== */}
         <section className="py-24 bg-transparent relative overflow-hidden">
           <div className="container px-4 relative z-10">
@@ -648,6 +836,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
 
         {/* ==================== 6. UNIQUE VALUE PROP ==================== */}
         <section className="py-16 md:py-24 bg-transparent overflow-hidden">
@@ -712,6 +901,71 @@ const HomePage = () => {
           </div>
         </section>
 
+{/* ==================== 6.8 ENGAGEMENT MODELS ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5">
+          <div className="container px-4">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-4 bg-orange-500/10 text-orange-300 border border-orange-500/20">Partnership</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Flexible Engagement Models</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">
+                Whether you need a full product built from scratch or an extension of your current team, we adapt to your needs.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { 
+                  title: "Fixed-Price Project", 
+                  icon: Briefcase, 
+                  desc: "Perfect for well-defined projects. We agree on a strict scope, timeline, and budget upfront.",
+                  features: ["Predictable costs", "Clear milestones", "Dedicated project manager"]
+                },
+                { 
+                  title: "Dedicated Team", 
+                  icon: Users, 
+                  desc: "Scale your startup fast. Hire our developers, designers, or QA engineers full-time for your project.",
+                  features: ["Direct communication", "Highly scalable", "Weekly sprint planning"]
+                },
+                { 
+                  title: "Monthly Retainer", 
+                  icon: InfinityIcon, // <-- Using the TypeScript-safe alias here
+                  desc: "Ongoing support for Marketing, SEO, and Maintenance to keep your business growing month over month.",
+                  features: ["Priority support", "Continuous optimization", "Monthly reporting"]
+                }
+              ].map((model, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-slate-900/40 backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:bg-slate-800/80 hover:border-blue-500/30 transition-all group flex flex-col"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                    <model.icon size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{model.title}</h3>
+                  <p className="text-slate-400 mb-6 min-h-[80px]">{model.desc}</p>
+                  
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {model.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-3 text-slate-300 text-sm">
+                        <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link to="/contact" className="mt-auto w-full">
+                    <Button variant="outline" className="w-full border-white/10 text-white hover:bg-white/10 bg-transparent">
+                      Discuss Model
+                    </Button>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* ==================== 7. EXTENDED COST ESTIMATOR ==================== */}
         <section className="py-24 bg-transparent">
           <div className="container max-w-5xl px-4">
@@ -818,6 +1072,71 @@ const HomePage = () => {
                 </AnimatePresence>
               </div>
             </Card>
+          </div>
+        </section>
+        {/* ==================== 8.5 FAQS ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5">
+          <div className="container max-w-4xl px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Got Questions?</h2>
+              <p className="text-slate-400 max-w-xl mx-auto">
+                Everything you need to know about working with TechWisdom.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <FaqItem 
+                question="Do you use templates or write custom code?" 
+                answer="We write 100% custom code tailored to your exact business needs. We never use pre-bought themes, ensuring your product is uniquely yours, highly secure, and lightning-fast." 
+              />
+              <FaqItem 
+                question="Will I own the source code?" 
+                answer="Absolutely. Upon final payment, 100% of the intellectual property, source code, and design assets are legally transferred to you. You are never locked in with us." 
+              />
+              <FaqItem 
+                question="How long does a typical project take?" 
+                answer="A standard corporate website takes 3-5 weeks. Complex SaaS applications or E-commerce platforms typically take 8-12 weeks, depending on the feature scope." 
+              />
+              <FaqItem 
+                question="Do you provide support after the launch?" 
+                answer="Yes! Every project includes a 30-day free warranty period for bug fixes. We also offer affordable monthly retainers for ongoing maintenance, updates, and SEO." 
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ==================== 8.8 NEWSLETTER CAPTURE ==================== */}
+        <section className="py-20 bg-transparent">
+          <div className="container max-w-4xl px-4">
+            <div className="bg-gradient-to-br from-slate-900 to-[#0b1121] border border-blue-500/20 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+              {/* Background Glow */}
+              <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full pointer-events-none" />
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+                <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-900/50">
+                  <Mail size={32} className="text-white" />
+                </div>
+                
+                <div className="flex-1 space-y-2">
+                  <h3 className="text-2xl font-bold text-white">Stay Ahead of the Tech Curve</h3>
+                  <p className="text-slate-400">Join 5,000+ founders getting our weekly insights on AI, SaaS scaling, and Web3 trends. No spam, just value.</p>
+                </div>
+
+                <div className="w-full md:w-auto flex-shrink-0">
+                  <form className="flex w-full max-w-sm items-center space-x-2 relative" onSubmit={(e) => e.preventDefault()}>
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email" 
+                      className="flex h-12 w-full md:w-64 rounded-full border border-white/10 bg-black/40 px-4 py-2 text-sm text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-500"
+                      required
+                    />
+                    <Button type="submit" size="icon" className="h-12 w-12 rounded-full bg-blue-600 hover:bg-blue-500 flex-shrink-0">
+                      <Send size={18} />
+                    </Button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
