@@ -1,8 +1,57 @@
-[
+[ 
+{
+  "id": "oxygen-wellness",
+  "title": "OXYGEN Wellness & Spa",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600",
+  "shortDescription": "An ultra-premium, 5-star wellness club website targeting elite clients in Dhaka.",
+  "fullDescription": "An 8-page ultra-luxury wellness and spa portfolio designed for high-net-worth individuals in Gulshan and Banani, Bangladesh. It shifts away from aggressive gym aesthetics, opting instead for a 'Champagne Gold and Forest Night' color palette with elegant serif typography. The site is highly interactive without feeling cluttered, featuring an intuitive Program Matcher quiz, an interactive Facility Zone navigator, a bespoke BMI/TDEE calculator tailored for the local 'Dhaka Diet', and a high-end application system for memberships and private tours.",
+  "liveLink": "https://oxygen-wellness-twtech.netlify.app/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Interactive Program Matcher Quiz",
+    "Bespoke Wellness Calculator (BMI & TDEE)",
+    "Dynamic Facility Zone Navigator",
+    "Elegant Scroll-Triggered Timeline",
+    "Custom Luxury Cursor Implementation",
+    "Encrypted Private Viewing Form Simulation"
+  ],
+  "designUnique": "Utilizes the 'Playfair Display' serif typeface mixed with a custom floating gold cursor to evoke the feeling of a 5-star hotel rather than a traditional gym. Implements extensive scroll-based 'fade-up' animations to ensure a smooth, unhurried browsing experience suitable for a luxury brand.",
+  "developmentProcess": "Built complex interactive states entirely in Vanilla JS to maintain high performance. Features include a multi-step logic quiz for program recommendations, dynamic pricing toggles that instantly calculate annual savings in BDT, and a sleek image slider built without any heavy external libraries (like Swiper or Slick)."
+},  
+{
+  "id": "ironcore-fitness",
+  "title": "IRONCORE Fitness",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "High-energy, neon brutalist website for a premium gym in Dhaka.",
+  "fullDescription": "An 8-page premium fitness center website designed for the Bangladeshi market (Banani/Dhanmondi). It features a striking 'Neon Brutalist' aesthetic using deep blacks and neon yellow. The site is highly interactive, featuring a live BMI and BMR macro calculator tailored for local diets, a dynamic class schedule filter, and interactive trainer booking modals. It includes localized context like BDT pricing, Ramadan freezing policies, and corporate squad plans.",
+  "liveLink": "https://ironcore-fitness-twtech.netlify.app/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Interactive BMI & BMR Calculators",
+    "Dynamic Class Timetable Filter",
+    "Trainer Booking Modal",
+    "Interactive Branch/Location Toggle",
+    "Animated Statistics Counter"
+  ],
+  "designUnique": "Utilizes the bold 'Oswald' typeface paired with a high-contrast Neon Volt on Black palette to evoke sweat, energy, and premium exclusivity. High-quality grayscale imagery turns to color on hover to create a highly dynamic user experience.",
+  "developmentProcess": "Implemented complex JavaScript logic entirely in Vanilla JS without external libraries, including health metric algorithms (Mifflin-St Jeor), Isotope-style DOM filtering for classes and schedules, and smooth interactive states for modals and accordions."
+},
   {
   "id": "titan-x",
   "title": "Titan X - Mujahid's Portfolio",
-  "category": "Developer Portfolio",
+  "category": "Portfolio",
   "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1600",
   "shortDescription": "High-performance dark mode portfolio for a Full Stack Engineer.",
   "fullDescription": "An 8-page 'Cyber-Mercenary' style portfolio designed for a computer engineer. It features a deep dark theme with neon cyan/green accents, a terminal-style contact form, and a 'Tech Radar' to showcase skills. The site includes a custom JavaScript engine ('The Brain') that allows the user to update their CV details (Name, Bio, Projects) in one single script block, which then populates the entire website dynamically.",
@@ -25,7 +74,7 @@
 {
   "id": "nexus-fidbi",
   "title": "Nexus - Engineer Portfolio",
-  "category": "Developer Portfolio",
+  "category": "Portfolio",
   "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1600",
   "shortDescription": "High-performance dark mode portfolio for a Full Stack Engineer.",
   "fullDescription": "A 9-page 'Cyber-Architect' style portfolio designed for Fidbi Hasan. It features a deep dark theme with neon cyan accents, a terminal-style contact form, and a 'Tech Matrix' to showcase full-stack skills. The design mimics a developer's command center with code snippets and system diagnostics.",
@@ -48,7 +97,7 @@
 {
   "id": "aurora-mayad",
   "title": "Aurora - HCI Portfolio",
-  "category": "Design Portfolio",
+  "category": "Portfolio",
   "image": "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1600",
   "shortDescription": "Aesthetic glassmorphism portfolio for UI/UX & HCI researchers.",
   "fullDescription": "A 9-page 'Soft UI' portfolio designed for Asmaul Husna Mayad. It features a custom interactive cursor, a masonry gallery for Dribbble shots, and a dedicated 'Research' page for academic papers. The design uses pastel gradients and frosted glass effects to reflect empathy and modern design principles.",
