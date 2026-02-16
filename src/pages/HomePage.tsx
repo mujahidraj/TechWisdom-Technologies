@@ -898,7 +898,7 @@ const HomePage = () => {
                 </div>
               </div>
               
-              <div className="w-full lg:w-2/5 relative h-[350px] flex items-center justify-center mt-10 lg:mt-0">
+              <div className="w-3/4 lg:w-2/5 relative h-[350px] flex items-center justify-center mt-10 lg:mt-0">
                 {/* Central Node */}
                 <div className="absolute z-20 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.5)] border-4 border-[#020617]">
                   <Link2 size={32} className="text-white" />
@@ -907,16 +907,16 @@ const HomePage = () => {
                 {/* 8 Orbiting/Connected Nodes */}
                 {[
                   // Original 4 (Corners)
-                  { icon: CreditCard, color: "text-green-400", pos: "-top-6 left-10" },
-                  { icon: MessageSquare, color: "text-blue-400", pos: "top-4 -right-4" },
-                  { icon: Mail, color: "text-red-400", pos: "-bottom-4 right-10" },
-                  { icon: Database, color: "text-purple-400", pos: "bottom-6 -left-4" },
+                  { icon: CreditCard, color: "text-green-400", pos: "-top-0 left-1" },
+                  { icon: MessageSquare, color: "text-blue-400", pos: "top-0 -right-2" },
+                  { icon: Mail, color: "text-red-400", pos: "-bottom-0 right-0" },
+                  { icon: Database, color: "text-purple-400", pos: "bottom-0 -left-4" },
                   
                   // New 4 (Top, Bottom, Left, Right edges)
-                  { icon: ShoppingCart, color: "text-orange-400", pos: "top-1/2 -left-12 -translate-y-1/2" },
-                  { icon: Cloud, color: "text-sky-400", pos: "top-1/2 -right-12 -translate-y-1/2" },
-                  { icon: Activity, color: "text-yellow-400", pos: "-top-12 left-1/2 -translate-x-1/2" },
-                  { icon: Shield, color: "text-emerald-400", pos: "-bottom-12 left-1/2 -translate-x-1/2" },
+                  { icon: ShoppingCart, color: "text-orange-400", pos: "top-1/5 -left-12 -translate-y-1/2" },
+                  { icon: Cloud, color: "text-sky-400", pos: "top-1/5 -right-12 -translate-y-1/2" },
+                  { icon: Activity, color: "text-yellow-400", pos: "-top-12 left-1/5 -translate-x-1/2" },
+                  { icon: Shield, color: "text-emerald-400", pos: "-bottom-12 left-1/5 -translate-x-1/2" },
                 ].map((node, i) => (
                   <motion.div 
                     key={i}

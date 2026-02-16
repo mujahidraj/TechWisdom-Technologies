@@ -321,7 +321,7 @@ const ServicesPage = () => {
               </div>
 
               {/* Right Side: Solar System Visual */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-2 relative h-[400px] md:h-[500px] flex items-center justify-center">
+              <div className="w-full  lg:w-1/2 order-1 lg:order-2 relative h-[400px] md:h-[500px] flex items-center justify-center">
                 {/* Deep space ambient glow */}
                 <div className="absolute inset-0 bg-sky-600/5 blur-[100px] rounded-full pointer-events-none" />
                 
