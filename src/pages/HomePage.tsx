@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 import {Infinity as InfinityIcon, // Renamed to avoid TypeScript error,
   Zap, Shield, Eye, Headphones, Globe, Smartphone, Settings,
   Lock, CreditCard, Brain, BarChart, FileText, ArrowRight,
-  CheckCircle, Calculator, ChevronRight, Server, Calendar,
+  CheckCircle, Calculator, ChevronRight, Server, Calendar,Network, Ship, Flame, Layers, GitBranch, Triangle,  Terminal,
+
+
+
+
   Megaphone, Blocks, Quote, Star, ChevronLeft, User, ShieldCheck, ShoppingBag, Activity, Cloud, GraduationCap,LayoutTemplate,  Code2, Database,  
   BrainCircuit, LayoutDashboard, Figma, HardDrive, Box, Cpu, 
   BarChart3, Hexagon, MonitorPlay, TestTube, Wind, Palette,
@@ -123,6 +127,161 @@ const TESTIMONIALS = [
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
   }
 ];
+
+// --- 3D TECH GLOBE COMPONENT ---
+const TechGlobe = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mouseRef = useRef({ x: 0.5, y: 0.5 });
+  const rotationRef = useRef({ x: 0, y: 0 });
+  const [items, setItems] = useState<any[]>([]);
+
+  // EXACTLY 24 TECHNOLOGIES TAILORED TO YOUR SERVICES
+  const ALL_TECH = [
+    // Web Dev, SaaS, ERP, CRM
+    { name: "React", icon: LayoutTemplate, color: "text-cyan-400" },
+    { name: "Next.js", icon: Triangle, color: "text-slate-100" },
+    { name: "Node.js", icon: Server, color: "text-green-500" },
+    { name: "TypeScript", icon: Code2, color: "text-blue-500" },
+    { name: "PostgreSQL", icon: Database, color: "text-indigo-400" },
+    { name: "MongoDB", icon: HardDrive, color: "text-emerald-500" },
+    { name: "Redis", icon: Zap, color: "text-red-500" },
+    { name: "Tailwind CSS", icon: Wind, color: "text-cyan-300" },
+    { name: "Stripe API", icon: CreditCard, color: "text-purple-400" },
+    
+    // Cloud, DevOps & QA
+    { name: "AWS", icon: Cloud, color: "text-orange-400" },
+    { name: "Docker", icon: Box, color: "text-blue-400" },
+    { name: "Automated QA", icon: TestTube, color: "text-green-400" },
+
+    // Mobile & CMS
+    { name: "React Native", icon: Smartphone, color: "text-sky-400" },
+    { name: "WordPress", icon: LayoutDashboard, color: "text-blue-500" },
+    { name: "Headless CMS", icon: FileText, color: "text-rose-400" },
+
+    // AI & Web Analytics
+    { name: "Python", icon: BrainCircuit, color: "text-yellow-400" },
+    { name: "OpenAI / LLMs", icon: Cpu, color: "text-emerald-400" },
+    { name: "GA4 Analytics", icon: BarChart3, color: "text-yellow-500" },
+
+    // Blockchain / Web3
+    { name: "Solidity / Web3", icon: Hexagon, color: "text-slate-300" },
+    { name: "Smart Contracts", icon: FileKey, color: "text-amber-400" },
+
+    // UI/UX, Graphics & Motion
+    { name: "Figma", icon: Figma, color: "text-purple-400" },
+    { name: "Adobe CC", icon: Palette, color: "text-pink-400" },
+    { name: "After Effects", icon: MonitorPlay, color: "text-red-400" },
+    { name: "Lottie Animation", icon: Layers, color: "text-teal-400" }
+  ];
+
+  useEffect(() => {
+    // 1. Generate points on a sphere using Fibonacci distribution
+    const N = ALL_TECH.length;
+    const points = ALL_TECH.map((tech, i) => {
+      const phi = Math.acos(-1 + (2 * i) / N);
+      const theta = Math.sqrt(N * Math.PI) * phi;
+      return {
+        ...tech,
+        baseX: Math.cos(theta) * Math.sin(phi),
+        baseY: Math.sin(theta) * Math.sin(phi),
+        baseZ: Math.cos(phi)
+      };
+    });
+
+    let animationFrameId: number;
+    let isHovered = false;
+
+    // 2. Animation Loop
+    const update = () => {
+      // Speeds: Slow auto-rotate, fast mouse-rotate
+      const targetSpeedX = isHovered ? mouseRef.current.y * 0.03 : 0.003;
+      const targetSpeedY = isHovered ? mouseRef.current.x * 0.03 : 0.005;
+
+      rotationRef.current.x += targetSpeedX;
+      rotationRef.current.y += targetSpeedY;
+
+      const { x: rx, y: ry } = rotationRef.current;
+      const cosX = Math.cos(rx), sinX = Math.sin(rx);
+      const cosY = Math.cos(ry), sinY = Math.sin(ry);
+
+      // 3. Project 3D points to 2D screen space
+      const projected = points.map((p) => {
+        const x1 = p.baseX * cosY - p.baseZ * sinY;
+        const z1 = p.baseX * sinY + p.baseZ * cosY;
+        const y2 = p.baseY * cosX - z1 * sinX;
+        const z2 = p.baseY * sinX + z1 * cosX;
+
+        return { ...p, x: x1, y: y2, z: z2 };
+      });
+
+      // Sort by Z so items in front render on top
+      projected.sort((a, b) => a.z - b.z);
+      setItems(projected);
+
+      animationFrameId = requestAnimationFrame(update);
+    };
+
+    update();
+
+    // Mouse Tracking Event Listeners
+    const el = containerRef.current;
+    if (el) {
+      el.onmouseenter = () => (isHovered = true);
+      el.onmouseleave = () => {
+        isHovered = false;
+        mouseRef.current = { x: 0.5, y: 0.5 }; // Reset to slow auto-spin
+      };
+      el.onmousemove = (e) => {
+        const rect = el.getBoundingClientRect();
+        mouseRef.current.x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        mouseRef.current.y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      };
+    }
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
+  return (
+    <div 
+      ref={containerRef} 
+      className="relative w-full max-w-[500px] aspect-square mx-auto flex items-center justify-center cursor-move touch-none"
+    >
+      {/* Glow Behind Globe */}
+      <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
+      
+      {items.map((item) => {
+        // Dynamic scale and opacity based on Z depth
+        const scale = (item.z + 2) / 3; 
+        const opacity = item.z > 0 ? 1 : 0.15; 
+        const zIndex = Math.round(item.z * 100) + 100;
+        
+        // Sphere Radius
+        const radius = 200; 
+
+        return (
+          <div
+            key={item.name}
+            className="absolute left-1/2 top-1/2 flex flex-col items-center justify-center gap-2 transition-opacity duration-300"
+            style={{
+              transform: `translate(-50%, -50%) translate3d(${item.x * radius}px, ${item.y * radius}px, 0px) scale(${scale})`,
+              opacity,
+              zIndex,
+            }}
+          >
+            <div className={`w-14 h-14 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/10 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-blue-500/50 hover:bg-slate-800 transition-colors`}>
+              <item.icon className={`w-6 h-6 ${item.color}`} />
+            </div>
+            {item.z > 0.5 && (
+              <span className="text-[10px] font-bold text-slate-300 bg-slate-900/80 px-2 py-0.5 rounded-full backdrop-blur-sm border border-white/10 absolute -bottom-6 whitespace-nowrap">
+                {item.name}
+              </span>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 // --- INTERACTIVE BACKGROUND (Spotlight + Particles + Parallax + Top/Bottom Lights) ---
 const InteractiveBackground = () => {
@@ -586,6 +745,80 @@ const HomePage = () => {
           </div>
         </div>
 
+
+
+
+{/* ==================== 3. 3D TECH STACK ==================== */}
+        <section className="py-24 bg-transparent overflow-hidden border-t border-white/5 relative">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+              
+              {/* Left Column: Tech Stack Breakdown */}
+              <div className="w-full lg:w-1/2 max-w-2xl text-center lg:text-left z-10">
+                <Badge variant="outline" className="text-purple-400 border-purple-400/30 bg-purple-500/10 px-3 py-1 mb-6">Full-Stack Arsenal</Badge>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6 text-white">
+                  The DNA of our digital products.
+                </h2>
+                <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10">
+                  We don't believe in one-size-fits-all. We handpick the perfect combination of modern frameworks, AI models, and cloud infrastructure tailored strictly to your business goals.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                  {/* Category 1: Web & Mobile */}
+                  <div className="bg-slate-900/30 border border-white/5 p-5 rounded-2xl backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-3 text-cyan-400">
+                      <LayoutTemplate size={20} />
+                      <h4 className="font-bold text-white">App & Web Engineering</h4>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      React, Next.js, and Node.js for high-performance SaaS and ERPs, plus React Native for seamless iOS & Android applications.
+                    </p>
+                  </div>
+
+                  {/* Category 2: AI & Data */}
+                  <div className="bg-slate-900/30 border border-white/5 p-5 rounded-2xl backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-3 text-emerald-400">
+                      <BrainCircuit size={20} />
+                      <h4 className="font-bold text-white">AI & Data Architecture</h4>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      Python and OpenAI integrations for intelligent automation, backed by highly scalable PostgreSQL and MongoDB databases.
+                    </p>
+                  </div>
+
+                  {/* Category 3: Web3 & CMS */}
+                  <div className="bg-slate-900/30 border border-white/5 p-5 rounded-2xl backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-3 text-purple-400">
+                      <Hexagon size={20} />
+                      <h4 className="font-bold text-white">Web3 & CMS Platforms</h4>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      Secure Solidity smart contracts for blockchain ecosystems, alongside robust WordPress and Headless CMS development.
+                    </p>
+                  </div>
+
+                  {/* Category 4: Design, Motion & QA */}
+                  <div className="bg-slate-900/30 border border-white/5 p-5 rounded-2xl backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-3 text-pink-400">
+                      <Palette size={20} />
+                      <h4 className="font-bold text-white">Design, Motion & QA</h4>
+                    </div>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      Figma and After Effects for stunning UI/UX and motion graphics, all verified by rigorous automated QA testing protocols.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Interactive 3D Globe */}
+              <div className="w-full lg:w-1/2 flex items-center justify-center min-h-[500px]">
+                <TechGlobe />
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
         {/* ==================== 4. FEATURED WORK ==================== */}
         <section className="py-24 bg-transparent">
           <div className="container px-4">
@@ -721,61 +954,7 @@ const HomePage = () => {
           </div>
         </section>
 
-{/* ==================== 4.5 OUR TECH STACK ==================== */}
-        <section className="py-24 bg-transparent border-t border-white/5 relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-          
-          <div className="container px-4 relative z-10">
-            <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-4 bg-purple-500/10 text-purple-300 border border-purple-500/20">Technology</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Powered by Modern Tech</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">
-                From frontend frameworks to AI models and blockchain architecture, we use enterprise-grade stacks to build your digital assets.
-              </p>
-            </div>
 
-            {/* Grid expanded to fit 18 items (3 rows of 6 on large screens) */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {[
-                // Web, Fullstack, & SaaS
-                { name: "React & Next.js", icon: LayoutTemplate, color: "text-cyan-400" },
-                { name: "Node & NestJS", icon: Server, color: "text-green-500" },
-                { name: "TypeScript", icon: Code2, color: "text-blue-500" },
-                { name: "PostgreSQL", icon: Database, color: "text-indigo-400" },
-                { name: "AWS Cloud", icon: Cloud, color: "text-orange-400" },
-                { name: "Tailwind CSS", icon: Wind, color: "text-cyan-300" },
-                
-                // Mobile, CMS, UI/UX & DBs
-                { name: "React Native", icon: Smartphone, color: "text-sky-400" },
-                { name: "WordPress CMS", icon: LayoutDashboard, color: "text-blue-400" },
-                { name: "Figma UI/UX", icon: Figma, color: "text-purple-400" },
-                { name: "MongoDB", icon: HardDrive, color: "text-emerald-500" },
-                { name: "Docker & CI/CD", icon: Box, color: "text-blue-400" },
-                { name: "Automated QA", icon: TestTube, color: "text-green-400" },
-
-                // AI, Data, Web3, & Graphics
-                { name: "Python & Data", icon: BrainCircuit, color: "text-yellow-400" },
-                { name: "OpenAI & LLMs", icon: Cpu, color: "text-emerald-400" },
-                { name: "GA4 Analytics", icon: BarChart3, color: "text-yellow-500" },
-                { name: "Web3 & Solidity", icon: Hexagon, color: "text-slate-300" },
-                { name: "Motion & VFX", icon: MonitorPlay, color: "text-red-400" },
-                { name: "Adobe Creative", icon: Palette, color: "text-pink-400" }
-              ].map((tech, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }} // Faster delay for smoother cascade
-                  className="bg-slate-900/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 hover:bg-slate-800 hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(0,0,0,0.5)] group cursor-default"
-                >
-                  <tech.icon className={`w-8 h-8 ${tech.color} opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`} />
-                  <span className="text-slate-300 font-medium text-sm text-center">{tech.name}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
 
         {/* ==================== 5. TESTIMONIALS SLIDER ==================== */}

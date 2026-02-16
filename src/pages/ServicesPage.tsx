@@ -50,6 +50,7 @@ import { Link } from 'react-router-dom';
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = { Code, FileCode, Palette, Layout: LayoutIcon, CheckCircle, Smartphone, Search, Target, Rocket ,Cpu, Play,BarChart3,ShieldCheck,Layers,Briefcase,Users,FileText};
 
+
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -290,8 +291,8 @@ const ServicesPage = () => {
           </div>
         </section>
 
-                {/* ==================== 5.5 GLOBAL ECOSYSTEM ==================== */}
-        <section className="py-24 bg-transparent border-t border-white/5">
+{/* ==================== 5.5 GLOBAL ECOSYSTEM ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5 overflow-hidden">
           <div className="container px-4">
             <div className="flex flex-col lg:flex-row gap-16 items-center">
               
@@ -319,24 +320,57 @@ const ServicesPage = () => {
                 </div>
               </div>
 
-              {/* Right Side: Abstract Map/Globe Visual */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-2 relative h-[400px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-sky-600/5 blur-[100px] rounded-full" />
+              {/* Right Side: Solar System Visual */}
+              <div className="w-full lg:w-1/2 order-1 lg:order-2 relative h-[400px] md:h-[500px] flex items-center justify-center">
+                {/* Deep space ambient glow */}
+                <div className="absolute inset-0 bg-sky-600/5 blur-[100px] rounded-full pointer-events-none" />
                 
-                {/* Stylized UI representation of a global connection */}
-                <div className="relative w-full max-w-sm aspect-square rounded-full border border-white/5 flex items-center justify-center">
-                  <div className="absolute inset-4 rounded-full border border-sky-500/20 flex items-center justify-center animate-[spin_60s_linear_infinite]">
-                    {/* Dots representing cities */}
-                    <div className="absolute top-0 w-3 h-3 bg-sky-400 rounded-full shadow-[0_0_15px_#38bdf8]" />
-                    <div className="absolute bottom-10 right-10 w-2 h-2 bg-blue-500 rounded-full" />
-                    <div className="absolute top-20 left-4 w-2 h-2 bg-purple-400 rounded-full" />
+                {/* Solar System Container */}
+                <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center">
+                  
+                  {/* The Sun / Central Core */}
+                  <div className="absolute z-20 w-20 h-20 rounded-full bg-slate-900 border border-sky-500/30 flex items-center justify-center shadow-[0_0_50px_rgba(56,189,248,0.2)]">
+                    <Globe2 size={40} className="text-sky-400" />
                   </div>
-                  <div className="absolute inset-16 rounded-full border border-white/5 flex items-center justify-center animate-[spin_40s_linear_infinite_reverse]">
-                     <div className="absolute bottom-0 w-2 h-2 bg-emerald-400 rounded-full shadow-[0_0_10px_#34d399]" />
+
+                  {/* Orbit 1 (Inner Ring - Fast) */}
+                  <div 
+                    className="absolute inset-[30%] rounded-full border border-white/10 border-dashed"
+                    style={{ animation: 'spin 15s linear infinite' }}
+                  >
+                    {/* Planet 1 */}
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full shadow-[0_0_15px_#34d399]" />
                   </div>
-                  <div className="absolute inset-28 rounded-full border border-blue-500/30 flex items-center justify-center bg-slate-900/80 backdrop-blur-xl shadow-2xl z-10">
-                    <Globe2 size={48} className="text-sky-400 opacity-80" />
+
+                  {/* Orbit 2 (Middle Ring - Medium, Reverse Direction) */}
+                  <div 
+                    className="absolute inset-[15%] rounded-full border border-white/5"
+                    style={{ animation: 'spin 25s linear infinite reverse' }}
+                  >
+                    {/* Planet 2 */}
+                    <div className="absolute top-1/2 -left-2.5 -translate-y-1/2 w-5 h-5 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]" />
+                    {/* Planet 3 (Small Node) */}
+                    <div className="absolute top-1/4 right-0 w-2 h-2 bg-slate-300 rounded-full shadow-[0_0_5px_#cbd5e1]" />
                   </div>
+
+                  {/* Orbit 3 (Outer Ring - Slow) */}
+                  <div 
+                    className="absolute inset-[0%] rounded-full border border-white/5"
+                    style={{ animation: 'spin 40s linear infinite' }}
+                  >
+                    {/* Planet 4 */}
+                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full shadow-[0_0_20px_#3b82f6]" />
+                    {/* Planet 5 */}
+                    <div className="absolute top-1/4 -right-1.5 w-3 h-3 bg-rose-400 rounded-full shadow-[0_0_10px_#fb7185]" />
+                  </div>
+
+                  {/* Distant Stars / Dust */}
+                  <div className="absolute inset-0 w-full h-full pointer-events-none">
+                    <div className="absolute top-10 left-10 w-1 h-1 bg-white/40 rounded-full animate-pulse" />
+                    <div className="absolute bottom-20 right-10 w-1.5 h-1.5 bg-sky-200/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute top-1/2 left-0 w-1 h-1 bg-purple-200/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+                  </div>
+
                 </div>
               </div>
 
