@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Compass, Flag, ImageIcon, ArrowDown, Calendar, User, Lightbulb, Coffee, Globe, Briefcase, Heart, BookOpen, Zap, Smile, Laptop, Users, TrendingDown, XCircle, TrendingUp, CheckCircle } from 'lucide-react';
+import { 
+  Target, Compass, Flag, ImageIcon, ArrowDown, Calendar, User, 
+  Lightbulb, Coffee, Globe, Briefcase, Heart, BookOpen, Zap, 
+  Smile, Laptop, Users, TrendingDown, XCircle, TrendingUp, CheckCircle 
+} from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
@@ -14,7 +18,21 @@ import { Separator } from '@/components/ui/separator';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Link, useNavigate } from 'react-router-dom';
 
-// --- INTERACTIVE BACKGROUND (Same as Home) ---
+
+// --- GLOBAL REACH DATA (Recalibrated for perfect SVG fit) ---
+const globalReach = [
+  { country: "Bangladesh", projects: "Native (HQ) Local Works", flag: "https://flagcdn.com/w80/bd.png", top: "42%", left: "74%", isHQ: true },
+  { country: "USA", projects: "3 Projects", flag: "https://flagcdn.com/w80/us.png", top: "34%", left: "20%" },
+  { country: "Canada", projects: "1 Project", flag: "https://flagcdn.com/w80/ca.png", top: "22%", left: "22%" },
+  { country: "Spain", projects: "1 Project", flag: "https://flagcdn.com/w80/es.png", top: "36%", left: "47%" },
+  { country: "Italy", projects: "1 Project", flag: "https://flagcdn.com/w80/it.png", top: "32%", left: "51%" },
+  { country: "Lithuania", projects: "2 Projects", flag: "https://flagcdn.com/w80/lt.png", top: "24%", left: "54%" },
+  { country: "Pakistan", projects: "1 Project", flag: "https://flagcdn.com/w80/pk.png", top: "40%", left: "67%" },
+  { country: "Malaysia", projects: "2 Projects", flag: "https://flagcdn.com/w80/my.png", top: "56%", left: "78%" },
+  { country: "Australia", projects: "1 Project", flag: "https://flagcdn.com/w80/au.png", top: "70%", left: "85%" }
+];
+
+// --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -84,8 +102,8 @@ const AboutPage = () => {
       {/* --- BACKGROUND INJECTION --- */}
       <InteractiveBackground />
 
-      {/* --- CONTENT WRAPPER --- */}
-      <div className="relative z-10 text-slate-100">
+      {/* --- CONTENT WRAPPER (CRITICAL SCROLLBAR FIX HERE) --- */}
+      <div className="relative w-full overflow-x-hidden z-10 text-slate-100">
 
         {/* ==================== 1. HERO SECTION ==================== */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
@@ -113,7 +131,6 @@ const AboutPage = () => {
                 <Button 
                   size="lg" 
                   className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
-                   // Scrolls to gallery
                 >
                   View Our Work
                 </Button>
@@ -202,76 +219,121 @@ const AboutPage = () => {
           </div>
         </section>
 
-                {/* ==================== 2.5 PAIN VS SOLUTION ==================== */}
-                <section className="py-24 bg-transparent relative overflow-hidden">
-                  <div className="container px-4">
-                    <div className="text-center mb-16">
-                      <Badge variant="outline" className="mb-4 bg-red-500/10 text-red-400 border border-red-500/20">The Challenge</Badge>
-                      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Standard</h2>
-                      <p className="text-slate-400 max-w-2xl mx-auto">
-                        Slow load times, broken user journeys, and outdated tech stacks are silently killing your conversion rates.
-                      </p>
-                    </div>
-        
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                      {/* The Old Way (Pain) */}
-                      <motion.div 
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-red-950/20 border border-red-500/20 rounded-3xl p-8 relative overflow-hidden group"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 blur-3xl rounded-full" />
-                        <h3 className="text-xl font-bold text-red-400 mb-6 flex items-center gap-3">
-                          <TrendingDown size={24} /> The Old Way
-                        </h3>
-                        <ul className="space-y-4">
-                          {[
-                            "Templates that look like everyone else",
-                            "Spaghetti code that breaks on every update",
-                            "3+ second page load speeds (losing 50% of traffic)",
-                            "Vulnerable to basic security threats",
-                            "Developers who vanish after launch"
-                          ].map((pain, i) => (
-                            <li key={i} className="flex items-start gap-3 text-slate-300">
-                              <XCircle size={20} className="text-red-500/70 shrink-0 mt-0.5" />
-                              <span className="text-sm leading-relaxed">{pain}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
-        
-                      {/* The TechWisdom Way (Solution) */}
-                      <motion.div 
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-emerald-950/20 border border-emerald-500/30 rounded-3xl p-8 relative overflow-hidden group shadow-[0_0_30px_rgba(16,185,129,0.05)]"
-                      >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-3xl rounded-full" />
-                        <h3 className="text-xl font-bold text-emerald-400 mb-6 flex items-center gap-3">
-                          <TrendingUp size={24} /> The TechWisdom Standard
-                        </h3>
-                        <ul className="space-y-4">
-                          {[
-                            "100% Custom architecture built for your exact needs",
-                            "Clean, documented code that scales effortlessly",
-                            "Sub-second load times optimized for Core Web Vitals",
-                            "Bank-grade security and data encryption",
-                            "Long-term partnership with proactive maintenance"
-                          ].map((solution, i) => (
-                            <li key={i} className="flex items-start gap-3 text-slate-200">
-                              <CheckCircle size={20} className="text-emerald-500 shrink-0 mt-0.5" />
-                              <span className="text-sm leading-relaxed">{solution}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    </div>
-                  </div>
-                </section>
+                {/* ======================================================= */}
+        {/* --- GLOBAL FOOTPRINT MAP (Replaces text-based stats) --- */}
+        {/* ======================================================= */}
+        <section className="py-24 md:py-32 bg-transparent border-t border-white/5 relative min-h-[90vh] flex flex-col justify-center items-center w-full">
+          
+          {/* Background Ambient Glows */}
+          <div className="absolute top-1/4 -left-20 md:left-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-600/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-1/4 -right-20 md:right-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-purple-600/10 blur-[100px] md:blur-[150px] rounded-full pointer-events-none" />
 
-        <Separator className="bg-white/10" />
+          {/* High-tech grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)] opacity-20 pointer-events-none" />
+
+          <div className="container mx-auto px-4 relative z-10 w-full">
+            
+            {/* Header Area */}
+            <div className="text-center mb-16 md:mb-16">
+              <Badge variant="outline" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20 px-4 py-1.5 text-sm backdrop-blur-md">Global Footprint</Badge>
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">Trusted Across the Globe.</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-light">
+                From our headquarters in Bangladesh to enterprise clients in the USA and Europe, our digital solutions cross borders seamlessly.
+              </p>
+            </div>
+
+            {/* The Seamless Map Wrapper */}
+            <div className="relative w-full max-w-7xl mx-auto">
+              
+              {/* Floating Inline Stats */}
+              <div className="absolute -top-12 md:-top-10 left-1/2 -translate-x-1/2 z-30 w-[95%] max-w-4xl px-2">
+                <div className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-full shadow-2xl p-3 md:p-4 flex flex-wrap md:flex-nowrap items-center justify-around gap-y-4 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10 w-full">
+                  <div className="text-center w-1/2 md:w-full py-1 md:py-0 border-t-0">
+                    <div className="text-xl md:text-2xl font-black text-white">9</div>
+                    <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Countries</div>
+                  </div>
+                  <div className="text-center w-1/2 md:w-full py-1 md:py-0 border-t-0 border-l border-white/10">
+                    <div className="text-xl md:text-2xl font-black text-emerald-400">HQ</div>
+                    <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Bangladesh</div>
+                  </div>
+                  <div className="text-center w-1/2 md:w-full py-2 md:py-0">
+                    <div className="text-xl md:text-2xl font-black text-white">12+</div>
+                    <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Int. Projects</div>
+                  </div>
+                  <div className="text-center w-1/2 md:w-full py-2 md:py-0 border-l border-white/10">
+                    <div className="text-xl md:text-2xl font-black text-blue-400">100%</div>
+                    <div className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Remote Ready</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Map Itself (Mobile Swiping + Mask Fading) */}
+              <div 
+                className="relative w-full mx-auto pt-16 md:pt-16 pb-10 overflow-x-auto overflow-y-hidden no-scrollbar cursor-grab active:cursor-grabbing" 
+                style={{ 
+                  maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)', 
+                  WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
+                  scrollbarWidth: 'none', 
+                  msOverflowStyle: 'none' 
+                }}
+              >
+                {/* Map Inner Container: 
+                  CRITICAL FIX: Removed horizontal padding here so absolute coordinates perfectly align with the image!
+                */}
+                <div className="relative w-full min-w-[800px] md:min-w-full mx-auto">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
+                    alt="World Map" 
+                    className="w-full h-auto opacity-40 pointer-events-none select-none block"
+                    style={{ filter: 'invert(1) brightness(150%) hue-rotate(180deg) drop-shadow(0 0 20px rgba(59,130,246,0.3))' }}
+                  />
+
+                  {/* Interactive Layer: Pulsing Flag Markers */}
+                  <div className="absolute inset-0">
+                    {globalReach.map((loc, i) => (
+                      <div 
+                        key={i} 
+                        className="absolute z-20 group cursor-pointer"
+                        style={{ top: loc.top, left: loc.left }}
+                      >
+                        {/* Tooltip */}
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-50 translate-y-2 group-hover:translate-y-0 w-max">
+                          <div className="bg-slate-900/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)] rounded-2xl px-5 py-3 flex items-center gap-3">
+                            <div className="flex flex-col">
+                              <span className="text-white font-bold text-base leading-tight">{loc.country}</span>
+                              <span className={`text-sm font-bold mt-1 ${loc.isHQ ? 'text-emerald-400' : 'text-blue-400'}`}>
+                                {loc.projects}
+                              </span>
+                            </div>
+                          </div>
+                          {/* Tooltip Arrow */}
+                          <div className="w-4 h-4 bg-slate-900/90 border-r border-b border-white/10 rotate-45 absolute -bottom-2 left-1/2 -translate-x-1/2" />
+                        </div>
+
+                        {/* Flag Marker & Pulse */}
+                        <div className="relative flex items-center justify-center -translate-x-1/2 -translate-y-1/2">
+                          <span 
+                              className={`absolute inline-flex h-full w-full rounded-full opacity-60 animate-ping ${loc.isHQ ? 'bg-emerald-500' : 'bg-blue-500'}`} 
+                              style={{ animationDuration: loc.isHQ ? '1.5s' : '2.5s' }}
+                          />
+                          
+                          <div className={`relative z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full border-2 ${loc.isHQ ? 'border-emerald-400 bg-emerald-950/80' : 'border-blue-400 bg-blue-950/80'} shadow-[0_0_20px_rgba(0,0,0,0.5)] overflow-hidden backdrop-blur-md transition-transform duration-300 group-hover:scale-110 group-hover:border-white`}>
+                            <img 
+                              src={loc.flag} 
+                              alt={`${loc.country} flag`} 
+                              className="w-full h-full object-cover scale-[1.35] pointer-events-none select-none" 
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         {/* ==================== 3. HISTORY TIMELINE ==================== */}
         <section className="py-24 bg-transparent overflow-hidden">
@@ -394,7 +456,7 @@ const AboutPage = () => {
         </section>
 
         {/* ======================================================= */}
-        {/* --- NEW SECTION 1: OUR PHILOSOPHY (ADDED) --- */}
+        {/* --- OUR PHILOSOPHY --- */}
         {/* ======================================================= */}
         <section className="py-24 bg-slate-900/30 border-y border-white/5">
           <div className="container px-4 md:px-6">
@@ -439,7 +501,6 @@ const AboutPage = () => {
                   <p className="text-slate-400 mb-6">
                     Every project is an opportunity to push the boundaries of what is possible on the web. We treat your business as our own.
                   </p>
-                  {/* Fixed Button: Use Link if it's internal, otherwise style as link */}
                   <Link to="/manifesto">
                     <Button variant="link" className="text-purple-400 p-0 hover:text-purple-300">Read our Manifesto &rarr;</Button>
                   </Link>
@@ -450,7 +511,7 @@ const AboutPage = () => {
         </section>
 
         {/* ======================================================= */}
-        {/* --- NEW SECTION 2: CULTURE & LIFE (ADDED & EXPANDED) --- */}
+        {/* --- CULTURE & LIFE --- */}
         {/* ======================================================= */}
         <section className="py-24 bg-transparent">
           <div className="container px-4 md:px-6">
@@ -539,36 +600,10 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* ======================================================= */}
-        {/* --- NEW SECTION 3: GLOBAL REACH (ADDED) --- */}
-        {/* ======================================================= */}
-        <section className="py-24 bg-transparent border-t border-white/5">
-          <div className="container px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-12">Global Impact</h2>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-8">
-              {[
-                { label: "Countries Served", value: "5+" },
-                { label: "Lines of Code", value: "2M+" },
-                { label: "Team Members", value: "8+" },
-                { label: "Years of Experience", value: "2+" },
-                { label: "Satisfied client", value: "15+" },
-                { label: "Projects Completed", value: "30+" }
-              ].map((stat, i) => (
-                <div key={i} className="p-6">
-                  <div className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-blue-400 font-medium tracking-widest uppercase">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* ======================================================= */}
-        {/* --- NEW SECTION 4: JOIN US CTA (ADDED & FIXED) --- */}
+        {/* --- JOIN US CTA --- */}
         {/* ======================================================= */}
         <section className="py-24 px-6">
           <div className="container mx-auto">
@@ -592,7 +627,7 @@ const AboutPage = () => {
                     size="lg" 
                     variant="outline" 
                     className="border-white/20 text-black hover:bg-white/10 hover:text-white rounded-full hover:border-white/40 transition-colors"
-                    onClick={() => scrollToSection('gallery-section')} // Scroll to gallery on click
+                    onClick={() => scrollToSection('gallery-section')}
                   >
                     <Heart className="mr-2 h-4 w-4" /> Life at {data.site.name}
                   </Button>
@@ -602,13 +637,11 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* ==================== 5. GALLERY SECTION (EXISTING) ==================== */}
-        {/* Added ID for scrolling anchor */}
+        {/* ==================== 5. GALLERY SECTION ==================== */}
         <section id="gallery-section" className="py-24 bg-transparent border-t border-white/5">
           <div className="container px-4 md:px-6">
             <div className="flex items-center justify-between mb-12">
                <h2 className="text-3xl font-bold tracking-tighter text-white">Life at {data.site.name}</h2>
-               {/* Fixed Button Style: Added border and hover effect to be visible */}
                <Button variant="outline" className="gap-2 text-slate-700 border-white/10 hover:text-white hover:bg-white/10 hover:border-white/20">
                   <ImageIcon size={18} /> View All
                </Button>
@@ -644,7 +677,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-      </div>
+      </div> {/* <-- END OF CRITICAL OVERFLOW WRAPPER --> */}
     </Layout>
   );
 };

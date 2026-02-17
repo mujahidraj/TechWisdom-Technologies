@@ -292,83 +292,87 @@ const ServicesPage = () => {
         </section>
 
 {/* ==================== 5.5 GLOBAL ECOSYSTEM ==================== */}
-        <section className="py-24 bg-transparent border-t border-white/5 overflow-hidden">
-          <div className="container px-4">
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <section className="py-16 md:py-24 bg-transparent border-t border-white/5 relative w-full overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
               
               {/* Left Side: Stats */}
-              <div className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+              <div className="w-full lg:w-1/2 space-y-6 md:space-y-8 order-2 lg:order-1 text-center lg:text-left z-10">
                 <Badge variant="outline" className="bg-sky-500/10 text-sky-400 border border-sky-500/20">Global Reach</Badge>
-                <h2 className="text-3xl md:text-5xl font-bold text-white">Borderless engineering for a global market.</h2>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Borderless engineering for a global market.
+                </h2>
+                
+                <p className="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
                   TechWisdom operates as a hyper-connected, remote-native ecosystem. We serve visionaries across multiple continents, bringing international standards to every line of code we write.
                 </p>
                 
-                <div className="grid grid-cols-2 gap-8 pt-6 border-t border-white/10">
-                  <div>
-                    <div className="text-3xl font-bold text-white flex items-center gap-2 mb-2">
-                      <MapPin size={24} className="text-sky-400" /> 15+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                  <div className="flex flex-col items-center lg:items-start">
+                    <div className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3 mb-2">
+                      <MapPin size={28} className="text-sky-400" /> 15+
                     </div>
                     <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Countries Served</p>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold text-white flex items-center gap-2 mb-2">
-                      <Clock1 size={24} className="text-sky-400" /> 24/7
+                  
+                  <div className="flex flex-col items-center lg:items-start">
+                    <div className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3 mb-2">
+                      <Clock1 size={28} className="text-sky-400" /> 24/7
                     </div>
                     <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Monitoring Support</p>
                   </div>
                 </div>
               </div>
 
-              {/* Right Side: Solar System Visual */}
-              <div className="w-full  lg:w-1/2 order-1 lg:order-2 relative h-[400px] md:h-[500px] flex items-center justify-center">
-                {/* Deep space ambient glow */}
-                <div className="absolute inset-0 bg-sky-600/5 blur-[100px] rounded-full pointer-events-none" />
+              {/* Right Side: Fluid Solar System Visual */}
+              <div className="w-full lg:w-1/2 order-1 lg:order-2 relative flex items-center justify-center py-10 z-0">
                 
-                {/* Solar System Container */}
-                <div className="relative w-full max-w-[400px] aspect-square flex items-center justify-center">
+                {/* Deep space ambient glow - Explicit width to prevent bleeding */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] aspect-square bg-sky-600/20 blur-[60px] md:blur-[100px] rounded-full pointer-events-none" />
+                
+                {/* Solar System Container - Safe bounds for mobile */}
+                <div className="relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-[400px] aspect-square flex items-center justify-center">
                   
                   {/* The Sun / Central Core */}
-                  <div className="absolute z-20 w-20 h-20 rounded-full bg-slate-900 border border-sky-500/30 flex items-center justify-center shadow-[0_0_50px_rgba(56,189,248,0.2)]">
-                    <Globe2 size={40} className="text-sky-400" />
+                  <div className="absolute z-20 w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-900 border border-sky-500/30 flex items-center justify-center shadow-[0_0_50px_rgba(56,189,248,0.2)]">
+                    <Globe2 className="text-sky-400 w-8 h-8 md:w-10 md:h-10" />
                   </div>
 
                   {/* Orbit 1 (Inner Ring - Fast) */}
+                  {/* FIX: Added animate-spin to className, changed style to only dictate duration */}
                   <div 
-                    className="absolute inset-[30%] rounded-full border border-white/10 border-dashed"
-                    style={{ animation: 'spin 15s linear infinite' }}
+                    className="absolute inset-[30%] rounded-full border border-white/10 border-dashed animate-spin"
+                    style={{ animationDuration: '10s', animationTimingFunction: 'linear' }}
                   >
-                    {/* Planet 1 */}
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full shadow-[0_0_15px_#34d399]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 bg-emerald-400 rounded-full shadow-[0_0_15px_#34d399]" />
                   </div>
 
                   {/* Orbit 2 (Middle Ring - Medium, Reverse Direction) */}
+                  {/* FIX: Added animate-spin to className, changed style to dictate duration and reverse direction */}
                   <div 
-                    className="absolute inset-[15%] rounded-full border border-white/5"
-                    style={{ animation: 'spin 25s linear infinite reverse' }}
+                    className="absolute inset-[15%] rounded-full border border-white/5 animate-spin"
+                    style={{ animationDuration: '20s', animationTimingFunction: 'linear', animationDirection: 'reverse' }}
                   >
-                    {/* Planet 2 */}
-                    <div className="absolute top-1/2 -left-2.5 -translate-y-1/2 w-5 h-5 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]" />
-                    {/* Planet 3 (Small Node) */}
-                    <div className="absolute top-1/4 right-0 w-2 h-2 bg-slate-300 rounded-full shadow-[0_0_5px_#cbd5e1]" />
+                    <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 bg-purple-500 rounded-full shadow-[0_0_15px_#a855f7]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-slate-300 rounded-full shadow-[0_0_5px_#cbd5e1]" />
                   </div>
 
                   {/* Orbit 3 (Outer Ring - Slow) */}
+                  {/* FIX: Added animate-spin to className, changed style to dictate duration */}
                   <div 
-                    className="absolute inset-[0%] rounded-full border border-white/5"
-                    style={{ animation: 'spin 40s linear infinite' }}
+                    className="absolute inset-4 md:inset-0 rounded-full border border-white/5 animate-spin"
+                    style={{ animationDuration: '35s', animationTimingFunction: 'linear' }}
                   >
-                    {/* Planet 4 */}
-                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full shadow-[0_0_20px_#3b82f6]" />
-                    {/* Planet 5 */}
-                    <div className="absolute top-1/4 -right-1.5 w-3 h-3 bg-rose-400 rounded-full shadow-[0_0_10px_#fb7185]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-5 h-5 md:w-6 md:h-6 bg-blue-500 rounded-full shadow-[0_0_20px_#3b82f6]" />
+                    <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 md:w-3 md:h-3 bg-rose-400 rounded-full shadow-[0_0_10px_#fb7185]" />
                   </div>
 
                   {/* Distant Stars / Dust */}
                   <div className="absolute inset-0 w-full h-full pointer-events-none">
-                    <div className="absolute top-10 left-10 w-1 h-1 bg-white/40 rounded-full animate-pulse" />
-                    <div className="absolute bottom-20 right-10 w-1.5 h-1.5 bg-sky-200/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-                    <div className="absolute top-1/2 left-0 w-1 h-1 bg-purple-200/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+                    <div className="absolute top-[10%] left-[15%] w-1 h-1 bg-white/40 rounded-full animate-pulse" />
+                    <div className="absolute bottom-[20%] right-[10%] w-1.5 h-1.5 bg-sky-200/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+                    <div className="absolute top-[50%] left-[5%] w-1 h-1 bg-purple-200/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
                   </div>
 
                 </div>
