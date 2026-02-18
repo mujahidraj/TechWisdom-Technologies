@@ -497,6 +497,7 @@ const HomePage = () => {
         <section className="py-24 bg-transparent">
           <div className="container px-4">
             <div className="text-center mb-16">
+              <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20">Our Pillar</Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-white">Our Core Pillars</h2>
               <p className="text-slate-400 max-w-2xl mx-auto mt-4 text-lg">
                 We don't just build websites; we build comprehensive digital ecosystems.
@@ -739,6 +740,7 @@ const HomePage = () => {
         <section className="py-24 bg-transparent relative overflow-hidden">
           <div className="container px-4 relative z-10">
             <div className="text-center mb-16">
+              <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20">Testimonials</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Trusted by Visionaries</h2>
               <p className="text-slate-400 max-w-xl mx-auto">
                 Hear what our partners have to say about their journey with us.
@@ -801,6 +803,7 @@ const HomePage = () => {
             <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
               <div className="space-y-8 order-2 lg:order-1">
+                      <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20">Why Us</Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white text-center lg:text-left">
                   Why industry leaders choose us.
                 </h2>
