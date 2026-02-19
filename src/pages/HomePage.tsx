@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,7 +39,10 @@ import {Infinity as InfinityIcon, // Renamed to avoid TypeScript error,
   FileKey,
   Fingerprint,
   ShieldAlert,
-  ShoppingCart
+  ShoppingCart,
+  Play,
+  Pause,
+  Mic
 } from 'lucide-react';
 
 import SEOHead from '@/components/seo/SEOHead';
@@ -92,42 +96,42 @@ const industries = [
   { name: "SaaS", icon: Cloud },
 ];
 
-// --- MOCK TESTIMONIAL DATA ---
+// --- ACTUAL TESTIMONIAL DATA ---
 const TESTIMONIALS = [
   {
-    id: 1,
     name: "Jahangir Hossain",
     role: "CEO",
     company: "Cambry Study Abroad Agency",
     content: "আমাদের এজেন্সির জন্য এমন একটা ওয়েবসাইট দরকার ছিল যা দেখে ছাত্রছাত্রীরা ভরসা পায়। এই টিম আমাদের চাহিদা পুরোপুরি বুঝেছে এবং চমৎকার একটি প্ল্যাটফর্ম তৈরি করে দিয়েছে।",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",
+    // Placeholder audio - replace with actual voice note link later
+    audioSrc: "https://remarkable-orange-znyizfxyos.edgeone.app/Cambry.mp3" 
   },
   {
-    id: 2,
     name: "Nehal Fatin Sohan",
     role: "Founder",
     company: "New Bangladesh Group",
     content: "টেকউইসডমের টিমটি তরুণ হলেও তাদের কাজের মান আন্তর্জাতিক লেভেলের। আমাদের গ্রুপের ডিজিটাল ব্র্যান্ডিং এবং ওয়েবসাইটের স্পিড অপ্টিমাইজেশন নিয়ে তারা যে কাজ করেছে, তা সত্যিই প্রশংসনীয়।",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
+    audioSrc: "https://ashamed-apricot-5vsppmmmsf.edgeone.app/new%20bangladesh.mp3"
   },
   {
-    id: 3,
     name: "Nusrat Ferdaws",
     role: "Managing Director",
     company: "Juta Express",
     content: "জুতা এক্সপ্রেসের ই-কমার্স সাইটটি এত ইউজার ফ্রেন্ডলি হবে ভাবিনি। কাস্টমাররা খুব সহজেই অর্ডার করতে পারছে এবং আমাদের সেলস আগের চেয়ে দ্বিগুণ বেড়েছে।",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+    audioSrc: "https://pure-coffee-5vp9x0f9om.edgeone.app/Juta%20express.mp3"
   },
   {
-    id: 4,
     name: "Sanjidul Islam Surjo",
     role: "Managing Director",
     company: "New Organic Food",
     content: "অর্গানিক ফুড বিজনেসে কাস্টমারের বিশ্বাসটাই আসল। তারা আমাদের ওয়েবসাইটটি এত ক্লিন এবং ফাস্ট বানিয়েছে যে কাস্টমাররা ভিজিট করলেই ইমপ্রেসড হয়ে যায়।",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+    audioSrc: "https://tame-amaranth-efrcujfhhx.edgeone.app/organic.mp3"
   }
 ];
-
 
 
 // --- INTERACTIVE BACKGROUND (Spotlight + Particles + Parallax + Top/Bottom Lights) ---
@@ -283,15 +287,47 @@ const HomePage = () => {
   // --- TESTIMONIAL STATE ---
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
+  };
 
-  const nextTestimonial = () => setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
-  const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  };
+
+// --- AUDIO TESTIMONIAL LOGIC ---
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audioProgress, setAudioProgress] = useState(0);
+
+  // Automatically stop audio and reset when the user changes slides
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+      setAudioProgress(0);
+    }
+  }, [currentTestimonial]);
+
+  const toggleAudio = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleAudioTimeUpdate = () => {
+    if (!audioRef.current) return;
+    const current = audioRef.current.currentTime;
+    const total = audioRef.current.duration || 1;
+    setAudioProgress((current / total) * 100);
+  };
+
+  // Ensure your TESTIMONIALS array has an 'audioSrc' property like this:
+  // { name: "John Doe", role: "CEO", company: "TechX", content: "...", image: "...", audioSrc: "/path-to-audio.mp3" }
 
   // --- EXTENDED ESTIMATOR DATA ---
   const extendedEstimatorSteps = [
@@ -736,60 +772,150 @@ const HomePage = () => {
 
 
 
-        {/* ==================== 5. TESTIMONIALS SLIDER ==================== */}
+{/* ==================== 5. PREMIUM AUDIO TESTIMONIALS ==================== */}
         <section className="py-24 bg-transparent relative overflow-hidden">
+          {/* Subtle background effects */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
+          
           <div className="container px-4 relative z-10">
             <div className="text-center mb-16">
-              <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20">Testimonials</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Trusted by Visionaries</h2>
-              <p className="text-slate-400 max-w-xl mx-auto">
-                Hear what our partners have to say about their journey with us.
+              <Badge variant="outline" className="mb-4 bg-blue-500/10 text-blue-300 border border-blue-500/20 px-4 py-1">Voice of our Partners</Badge>
+              <h2 className="text-4xl md:text-5xl font-black mb-4 text-white tracking-tight">Trusted by Visionaries</h2>
+              <p className="text-slate-400 max-w-xl mx-auto text-lg">
+                Don't just take our word for it. Listen to what our partners have to say about building the future with us.
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto relative">
+            <div className="max-w-6xl mx-auto relative">
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={currentTestimonial}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="bg-slate-900/60 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 relative"
+                  initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-6 md:p-12 relative shadow-2xl overflow-hidden"
                 >
-                  <div className="absolute -top-6 -left-6 md:-top-8 md:-left-8 text-blue-500/20 rotate-12">
-                    <Quote size={80} fill="currentColor" />
-                  </div>
+                  {/* Hidden Audio Element */}
+                  <audio 
+                    ref={audioRef} 
+                    src={TESTIMONIALS[currentTestimonial].audioSrc} 
+                    onTimeUpdate={handleAudioTimeUpdate}
+                    onEnded={() => setIsPlaying(false)}
+                  />
 
-                  <div className="relative z-10 flex flex-col items-center text-center space-y-8">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={20} className="text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-lg md:text-2xl leading-relaxed text-slate-200 font-light italic">
-                      "{TESTIMONIALS[currentTestimonial].content}"
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <Avatar className="h-14 w-14 border-2 border-blue-500">
-                        <AvatarImage src={TESTIMONIALS[currentTestimonial].image} />
-                        <AvatarFallback><User /></AvatarFallback>
-                      </Avatar>
-                      <div className="text-left">
-                        <h4 className="font-bold text-white text-lg">{TESTIMONIALS[currentTestimonial].name}</h4>
-                        <p className="text-blue-400 text-sm">{TESTIMONIALS[currentTestimonial].role} at {TESTIMONIALS[currentTestimonial].company}</p>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    {/* Left Column: Client Info & Audio Player */}
+                    <div className="lg:col-span-5 flex flex-col space-y-8">
+                      {/* Client Identity */}
+                      <div className="flex items-center gap-5">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-blue-500 blur-xl opacity-30 rounded-full" />
+                          <Avatar className="h-20 w-20 md:h-24 md:w-24 border-2 border-white/10 shadow-2xl relative z-10">
+                            <AvatarImage src={TESTIMONIALS[currentTestimonial].image} className="object-cover" />
+                            <AvatarFallback className="bg-slate-800 text-2xl"><User /></AvatarFallback>
+                          </Avatar>
+                        </div>
+                        <div>
+                          <div className="flex gap-1 mb-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} size={16} className="text-yellow-400 fill-yellow-400" />
+                            ))}
+                          </div>
+                          <h4 className="font-bold text-white text-xl md:text-2xl">{TESTIMONIALS[currentTestimonial].name}</h4>
+                          <p className="text-blue-400 font-medium">{TESTIMONIALS[currentTestimonial].role} @ <span className="text-slate-300">{TESTIMONIALS[currentTestimonial].company}</span></p>
+                        </div>
+                      </div>
+
+                      {/* The Audio Player */}
+                      <div className="bg-slate-950/50 rounded-3xl p-5 border border-white/5 shadow-inner">
+                        <div className="flex items-center gap-4 mb-4">
+                          <button 
+                            onClick={toggleAudio}
+                            className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg shrink-0 ${isPlaying ? 'bg-emerald-500 shadow-emerald-500/20' : 'bg-blue-600 hover:bg-blue-500 shadow-blue-600/20'}`}
+                          >
+                            {isPlaying ? <Pause size={24} className="text-white" /> : <Play size={24} className="text-white ml-1" />}
+                          </button>
+                          
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                <Mic size={12} className={isPlaying ? "text-emerald-400 animate-pulse" : ""} /> 
+                                Voice Note
+                              </span>
+                              {isPlaying && <span className="text-[10px] text-emerald-400 font-bold bg-emerald-400/10 px-2 py-0.5 rounded-full">PLAYING</span>}
+                            </div>
+                            
+                            {/* Animated Waveform */}
+                            <div className="flex items-end gap-1 h-8 w-full">
+                              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((bar) => (
+                                <motion.div
+                                  key={bar}
+                                  className={`w-full rounded-full ${isPlaying ? 'bg-emerald-400' : 'bg-slate-700'}`}
+                                  animate={isPlaying ? { height: [`${Math.random() * 40 + 20}%`, "100%", `${Math.random() * 40 + 20}%`] } : { height: "20%" }}
+                                  transition={{ duration: 0.5 + Math.random() * 0.5, repeat: Infinity, ease: "easeInOut" }}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Progress Bar */}
+                        <div className="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                          <div 
+                            className="h-full bg-gradient-to-r from-blue-500 to-emerald-400 transition-all duration-300 ease-linear" 
+                            style={{ width: `${audioProgress}%` }} 
+                          />
+                        </div>
                       </div>
                     </div>
+
+                    {/* Right Column: Text Quote */}
+                    <div className="lg:col-span-7 relative">
+                      <div className="absolute -top-10 -left-6 md:-top-16 md:-left-10 text-white/5 rotate-6 pointer-events-none">
+                        <Quote size={120} fill="currentColor" />
+                      </div>
+                      
+                      <div className="relative z-10 pl-4 md:pl-8 border-l-2 border-blue-500/30 py-4">
+                        <p className="text-xl md:text-xl leading-relaxed text-slate-200 font-light italic">
+                          "{TESTIMONIALS[currentTestimonial].content}"
+                        </p>
+                      </div>
+                    </div>
+
                   </div>
                 </motion.div>
               </AnimatePresence>
 
-              <div className="flex justify-center gap-4 mt-8">
-                <Button variant="outline" size="icon" onClick={prevTestimonial} className="rounded-full border-white/20 text-slate-300 hover:bg-white/10 hover:text-white bg-transparent">
-                  <ChevronLeft size={20} />
+              {/* Slider Controls */}
+              <div className="flex justify-center items-center gap-6 mt-10">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  onClick={prevTestimonial} 
+                  className="w-12 h-12 rounded-full border-white/10 text-white hover:bg-blue-600 hover:border-blue-600 hover:text-white bg-slate-900/50 backdrop-blur-md transition-all"
+                >
+                  <ChevronLeft size={24} />
                 </Button>
-                <Button variant="outline" size="icon" onClick={nextTestimonial} className="rounded-full border-white/20 text-slate-300 hover:bg-white/10 hover:text-white bg-transparent">
-                  <ChevronRight size={20} />
+                
+                {/* Pagination Dots */}
+                <div className="flex gap-2">
+                  {TESTIMONIALS.map((_, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`h-2 rounded-full transition-all duration-300 ${idx === currentTestimonial ? 'w-8 bg-blue-500' : 'w-2 bg-white/20'}`}
+                    />
+                  ))}
+                </div>
+
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  onClick={nextTestimonial} 
+                  className="w-12 h-12 rounded-full border-white/10 text-white hover:bg-blue-600 hover:border-blue-600 hover:text-white bg-slate-900/50 backdrop-blur-md transition-all"
+                >
+                  <ChevronRight size={24} />
                 </Button>
               </div>
             </div>
