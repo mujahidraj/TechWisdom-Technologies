@@ -1,4 +1,56 @@
-[ 
+[ {
+  "id": "kinetic-lab",
+  "title": "KINETIC | High-Performance Lab",
+  "category": "Neon-Brutalist Fitness OS",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "A completely non-traditional, brutalist OS-style website for a data-driven elite gym in Dhaka.",
+  "fullDescription": "An 8-page avant-garde website built for a fictional high-end biometric gym in Bangladesh (Gulshan, Banani, Dhanmondi). The project deliberately abandons traditional web architecture—removing the top navigation bar entirely in favor of a bottom-floating 'Kinetic Deck' radial menu. Utilizing a 'Neon-Brutalism' aesthetic (Obsidian Black, Acid Green, Electric Violet) and terminal typography, the site feels like interacting with a military-grade operating system. It features raw JS functionality including a custom cyber-cursor, a draggable map UI, functional biometric telemetry tools (TDEE/Macros), and simulated live facility capacity radars to create high urgency.",
+  "liveLink": "https://kinetic-labs-twtech.netlify.app/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla DOM Manipulation)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Navbar-less UI via 'The Kinetic Deck' Command Overlay",
+    "Custom Geometric Pointer/Cursor Engine",
+    "Interactive Draggable Hub Locator",
+    "Terminal-Style Biometric Diagnostics (JS Calculators)",
+    "Simulated Live Network Feeds & Waitlist Tickers",
+    "Glitch/Hard-Toggle Pricing and Protocol Filters",
+    "Localized Dhaka 'Diet Patch' & Environmental Context"
+  ],
+  "designUnique": "A total departure from soft, friendly corporate designs. Uses strict grid backgrounds, sharp unrounded borders with solid drop-shadows (brutalism), and cinematic 'terminal bootloader' sequences on every page load to establish an aggressive, high-performance 'hacker' vibe.",
+  "developmentProcess": "Engineered exclusively with Vanilla JS and Tailwind utility classes (zero external CSS files). Built complex interactive states—such as the typing-effect modal for Operator dossiers and the mouse-drag scrolling logic for the communications hub—without relying on heavy libraries like React or Swiper.js."
+},
+{
+  "id": "aether-flow",
+  "title": "AETHER | State of Flow",
+  "category": "Liquid Glassmorphism & Sensory Computing (Fitness)",
+  "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600",
+  "shortDescription": "An avant-garde, sensory-optimized fitness sanctuary website built to induce 'flow state' for Dhaka's corporate elite.",
+  "fullDescription": "An 8-page highly experimental web application for a luxury, sensory-deprivation fitness center in Bangladesh (Gulshan, Banani, Dhanmondi). This project completely abandons traditional UI patterns (like top navbars and sharp grids). Instead, it utilizes a 'Liquid Glassmorphism' philosophy featuring deep void backgrounds, animated aurora gradients, and frosted-glass panels. The primary navigation is a 'Magnetic Orb' that reacts to the user's cursor. Content is deeply localized, introducing features like 'The Bengal Diet Paradigm' for local corporate lunches, a strict 'Pause Protocol' for Friday Jumu'ah and Ramadan, and a dedicated 'Female-Only Sanctuary' to address cultural privacy needs.",
+  "liveLink": "https://aether-flow-twtech.netlify.app/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Extended Configuration)",
+    "JavaScript (Vanilla Physics, DOM Manipulation)",
+    "Intersection Observer API",
+    "Font Awesome Icons"
+  ],
+  "features": [
+    "Magnetic Orb Navigation System (Replaces Top Navbar)",
+    "Custom Liquid Geometry Cursor Tracker",
+    "Interactive 'Flow State Matrix' (JS Sensory Data Visualization)",
+    "Fluid Diagnostic Calculators (BMI/TDEE/Macros) with seamless transitions",
+    "Cinematic Modals for 'Architects of Flow' (Guide Profiles)",
+    "Live Facility Frequency Simulator (Dynamic Capacity Energy Meter)",
+    "Intention-Based Filtering for Movement Regimens"
+  ],
+  "designUnique": "Deliberately anti-traditional. Employs large, elegant typography (Playfair Display) mixed with technical data fonts (Inter) to merge human emotion with clinical science. Elements float and morph using CSS keyframes, while `backdrop-filter: blur` is used extensively to create depth and layering, mimicking a living, breathing digital organism.",
+  "developmentProcess": "Developed entirely without heavy external frameworks like React or Three.js. The magnetic physics, cursor tracking, dynamic timeline rendering, and complex modal states were all engineered using highly optimized Vanilla JavaScript and Tailwind CSS utility classes, ensuring lightning-fast load times despite the visually heavy UI."
+},
   {
   "id": "zenith-wellness-hub",
   "title": "Zenith Wellness Hub",

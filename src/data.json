@@ -1969,8 +1969,8 @@
       {
         "id": "starter",
         "name": "The Starter",
-        "description": "For Personal Portfolios, Small F-Commerce, Photographers. (Range: ৳8k - ৳12k)",
-        "price": 10000,
+        "description": "For Personal Portfolios, Small F-Commerce, Photographers. (Approximate Range: ৳10k - ৳15k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
+        "price": 15000,
         "features": [
           "1 Page (Long Scroll) & Hero Section",
           "Gallery/Portfolio & Contact Form",
@@ -1985,7 +1985,7 @@
       {
         "id": "corporate",
         "name": "The Corporate",
-        "description": "For Agencies, Law Chambers, NGOs, Interior Design. (Range: ৳15k - ৳25k)",
+        "description": "For Agencies, Law Chambers, NGOs, Interior Design. (Approximate Range: ৳15k - ৳25k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 20000,
         "features": [
           "5 - 8 Pages & Trust Elements",
@@ -2001,7 +2001,7 @@
       {
         "id": "service_hub",
         "name": "The Service Hub",
-        "description": "For Dental Clinics, Parlors, Car Rental, Cleaning Services. (Range: ৳25k - ৳35k)",
+        "description": "For Dental Clinics, Parlors, Car Rental, Cleaning Services. (Approximate Range: ৳25k - ৳35k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 30000,
         "features": [
           "8 - 10 Pages + Booking Engine",
@@ -2018,7 +2018,7 @@
       {
         "id": "estore",
         "name": "The E-Store",
-        "description": "For Fashion Brands, Gadget Shops, Organic Food. (Range: ৳30k - ৳50k+)",
+        "description": "For Fashion Brands, Gadget Shops, Organic Food. (Approximate Range: ৳30k - ৳50k+)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 40000,
         "features": [
           "Full E-Commerce & 20 Product Upload",
@@ -2034,7 +2034,7 @@
       {
         "id": "portal",
         "name": "The Portal",
-        "description": "For News Portals, Coaching Centers, Community Blogs. (Range: ৳20k - ৳40k)",
+        "description": "For News Portals, Coaching Centers, Community Blogs. (Approximate Range: ৳20k - ৳40k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 30000,
         "features": [
           "High-Volume Content Layout",
@@ -2052,7 +2052,7 @@
       {
         "id": "app_mvp",
         "name": "App MVP",
-        "description": "Validate your idea with a core feature set.",
+        "description": "Validate your idea with a core feature set.Price varies based on complexity,features and timelines. Contact us for a custom quote.",
         "price": 30000,
         "features": [
           "Cross-Platform (Flutter/React Native)",
@@ -2068,7 +2068,7 @@
       {
         "id": "app_business",
         "name": "Business App",
-        "description": "Dynamic app for service/product businesses.",
+        "description": "Dynamic app for service/product businesses. (Approximate Range: ৳60k - ৳80k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 60000,
         "features": [
           "Dynamic Content & Admin Panel",
@@ -2085,7 +2085,7 @@
       {
         "id": "app_ecommerce",
         "name": "E-Com Super App",
-        "description": "Full-fledged shopping experience.",
+        "description": "Full-fledged shopping experience. (Approximate Range: ৳80k - ৳120k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 90000,
         "features": [
           "Advanced Product Filtering",
@@ -2103,7 +2103,7 @@
       {
         "id": "gfx_starter",
         "name": "Identity Lite",
-        "description": "Essentials for new startups.",
+        "description": "Essentials for new startups. (Approximate Range: ৳4k - ৳6k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 4000,
         "features": [
           "2 Logo Concepts",
@@ -2119,7 +2119,7 @@
       {
         "id": "gfx_social",
         "name": "Social Suite",
-        "description": "Make your Facebook/Insta look pro.",
+        "description": "Make your Facebook/Insta look pro. (Approximate Range: ৳10k - ৳15k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 10000,
         "features": [
           "5 Post Templates (Canva/PS)",
@@ -2136,7 +2136,7 @@
       {
         "id": "gfx_brand",
         "name": "Full Branding",
-        "description": "Complete visual overhaul.",
+        "description": "Complete visual overhaul. (Approximate Range: ৳20k - ৳30k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 20000,
         "features": [
           "Logo & Brand Guidelines Book",
@@ -2154,7 +2154,7 @@
       {
         "id": "mkt_social",
         "name": "Social Starter",
-        "description": "Keep your pages active and alive.",
+        "description": "Keep your pages active and alive. (Approximate Range: ৳15k - ৳20k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 15000,
         "features": [
           "Manage FB & Instagram",
@@ -2170,7 +2170,7 @@
       {
         "id": "mkt_growth",
         "name": "Growth Engine",
-        "description": "Focus on leads and sales.",
+        "description": "Focus on leads and sales. (Approximate Range: ৳30k - ৳40k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 30000,
         "features": [
           "Manage FB, Insta & LinkedIn",
@@ -2187,7 +2187,7 @@
       {
         "id": "mkt_seo",
         "name": "SEO & Dominance",
-        "description": "Long-term organic traffic.",
+        "description": "Long-term organic traffic. (Approximate Range: ৳40k - ৳50k)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "price": 40000,
         "features": [
           "Full Website SEO Audit",
@@ -2205,7 +2205,7 @@
       {
         "id": "basic_m",
         "name": "Starter Care",
-        "description": "Hosting and basic security.",
+        "description": "Hosting and basic security. (Approximate Range: ৳1500 - ৳2000/month)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "monthlyPrice": 1500,
         "yearlyPrice": 14400,
         "features": [
@@ -2219,7 +2219,7 @@
       {
         "id": "standard_m",
         "name": "Business Care",
-        "description": "Updates and content edits.",
+        "description": "Updates and content edits. (Approximate Range: ৳4500 - ৳5000/month)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "monthlyPrice": 4500,
         "yearlyPrice": 43200,
         "features": [
@@ -2235,7 +2235,7 @@
       {
         "id": "premium_m",
         "name": "Priority Care",
-        "description": "Full peace of mind.",
+        "description": "Full peace of mind. (Approximate Range: ৳9500 - ৳10000/month)/Depending on complexity, features, and timeline. Contact us for a custom quote.",
         "monthlyPrice": 9500,
         "yearlyPrice": 91200,
         "features": [
