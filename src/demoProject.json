@@ -1,11 +1,175 @@
 [ {
+  "id": "protima-elite-wellness",
+  "title": "PROTIMA | The Elite Wellness Club",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1600",
+  "shortDescription": "A cinematic, editorial-split web experience for a high-end clinical fitness club in Dhaka's elite residential zones.",
+  "fullDescription": "PROTIMA is an 8-page premium web presence designed for a high-net-worth fitness network in Bangladesh. This project breaks from standard web design by utilizing a 'Cinematic Editorial Split' layout, combining a persistent vertical icon dock with a Z-pattern split content area. The aesthetic mimics a luxury brochure, utilizing Deep Emerald and Champagne Gold to signal prestige. The project is highly localized for the Dhaka market, featuring an 'Executive Valet' protocol, 'Stealth Vanguard' wings for absolute female privacy, and medical-grade H13 HEPA air purification infrastructure as a core metabolism stressor defense. Conversion is driven through exclusive 'Initiation' forms, elite 'Curator Matchmakers,' and functional 'Diagnostic Lab' tools that interpret body metrics through a clinical lens rather than a generic fitness one.",
+  "liveLink": "https://twtech-hub.github.io/Protima-Fitness-D14/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Luxury Config)",
+    "JavaScript (Vanilla DOM State Management)",
+    "Intersection Observer API",
+    "Lucide/FontAwesome Icon Suite"
+  ],
+  "features": [
+    "Persistent Vertical Icon Dock Navigation",
+    "Interactive 'Heritage Timeline' Scroll Engine",
+    "Clinical 'Dossier Modal' System for Disciplines and Curators",
+    "Dynamic 'Curator Matchmaker' intent tool",
+    "Interactive 'Sanctuary Node' Switcher for multiple branches",
+    "Clinical Diagnostic Lab widgets (BMI, TDEE, Hydration)",
+    "High-end 'Initiation Terminal' lead generation forms",
+    "Cultural 'Pause Privilege' logic for Ramadan and travel"
+  ],
+  "designUnique": "Adopted a 'Cinematic Editorial' philosophy. Features high-contrast typography (Playfair Display) and large-scale imagery with slow-scale hover effects. The design intentionally creates a sense of 'weight' and 'prestige' to distinguish the brand from generic commercial gyms. Empathy is woven into the UX, specifically addressing Dhaka-specific stressors like traffic, air quality, and the need for high-level privacy.",
+  "developmentProcess": "Developed using a utility-first CSS approach with Tailwind, ensuring a flawless responsive experience on both mobile and desktop. Complex state-management for the scheduling engine and diagnostic widgets was written in Vanilla JS to ensure lightning-fast performance and zero framework bloat. Custom intersection observers were implemented to create the signature slow-reveal storytelling feel."
+},
+  {
+  "id": "shokti-kinetic-grid",
+  "title": "SHOKTI | The Kinetic Grid",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "A high-end, dashboard-style Bento Box UI for a family-focused gym network in Dhaka.",
+  "fullDescription": "SHOKTI is an 8-page premium web application designed for a fictional Dhaka-based fitness sanctuary. Breaking away from traditional 'Hero/Navbar' templates, the site utilizes a 'Bento Box' layout where information is compartmentalized into tactile, rounded interactive widgets. This approach reduces cognitive load for older generations while maintaining a sleek, app-like feel for younger audiences. The project is deeply rooted in the Bangladeshi cultural context, featuring a unique 'Pause Protocol' for the holy month of Ramadan, dedicated Namaz (prayer) room callouts with valet parking alerts for Gulshan traffic, and a 'Ladies Only Stealth Wing' managed exclusively by female staff. The platform is built for high conversion with integrated lead generation tools, real-time branch traffic simulations, and functional health diagnostics.",
+  "liveLink": "https://twtech-hub.github.io/Shokti-Fitness-D13/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Kinetic Config)",
+    "JavaScript (Vanilla DOM Manipulation)",
+    "Intersection Observer API",
+    "Font Awesome Pro Icons"
+  ],
+  "features": [
+    "Floating App Dock Universal Navigation",
+    "Live-Simulated 'Hub Traffic' Capacity Widgets",
+    "Interactive BMI, TDEE, and Hydration Hub Diagnostics",
+    "Intent-based Workout Filtering Engine (De-stress, Strength, etc.)",
+    "Dynamic Mentor Matchmaker Tool",
+    "Time-of-day Adaptive Welcome Headers",
+    "Automated Tariff Toggles (Monthly/Annual) with JS Price Engine",
+    "Cultural Pause Protocol System for Ramadan/International Travel"
+  ],
+  "designUnique": "Adopted a 'Dashboard First' philosophy. Every section is a self-contained card with high-contrast typography (Outfit font) and generous rounding (`rounded-[3rem]`). Utilized a vibrant 'Energy Red' and 'Bengal Green' palette to evoke power and heritage, intentionally avoiding dark/aggressive gym aesthetics to ensure the space feels welcoming to seniors and beginners.",
+  "developmentProcess": "Engineered strictly with Vanilla JavaScript and utility-first CSS (Tailwind) to ensure lightning-fast performance across mobile and desktop. Built custom state-management logic for the hub switcher, pricing engine, and health tools, allowing the entire user journey to feel like a seamless SPA (Single Page Application) without the weight of heavy frameworks."
+},
+  {
+  "id": "mati-rooted-fitness",
+  "title": "MATI | Rooted Fitness & Wellness",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600",
+  "shortDescription": "An editorial-style, magazine-layout web presence for a gentle, multi-generational wellness sanctuary in Dhaka.",
+  "fullDescription": "An 8-page complete web ecosystem for MATI, a fictional holistic fitness space in Bangladesh designed to counteract toxic gym culture. This project fundamentally changes traditional web design by abandoning the standard 'top navbar + hero' layout in favor of a fixed editorial sidebar (converting to a sleek bottom-bar on mobile). The color palette is deeply earthy (Terracotta, Forest Green, Sand) and utilizes elegant serif typography (Lora) to establish a calm, magazine-like reading experience. The content is heavily localized, specifically addressing Dhaka traffic context, the 'Deshi Diet' (balancing rice/curry), the importance of Namaz rooms, and private 'Stealth' hours for women. The platform features fully functioning, judgment-free wellness tools and interactive filters for schedules and mentorship profiles.",
+  "liveLink": "https://twtech-hub.github.io/Mati-Fitness-D12/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Earth-Toned Config)",
+    "JavaScript (Vanilla DOM Manipulation & Filtering)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Fixed Editorial Sidebar / Mobile App-like Bottom Navigation",
+    "Interactive 'Mood Board' intent selector (JS)",
+    "Magazine-style 'Mentor Dossier' & 'Movement' pop-up modals",
+    "Real-time, aesthetically rendered Daily Rhythm schedule",
+    "Judgment-free Wellness Calculators (Foundation Index, Sustenance)",
+    "Elegant Lunar/Solar (Monthly/Annual) pricing toggle engine",
+    "Smooth vertical Accordion for Cultural Manifestos & FAQs"
+  ],
+  "designUnique": "A bold rejection of standard tech/SaaS web templates. The layout feels like a high-end lifestyle book. Elements are spaced generously with soft transitions, thin borders, and drop-cap typography to invoke calmness. Empathy is woven into the UX—calculators do not use harsh medical terms like 'obese', opting instead for gentle prompts like 'Supportive Care Suggested'.",
+  "developmentProcess": "Built entirely with Vanilla JavaScript and Tailwind CSS, focusing on CSS grid and flexbox to manage the dual-layout (sidebar on desktop vs. bottom-nav on mobile) flawlessly without requiring a heavy frontend framework like React. Complex filtering logic for the schedule and trainer galleries was written from scratch to ensure instant, reload-free interactions."
+},
+{
+  "id": "aarohan-fitness",
+  "title": "Aarohan Fitness & Wellness",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1600",
+  "shortDescription": "A vibrant, accessible, and culturally aligned wellness brand serving every generation in Dhaka.",
+  "fullDescription": "An 8-page comprehensive web platform built for a premium family-centric gym in Bangladesh (with branches in Gulshan, Dhanmondi, and Uttara). Moving away from intimidating 'hardcore' gym tropes, Aarohan utilizes a bright, welcoming color palette (Sunrise Orange and Ocean Blue) and generous whitespace to appeal to university students, corporate professionals, and senior citizens alike. The site is deeply localized for the Bangladeshi market, prominently featuring dedicated prayer rooms, female-only 'Stealth Zone' operational hours, Jumu'ah break announcements, and a 'Bangladeshi Plate' nutrition guide. The UI is built for high conversion with sticky navbars, floating WhatsApp integrations, and frictionless free-trial forms.",
+  "liveLink": "https://twtech-hub.github.io/Aarohon-fitness-D11/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "JavaScript (Vanilla DOM Manipulation)",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Interactive BMI, TDEE, and Hydration Calculators",
+    "Dynamic 'Find Your Match' Trainer Matchmaker Form",
+    "Fluid Program & Class Schedule Filtering System",
+    "Interactive Branch/Location Locators",
+    "Custom Testimonial Sliders & FAQ Accordions",
+    "Automated Pricing Cycle Toggles (Monthly/Annual)",
+    "Floating WhatsApp & Toast Notification Systems"
+  ],
+  "designUnique": "Designed with a 'Clarity & Community' philosophy. Uses the highly legible Open Sans for body text paired with the friendly Poppins font for headings. Incorporates soft shadows, rounded borders (`rounded-[2rem]`), and clean layout structures to reduce cognitive load and establish trust, specifically appealing to individuals who might normally feel intimidated by traditional tech-heavy or aggressive gym environments.",
+  "developmentProcess": "Developed strictly with Vanilla JavaScript and Tailwind CSS to ensure rapid load times and zero dependencies. Built custom logic for complex interactions—such as the generative health calculators and the trainer matchmaking algorithm—allowing users to receive immediate, personalized value without ever needing to reload the page or interact with a backend server."
+},
+  {
+  "id": "bondhon-wellness-circle",
+  "title": "BONDHON | The Wellness Circle",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600",
+  "shortDescription": "A fluid, organic web experience for a premium community-focused gym network in Dhaka's elite hubs.",
+  "fullDescription": "BONDHON is an 8-page premium web application designed for a multigenerational fitness brand in Bangladesh. Moving away from rigid grids and traditional headers, this project utilizes an 'Organic Fluidity' philosophy, featuring circular motifs, rounded blobs, and a unique 'Floating Nav Flower' for an immersive, sanctuary-like experience. The platform is deeply localized for the Bangladeshi elite market, addressing the need for hospital-grade H13 HEPA air purification in Dhaka, 'Stealth Vanguard' wings for absolute female privacy, and physiotherapy-led mobility protocols for senior members. Conversion is optimized through interactive 'Vitality Lab' diagnostics, a dynamic 'Guide Matchmaker' tool, and culturally-tuned features like the 'Ramadan Pause Protocol' and 'Deshi Plate' nutritional coaching.",
+  "liveLink": "https://twtech-hub.github.io/Bandhon-Fitness-D15/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Organic Config)",
+    "JavaScript (Vanilla DOM State Management)",
+    "Intersection Observer API",
+    "Lucide/FontAwesome Icon Suite"
+  ],
+  "features": [
+    "Floating Bottom-Right Navigation Flower Hub",
+    "Interactive 'Heritage Path' Scroll Timeline",
+    "Dynamic 'Vitality Bubble' program explorer",
+    "Generational 'Guide Matchmaker' intent tool",
+    "Auto-centering Daily Flow Cycle timetable",
+    "Interactive Vitality Lab diagnostics (BMI, TDEE, Hydration)",
+    "Organic 'Initiation Terminal' lead generation forms",
+    "Cultural 'Pause Protocol' logic for Ramadan and travel"
+  ],
+  "designUnique": "Adopted an 'Organic Fluidity' philosophy. Replaced standard navigation bars with a blooming interactive flower. Utilized a soft, high-contrast palette (Sunrise Peach & Healing Mint) with rounded, shifting shapes to create a sense of calm and accessibility. The design intentionally avoids aggressive fitness imagery to welcome seniors and beginners into the 'Circle'.",
+  "developmentProcess": "Built using utility-first CSS (Tailwind) to ensure a perfectly responsive fluid experience across all devices. Custom Vanilla JS was engineered for complex state management (diagnostic calculators, schedule filtering, and hub transitions) to maintain high performance with zero framework dependencies. Custom intersection observers create a smooth, staggered 'reveal' effect for the organic elements."
+},
+
+  {
+  "id": "iron-nexus",
+  "title": "IRON-NEXUS | Cybernetic Fitness Hub",
+  "category": "Fitness & Gym",
+  "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
+  "shortDescription": "A cyberpunk-themed, heavily gamified web application for a tech-driven elite gym franchise in Dhaka.",
+  "fullDescription": "An 8-page web ecosystem designed for a fictional, high-end data-driven fitness hub located in Bangladesh (Gulshan, Banani, Dhanmondi). Instead of a traditional corporate gym layout, the site treats fitness as a video game 'avatar upgrade'. It uses a Cyber-Industrial aesthetic featuring aggressive clip-path geometries, neon cyan/orange glows, scanline overlays, and 'glitch' hover animations. The content is heavily localized for the Dhaka market, introducing specific contextual features like 'The Dhaka Diet Patch' for handling corporate deshi lunches, a 'System Pause Protocol' for Ramadan and travel, and a dedicated 'Stealth Zone' addressing the cultural requirement for a private, female-only training sanctuary.",
+  "liveLink": "https://twtech-hub.github.io/Iron-Nexus-Fitness-D10/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Configuration & Clip-Paths)",
+    "JavaScript (Vanilla DOM Manipulation & Data Visualization)",
+    "Intersection Observer API",
+    "Font Awesome Icons"
+  ],
+  "features": [
+    "Gamified 'Skill Tree' Navigation for Workout Programs",
+    "Live Telemetry Terminal (Hover-responsive JS Stat Bars)",
+    "Interactive RPG-style 'Vanguard' Coach Dossier Modals",
+    "Real-time Deployment Radar (Dynamic Schedule Engine)",
+    "Functional 'Bio-Scanners' (JS TDEE/BMI/Macro Engines)",
+    "Hardware Upgrades Page (Toggle-based Pricing Tiers)",
+    "Custom Cyber-Geometric Cursor & Global Scanline Overlay"
+  ],
+  "designUnique": "A bold rejection of minimal, soft web design. Utilizes fonts like Orbitron and Rajdhani paired with deep #0B0C10 backgrounds and harsh neon borders. Every UI element mimics a heads-up display (HUD), renaming standard pages like 'About' and 'Trainers' to 'Lore' and 'Vanguard', completely immersing the user in an RPG-like physical upgrade system.",
+  "developmentProcess": "Developed using strict Vanilla JS constraints (no React/Vue) combined with advanced Tailwind CSS utility classes. Custom CSS was only used for complex clip-paths, cursor rendering, and specific keyframe glitch animations. Built highly interactive, state-managed components (like the schedule grid and the dynamic stat injection on the coaches page) from scratch to ensure immediate reactivity and a lightweight payload."
+},
+ {
   "id": "kinetic-lab",
   "title": "KINETIC | High-Performance Lab",
-  "category": "Neon-Brutalist Fitness OS",
+  "category": "Fitness & Gym",
   "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600",
   "shortDescription": "A completely non-traditional, brutalist OS-style website for a data-driven elite gym in Dhaka.",
   "fullDescription": "An 8-page avant-garde website built for a fictional high-end biometric gym in Bangladesh (Gulshan, Banani, Dhanmondi). The project deliberately abandons traditional web architecture—removing the top navigation bar entirely in favor of a bottom-floating 'Kinetic Deck' radial menu. Utilizing a 'Neon-Brutalism' aesthetic (Obsidian Black, Acid Green, Electric Violet) and terminal typography, the site feels like interacting with a military-grade operating system. It features raw JS functionality including a custom cyber-cursor, a draggable map UI, functional biometric telemetry tools (TDEE/Macros), and simulated live facility capacity radars to create high urgency.",
-  "liveLink": "https://kinetic-labs-twtech.netlify.app/",
+  "liveLink": "https://twtech-hub.github.io/Kinetic-fitness-D8/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -27,11 +191,11 @@
 {
   "id": "aether-flow",
   "title": "AETHER | State of Flow",
-  "category": "Liquid Glassmorphism & Sensory Computing (Fitness)",
+  "category": "Fitness & Gym",
   "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600",
   "shortDescription": "An avant-garde, sensory-optimized fitness sanctuary website built to induce 'flow state' for Dhaka's corporate elite.",
   "fullDescription": "An 8-page highly experimental web application for a luxury, sensory-deprivation fitness center in Bangladesh (Gulshan, Banani, Dhanmondi). This project completely abandons traditional UI patterns (like top navbars and sharp grids). Instead, it utilizes a 'Liquid Glassmorphism' philosophy featuring deep void backgrounds, animated aurora gradients, and frosted-glass panels. The primary navigation is a 'Magnetic Orb' that reacts to the user's cursor. Content is deeply localized, introducing features like 'The Bengal Diet Paradigm' for local corporate lunches, a strict 'Pause Protocol' for Friday Jumu'ah and Ramadan, and a dedicated 'Female-Only Sanctuary' to address cultural privacy needs.",
-  "liveLink": "https://aether-flow-twtech.netlify.app/",
+  "liveLink": "https://twtech-hub.github.io/Aether-fitness-D9/",
   "techStack": [
     "HTML5",
     "Tailwind CSS (Custom Extended Configuration)",
