@@ -1,4 +1,32 @@
 [ {
+  "id": "aura-signature-events",
+  "title": "AURA | Signature Events",
+  "category": "Elite Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600",
+  "shortDescription": "A cinematic, glassmorphic web portal for a high-end wedding and corporate event architecture firm in Dhaka.",
+  "fullDescription": "AURA is an 8-page ultra-premium web application engineered for the highest tier of the Bangladeshi event management industry. Abandoning soft, rounded designs, it utilizes a 'Luminous Glassmorphism & High-Contrast Grid' philosophy. Featuring Deep Space Black backgrounds accented by Luminous Gold, the site mimics a high-fashion editorial or an architectural dossier. It directly addresses the unique pain points of the Dhaka luxury market: enforcing strict VVIP security protocols, managing paparazzi embargoes, coordinating VIP valet in heavy traffic, and securing exclusive dates at prime venues like the Radisson Blu and ICCB. The conversion pipeline is aggressively modern, featuring an interactive 'Budget Estimator' built in Vanilla JS that provides immediate financial transparency, and highly detailed 'Initiation Terminals' replacing standard contact forms.",
+  "liveLink": "https://aura-events-twtech.netlify.app/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Glassmorphism Config)",
+    "JavaScript (Vanilla DOM State Management)",
+    "Intersection Observer API",
+    "Font Awesome Pro Icons"
+  ],
+  "features": [
+    "Luminous Glassmorphic Top Navigation",
+    "Interactive JS Event Budget Estimator Engine",
+    "Dynamic Masonry Archive with Lightbox Curation",
+    "Interactive 'Cultural Pillars' Tabs for Holud/Akdh/Reception",
+    "Live-Simulated 'Command Center' Operational Ticker",
+    "Interactive 'Venue Procurement' Grid with Logistics Modals",
+    "Cinematic Hover Reveals & Infinite Marquees",
+    "High-End 'Initiation Terminal' Lead Generation Routing"
+  ],
+  "designUnique": "Designed around the concept of 'Control and Precision'. It uses the Cinzel font to establish heritage and luxury, while Inter ensures modern data readability. The UI relies heavily on `backdrop-blur` glass panels and glowing neon accents to create depth. It intentionally avoids calling itself a 'party planner,' instead framing the agency as 'Architects of Grandeur', speaking directly to corporate executives and elite families seeking zero-latency execution.",
+  "developmentProcess": "Built entirely on a utility-first CSS framework (Tailwind) to ensure the heavy glassmorphic effects render smoothly across mobile and desktop without layout shifts. The complex state-logic for the Budget Estimator, Venue filtering, and Archive Masonry grids was coded entirely in raw Vanilla JavaScript, ensuring a lightning-fast 'SPA-like' feel without relying on heavy frameworks like React or Vue."
+},
+{
   "id": "protima-elite-wellness",
   "title": "PROTIMA | The Elite Wellness Club",
   "category": "Fitness & Gym",
