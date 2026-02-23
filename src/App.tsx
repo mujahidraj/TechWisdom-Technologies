@@ -29,6 +29,7 @@ import CookiesPolicy from './pages/CookiesPolicy';
 
 // --- Splash Screen Import ---
 import SplashScreen from './components/ui/SplashScreen';
+import GalleryPage from './pages/GalleryPage';
 
 const queryClient = new QueryClient();
 
@@ -71,6 +72,7 @@ const App = () => {
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/services/:id" element={<ServiceDetails />} />
                 <Route path="/manifesto" element={<ManifestoPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>

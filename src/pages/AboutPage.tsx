@@ -619,7 +619,7 @@ const AboutPage = () => {
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/careers">
-                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full shadow-lg shadow-blue-900/20">
+                    <Button size="lg" className="bg-blue-600 hover:bg-lue-500 text-white font-bold rounded-full shadow-lg shadow-blue-900/20">
                       <Briefcase className="mr-2 h-4 w-4" /> View Openings
                     </Button>
                   </Link>
@@ -642,9 +642,11 @@ const AboutPage = () => {
           <div className="container px-4 md:px-6">
             <div className="flex items-center justify-between mb-12">
                <h2 className="text-3xl font-bold tracking-tighter text-white">Life at {data.site.name}</h2>
-               <Button variant="outline" className="gap-2 text-slate-700 border-white/10 hover:text-white hover:bg-white/10 hover:border-white/20">
+               <Link to="/gallery" className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
+                 <Button variant="outline" className="gap-2 text-slate-700 border-white/10 hover:text-white hover:bg-white/10 hover:border-white/20">
                   <ImageIcon size={18} /> View All
                </Button>
+               </Link>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
