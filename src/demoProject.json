@@ -1,5 +1,222 @@
 [ 
-
+  {
+  "id": "utsab-aura-events",
+  "title": "Utsab Aura Events",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000",
+  "shortDescription": "Premium, interactive, and highly conversion-focused event agency platform tailored for the Bangladeshi market.",
+  "fullDescription": "A comprehensive 9-page web application designed for a premier event management agency in Dhaka, Bangladesh. Ditching the traditional top-navbar for a mobile-native 'Floating Dock', it covers Weddings, Corporate B2B, Social Events, and Venue Sourcing. The platform is highly interactive, featuring live BDT budget calculators, space requirement algorithms, dynamic form routing, and a faux 360-degree venue viewer. The color palette shifts per sector—warm reds/golds for weddings, sharp slate for corporate, and deep black for the cinematic gallery—while maintaining a cohesive brand identity.",
+  "liveLink": "https://twtech-hub.github.io/Utsab-Aura-Event-Management-D12/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "FontAwesome 6"
+  ],
+  "features": [
+    "Floating Glassmorphism App-style Dock",
+    "Live BDT Event Cost Estimators (3 Variants)",
+    "Faux 360° Panorama Venue Viewer",
+    "Interactive Comparison Matrix",
+    "Square Footage Space Calculator",
+    "Filterable Masonry Dark-Mode Gallery",
+    "Smart Conditional Contact Form with BD Regex",
+    "Live Dhaka Time / Office Status Indicator"
+  ],
+  "designUnique": "Avoided traditional 'techy' or generic corporate templates. Adopted a 'Festive Modern' aesthetic combining Plus Jakarta Sans for legibility and Playfair Display for elegance. Implemented CSS flex-grow hover galleries, polaroid scatter effects, and live 'Vibe Meters' to make the site engaging for multiple generations.",
+  "developmentProcess": "Developed strictly with Vanilla HTML/JS and Tailwind CSS without external dependencies. Engineered multiple custom logic scripts, including a dynamic price engine that updates card totals instantly based on a guest count slider, and a before/after image drag slider to showcase decor transformations without any plugins."
+},
+{
+  "id": "utsab-canvas-v2",
+  "title": "Utsab Canvas: The Editorial Experience",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
+  "shortDescription": "Non-traditional, magazine-style immersive platform for high-end Bangladeshi events.",
+  "fullDescription": "An 8-page flagship digital platform built for the elite event market in Bangladesh. Departing from standard corporate layouts, it utilizes an 'Editorial Canvas' design with integrated side navigation and interactive story-telling modules. The system features a multi-day wedding symphony tracker, a VVIP corporate protocol blueprint, and a highly transparent investment portal with dynamic add-on calculators. The aesthetic uses a 'Heritage Maroon & Artisan Gold' palette to bridge the gap between traditional Bengali hospitality and global management standards.",
+  "liveLink": "https://twtech-hub.github.io/Utsab-Canvas-Event-Management-D13/",
+  "techStack": [
+    "HTML5 (Semantic)",
+    "Tailwind CSS (JIT)",
+    "Vanilla JavaScript (ES6+)",
+    "FontAwesome Icons"
+  ],
+  "features": [
+    "Integrated Concierge Flow: Multi-step, logic-based booking wizard.",
+    "Dynamic Mood Switcher: Switches entire page contexts between Wedding and Corporate modes.",
+    "Dhaka Logistics Matrix: Interactive visualization of event timelines and backup protocols.",
+    "Artisan Material Palette: Functional material selector showcasing physical decor textures.",
+    "Transparency Investment Portal: Fixed-tier pricing with real-time add-on cost estimation."
+  ],
+  "designUnique": "Adopted a 'Magazine Immersive' philosophy, removing the traditional header/hero structure in favor of side-integrated branding and typography-led entry points. Focused on high-contrast serif headers and generous white space to appeal to both HNWI families and corporate decision-makers.",
+  "developmentProcess": "Engineered a custom multi-step form state manager in vanilla JS to reduce bounce rates. Developed an infinite-scroll 'Living Wall' for the gallery using CSS masonry and JS filtering. Implemented a smart scroll-hide navigation system for a distraction-free mobile reading experience."
+},
+{
+  "id": "ananda-and-co",
+  "title": "Ananda & Co.",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000",
+  "shortDescription": "Cinematic, emotion-driven website for a premium Bangladeshi event agency.",
+  "fullDescription": "A comprehensive 9-page flagship platform built to capture the essence of luxury events in Bangladesh. Moving away from standard top-nav layouts, it utilizes a 'Floating Glass Island' navigation and a deep 'Midnight Sapphire & Rose Gold' palette. The site caters to both emotional family weddings and protocol-heavy corporate summits, featuring specialized tools like a live BD venue interactive map, a dynamic Kacchi menu estimator, and a multi-step digital concierge booking system.",
+  "liveLink": "https://twtech-hub.github.io/Annondo-and-Co-Event-Managament-D14/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (Custom Config)",
+    "Vanilla JavaScript",
+    "FontAwesome Icons"
+  ],
+  "features": [
+    "Digital Concierge Booking Wizard",
+    "Interactive Dhaka Venue Matcher & Map",
+    "Dynamic Kacchi Menu Estimator",
+    "Flowing JS Masonry Lightbox Gallery",
+    "Floating Glass-Pill Navigation System"
+  ],
+  "designUnique": "Adopted a 'Cinematic Flow' philosophy utilizing the elegant Playfair Display typeface and rich, emotion-evoking colors. It bridges the generational gap in BD by providing easy-to-use slider estimators for parents while offering sleek, app-like mobile interfaces for younger clients.",
+  "developmentProcess": "Developed a custom, bug-free vanilla JS form state manager to replace low-converting traditional forms. Implemented interactive DOM manipulation for the venue and catering calculators without relying on external libraries, ensuring lightning-fast load times even on mobile networks."
+},
+{
+  "id": "bondhon-events",
+  "title": "Bondhon Event Planners",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069",
+  "shortDescription": "A highly interactive, non-traditional agency portal designed specifically for the premium Bangladeshi event market.",
+  "fullDescription": "A massive 9-page, immersive web ecosystem built for 'Bondhon Event Planners'. Rejecting standard corporate layouts, the site utilizes a 'Floating Canvas & Storybook' methodology. It replaces the traditional top navbar with a sticky, animated 'Floating Navigation Hub' that expands into a full-screen elegant menu. Tailored specifically for the Bangladeshi market, the site features localized BDT currency calculators, specific venue references (like Sena Malancha, Le Méridien Dhaka, ICCB), and culturally relevant event categories (Gaye Holud, Mehendi, Walima, Corporate Activations). The design leans heavily on interactive JavaScript to engage multi-generational clients through visual storytelling rather than walls of text.",
+  "liveLink": "https://twtech-hub.github.io/Bondhon-Event-Management-D15/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "CSS Grid & Masonry Layouts",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Global Floating Navigation Hub",
+    "Live Event Budget Calculator Engine (multi-variable JS)",
+    "Interactive Venue Comparison Tool",
+    "Dynamic 'Choose Your Path' Consultation Forms",
+    "CSS Masonry Lookbook Gallery with Lightbox",
+    "Interactive Event Journey Tab System",
+    "Scroll-Triggered Number Counters",
+    "3D Flip Artisan Profile Cards"
+  ],
+  "designUnique": "Adopted an 'Art Exhibition & Storybook' philosophy. It abandons tech-heavy, boring corporate aesthetics in favor of rich, cultural palettes (Marigold, Velvet Maroon, Emerald) and soft, rounded geometries. The UI utilizes massive imagery, glassmorphism elements, and playful CSS hover transformations (like the floating polaroids on the social page) to evoke emotion, trust, and grandeur.",
+  "developmentProcess": "Engineered entirely without heavy frontend frameworks (No React/Vue) to ensure lightning-fast load times on Bangladeshi mobile networks. Leveraged advanced Vanilla JS for all state-management and logic, including building a robust, multi-step pricing algorithm that updates the DOM instantly as users interact with range sliders and radio toggles. Custom CSS animations were meticulously layered over Tailwind utility classes to create smooth page transitions and micro-interactions without performance drops."
+},
+{
+"id": "nova-strategy-v2",
+"title": "Nova Strategy: Ultimate Event Management Ecosystem",
+"category": "Event Management Agency",
+"image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
+"shortDescription": "A hyper-localized, 9-page premium web architecture for the Bangladeshi event industry.",
+"fullDescription": "Nova Strategy is an end-to-end digital ecosystem featuring a cohesive design language across 9 core pages (Home, Services, Portfolio, About, Corporate, Weddings, Contact, FAQ, Pricing). It targets the Bangladeshi market with precision by integrating BDT-based financial calculators, guest-to-venue matching logic, and DMP permission compliance guides. The platform utilizes a 'Modern Materialist' aesthetic with Tailwind CSS, ensuring zero bugs and fluid responsiveness. Functionality is powered by Vanilla JavaScript, including multi-step form validation, category-based portfolio filtering, and a real-time budget add-on calculator.",
+"liveLink": "https://twtech-hub.github.io/NOVA.-Digital-Marketing-D5/",
+"techStack": [
+"HTML5 (Semantic)",
+"Tailwind CSS (3.4+ JIT)",
+"Vanilla JavaScript (ES2024)",
+"Google Fonts API",
+"Lucide/FontAwesome Icons"
+],
+"features": [
+"9 Interactive Pages with 10+ sections each",
+"Dynamic BDT Budget & Add-on Estimators",
+"Localized Venue & Permission Management Guides",
+"Searchable FAQ System",
+"Portfolio Filter for Corporate & Wedding sectors",
+"Validated B2B and Social Lead Capture Forms",
+"Unified Navigation & Mega-Footer logic"
+],
+"designUnique": "A 'Clarity & Growth' philosophy using a professional slate and amber color palette, tailored to appeal to both high-net-worth individuals and corporate procurement departments in Dhaka.",
+"developmentProcess": "Engineered for speed and SEO with vanilla code to maintain a bug-free environment. Each functional element was stress-tested for Bangladeshi mobile network conditions."
+},
+{
+  "id": "ayojon-events-bd",
+  "title": "AyoJon Events",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1000",
+  "shortDescription": "A premium, high-conversion event management agency website tailored specifically for the Bangladeshi corporate and luxury wedding market.",
+  "fullDescription": "A comprehensive 7-page, highly interactive website designed for 'AyoJon', a premier event management agency based in Banani, Dhaka. Built to cater to high-end B2B clients and luxury social events in Bangladesh, the platform features a heavily localized approach incorporating BDT pricing models, cultural event terminology (Gaye Holud, Mehendi, AGM), and specific Dhaka venue highlights (BICC, ICCB). The site architecture is meticulously engineered to maximize lead generation, featuring multiple touchpoints, dynamic vanilla JS cost estimators, custom tab systems for service exploration, and deep case-study integrations. It perfectly balances a luxurious 'Festive BD Red & Corporate Slate' aesthetic to bridge traditional Bangladeshi culture with modern corporate professionalism.",
+  "liveLink": "https://twtech-hub.github.io/Ayojon-Event-Management-D9/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "Google Maps API",
+    "Intersection Observer API"
+  ],
+  "features": [
+    "Dynamic Vanilla JS Event Budget Estimator",
+    "Interactive Custom Tab & Accordion Systems",
+    "Scroll-Triggered Statistic Counters & Progress Bars",
+    "Custom Lightbox Video Modal Integration",
+    "Advanced DOM-based Portfolio Filtering System",
+    "Custom 'Build-Your-Own' Package Cost Calculator",
+    "Client Testimonial Auto-Slider",
+    "Real-time Form Validation with Dynamic Success Overlay"
+  ],
+  "designUnique": "Adopted a 'Cultural Elegance meets Corporate Precision' design philosophy. The UI uses a strategic color palette featuring a festive, traditional Bangladeshi Red (#D91656) balanced with a stable, trust-inducing Corporate Slate (#1E2022) and Gold accents. Generous whitespace, immersive full-width imagery of local BD events, and the crisp 'Inter' typeface ensure the site appeals equally to corporate decision-makers (Banks, FMCG) and high-net-worth individuals planning luxury weddings. Every interactive element was designed to mimic the tactile, white-glove feel of premium physical event planning.",
+  "developmentProcess": "Developed entirely without heavy JavaScript frameworks (No React/Vue), utilizing strictly HTML5, Tailwind CSS, and Vanilla JS to ensure the lightning-fast load times crucial for the Bangladeshi mobile network market. Custom logic was written from scratch for complex interactive components, including a multi-variable BDT budget estimator, a dynamic pricing toggle system that prevents page reloads, and an Intersection Observer-powered animation engine that reveals content organically as the user scrolls. The architecture strictly adhered to a highly componentized HTML structure, ensuring perfect 1:1 consistency across the shared Navbar and Footer over all 7 pages, resulting in a 0-bug, high-performance deployment."
+},
+{
+  "id": "utsab-events",
+  "title": "Utsab Event Management",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1000",
+  "shortDescription": "High-conversion, interactive event management platform tailored for the Bangladeshi market.",
+  "fullDescription": "An 8-page, highly interactive, and zero-bug website designed specifically for a premium event management agency in Bangladesh (targeting venues like ICCB, BICC, and Radisson). Built entirely with HTML5, Tailwind CSS, and Vanilla JavaScript, the platform focuses heavily on UI/UX principles to drive lead generation. Key pages include an interactive filtering system for services, a dynamic image lightbox for the portfolio, a robust BDT (৳) budget estimator calculator, and a live-search FAQ section. The design logic centers on building trust with corporate clients and families planning luxury weddings by ensuring a smooth, highly responsive user journey.",
+  "liveLink": "https://twtech-hub.github.io/utsab-Event-Management-D11/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "Google Maps API"
+  ],
+  "features": [
+    "Vanilla JS Event Cost Estimator (BDT)",
+    "Dynamic Portfolio Lightbox Gallery",
+    "Live Search & Filterable FAQ Accordions",
+    "Interactive Service & Department Grid Filtering",
+    "Scroll-Reveal Storytelling Animations",
+    "Simulated Asynchronous Lead Generation Form"
+  ],
+  "designUnique": "Adopted a 'Trust & Elegance' materialist philosophy utilizing the Plus Jakarta Sans typeface. The color palette mixes authoritative corporate blue with soft wedding pinks and purples to cleanly separate the B2B and B2C divisions. Generous whitespace, glassmorphism sticky navbars, and hover-lift micro-interactions ensure a modern, tech-savvy feel.",
+  "developmentProcess": "Developed using a strict component-free approach, relying entirely on CDN-based Tailwind CSS and custom Vanilla JS logic to ensure maximum performance and zero dependency bugs. Custom logic was written for the budget calculator to handle multi-variable local pricing tiers, and custom tab-switching logic was built for the portfolio and service directories to provide immediate, page-reload-free interactions."
+},
+{
+  "id": "nova-strategy",
+  "title": "Nova Events",
+  "category": "Event Management Agency",
+  "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
+  "shortDescription": "একটি সম্পূর্ণ ফাংশনাল, ইন্টারঅ্যাকটিভ ইভেন্ট ম্যানেজমেন্ট ওয়েবসাইট বাংলাদেশের বাজারের জন্য ডিজাইন করা।",
+  "fullDescription": "এটি একটি ১২-পৃষ্ঠার সম্পূর্ণ ফাংশনাল ওয়েবসাইট যা বাংলাদেশের ইভেন্ট ম্যানেজমেন্ট ইন্ডাস্ট্রির জন্য বিশেষভাবে ডিজাইন করা হয়েছে। ওয়েবসাইটটিতে রয়েছে আধুনিক ডিজাইন, ইন্টারঅ্যাকটিভ এলিমেন্ট, মাল্টি-স্টেপ বুকিং সিস্টেম, প্রাইস ক্যালকুলেটর, ব্লগ সেকশন, টিম পেজ, টেস্টিমোনিয়াল, FAQ এবং আরও অনেক কিছু। প্রতিটি পৃষ্ঠায় রয়েছে অভিন্ন নেভিগেশন ও ফুটার, এবং সব বাটন ও লিংক ফাংশনাল। ওয়েবসাইটটি সম্পূর্ণ বাংলা ভাষায় কন্টেন্ট সহ তৈরি করা হয়েছে যা বাংলাদেশের টার্গেট কাস্টমারদের জন্য উপযোগী।",
+  "liveLink": "https://twtech-hub.github.io/Nova-Strategy-D8/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "AOS Animation Library",
+    "Flatpickr Date Picker",
+    "Leaflet Maps API",
+    "Font Awesome Icons",
+    "Google Fonts"
+  ],
+  "features": [
+    "১২টি সম্পূর্ণ ফাংশনাল পেজ",
+    "মাল্টি-স্টেপ বুকিং ফর্ম",
+    "ইন্টারঅ্যাকটিভ প্রাইস ক্যালকুলেটর",
+    "ক্যাটাগরি ভিত্তিক পোর্টফোলিও ফিল্টার",
+    "ডিপার্টমেন্ট ভিত্তিক টিম পেজ",
+    "FAQ সেকশন অনুসন্ধান সহ",
+    "ব্লগ পোস্ট ও ক্যাটাগরি ফিল্টার",
+    "টেস্টিমোনিয়াল ও রিভিউ সিস্টেম",
+    "ইন্টারঅ্যাকটিভ ম্যাপ ইন্টিগ্রেশন",
+    "ক্যারিয়ার পেজ ও জব অ্যাপ্লিকেশন",
+    "সম্পূর্ণ বাংলা কন্টেন্ট",
+    "মোবাইল রেসপন্সিভ ডিজাইন"
+  ],
+  "designUnique": "ওয়েবসাইটটি 'মডার্ন টেক স্যাভি' ডিজাইন ফিলোসফি অনুসরণ করে তৈরি করা হয়েছে যেখানে রয়েছে গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড, ফ্লোটিং অ্যানিমেশন, ইন্টারঅ্যাকটিভ হোভার ইফেক্ট, গ্লাসমরফিজম, এবং মাল্টি-স্টেপ প্রসেস ইন্ডিকেটর। Plus Jakarta Sans ফন্ট এবং পেপল কালার প্যালেট (পার্পল, ব্লু গ্রেডিয়েন্ট) ব্যবহার করে একটি প্রফেশনাল ও আকর্ষণীয় লুক তৈরি করা হয়েছে। প্রতিটি পৃষ্ঠায় রয়েছে AOS অ্যানিমেশন যা স্ক্রলিং-এ এলিমেন্টগুলোকে সুন্দরভাবে দেখায়। বাংলাদেশের বাজারের জন্য বিশেষভাবে বাংলা ভাষায় কন্টেন্ট, স্থানীয় মুদ্রায় প্রাইসিং এবং বাংলাদেশের ভেন্যু ও সিটিগুলো অন্তর্ভুক্ত করা হয়েছে।",
+  "developmentProcess": "প্রথমে ১২টি পৃষ্ঠার একটি স্ট্রাকচার তৈরি করা হয়। প্রতিটি পৃষ্ঠার জন্য অভিন্ন নেভিগেশন ও ফুটার ডিজাইন করা হয়। তারপর ধাপে ধাপে প্রতিটি পৃষ্ঠা তৈরি করা হয় - হোম পেজ থেকে শুরু করে বুকিং পেজ পর্যন্ত। JavaScript ব্যবহার করে সব ইন্টারঅ্যাকটিভ ফিচার ইমপ্লিমেন্ট করা হয় যেমন ট্যাব সুইচিং, ফর্ম ভ্যালিডেশন, প্রাইস ক্যালকুলেটর, সার্চ ফাংশনালিটি, ফিল্টারিং সিস্টেম ইত্যাদি। প্রতিটি ফর্ম (কন্টাক্ট ফর্ম, বুকিং ফর্ম, জব অ্যাপ্লিকেশন ফর্ম) সম্পূর্ণ ফাংশনাল এবং ভ্যালিডেশন সহ তৈরি করা হয়েছে। Flatpickr লাইব্রেরি ব্যবহার করে বাংলা ভাষায় ডেট পিকার ইমপ্লিমেন্ট করা হয়েছে। Leaflet ব্যবহার করে ইন্টারঅ্যাকটিভ ম্যাপ যুক্ত করা হয়েছে। সবশেষে, প্রতিটি পৃষ্ঠার লিংক ও বাটন পরীক্ষা করে নিশ্চিত করা হয়েছে যে সবকিছু সঠিকভাবে কাজ করছে।"
+},
 {
   "id": "eventease-bangladesh",
   "title": "EventEase Bangladesh",
@@ -7,7 +224,7 @@
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
   "shortDescription": "A comprehensive 9-page event management website designed specifically for the Bangladeshi market with high conversion focus and interactive features.",
   "fullDescription": "EventEase Bangladesh is a fully functional 9-page event management agency website built with vanilla HTML, JavaScript, and Tailwind CSS. The website is meticulously designed for the Bangladeshi market, featuring Bengali language support, local cultural elements, and region-specific functionality. It includes a multi-step booking form with validation, dynamic pricing calculator with BDT currency, filterable portfolio gallery with lightbox, before/after event slider, team showcase with social overlays, testimonial slider with auto-scroll, blog with category filtering, and a complete contact system with Google Maps integration. Every page features 14+ sections, far exceeding the 10+ requirement, with consistent navigation and footer across all pages. The design follows a 'Vibrant Tradition Meets Modern Tech' philosophy with a color palette of Deep Magenta (#9D174D), Golden Yellow (#FBBF24), Charcoal Gray, and Soft White, complemented by the Inter typeface. Micro-interactions, hover animations, and smooth transitions create an engaging user experience tailored for Bangladeshi clients seeking wedding planning, corporate events, concerts, and cultural celebrations.",
-  "liveLink": "https://eventease-bangladesh.netlify.app",
+  "liveLink": "https://twtech-hub.github.io/Event-Ease-Event-Management-D6/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -49,7 +266,7 @@
   "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000",
   "shortDescription": "A comprehensive 7-page digital ecosystem designed for Bangladesh's leading event agency, blending cultural authenticity with high-end modern production values.",
   "fullDescription": "Utshab Events is a sophisticated multi-page web platform engineered to bridge the gap between traditional Bengali celebration and world-class event logistics. The site serves as both a high-conversion sales funnel and an educational resource, featuring deep-dive service dossiers, a nationwide portfolio archive, and a transparent pricing engine. Built with a 'Culture-First' architectural philosophy, the platform utilizes advanced JavaScript interactions to guide users from initial inspiration to a detailed project request within a localized Bangladeshi context.",
-  "liveLink": "#",
+  "liveLink": "https://twtech-hub.github.io/Utsab-Event-Managment-D2/",
   "techStack": [
     "HTML5",
     "Tailwind CSS (Custom Configuration)",
@@ -81,7 +298,7 @@
   "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000",
   "shortDescription": "Ultra-modern, high-frequency event architecture firm for the tech-savvy Bangladeshi market.",
   "fullDescription": "A comprehensive 9-page high-performance website built for an agency specializing in modern deployments: Mega Concerts, Varsity Fests, Tech Launches, and Neon Weddings. The site features a dark-mode industrial aesthetic with glowing neon accents, moving away from traditional planning styles to an 'Engineering Unit' philosophy. It integrates advanced Vanilla JS logic for real-time cost estimation, multi-step deployment forms, and interactive hardware blueprints.",
-  "liveLink": "#",
+  "liveLink": "https://twtech-hub.github.io/PulseBox-Event-Management-D7/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -111,7 +328,7 @@
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
   "shortDescription": "Premium, highly-interactive event architecture firm for the Bangladeshi market.",
   "fullDescription": "A sprawling, 9-page immersive website designed for a high-end Event Management Agency in Dhaka, Bangladesh. Ditching traditional 'techy' layouts, the site utilizes an emotional, editorial design language with a floating glassmorphism app-like dock. It caters to multiple demographics—ranging from intimate Holuds to massive 5-Star Corporate Galas—featuring deep cultural ties to Bangladeshi traditions like Mukhe Bhaat alongside modern B2B features.",
-  "liveLink": "#",
+  "liveLink": "https://twtech-hub.github.io/Utsab-Craft-Event-Management-D4/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -141,7 +358,7 @@
   "image": "https://www.anantabd.net/wp-content/uploads/2025/07/SPG01829.jpg",
   "shortDescription": "A high-end editorial e-commerce experience for Bangladeshi heritage crafts and slow fashion.",
   "fullDescription": "A 9-page luxury e-commerce and lifestyle platform designed to elevate Bangladeshi crafts (Jamdani, Muslin, Rajshahi Silk, Dhamrai Brass, Bogra Terracotta) away from 'cheap souvenir' aesthetics into the realm of high-end, contemporary luxury. It abandons traditional techy layouts for an editorial 'magazine' feel, featuring a custom interactive cursor, full-screen overlay navigation, and deep storytelling.",
-  "liveLink": "#",
+  "liveLink": "https://twtech-hub.github.io/Aarshi-Event-Management-D5/",
   "techStack": [
     "HTML5",
     "Tailwind CSS",
@@ -173,7 +390,7 @@
   
   "fullDescription": "An extensive 7-page interactive platform tailored for Bangladeshi event management, breaking away from conventional corporate designs. It features a 'Desher Mela' (Village Fair) aesthetic with rickshaw art patterns, nakshi kantha borders, and warm teal-mustard-red palette. The site includes specialized pages for Wedding (Biyer Pala), Picnic, Religious Ceremonies (Khatna/Annaprashon), Boishakhi Mela, Gallery (Smriti), and Contact (Jiggasha), each with 10+ uniquely crafted sections (totaling 97 sections across all pages). Every button and link is functional with smooth page transitions. The navigation uses a floating 'Boi Mela' style menu on desktop and a bottom 'Chatai' style navigation on mobile, incorporating traditional gamcha patterns in the footer. All interactive elements - from the 'Khoroch Thik Kore Din' budget calculator to the 'Chai' quick-inquiry button, the Panta-Ilish game, Alpana design generator, and the RSVP counter - are built with vanilla JavaScript, ensuring zero bugs and cross-generational usability. The design prioritizes emotional connection over formality, making it ideal for Bangladeshi families planning celebrations across all generations - from grandparents to Gen Z. The website includes 15+ working JavaScript modules, 7 working forms with validation, localStorage integration for draft saving, and a complete gallery with Lightbox2 integration and photo filters.",
   
-  "liveLink": "https://yourusername.github.io/ananda-utsab/",
+  "liveLink": "https://twtech-hub.github.io/Anondo-Utsab-Event-Management-D3/",
   
   "techStack": [
     "HTML5 Semantic",
@@ -223,7 +440,7 @@
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600",
   "shortDescription": "A cinematic, glassmorphic web portal for a high-end wedding and corporate event architecture firm in Dhaka.",
   "fullDescription": "AURA is an 8-page ultra-premium web application engineered for the highest tier of the Bangladeshi event management industry. Abandoning soft, rounded designs, it utilizes a 'Luminous Glassmorphism & High-Contrast Grid' philosophy. Featuring Deep Space Black backgrounds accented by Luminous Gold, the site mimics a high-fashion editorial or an architectural dossier. It directly addresses the unique pain points of the Dhaka luxury market: enforcing strict VVIP security protocols, managing paparazzi embargoes, coordinating VIP valet in heavy traffic, and securing exclusive dates at prime venues like the Radisson Blu and ICCB. The conversion pipeline is aggressively modern, featuring an interactive 'Budget Estimator' built in Vanilla JS that provides immediate financial transparency, and highly detailed 'Initiation Terminals' replacing standard contact forms.",
-  "liveLink": "https://aura-events-twtech.netlify.app/",
+  "liveLink": "https://twtech-hub.github.io/Aura-Event-Management-D1/",
   "techStack": [
     "HTML5",
     "Tailwind CSS (Custom Glassmorphism Config)",
