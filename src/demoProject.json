@@ -109,7 +109,7 @@
 "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
 "shortDescription": "A hyper-localized, 9-page premium web architecture for the Bangladeshi event industry.",
 "fullDescription": "Nova Strategy is an end-to-end digital ecosystem featuring a cohesive design language across 9 core pages (Home, Services, Portfolio, About, Corporate, Weddings, Contact, FAQ, Pricing). It targets the Bangladeshi market with precision by integrating BDT-based financial calculators, guest-to-venue matching logic, and DMP permission compliance guides. The platform utilizes a 'Modern Materialist' aesthetic with Tailwind CSS, ensuring zero bugs and fluid responsiveness. Functionality is powered by Vanilla JavaScript, including multi-step form validation, category-based portfolio filtering, and a real-time budget add-on calculator.",
-"liveLink": "https://twtech-hub.github.io/NOVA.-Digital-Marketing-D5/",
+"liveLink": "https://twtech-hub.github.io/Nova-Strategy-D8/",
 "techStack": [
 "HTML5 (Semantic)",
 "Tailwind CSS (3.4+ JIT)",
