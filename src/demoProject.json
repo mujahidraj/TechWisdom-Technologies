@@ -1,11 +1,436 @@
-[ 
+[
+  {
+  "id": "digonto-bd",
+  "title": "Digonto — The Spatial Travel OS",
+  "category": "Operating System-Style Travel Platform",
+  "image": "https://images.unsplash.com/photo-1623946051772-2f3427909384?q=80&w=1000",
+  "shortDescription": "A groundbreaking operating system-inspired travel platform with custom cursor, radial menu, comparison tray, drag-and-drop trip builder, and interactive map of Bangladesh.",
+  "fullDescription": "Digonto is not a website — it's a Spatial Travel Operating System. This avant-garde platform reimagines domestic travel planning as an OS experience, featuring a left dock (navigation), right control center (live stats, weather, notifications), comparison tray, radial quick-action menu, custom cursor with ring, and eight fully interactive modules. Built on a deep indigo (#1E1B4B) color scheme with amber accents, the interface uses advanced glassmorphism, animated blob backgrounds, and cinematic transitions. Modules include: Command Center (home with trending destinations, platform stats, quick links), Interactive Map (clickable division polygons with data panels), Marketplace (filterable packages with expand overlay and comparison tray), Trip Engine (drag-and-drop trip builder with live cost breakdown), DNA (story slider about the company), Blog Feed (masonry layout with infinite scroll), Support Portal (conversational chat with option buttons), and Lens (draggable polaroid gallery).",
+  "liveLink": "https://twtech-hub.github.io/Diganto-Travelling-D15/",
+  "techStack": [
+    "HTML5",
+    "CSS3 (Custom Properties)",
+    "Vanilla JavaScript",
+    "Google Fonts (Outfit, Playfair Display, JetBrains Mono)"
+  ],
+  "features": [
+    "8 Fully Responsive OS-Style Modules with Cinematic Transitions",
+    "Custom Cursor with Ring and Interactive States",
+    "Animated Blob Background with 4 Layers and Noise Grain",
+    "Left Dock Navigation with Tooltips and Active Indicators",
+    "Right Control Center with Live Stats, Weather, Progress Bars, Notifications",
+    "Comparison Tray (Toggleable) for Package Comparison (Max 3 Items)",
+    "Radial Quick-Action Menu with 4 Items and Smooth Animations",
+    "Interactive SVG Map of Bangladesh with 8 Clickable Divisions",
+    "Map Data Panel with Division Statistics and Highlights",
+    "Marketplace with Filterable Packages (All/Family/Adventure/Heritage/Budget/Premium)",
+    "Package Expand Overlay with Detailed Information and Features",
+    "Trip Engine with Drag-and-Drop Components (12 Items) and Live Cost Breakdown",
+    "Story Slider for Company History with Navigation Dots",
+    "Blog Feed with Masonry Layout and Infinite Scroll",
+    "Conversational Chat with Option Buttons and Typing Indicator",
+    "Draggable Polaroid Gallery with Reset Functionality",
+    "Keyboard Navigation (← → arrows, 1-8 keys, Ctrl+K, Ctrl+T, ?)",
+    "Command Line Search with Autocomplete Results",
+    "Live Counter Animation (Updates every 4 seconds)",
+    "Toast Notification System with Multiple Styles",
+    "Theme Toggle (Night/Day Mode) with Persistent State"
+  ],
+  "designUnique": "The design is unprecedented in travel websites — it functions like a desktop operating system. The left dock provides app-style navigation with tooltips, while the right control center displays live system stats. The color palette features deep indigo (#1E1B4B) as primary, amber (#F59E0B) as accent, and sand (#F8FAFC) for text. Advanced glassmorphism (backdrop-filter: blur(20px)) is applied to all panels with subtle borders. Animated blob backgrounds (4 layers) create depth with smooth floating animations, while a noise grain overlay adds texture. Typography combines Outfit (body), Playfair Display (display), and JetBrains Mono (technical elements). The interface features custom cursor interactions, cinematic module transitions (slide left/right with clip-path), and a radial menu that expands from a floating button. Every interaction is designed to feel like a spatial operating system rather than a traditional website.",
+  "developmentProcess": "Built entirely with vanilla HTML, CSS, and JavaScript, implementing a custom module router with slide animations (left/right exit transitions using clip-path). Developed an interactive SVG map of Bangladesh with 8 clickable division polygons, each triggering a data panel with division-specific statistics (districts, tours, price, rating) and highlight tags. Engineered a drag-and-drop trip builder with 12 draggable components across 6 categories (Stay, Transport, Food, Experience, Safety, Essential), live cost calculation, category-based breakdown, and localStorage persistence. Created a comparison tray system that can hold up to 3 packages with add/remove functionality. Implemented a radial menu with CSS positioning (4 items at different offsets) and JavaScript toggle. Built a conversational chat system with option buttons, typing indicator, and multi-step flow. Developed a draggable polaroid gallery with mouse tracking and position reset. Added keyboard navigation (← → arrows, 1-8 shortcuts, Ctrl+K for command search, Ctrl+T for theme toggle, ? for help overlay). Implemented live counter animation (updates every 4s) and mini-charts with dynamic bar heights. The codebase exceeds 2,500 lines of custom JavaScript with comprehensive state management and event handling."
+},
+  {
+  "id": "probaho-bd",
+  "title": "Probaho BD",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?q=80&w=1000",
+  "shortDescription": "A bold, brutalism-inspired travel platform with monospace typography, bold black borders, and comprehensive tools for exploring Bangladesh's 64 districts.",
+  "fullDescription": "A radical, avant-garde 8-view web application designed for Probaho BD, a domestic travel agency celebrating Bangladesh's 64 districts through a distinctive brutalism aesthetic. The platform features a bold black-and-white color scheme with sand (#F5F5DC) backgrounds, teal (#2D5A27) accents, and heavy black borders throughout. Typography combines Space Mono (monospace) for technical elements, Bebas Neue for commanding headlines, and DM Serif Display for italic elegance. The interface spans eight views: Home (with hero, booking ticker, district scroll, featured categories, values strip, testimonials, upcoming events, quick links), Destinations (alpha index, hover preview cards, division guides), Packages (filterable by family/student/adventure, sortable by price/duration/rating), Budgeteer (live cost estimator with transport options, meal costs, guide fees), About (scrapbook layout, team profiles, archival aesthetic), Blog/Gazette (newspaper-style layout with feature stories and sidebars), Reviews (social wall with rating highlights, user cards), and Contact (split-form with regional office grid).",
+  "liveLink": "https://twtech-hub.github.io/Probaho-Travelling-D14/",
+  "techStack": [
+    "HTML5",
+    "CSS3 (Custom Properties)",
+    "Vanilla JavaScript",
+    "Google Fonts (Space Mono, Bebas Neue, DM Serif Display, Syne)"
+  ],
+  "features": [
+    "8 Fully Responsive SPA Views with Brutalist Design Language",
+    "Live Booking Ticker with Animated Counters (3s update interval)",
+    "District Directory with Alphabetical Index and Hover Previews",
+    "Package Filtering by Type (Family, Student, Adventure)",
+    "Package Sorting by Price, Duration, and Rating",
+    "Live Budget Estimator with Transport Options (Non-AC/AC/Train/Launch)",
+    "Real-time Cost Breakdown (Transport, Accommodation, Meals, Activities, Guide)",
+    "Scrapbook-style About Section with Polaroid Cards and Tape Accents",
+    "Newspaper-style Blog/Gazette with Feature Stories and Sidebars",
+    "Social Wall with User Reviews, Rating Highlights, and Guide Profiles",
+    "Interactive District Cards with Hover Zoom and Shadow Effects",
+    "Magnet Button Effect (buttons subtly move toward cursor within 80px radius)"
+  ],
+  "designUnique": "The design embraces a bold, uncompromising brutalism aesthetic rarely seen in travel platforms—heavy black borders (2-3px), monospace typography (Space Mono), commanding sans-serif headlines (Bebas Neue), and a limited color palette of sand (#F5F5DC), teal (#2D5A27), black, and white. The interface rejects rounded corners entirely, using sharp angles, bold shadows (4px 4px 0, 6px 6px 0, 8px 8px 0), and heavy borders. Each section features distinctive layout choices: the hero with split-screen design, featured cells with giant translucent numbers, the scrapbook with rotated polaroids and washi tape accents, the gazette with newspaper masthead and column layout, and the contact form with split-panel design. The aesthetic channels Bangladeshi river posters, vintage travel documents, and industrial design sensibilities.",
+  "developmentProcess": "Built entirely with vanilla HTML, CSS, and JavaScript, implementing a custom SPA router with localStorage persistence for last-viewed page. Developed a comprehensive live booking ticker with 3-second update intervals that randomly increments counters and changes color. Engineered a district directory with alphabetical index filtering and hover preview cards (absolute-positioned images). Built a package filtering system with toggle buttons and sorting algorithms for price, duration, and rating. Created a budget estimator with real-time calculation of transport (4 options), accommodation (4 tiers), meals (৳300/day), activities (৳400/day), and guide fees (৳500/day). Implemented a contact form with validation and localStorage storage of submissions. Added magnet button effect using mousemove distance calculations (80px radius, 8px max pull). Used intersection observer for scroll-triggered 'pop-in' animations across all views."
+},
+  {
+  "id": "shanto-travel-agency",
+  "title": "Shanto Travel Agency",
+  "category": "Travel & Tourism",
+  "image": "https://nugget-design.com/wp-content/uploads/2016/12/Go-Travel_Chislhrust_Interior-Design-By-Nugget-Design-01.jpg",
+  "shortDescription": "A comprehensive, multi-page travel platform for a premier travel, visa, and Hajj/Umrah agency in Bangladesh featuring instant budget estimation and immersive destination showcases.",
+  "fullDescription": "A complete 7-page web application designed for Shanto Travel Agency, a premier travel and visa service provider based in Motijheel, Dhaka. The platform covers Domestic Tours, International Packages, Hajj & Umrah services, and features a powerful Smart Budget Estimator for instant trip quotations. The interface leverages modern web aesthetics with smooth animations, a dynamic hero search bar, and a sophisticated color palette of sky blue and slate that evokes trust and wanderlust. Each service category has its own dedicated page with tailored content, package cards, and conversion-focused elements, all while maintaining a cohesive brand identity throughout the user journey.",
+  "liveLink": "https://twtech-hub.github.io/Shanto-Travel-Agency-D1/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "FontAwesome 6",
+    "Google Fonts (Plus Jakarta Sans)"
+  ],
+  "features": [
+    "7 Fully Responsive SPA-style Pages with Smooth Transitions",
+    "Live BDT Trip Cost Estimator with Dynamic Add-ons",
+    "Interactive Destination Cards with Hover Zoom Effects",
+    "Multi-step Booking Form Simulation with Instant Calculations",
+    "Comprehensive Hajj & Umrah Package Comparison",
+    "Smart Filtering System for Domestic Tours",
+    "Digital Payment Integration Showcase (bKash, Nagad)",
+    "Real-time Form Validation and Modal Interactions"
+  ],
+  "designUnique": "Departing from standard travel templates, this design employs a bold, modern aesthetic combining 'Plus Jakarta Sans' typography with a vibrant sky blue (#0284c7) and deep slate (#0f172a) palette. The interface features glassmorphism effects on the hero search bar, a fixed navigation bar with transparent backdrop blur, and custom scrollbar styling. Each destination page adopts unique visual hierarchies, from the dramatic full-bleed hero images to the grid-based package layouts, creating an immersive and trustworthy digital presence that appeals to both leisure travelers and religious pilgrims.",
+  "developmentProcess": "Built entirely with vanilla HTML/JavaScript and Tailwind CSS, eliminating framework overhead while maintaining robust functionality. Engineered a custom SPA routing system for seamless page transitions without reloads. Developed a sophisticated budget estimator that processes base fares, applies child discounts (20%), calculates add-ons per person, and formats output in Bangladeshi Taka. Implemented dynamic image swapping based on destination selection, responsive grid systems for package displays, and interactive form handlers with regex validation for Bangladeshi phone numbers. The payment modal simulation and live office status indicators add realistic interactive layers to the prototype."
+},
+{
+  "id": "raina-touring-firm",
+  "title": "Raina Touring Firm",
+  "category": "Travel & Tourism",
+  "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/92683e44837519.58205136aaa91.jpg",
+  "shortDescription": "An opulent, multi-page travel platform for a luxury touring firm in Bangladesh, featuring emerald-green aesthetics, interactive budget estimation, and comprehensive Hajj/Umrah services.",
+  "fullDescription": "A sophisticated 7-page web application designed for Raina Touring Firm, a premier luxury travel agency based in Motijheel, Dhaka. The platform targets discerning Bangladeshi travelers seeking premium domestic escapes, international luxury voyages, and divine Hajj/Umrah experiences with 5-star accommodations. Built with a distinctive emerald green (#064e3b) and amber gold (#fbbf24) color palette, the interface exudes elegance and trust. Each page features immersive full-bleed hero sections, interactive package cards with hover effects, and a powerful BDT budget estimator that applies child discounts and add-on calculations. The design philosophy balances modern luxury with Islamic geometric influences, creating a digital environment that appeals to both corporate clients and spiritual pilgrims.",
+  "liveLink": "https://twtech-hub.github.io/Raina-Touring-Firm-D2/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "FontAwesome 6",
+    "Google Fonts (Inter & Playfair Display)"
+  ],
+  "features": [
+    "7 Fully Responsive SPA-style Pages with Smooth Transitions",
+    "Live BDT Trip Cost Estimator with Child Discount Logic (20%)",
+    "Dynamic Background Image Swapping Based on Destination Selection",
+    "Interactive Package Cards with Hover Zoom and Gradient Overlays",
+    "Comprehensive Hajj/Umrah Package Comparison with VIP Options",
+    "Advanced Navbar Scroll Effects (Topbar Hide, Brand Color Shift)",
+    "Smart Payment Modal Simulation with Secure Gateway Messaging",
+    "B2B Corporate Section with Volume Discount Messaging"
+  ],
+  "designUnique": "The design departs from typical travel templates by adopting a luxurious emerald green (#064e3b) as the primary brand color, complemented by warm amber gold (#fbbf24) accents. Typography combines clean Inter for body text with elegant Playfair Display for serif headings, creating a sophisticated editorial feel. The interface employs glassmorphism effects on navigation elements, dramatic full-bleed hero images with gradient overlays, and subtle Islamic geometric patterns in backgrounds. Each service category maintains visual hierarchy through distinctive card designs, from the polaroid-style domestic packages to the regal VIP Umrah cards with crown icons and gold borders.",
+  "developmentProcess": "Engineered entirely with vanilla HTML/JavaScript and Tailwind CSS, implementing a custom SPA routing system for seamless multi-page navigation without reloads. Developed a sophisticated budget calculator that processes base fares, applies 20% child discounts dynamically, calculates add-ons per person, and formats output in Bangladeshi Taka with proper currency formatting. Implemented advanced scroll-triggered navbar transformations that hide the top bar, change brand colors, and adjust container heights. Created dynamic image swapping based on destination selection, interactive form handlers with validation, and a modal payment simulation. The codebase maintains clean separation of concerns with documented JavaScript functions for routing, form handling, estimator logic, and UI updates."
+},
+{
+  "id": "wander-bd-experience",
+  "title": "WanderBD: The Explorer's Canvas",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1589330273594-fade1ee91647?q=80&w=1000",
+  "shortDescription": "A radical, app-inspired travel platform for the Bangladeshi market.",
+  "fullDescription": "WanderBD is an 8-page, high-conversion travel agency website built to replace the tired 'navbar-hero-footer' archetype with a mobile-first, app-style interface. Designed specifically for Bangladeshi users, it integrates local payment trust factors (bKash/Nagad), 0% EMI logic, and a multi-step custom trip builder. The project focuses on visual storytelling through Bento-grid layouts and interactive Vanilla JS elements that reduce friction from discovery to final ticket generation.",
+  "liveLink": "https://twtech-hub.github.io/WanderBD-Touring-Agency-D4/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (CDN)",
+    "Vanilla JavaScript",
+    "FontAwesome Icons",
+    "Google Fonts API"
+  ],
+  "features": [
+    "Floating Glassmorphic Side/Bottom Navigation",
+    "Interactive Bento-Box Visual Hero",
+    "Multi-Step Custom Trip Builder with Live Budgeting",
+    "Real-time Package Filtering & Live Search Engine",
+    "0% EMI Monthly Installment Calculator",
+    "Scroll-Triggered Animated Timeline & Stats Counter",
+    "Click-to-Copy Promo Code System",
+    "Dynamic Booking Checkout with Add-on Logic"
+  ],
+  "designUnique": "Ditched traditional web layouts for 'The Explorer’s Canvas' philosophy. Used a floating dock system to maximize screen real estate for high-definition destination imagery. Employed a 'Plus Jakarta Sans' & 'Outfit' typography pairing for a premium, modern feel that appeals to all generations (Z to Boomers). The color palette uses 'Wander Red' (#FF6B6B) to evoke passion and urgency.",
+  "developmentProcess": "Engineered entirely without CSS files or heavy frameworks. All interactivity (filtering, step-navigation, calculations, and animations) is powered by optimized Vanilla JS. Implemented the Intersection Observer API for performance-friendly scroll animations. Focused heavily on 'conversion triggers' like social proof carousels, urgency countdown timers, and visual trust badges (ATAB/TOAB)."
+},
+{
+  "id": "roambd-travel",
+  "title": "RoamBD: The Explorer’s Canvas",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000",
+  "shortDescription": "A non-traditional, highly interactive 8-page travel platform for the Bangladeshi market.",
+  "fullDescription": "RoamBD is a comprehensive travel agency ecosystem meticulously designed to deviate from generic web layouts. It swaps traditional top navbars for a persistent, mobile-first floating dock and replaces standard heroes with mood-based exploration tools. The platform features 8 fully integrated pages (Home, Destinations, Packages, Offers, Visa, Gallery, About, and a Multi-step Booking Hub). Every page contains over 10 distinct content sections and bespoke vanilla JavaScript modules including a Budget Explorer, a Visa Readiness Scorecard, a Package Itinerary Viewer, and a gamified Promo Code Generator. The UI is localized for Bangladesh, highlighting MFS payment partner benefits (bKash/Nagad), Umrah-specific sacred journeys, and domestic hill/beach tourism.",
+  "liveLink": "https://twtech-hub.github.io/RoamBD-Touring-Agency-D5/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS (CDN)",
+    "Vanilla JavaScript",
+    "Font Awesome Icons"
+  ],
+  "features": [
+    "Conversational Multi-Step Booking Hub",
+    "Interactive Visa Readiness Checklist & Tracker",
+    "Mood-Based Destination Filtering Logic",
+    "Real-time Package Budget Slider & Calculator",
+    "Dynamic Day-by-Day Itinerary Viewer Widget",
+    "Gamified 'Spin-the-Wheel' Promo Generator",
+    "Masonry-Style Traveler Social Proof Gallery"
+  ],
+  "designUnique": "Implemented 'The Explorer's Canvas' philosophy—moving away from 'techy' rigid containers toward fluid, overlapping card designs, high-contrast typography, and a persistent floating interaction dock. The color palette uses 'Emerald Brand Green' for growth and trust, paired with 'Deep Slate' for premium stability, ensuring legibility across generations in Bangladesh.",
+  "developmentProcess": "Developed using a vanilla-first approach to ensure zero bugs and maximum speed. Built custom state-management logic for the multi-step booking form and utilized event-driven DOM manipulation for all interactive widgets (Budget Explorer, Season Matcher, and Itinerary Viewer) without external library overhead."
+},
+{
+  "id": "ghumantu-spa-v1",
+  "title": "Ghumantu BD - The Ultimate SPA Experience",
+  "category": "Travel & Tourism",
+  "image": "https://www.internationalcitizens.com/wp-content/uploads/2025/01/traveling-abroad.jpg",
+  "shortDescription": "A high-conversion, mobile-first Single Page Application built for Bangladesh's domestic tourism market. Engineered around three high-intent traveler personas — students, families, and corporate teams — with localized trust signals (bKash/Nagad/Rocket payment simulation, Govt Reg badge, TOAB certification), a live JS cost estimator, and 80+ distinct UI sections covering all 8 core pages.",
+  "fullDescription": "Ghumantu BD is a production-grade vanilla JS SPA with a custom hash-based router managing 8 distinct views: Home, Destinations, Packages, Booking, About, Blog, Reviews, and Contact — all rendered without page reloads. The router leverages history.pushState, popstate events, and a view activation system with per-view animation resets via Intersection Observer API. The Home page leads with a fullscreen parallax hero, animated stats counter (counting up via setInterval), a featured 6-destination grid layout mixing portrait and landscape cards, special offer tiers by traveler type, a trust-building Why Us grid, video tour CTA, testimonial cards, partner logos, FAQ accordion with smooth toggle animations, and a full 4-column footer with payment icons. The Destinations page includes a live search bar filtering 18 district cards by name or region, 6 divisional filter buttons, a 4-season guide, regional food highlights, a static weather widget, travel safety checklist, packing tag cloud, cultural etiquette explainers, and a map embed placeholder. The Packages page renders 9 packages dynamically from a JS data array with real-time filter buttons by category (Group/Honeymoon/Corporate/Weekend/Budget/Luxury/Student) and a price sort dropdown, plus a full inclusions/exclusions list and a visual day-by-day itinerary timeline. The Booking view is the commercial engine — a 4-step multi-form (Destination → Preferences → Contact Info → Payment) with a persistent sticky cost estimator that recalculates in real time using destination base prices, package multipliers (0.7x for Student, 1.5x for Honeymoon, 2x for Luxury), per-night add-ons, transport premiums, and traveler count. Payment step simulates bKash/Nagad/Rocket selection with visual feedback. The About page covers Mission/Vision cards, a two-column Founder's Story with photo, a 4-person team grid, awards list, CSR activities, environmental policy, media mentions, careers board, and brand values. The Blog sidebar layout renders 5 featured articles dynamically from a JS array with category filter, tags, and a Newsletter CTA card in the sidebar. The Reviews page features a live-cycling review slider (4 testimonials with prev/next), a 5-star rating breakdown bar chart, an 8-photo hover gallery grid, and 3 local guide profile cards. Contact has a validated form (name, email, phone, subject, message with toast feedback), dual office cards, a Google Maps iframe embed, social links grid, and FAQ accordion. Design language is 'Green-Delta Materialist' — deep forest green (#1a6b3a), warm cream (#faf6ef), and antique gold (#c9a84c) with Playfair Display for editorial headers and DM Sans for modern body copy.",
+  "liveLink": "https://twtech-hub.github.io/Ghumontu-BD-Travel-D8/",
+  "techStack": ["Vanilla JavaScript", "Tailwind CSS", "HTML5", "Intersection Observer API", "Google Fonts (Playfair Display, DM Sans)"],
+  "features": [
+    "Custom Vanilla JS Hash Router — 8 views, zero page reloads",
+    "Dynamic Travel Cost Calculator — destination × nights × pax × transport × package type",
+    "4-Step Multi-Form Booking System with payment method selection",
+    "18-District Destination Grid with live search and regional filtering",
+    "9-Package Grid with category filters and price sort",
+    "Intersection Observer scroll-triggered fade animations on every section",
+    "Mobile-First Drawer Menu with overlay and smooth transitions",
+    "Animated Stats Counter on Home page",
+    "Review Slider with prev/next navigation",
+    "Contact Form with JS validation and toast notifications",
+    "bKash / Nagad / Rocket payment simulation",
+    "Floating WhatsApp support button with pulse animation",
+    "FAQ Accordions on Home and Contact pages",
+    "80+ Unique UI Sections across 8 views"
+  ],
+  "designUnique": "The 'Green-Delta Materialist' design language draws from Bangladesh's lush landscape palette — deep emerald (#1a6b3a), warm cream (#faf6ef), and antique gold (#c9a84c). Playfair Display serif headers evoke premium editorial travel magazines, while DM Sans body text ensures readability across mobile screens. Cards use 2px border-radius for a slightly formal, trustworthy feel. All interactive elements respond with translateY hover lifts and gradient box-shadows. The hero section uses a full-bleed image with a green-to-black gradient overlay, a scrolling animation indicator, and a trust bar for payment methods. The aesthetic avoids common AI-generated purple palettes in favor of a Bangladesh-specific nature-inspired color story that builds immediate cultural recognition and trust.",
+  "developmentProcess": "Architecture began with the hash-based router, mapping 8 view IDs to DOM sections controlled by display:block/none toggling. Per-view animation resets ensure Intersection Observer re-fires on each navigation. State for the cost estimator is stored in live form values, recalculated on every input change event with a pure function (calcCost). Packages and blog posts are rendered from in-memory JS arrays using template literal HTML injection. The mobile drawer uses CSS transform transitions rather than display toggling for smooth 60fps animation. All forms use explicit JS validation with a centralized showToast() function for consistent UX feedback. The FAQ accordion uses a shared toggleFAQ() function with dynamic ID generation to support multiple FAQ instances on different pages."
+},
+{
+  "id": "bengal-voyages-agency",
+  "title": "Bengal Voyages",
+  "category": "Travel & Tourism",
+  "image": "https://a.storyblok.com/f/112937/568x464/884e373bca/travel_pic_unsplash1-568x464.jpg/m/620x0/filters:quality(70)/",
+  "shortDescription": "High-conversion, interactive domestic tourism platform built exclusively for the Bangladeshi market.",
+  "fullDescription": "A comprehensive 9-page domestic tourism website tailored specifically for Bangladeshi travelers. Designed to maximize conversion rates and build absolute trust, it features a 100% transparent dynamic trip cost estimator, live predictive FAQ search, multi-category galleries with custom vanilla JS lightboxes, and zero-reload tabbed blog navigation. The UI utilizes an 'Emerald & Dark Slate' color palette with generous whitespace and modern typography to appeal to both retail travelers and high-end B2B corporate clients seeking trips to Sajek, Cox's Bazar, and the Sundarbans.",
+  "liveLink": "https://twtech-hub.github.io/Bengal-Voyages-traveling-D9/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "Google Maps API",
+    "FontAwesome 6"
+  ],
+  "features": [
+    "Dynamic Vanilla JS Trip Cost Estimator",
+    "Real-time Predictive FAQ Search",
+    "Zero-Reload Content Filtering (Gallery, Packages, Blog)",
+    "IntersectionObserver Animated Stat Counters",
+    "Custom Image Lightbox Modal",
+    "State-Managed Mock Form Submissions"
+  ],
+  "designUnique": "Adopted a 'Clarity & Trust' philosophy with a strict 11-section-per-page architecture to ensure maximum information density without visual clutter. Prioritized the Bangladeshi context heavily with local pricing (BDT ৳), local payment gateway badges (bKash, Nagad), and highly localized imagery. Extensive use of interactive hover states and visual hierarchy guides users naturally toward booking conversions.",
+  "developmentProcess": "Engineered by Mujahid Raj entirely without heavy frontend frameworks (React/Vue) to guarantee zero-bug, lightning-fast performance via standard DOM manipulation. Developed custom vanilla JavaScript logic for complex state management, including dynamic pricing calculation rules (50% off for children, +5% tax, 50% advance logic), multi-attribute array filtering, and interactive accordion/tab systems to provide immediate value to users without any server round-trips."
+},
+{
+  "id": "bengaltrek-travel",
+  "title": "BengalTrek Travel Agency",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000",
+  "shortDescription": "A highly interactive, conversion-optimized travel portal engineered specifically for the Bangladeshi market.",
+  "fullDescription": "An 8-page 'Modern Tech-Savvy' travel agency website designed for high conversion rates in Bangladesh. It features a completely dynamic Vanilla JS Booking Cost Estimator, an interactive 'BD Passport Visa Checker', and specialized sections for Hajj & Umrah, Domestic Tours (Sajek/Cox's Bazar), and B2B Corporate Ticketing. The design uses a 'Trust Blue & Sunset Orange' color palette to inspire confidence and urgency, while incorporating local trust signals like bKash, Nagad, and Ministry of Civil Aviation approvals.",
+  "liveLink": "https://twtech-hub.github.io/BengalTrek-Traveling-D10/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "FontAwesome Icons"
+  ],
+  "features": [
+    "Interactive Visa Requirement Checker",
+    "Dynamic Booking Cost Estimator (Tier Multipliers)",
+    "Vanilla JS Content Filtering (Destinations & Packages)",
+    "Dynamic Number Counter Animation",
+    "Deal of the Week Countdown Timer",
+    "Sticky Navigation & Mobile Drawer Menu",
+    "Interactive Contact Form Validation",
+    "FAQ Accordion Modules"
+  ],
+  "designUnique": "Adopted a 'Trust & Transparency' UI philosophy. Utilizing generous whitespace and 'Plus Jakarta Sans' for maximum readability. Built specifically for the BD demographic by emphasizing local payment gateways, prominent WhatsApp CTAs, and a dedicated UI component for Visa-Free/On-Arrival travel for Bangladeshi citizens.",
+  "developmentProcess": "Developed entirely without external JS libraries. Built custom tab-switching logic for package directories, a fully functional dynamic budget calculator in the booking engine, and a JSON-like internal database for the Visa Checker—all using pure Vanilla JavaScript to ensure zero bloat, high speed, and immediate value to potential leads."
+},
+{
+  "id": "oitijhyo-spa-v2",
+  "title": "Oitijhyo BD - The Heritage Concierge",
+  "category": "Travel & Tourism",
+  "image": "https://adhddirect.co.uk/wp-content/uploads/2024/05/adhd-direct-travellers-guide-traveling-with-adhd.jpg",
+  "shortDescription": "A cinematic luxury eco-tourism SPA targeting Bangladesh's emerging premium domestic travel market. By combining trust-signals (bKash Instant Refund, BTB Verification), real-time social proof (live booking ticker, traveler counter), and a 5-step concierge booking flow, Oitijhyo BD converts aspirational heritage travelers into confirmed bookings through frictionless UX and deep cultural resonance.",
+  "fullDescription": "Oitijhyo BD is architected as a state-driven Vanilla JavaScript SPA with a custom Observer pattern engine (subscribe/emit/set) that manages navigation state, booking form state, package tab state, and gallery filters — all without any framework dependency. The router uses hash-based deep linking with browser history API support and CSS slide-in transitions between 8 views.\n\nHome (10 sections): Cinematic parallax hero with live traveler counter, bKash/Nagad refund guarantee banner, animated 4-step journey roadmap, 6 curated destination getaways with lazy-loaded imagery, Founder's monthly spotlight, media mentions wall, 8-region interactive Bangladesh map, cultural heritage feature grid (terracotta, muslin, Baul music), 24/7 concierge stat counters with count-up animation, and an advanced multi-column footer.\n\nDestinations (10 sections): Full-screen search with real-time filtering, mood-based filter pills (Adventure/Relax/History/Food) using data attributes, all 64 Bangladesh district cards with lazy imagery, static weather API mockup for 4 major cities, safety heatmap with animated progress bars, local dialect guide (Sylheti/Chittagong/Khulna variants), wildlife encyclopedia (8 species), festival calendar, virtual 360° placeholder, and accessibility info.\n\nPackages (10 sections): Three-tabbed navigation (Luxury/Budget/Expedition) rendered from a JSON data store, per-night/total price toggle via state bit-flip, Early Bird countdown timer (real-time), slot availability indicators, full package cards with inclusions, Silver/Gold/Platinum comparison table, group discount grid, day-by-day itinerary concept, meal plan preview with lazy imagery, and hotel room type context.\n\nBooking (5-step form): Step 1 (Journey Selection — destination, transport, persons, nights), Step 2 (Guest Profiling — regex-validated name/email/phone with +8801 pattern), Step 3 (Add-ons — photography, extra bed, private guide, spa, special meal with toggle state), Step 4 (Payment — promo code engine with HERITAGE20/ROYALBENGAL/OITIJHYO10 codes, bKash/Nagad/Card selection, simulated payment processing), Step 5 (Confirmation with booking reference). Real-time cost engine: (BasePrice × Persons × Days) + TransportCost - PromoDiscount.\n\nAbout (10 sections): 8-event company timeline with scroll reveals, 4 expert guide bio-cards, sustainability manifesto with live stats, awards grid, CSR impact (50k trees/solar/zero plastic), partnership logos, HQ virtual tour concept, careers portal with apply flow, brand philosophy, and team values.\n\nTravel Log (10 sections): Magazine-style featured article, blog grid, category cloud with 12 tags, regional recipe guides (Hilsa/Seven-Layer Tea/Mezbani/Shutki), gear review section, travel photography tips context, podcast player mockup with progress bar, newsletter Inner Circle signup with email validation, author social links, and a pro-traveler submissions callout.\n\nSupport (8+ sections): 3 multi-city office cards (Dhaka/Sylhet/Chittagong), searchable FAQ accordion (6 questions with smooth height animation), multi-field contact form with real-time Bangladeshi phone validation, emergency contacts grid, social media Wall of Love (6-image grid), appointment scheduler (date/time/type picker), refund info, and live chat widget.\n\nGallery (8 sections): 5-filter masonry grid (Nature/Heritage/Wildlife/People/Aerial), 12 lazy-loaded Unsplash images in 3-column responsive layout, 3-video testimonial carousel with play simulation, Guest of the Month spotlight, drone footage section, high-res download zone, user upload callout, and filter state management.\n\nThe Royal Bengal Dark design language uses CSS variables for #022c22 (emerald deep), #c2410c (burnt orange), #eab308 (gold) as the primary palette over #010f0a backgrounds. Playfair Display serif anchors all headings for aristocratic weight; Cormorant Garamond provides editorial body text; Space Mono grounds all UI labels in precision monospace. Noise texture overlay, glassmorphism cards with backdrop-filter, grain effect via SVG filter, and a gold gradient custom cursor complete the cinematic identity.",
+  "liveLink": "https://twtech-hub.github.io/Oytijjho-Travelling-D12/",
+  "techStack": ["Vanilla JavaScript", "Tailwind CSS", "Observer API", "Stateful Logic"],
+  "features": [
+    "State-Driven Navigation System",
+    "Cinematic Glassmorphism UI",
+    "Real-time Itinerary Cost Engine",
+    "Dynamic 64 District Discovery Grid",
+    "Integrated Local Payment Simulation",
+    "Observer-based Scroll Animations",
+    "Advanced Lead-Capture Multi-step Forms",
+    "Magazine-style Travel Log Layout"
+  ],
+  "designUnique": "The Royal Bengal Dark design language fuses deep emerald (#022c22), burnt orange (#c2410c), and 24K gold (#eab308) into a palette that echoes Bengal's natural heritage — the Sundarbans, terracotta temples, and monsoon earth. Playfair Display in black weight at 7rem creates cinematic headline drama. Glassmorphism cards with backdrop-blur float above a noise-textured dark ground. A gold-gradient custom cursor replaces the system pointer. Sticky booking ticker and floating BTB badge build instant institutional trust.",
+  "developmentProcess": "The SPA was built bottom-up: first the Observer State Manager (subscribe/emit/set/setNested), then the hash router with animation orchestration, then the Intersection Observer pipeline for lazy images and scroll reveals. Each view was built as a modular render function fed by JSON data stores. The booking cost engine was implemented as a pure mathematical module (BookingEngine.calculate()) subscribed to bookingData state changes, rendering live breakdowns on every input event. All 2500+ lines follow a consistent template-function pattern — no innerHTML strings over 50 lines, every section encapsulated."
+},
+{
+  "id": "ondhakar-spa-v2",
+  "title": "Ondhakarer Alo - Immersive Travel Experience",
+  "category": "Travel & Tourism",
+  "image": "https://static.toiimg.com/photo/48679865/.jpg",
+  "shortDescription": "A cinematic, dark-themed SPA built for the premium Bangladeshi traveler. This project moves away from traditional grids to offer a magazine-style immersive journey using high-contrast bioluminescent aesthetics.",
+  "fullDescription": "This 2500+ line SPA leverages a 'Dark-Delta' design language, tailored to captivate Gen-Z and Millennial travelers. A custom Vanilla JS router handles 8 views via hash-based navigation with opacity transition animations. The Trip Lab cost engine calculates real-time pricing: (BasePrice × LuxMultiplier[1–5] × Days × GroupSize) + TransportCost + Add-ons, rendered live with full breakdowns. The Intersection Observer pipeline drives both lazy image loading and staggered reveal animations. A draggable side-scroll Region Explorer replaces conventional destination grids. The Vanila JS Lightbox opens gallery images with a single click. All 8 views contain 10+ distinct, data-driven sections rendered from a central DATA store using Component-as-Function architecture.",
+  "liveLink": "https://twtech-hub.github.io/Ondhokarer-Alo-D13/",
+  "techStack": ["Vanilla JS (Router & State)", "Tailwind CSS (JIT)", "HTML5 Semantic Tags", "Google Fonts CDN"],
+  "features": [
+    "State-based Vanilla JS Router",
+    "Bioluminescent Hover & Glow Effects",
+    "Asymmetrical Side-Scrolling Explorer",
+    "Futuristic Trip-Lab Estimator",
+    "Glassmorphic Lead Gen Concierge",
+    "Dynamic Masonry Image Gallery",
+    "Kinetic Typography Engine",
+    "10+ Unique Sections per View"
+  ],
+  "designUnique": "Electric Lime (#ADFF2F) as the sole accent against deep charcoal creates maximum contrast without neon excess. Diagonal clip-paths, floating stat cards, and zero-border card layouts break every grid convention. Bebas Neue at 11rem with -2px tracking delivers cinematic headline weight.",
+  "developmentProcess": "Engineered with a Component-as-a-Function approach — every section is a pure render function consuming a central DATA object, making the 2500+ lines maintainable and extensible. The custom cursor, scroll parallax, and kinetic typography are all coordinated on single RAF loops for 60fps performance."
+},
+{
+  "id": "apex-horizon-spa-v1",
+  "title": "Apex Horizon — Ultra-Luxury Concierge SPA",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?q=80&w=1200",
+  "shortDescription": "A cinematic, dark-mode SPA engineered for high-net-worth travelers seeking bespoke expedition experiences. Every UI decision — from the Cormorant Garamond typography to the gold-on-obsidian palette — communicates scarcity, discretion, and extreme quality. Built for an audience that measures experiences in exclusivity, not affordability.",
+  "fullDescription": "Apex Horizon is a 2,100+ line framework-less SPA built on a custom Vanilla JS hash router that manages five distinct views: Discover, Expeditions, Private Jet, Concierge, and Editorial. The router performs a GSAP cross-fade transition between views and critically calls `ScrollTrigger.getAll().forEach(t => t.kill())` on every navigation event, destroying all registered GSAP ScrollTrigger instances before re-initializing them in the incoming view — preventing the memory leaks and ghost animations that plague long-running SPAs. GSAP 3.12 drives every major animation: the hero entrance uses a staggered `gsap.from()` call with `power3.out` easing; the custom cursor implements a requestAnimationFrame loop with linear interpolation (lerp at 0.12 factor) for the trailing ring, creating the signature luxury cursor feel. The dark-mode Tailwind architecture uses CSS custom properties (`--obsidian`, `--gold`, `--graphite`) as the foundational palette, never relying on Tailwind utility classes for color, ensuring perfect consistency. The 'Dark Elegance' design language pairs Cormorant Garamond (a refined Garamond revival with exquisite italic) for display type with Raleway for interface labels and EB Garamond for body text — a three-font system that mirrors how luxury print editorial is typeset. The Expeditions view features true horizontal scroll with CSS `scroll-snap-type: x mandatory` and custom thin scrollbar styling. The Private Jet view includes a JavaScript fleet switcher that shows/hides slides by toggling `display:grid`. The Editorial page implements a dynamic reading-time calculator that estimates article length based on excerpt word count. The four-step Concierge inquiry form manages state through a `conciergeStep` integer, rendering destination-toggle pills (using a JavaScript Set for selection state), style preference checkboxes, a generated mini-calendar with click selection, and final NDA acknowledgment — all validated before a toast confirmation. 50+ real Unsplash images are woven throughout, each filtered with CSS `brightness()` and `saturate()` to maintain the moody, editorial atmosphere.",
+  "liveLink": "https://twtech-hub.github.io/Aprx-Horion-Travelling-D11/",
+  "techStack": ["Vanilla JavaScript", "Tailwind CSS", "HTML5", "GSAP 3.12", "GSAP ScrollTrigger", "Google Fonts (Cormorant Garamond, Raleway, EB Garamond)", "Intersection Observer API", "Custom RAF Cursor"],
+  "features": [
+    "Seamless Cross-fade SPA Routing with GSAP",
+    "Memory-Leak Prevention — ScrollTrigger.kill() on route change",
+    "Custom RAF Cursor with Gold Lerp-Trailing Ring",
+    "GSAP Staggered Hero Entrance Animation",
+    "Horizontal Scroll Gallery with CSS snap",
+    "4-Step Bespoke Concierge Inquiry with JS State",
+    "Destination Toggle Pills (Set-based selection)",
+    "Mini Calendar UI with day selection",
+    "Dynamic Reading Time Calculator",
+    "Fleet Showcase Tab Switcher (3 aircraft)",
+    "Animated FAQ Accordion",
+    "Live Global Timezone Footer (4 cities, auto-updates)",
+    "Scroll Reading Progress Bar",
+    "24/7 Concierge Floating Button with Pulse",
+    "Mobile Fullscreen Overlay Menu",
+    "50+ Real Unsplash Images Throughout",
+    "Masonry Editorial Grid with Category Filter",
+    "Film Grain Texture Overlay via SVG filter",
+    "45+ Unique Luxury UI Sections"
+  ],
+  "designUnique": "The 'Cinematic Minimalist' language is built on restraint as a statement. The obsidian (#080a0d) base is darker than typical dark themes — it absorbs light rather than reflecting it, creating a sense of depth and gravitas. The gold (#c9a96e) accent is antique, not metallic — warm and aged rather than flashy. Typography pairs Cormorant Garamond (which carries centuries of French fine publishing history) with EB Garamond for body text — both rooted in classical serif tradition, signaling permanence in a world of trendy sans-serifs. The grain texture overlay across the entire viewport adds analogue warmth. Whitespace is used architecturally: sections breathe, content is never rushed. The custom cursor — a 6px gold dot with a 36px expanding ring — transforms every hover into a tactile interaction.",
+  "developmentProcess": "The primary engineering challenge was GSAP lifecycle management inside a stateless router. Each view re-initializes its own ScrollTrigger instances, but without explicit cleanup, old triggers continue firing on DOM elements in hidden views, causing performance degradation and visual glitches. The solution was a centralized `scrollTriggers` array that collects all created instances, then calls `.kill()` on every member before each navigation. The four-step concierge form required careful state isolation: each step is rendered as a separate DOM section shown/hidden via `display` toggling, with a `conciergeStep` integer as the single source of truth. The destination pills use a JavaScript `Set` object for O(1) selection/deselection, avoiding array manipulation overhead. The fleet switcher required CSS `display:grid` toggling rather than opacity to prevent layout collapse in the hidden slides."
+},
+{
+  "id": "jinnats-travel-firm",
+  "title": "Jinnat's Travel Firm",
+  "category": "Travel & Tourism",
+  "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1000&q=80&fit=crop",
+  "shortDescription": "A warm, organic travel platform for a Bangladeshi travel firm featuring a vertical side dock, mood-based trip discovery, visa predictor, and interactive journey builder.",
+  "fullDescription": "A deeply soulful and human-centric 12-section web application designed for Jinnat's Travel Firm, a trusted Bangladeshi travel agency based in Gulshan, Dhaka. The platform breaks conventional navigation paradigms with a unique vertical side dock and mobile bottom pill, offering an app-like experience. The design palette draws from Bangladeshi earth tones—forest green (#1e3f32), terracotta clay (#c46a48), warm yellow (#eab308), and cream (#faf6ef)—creating an organic, trustworthy, and emotionally resonant digital environment. The application spans comprehensive services from international destinations and Hajj/Umrah packages to domestic 'Sonar Bangla' tours, featuring interactive tools like a Visa Predictor with dynamic scoring, a Mood Selector that curates trips based on emotional preference, and a multi-step Journey Builder with budget slider and personalized recommendations.",
+  "liveLink": "https://twtech-hub.github.io/Jinnats-Travel-Firm-D7/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "Phosphor Icons",
+    "Google Fonts (Outfit & Playfair Display)"
+  ],
+  "features": [
+    "12 Thematic Sections with Smooth Scroll Navigation",
+    "Vertical Floating Dock & Mobile Bottom Pill Navigation",
+    "Mood-Based Trip Selector (Peace, Adventure, Spiritual)",
+    "AI-Inspired Visa Predictor with 4-Step Questionnaire & Dynamic Scoring",
+    "Interactive Journey Builder with 4-Step Wizard & Budget Slider",
+    "Live Office Status Indicator with BD Timezone Detection",
+    "Drag-to-Scroll Interactive Timeline Itinerary",
+    "Bento Grid Destination Showcase",
+    "BD Passport Visa Guide with Difficulty Badges",
+    "Domestic 'Sonar Bangla' Tour Cards",
+    "Loader Animation with Brand Pulse Effect"
+  ],
+  "designUnique": "The design departs from conventional travel templates by embracing a warm, earthy color palette inspired by Bangladeshi landscapes—forest greens, clay terracotta, and cream. The interface features a distinctive vertical side dock (replaced by a bottom pill on mobile) for app-like navigation, curved organic elements, and soft shadows. Typography combines bold Outfit for headlines with italic Playfair Display accents, creating a soulful, storytelling aesthetic. Each interactive element—from mood chips to visa predictor buttons—features smooth state transitions and tactile feedback. The bento grid for destinations and the drag-scrollable timeline add modern, playful interactivity while maintaining the brand's grounded, trustworthy character.",
+  "developmentProcess": "Built entirely with vanilla HTML, CSS, and JavaScript, implementing a custom intersection observer for active navigation highlighting and scroll-triggered fade animations. Developed a sophisticated visa predictor with 4-step sequential logic, dynamic scoring (85/80/75/70/60/55 for country selection, plus modifiers for purpose, solvency, and travel history), and real-time progress visualization with color-coded dots. Engineered a multi-step journey builder with state management, budget slider with dynamic percentage calculation and descriptive labels, and personalized trip recommendations based on budget tiers. Implemented live BD time detection with office hour status logic (open 9 AM-6 PM, closing 18:00-22:00), drag-to-scroll timeline with mouse event handlers, and mood selector with dynamic card content swapping. The codebase maintains clean separation with documented functions for each interactive component, all optimized for the warm, organic brand aesthetic."
+},
+{
+  "id": "journeycraft-storybook",
+  "title": "JourneyCraft - The Storybook Travel Agency",
+  "category": "Travel & Tourism",
+  "image": "https://visaliv.com/business-directories/uploads/listing_thumbnails/ID-TA/travel-agency52.jpg",
+  "shortDescription": "A highly interactive, non-traditional travel interface for the Bangladeshi market.",
+  "fullDescription": "JourneyCraft is an 8-page 'Storybook' travel agency platform that rejects the traditional corporate grid for an immersive, app-like experience. Specifically designed for the Bangladeshi user, it features high-conversion tools like a Vanilla JS Visa Success Predictor, an interactive Hajj/Umrah packing checklist, and a multi-step Journey Builder wizard. The project utilizes a 'Nature Earth' palette (Forest Green, Sun Yellow, and Clay) to build trust across generations, moving away from the cold 'techy' look common in the industry. It integrates deep WhatsApp hooks and a real-time BD-time office status indicator to drive local conversions.",
+  "liveLink": "https://twtech-hub.github.io/JourneyCraft-Touring-Agency-D6/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "Phosphor Icons",
+    "Google Maps Embed API"
+  ],
+  "features": [
+    "Interactive Visa Success Predictor (SVG Animation Logic)",
+    "Horizontal Scroll Journey Timelines",
+    "Dynamic Document Checklist Generator",
+    "Multi-Step 'Journey Builder' Wizard",
+    "Real-time BD Working Status Indicator",
+    "Floating Asymmetric Navigation Dock"
+  ],
+  "designUnique": "Adopted a 'Human-First Journey' philosophy. Replaced standard top navbars with a floating side-dock and substituted typical hero sliders with typography-led emotional greetings. The design uses asymmetrical layouts, Bento-box grids for domestic travel, and custom range-sliders for budget filtering to create a tactile, magazine-like feeling.",
+  "developmentProcess": "Engineered purely in Vanilla JS to ensure zero bugs and high performance without the overhead of heavy frameworks. Built custom tab-logic for office locations and a sophisticated state-management system for the multi-step form to ensure user data persists through the wizard steps."
+},
+{
+  "id": "eclipse-touring-bd",
+  "title": "Eclipse Touring BD",
+  "category": "Travel & Tourism",
+  "image": "https://thumbs.dreamstime.com/b/modern-travel-agency-office-minimalist-decor-bright-atmosphere-concept-travel-planning-workspace-efficiency-modern-379094191.jpg",
+  "shortDescription": "A cyberpunk-inspired, dark-themed travel platform for a tech-forward touring firm in Bangladesh, featuring interactive budget estimation, neon aesthetics, and comprehensive travel services.",
+  "fullDescription": "A cutting-edge 7-page web application designed for Eclipse Touring BD, a technology-driven travel agency based in Banani, Dhaka. The platform breaks traditional travel design conventions with a bold dark theme (#030712) punctuated by vibrant neon cyan (#06b6d4), purple (#8b5cf6), and pink (#ec4899) accents. Targeting tech-savvy Bangladeshi travelers and corporate B2B clients, the interface features glassmorphism panels, cyberpunk-inspired UI elements, and a powerful Smart Estimator Engine that processes real-time BDT calculations with child discount logic. Each service page—Domestic, International, Hajj & Umrah—maintains thematic consistency while offering unique interactive elements, from immersive destination cards with hover zoom to detailed package breakdowns and VIP tier comparisons.",
+  "liveLink": "https://twtech-hub.github.io/Elicpse-Touring-BD-D3/",
+  "techStack": [
+    "HTML5",
+    "Tailwind CSS",
+    "Vanilla JavaScript",
+    "FontAwesome 6",
+    "Google Fonts (Inter & Outfit)"
+  ],
+  "features": [
+    "7 Fully Responsive SPA Pages with Cyberpunk-themed Transitions",
+    "Live BDT Smart Estimator with 20% Child Discount Logic",
+    "Dynamic Background Image Swapping via Destination Selection",
+    "Immersive Destination Cards with Zoom Effects and Gradient Overlays",
+    "VIP Hajj/Umrah Package Tiers with Crown Iconography",
+    "Interactive Dashboard Simulation (User Profile Card)",
+    "Advanced Navbar Scroll Effects with Glassmorphism",
+    "Secure Payment Modal with Animated Encryption Simulation",
+    "Visa Status Ticker with Real-time Updates Simulation"
+  ],
+  "designUnique": "The design embraces a full dark mode aesthetic rarely seen in Bangladeshi travel websites, employing a deep obsidian (#030712) base with neon cyan and purple accents. Typography combines clean Inter for body text with bold Outfit for display headings, creating a futuristic tech vibe. Glassmorphism panels with subtle borders, animated ping dots, and cyberpunk grid backgrounds establish a 'tech infrastructure' feel. Each service category uses distinct accent colors—cyan for international, purple for Hajj, pink for domestic—while maintaining cohesive dark theme foundations. The estimator interface mimics a terminal output with monospace fonts and animated processing indicators.",
+  "developmentProcess": "Built entirely with vanilla HTML/JavaScript and Tailwind CSS, implementing a custom SPA routing system for seamless page transitions. Developed a sophisticated budget calculator that processes base fares, applies 20% child discounts, calculates add-ons per person, and formats output in Bangladeshi Taka. Engineered dynamic image swapping based on dropdown selection, interactive form handlers with validation, and a modal payment simulation with animated encryption effects. Implemented advanced scroll-triggered navbar transformations with glassmorphism effects and border state changes. The codebase maintains clean separation with documented JavaScript functions for routing, form handling, estimator logic, and UI updates, all optimized for the dark theme color scheme."
+},
   {
   "id": "utsab-aura-events",
   "title": "Utsab Aura Events",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000",
   "shortDescription": "Premium, interactive, and highly conversion-focused event agency platform tailored for the Bangladeshi market.",
-  "fullDescription": "A comprehensive 9-page web application designed for a premier event management agency in Dhaka, Bangladesh. Ditching the traditional top-navbar for a mobile-native 'Floating Dock', it covers Weddings, Corporate B2B, Social Events, and Venue Sourcing. The platform is highly interactive, featuring live BDT budget calculators, space requirement algorithms, dynamic form routing, and a faux 360-degree venue viewer. The color palette shifts per sector—warm reds/golds for weddings, sharp slate for corporate, and deep black for the cinematic gallery—while maintaining a cohesive brand identity.",
+  "fullDescription": "A comprehensive 9-page web application designed for a premier Event Management in Dhaka, Bangladesh. Ditching the traditional top-navbar for a mobile-native 'Floating Dock', it covers Weddings, Corporate B2B, Social Events, and Venue Sourcing. The platform is highly interactive, featuring live BDT budget calculators, space requirement algorithms, dynamic form routing, and a faux 360-degree venue viewer. The color palette shifts per sector—warm reds/golds for weddings, sharp slate for corporate, and deep black for the cinematic gallery—while maintaining a cohesive brand identity.",
   "liveLink": "https://twtech-hub.github.io/Utsab-Aura-Event-Management-D12/",
   "techStack": [
     "HTML5",
@@ -29,7 +454,7 @@
 {
   "id": "utsab-canvas-v2",
   "title": "Utsab Canvas: The Editorial Experience",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
   "shortDescription": "Non-traditional, magazine-style immersive platform for high-end Bangladeshi events.",
   "fullDescription": "An 8-page flagship digital platform built for the elite event market in Bangladesh. Departing from standard corporate layouts, it utilizes an 'Editorial Canvas' design with integrated side navigation and interactive story-telling modules. The system features a multi-day wedding symphony tracker, a VVIP corporate protocol blueprint, and a highly transparent investment portal with dynamic add-on calculators. The aesthetic uses a 'Heritage Maroon & Artisan Gold' palette to bridge the gap between traditional Bengali hospitality and global management standards.",
@@ -53,7 +478,7 @@
 {
   "id": "ananda-and-co",
   "title": "Ananda & Co.",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000",
   "shortDescription": "Cinematic, emotion-driven website for a premium Bangladeshi event agency.",
   "fullDescription": "A comprehensive 9-page flagship platform built to capture the essence of luxury events in Bangladesh. Moving away from standard top-nav layouts, it utilizes a 'Floating Glass Island' navigation and a deep 'Midnight Sapphire & Rose Gold' palette. The site caters to both emotional family weddings and protocol-heavy corporate summits, featuring specialized tools like a live BD venue interactive map, a dynamic Kacchi menu estimator, and a multi-step digital concierge booking system.",
@@ -77,7 +502,7 @@
 {
   "id": "bondhon-events",
   "title": "Bondhon Event Planners",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069",
   "shortDescription": "A highly interactive, non-traditional agency portal designed specifically for the premium Bangladeshi event market.",
   "fullDescription": "A massive 9-page, immersive web ecosystem built for 'Bondhon Event Planners'. Rejecting standard corporate layouts, the site utilizes a 'Floating Canvas & Storybook' methodology. It replaces the traditional top navbar with a sticky, animated 'Floating Navigation Hub' that expands into a full-screen elegant menu. Tailored specifically for the Bangladeshi market, the site features localized BDT currency calculators, specific venue references (like Sena Malancha, Le Méridien Dhaka, ICCB), and culturally relevant event categories (Gaye Holud, Mehendi, Walima, Corporate Activations). The design leans heavily on interactive JavaScript to engage multi-generational clients through visual storytelling rather than walls of text.",
@@ -105,7 +530,7 @@
 {
 "id": "nova-strategy-v2",
 "title": "Nova Strategy: Ultimate Event Management Ecosystem",
-"category": "Event Management Agency",
+"category": "Event Management",
 "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
 "shortDescription": "A hyper-localized, 9-page premium web architecture for the Bangladeshi event industry.",
 "fullDescription": "Nova Strategy is an end-to-end digital ecosystem featuring a cohesive design language across 9 core pages (Home, Services, Portfolio, About, Corporate, Weddings, Contact, FAQ, Pricing). It targets the Bangladeshi market with precision by integrating BDT-based financial calculators, guest-to-venue matching logic, and DMP permission compliance guides. The platform utilizes a 'Modern Materialist' aesthetic with Tailwind CSS, ensuring zero bugs and fluid responsiveness. Functionality is powered by Vanilla JavaScript, including multi-step form validation, category-based portfolio filtering, and a real-time budget add-on calculator.",
@@ -132,10 +557,10 @@
 {
   "id": "ayojon-events-bd",
   "title": "AyoJon Events",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1000",
-  "shortDescription": "A premium, high-conversion event management agency website tailored specifically for the Bangladeshi corporate and luxury wedding market.",
-  "fullDescription": "A comprehensive 7-page, highly interactive website designed for 'AyoJon', a premier event management agency based in Banani, Dhaka. Built to cater to high-end B2B clients and luxury social events in Bangladesh, the platform features a heavily localized approach incorporating BDT pricing models, cultural event terminology (Gaye Holud, Mehendi, AGM), and specific Dhaka venue highlights (BICC, ICCB). The site architecture is meticulously engineered to maximize lead generation, featuring multiple touchpoints, dynamic vanilla JS cost estimators, custom tab systems for service exploration, and deep case-study integrations. It perfectly balances a luxurious 'Festive BD Red & Corporate Slate' aesthetic to bridge traditional Bangladeshi culture with modern corporate professionalism.",
+  "shortDescription": "A premium, high-conversion Event Management website tailored specifically for the Bangladeshi corporate and luxury wedding market.",
+  "fullDescription": "A comprehensive 7-page, highly interactive website designed for 'AyoJon', a premier Event Management based in Banani, Dhaka. Built to cater to high-end B2B clients and luxury social events in Bangladesh, the platform features a heavily localized approach incorporating BDT pricing models, cultural event terminology (Gaye Holud, Mehendi, AGM), and specific Dhaka venue highlights (BICC, ICCB). The site architecture is meticulously engineered to maximize lead generation, featuring multiple touchpoints, dynamic vanilla JS cost estimators, custom tab systems for service exploration, and deep case-study integrations. It perfectly balances a luxurious 'Festive BD Red & Corporate Slate' aesthetic to bridge traditional Bangladeshi culture with modern corporate professionalism.",
   "liveLink": "https://twtech-hub.github.io/Ayojon-Event-Management-D9/",
   "techStack": [
     "HTML5",
@@ -160,10 +585,10 @@
 {
   "id": "utsab-events",
   "title": "Utsab Event Management",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1000",
   "shortDescription": "High-conversion, interactive event management platform tailored for the Bangladeshi market.",
-  "fullDescription": "An 8-page, highly interactive, and zero-bug website designed specifically for a premium event management agency in Bangladesh (targeting venues like ICCB, BICC, and Radisson). Built entirely with HTML5, Tailwind CSS, and Vanilla JavaScript, the platform focuses heavily on UI/UX principles to drive lead generation. Key pages include an interactive filtering system for services, a dynamic image lightbox for the portfolio, a robust BDT (৳) budget estimator calculator, and a live-search FAQ section. The design logic centers on building trust with corporate clients and families planning luxury weddings by ensuring a smooth, highly responsive user journey.",
+  "fullDescription": "An 8-page, highly interactive, and zero-bug website designed specifically for a premium Event Management in Bangladesh (targeting venues like ICCB, BICC, and Radisson). Built entirely with HTML5, Tailwind CSS, and Vanilla JavaScript, the platform focuses heavily on UI/UX principles to drive lead generation. Key pages include an interactive filtering system for services, a dynamic image lightbox for the portfolio, a robust BDT (৳) budget estimator calculator, and a live-search FAQ section. The design logic centers on building trust with corporate clients and families planning luxury weddings by ensuring a smooth, highly responsive user journey.",
   "liveLink": "https://twtech-hub.github.io/utsab-Event-Management-D11/",
   "techStack": [
     "HTML5",
@@ -185,7 +610,7 @@
 {
   "id": "nova-strategy",
   "title": "Nova Events",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
   "shortDescription": "একটি সম্পূর্ণ ফাংশনাল, ইন্টারঅ্যাকটিভ ইভেন্ট ম্যানেজমেন্ট ওয়েবসাইট বাংলাদেশের বাজারের জন্য ডিজাইন করা।",
   "fullDescription": "এটি একটি ১২-পৃষ্ঠার সম্পূর্ণ ফাংশনাল ওয়েবসাইট যা বাংলাদেশের ইভেন্ট ম্যানেজমেন্ট ইন্ডাস্ট্রির জন্য বিশেষভাবে ডিজাইন করা হয়েছে। ওয়েবসাইটটিতে রয়েছে আধুনিক ডিজাইন, ইন্টারঅ্যাকটিভ এলিমেন্ট, মাল্টি-স্টেপ বুকিং সিস্টেম, প্রাইস ক্যালকুলেটর, ব্লগ সেকশন, টিম পেজ, টেস্টিমোনিয়াল, FAQ এবং আরও অনেক কিছু। প্রতিটি পৃষ্ঠায় রয়েছে অভিন্ন নেভিগেশন ও ফুটার, এবং সব বাটন ও লিংক ফাংশনাল। ওয়েবসাইটটি সম্পূর্ণ বাংলা ভাষায় কন্টেন্ট সহ তৈরি করা হয়েছে যা বাংলাদেশের টার্গেট কাস্টমারদের জন্য উপযোগী।",
@@ -220,10 +645,10 @@
 {
   "id": "eventease-bangladesh",
   "title": "EventEase Bangladesh",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
   "shortDescription": "A comprehensive 9-page event management website designed specifically for the Bangladeshi market with high conversion focus and interactive features.",
-  "fullDescription": "EventEase Bangladesh is a fully functional 9-page event management agency website built with vanilla HTML, JavaScript, and Tailwind CSS. The website is meticulously designed for the Bangladeshi market, featuring Bengali language support, local cultural elements, and region-specific functionality. It includes a multi-step booking form with validation, dynamic pricing calculator with BDT currency, filterable portfolio gallery with lightbox, before/after event slider, team showcase with social overlays, testimonial slider with auto-scroll, blog with category filtering, and a complete contact system with Google Maps integration. Every page features 14+ sections, far exceeding the 10+ requirement, with consistent navigation and footer across all pages. The design follows a 'Vibrant Tradition Meets Modern Tech' philosophy with a color palette of Deep Magenta (#9D174D), Golden Yellow (#FBBF24), Charcoal Gray, and Soft White, complemented by the Inter typeface. Micro-interactions, hover animations, and smooth transitions create an engaging user experience tailored for Bangladeshi clients seeking wedding planning, corporate events, concerts, and cultural celebrations.",
+  "fullDescription": "EventEase Bangladesh is a fully functional 9-page Event Management website built with vanilla HTML, JavaScript, and Tailwind CSS. The website is meticulously designed for the Bangladeshi market, featuring Bengali language support, local cultural elements, and region-specific functionality. It includes a multi-step booking form with validation, dynamic pricing calculator with BDT currency, filterable portfolio gallery with lightbox, before/after event slider, team showcase with social overlays, testimonial slider with auto-scroll, blog with category filtering, and a complete contact system with Google Maps integration. Every page features 14+ sections, far exceeding the 10+ requirement, with consistent navigation and footer across all pages. The design follows a 'Vibrant Tradition Meets Modern Tech' philosophy with a color palette of Deep Magenta (#9D174D), Golden Yellow (#FBBF24), Charcoal Gray, and Soft White, complemented by the Inter typeface. Micro-interactions, hover animations, and smooth transitions create an engaging user experience tailored for Bangladeshi clients seeking wedding planning, corporate events, concerts, and cultural celebrations.",
   "liveLink": "https://twtech-hub.github.io/Event-Ease-Event-Management-D6/",
   "techStack": [
     "HTML5",
@@ -262,7 +687,7 @@
 {
   "id": "utshab-events-bd-premier",
   "title": "Utshab Events Bangladesh",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2000",
   "shortDescription": "A comprehensive 7-page digital ecosystem designed for Bangladesh's leading event agency, blending cultural authenticity with high-end modern production values.",
   "fullDescription": "Utshab Events is a sophisticated multi-page web platform engineered to bridge the gap between traditional Bengali celebration and world-class event logistics. The site serves as both a high-conversion sales funnel and an educational resource, featuring deep-dive service dossiers, a nationwide portfolio archive, and a transparent pricing engine. Built with a 'Culture-First' architectural philosophy, the platform utilizes advanced JavaScript interactions to guide users from initial inspiration to a detailed project request within a localized Bangladeshi context.",
@@ -294,7 +719,7 @@
   {
   "id": "pulsebox-events-modern",
   "title": "PulseBox Events",
-  "category": "Event Management Agency" ,
+  "category": "Event Management" ,
   "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1000",
   "shortDescription": "Ultra-modern, high-frequency event architecture firm for the tech-savvy Bangladeshi market.",
   "fullDescription": "A comprehensive 9-page high-performance website built for an agency specializing in modern deployments: Mega Concerts, Varsity Fests, Tech Launches, and Neon Weddings. The site features a dark-mode industrial aesthetic with glowing neon accents, moving away from traditional planning styles to an 'Engineering Unit' philosophy. It integrates advanced Vanilla JS logic for real-time cost estimation, multi-step deployment forms, and interactive hardware blueprints.",
@@ -324,10 +749,10 @@
 {
   "id": "utsab-craft-events",
   "title": "Utsab Craft",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000",
   "shortDescription": "Premium, highly-interactive event architecture firm for the Bangladeshi market.",
-  "fullDescription": "A sprawling, 9-page immersive website designed for a high-end Event Management Agency in Dhaka, Bangladesh. Ditching traditional 'techy' layouts, the site utilizes an emotional, editorial design language with a floating glassmorphism app-like dock. It caters to multiple demographics—ranging from intimate Holuds to massive 5-Star Corporate Galas—featuring deep cultural ties to Bangladeshi traditions like Mukhe Bhaat alongside modern B2B features.",
+  "fullDescription": "A sprawling, 9-page immersive website designed for a high-end Event Management in Dhaka, Bangladesh. Ditching traditional 'techy' layouts, the site utilizes an emotional, editorial design language with a floating glassmorphism app-like dock. It caters to multiple demographics—ranging from intimate Holuds to massive 5-Star Corporate Galas—featuring deep cultural ties to Bangladeshi traditions like Mukhe Bhaat alongside modern B2B features.",
   "liveLink": "https://twtech-hub.github.io/Utsab-Craft-Event-Management-D4/",
   "techStack": [
     "HTML5",
@@ -354,7 +779,7 @@
 {
   "id": "aarshi-heritage-bd",
   "title": "Aarshi",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://www.anantabd.net/wp-content/uploads/2025/07/SPG01829.jpg",
   "shortDescription": "A high-end editorial e-commerce experience for Bangladeshi heritage crafts and slow fashion.",
   "fullDescription": "A 9-page luxury e-commerce and lifestyle platform designed to elevate Bangladeshi crafts (Jamdani, Muslin, Rajshahi Silk, Dhamrai Brass, Bogra Terracotta) away from 'cheap souvenir' aesthetics into the realm of high-end, contemporary luxury. It abandons traditional techy layouts for an editorial 'magazine' feel, featuring a custom interactive cursor, full-screen overlay navigation, and deep storytelling.",
@@ -384,7 +809,7 @@
 {
   "id": "ananda-utsab",
   "title": "Ananda Utsab",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://i0.wp.com/www.rbshospitality.com/wp-content/uploads/2023/12/event-management-services-in-dubai.jpg?fit=900%2C675&ssl=1",
   "shortDescription": "A vibrant, culturally-rooted 7-page event website for the Bangladeshi market, designed like a digital village fair with multi-generational appeal.",
   
@@ -436,7 +861,7 @@
 {
   "id": "aura-signature-events",
   "title": "AURA | Signature Events",
-  "category": "Event Management Agency",
+  "category": "Event Management",
   "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600",
   "shortDescription": "A cinematic, glassmorphic web portal for a high-end wedding and corporate event architecture firm in Dhaka.",
   "fullDescription": "AURA is an 8-page ultra-premium web application engineered for the highest tier of the Bangladeshi event management industry. Abandoning soft, rounded designs, it utilizes a 'Luminous Glassmorphism & High-Contrast Grid' philosophy. Featuring Deep Space Black backgrounds accented by Luminous Gold, the site mimics a high-fashion editorial or an architectural dossier. It directly addresses the unique pain points of the Dhaka luxury market: enforcing strict VVIP security protocols, managing paparazzi embargoes, coordinating VIP valet in heavy traffic, and securing exclusive dates at prime venues like the Radisson Blu and ICCB. The conversion pipeline is aggressively modern, featuring an interactive 'Budget Estimator' built in Vanilla JS that provides immediate financial transparency, and highly detailed 'Initiation Terminals' replacing standard contact forms.",
@@ -924,7 +1349,7 @@
   {
       "id": "nova-strategy",
       "title": "Nova Strategy",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000",
       "shortDescription": "Clean, trust-focused portfolio for B2B & corporate clients.",
       "fullDescription": "A 7-page 'Clean Corporate' website designed for high-end B2B clients in Bangladesh. It features a transparent pricing model, a project cost estimator, and a formal 'Company Profile' page, utilizing a 'Trust Blue & Slate Gray' palette to signal stability.",
@@ -1265,7 +1690,7 @@
     {
       "id": "vortex-digital",
       "title": "Vortex Digital",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
       "shortDescription": "Cyber-industrial portfolio for a high-performance ad agency.",
       "fullDescription": "An 8-page 'Cyber-Industrial' agency website designed for high-growth Bangladeshi brands. Features a command-center aesthetic with glitch effects, live ROI calculators, and a tactical service matrix, wrapped in a 'Deep Carbon & Neon Lime' dark mode.",
@@ -1288,7 +1713,7 @@
     {
       "id": "synapse-systems",
       "title": "Synapse Systems",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
       "shortDescription": "Algorithmic marketing portfolio with SaaS-style architecture.",
       "fullDescription": "An 8-page 'Quantum Tech' agency website designed to look like a high-end software dashboard. It features a developer-docs style resource hub, a 'Tech Radar' visualization, and a 'Resource Allocator' calculator, wrapped in a 'Midnight Navy & Plasma Blue' aesthetic.",
@@ -1311,7 +1736,7 @@
     {
       "id": "lumina-creative",
       "title": "Lumina Creative",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
       "shortDescription": "Vibrant, artistic portfolio for a high-energy creative agency.",
       "fullDescription": "An 8-page 'Prismatic Pop' agency website designed to stand out in the Bangladeshi market. Features include a chameleon background that shifts colors, a masonry grid portfolio, and a 'Vibe Meter' for team culture, all wrapped in a 'Royal Purple & Solar Orange' aesthetic.",
@@ -1334,9 +1759,9 @@
     {
       "id": "nexus-growth",
       "title": "Nexus Growth Agency",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000",
-      "shortDescription": "High-performance digital agency portfolio with ROI tools.",
+      "shortDescription": "High-performance Digital Marketing portfolio with ROI tools.",
       "fullDescription": "A 7-page 'Neo-Minimalist' agency website designed for the Bangladeshi market. Features include an interactive service ecosystem, real-time ad budget ROI calculator, and a dynamic case study filtering system, all wrapped in a 'Frost & Indigo' glassmorphism aesthetic.",
       "liveLink": "https://twtech-hub.github.io/NEXUS-GROWTH.-Digital-D1/",
       "techStack": [
@@ -1424,7 +1849,7 @@
     {
       "id": "traffic-matrix",
       "title": "Traffic Matrix",
-      "category": "Digital Agency",
+      "category": "Digital Marketing",
       "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
       "shortDescription": "Neo-Brutalist, high-contrast portfolio for a performance marketing agency.",
       "fullDescription": "A 7-page 'Neo-Brutalist' website that rejects modern design trends for a raw, high-conversion aesthetic. Featuring sharp borders, high-contrast colors (Yellow/Black), and utilitarian interactions, it is designed for agencies that focus purely on ROI and Sales data.",
