@@ -46,6 +46,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/componen
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
 import { Link } from 'react-router-dom';
+import TechGlobeSection from '@/components/ui/TechGlobeSection';
 
 // Icon mapping
 const iconMap: Record<string, LucideIcon> = { Code, FileCode, Palette, Layout: LayoutIcon, CheckCircle, Smartphone, Search, Target, Rocket ,Cpu, Play,BarChart3,ShieldCheck,Layers,Briefcase,Users,FileText};
@@ -463,69 +464,10 @@ const ServicesPage = () => {
 
 
         {/* ==================== 3. TECH STACK ==================== */}
-        <section className="py-24 bg-transparent overflow-hidden">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
-              <div className="max-w-2xl">
-                <Badge variant="outline" className="text-purple-400 border-purple-400/30 bg-purple-500/10 px-3 py-1 mb-4">Technical Excellence</Badge>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-white">Our Technology Stack</h2>
-                <p className="text-slate-400 text-lg">
-                  We leverage the most advanced and reliable frameworks to ensure your product is future-proof, scalable, and secure.
-                </p>
-              </div>
-              <div className="hidden md:flex gap-4">
-                <Cpu className="w-12 h-12 text-slate-700 opacity-50 animate-pulse" />
-                <Database className="w-12 h-12 text-slate-700 opacity-50" />
-                <Cloud className="w-12 h-12 text-slate-700 opacity-50" />
-              </div>
-            </div>
 
-            <Tabs defaultValue="frontend" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 bg-slate-900/60 border border-white/10 p-1 rounded-xl mb-12 h-auto backdrop-blur-md">
-                {Object.entries(techStack).map(([key, data]) => (
-                  <TabsTrigger
-                    key={key}
-                    value={key}
-                    className="rounded-lg py-3 data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-400 hover:text-white transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <data.icon className="w-4 h-4" />
-                      <span className="capitalize hidden md:inline">{key}</span>
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
 
-              <AnimatePresence mode="wait">
-                {Object.entries(techStack).map(([key, data]) => (
-                  <TabsContent key={key} value={key} className="mt-0">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ duration: 0.3 }}
-                      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
-                    >
-                      {data.tools.map((tool, idx) => (
-                        <Card key={idx} className="bg-slate-900/40 border border-white/5 hover:border-blue-500/50 hover:bg-slate-800/60 transition-all duration-300 group backdrop-blur-sm">
-                          <CardContent className="p-6 flex flex-col items-center text-center gap-3">
-                            <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors border border-white/5">
-                              <tool.icon className="w-6 h-6 text-blue-400 group-hover:text-blue-300" />
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-white">{tool.name}</h4>
-                              <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">{tool.desc}</p>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </motion.div>
-                  </TabsContent>
-                ))}
-              </AnimatePresence>
-            </Tabs>
-          </div>
-        </section>
+        <TechGlobeSection></TechGlobeSection>
+       
 
         {/* ==================== 4. WORK PROCESS ==================== */}
         <section className="py-24 bg-transparent relative">
