@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // --- ADDED NEW ICONS HERE ---
-import { 
-  Home, Heart, BookOpen, Clock, Plane, Laptop, 
+import {
+  Home, Heart, BookOpen, Clock, Plane, Laptop,
   MapPin, Briefcase, ArrowRight, Sparkles, Send,
   Coffee, Globe, Zap, Smile, Users, Award, ShieldCheck,
   type LucideIcon
@@ -16,11 +16,12 @@ import data from '@/data.json';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 // Updated Icon mapping with new icons
-const iconMap: Record<string, LucideIcon> = { 
-  Home, Heart, BookOpen, Clock, Plane, Laptop, 
-  Coffee, Globe, Zap, Smile, Users, Award, ShieldCheck 
+const iconMap: Record<string, LucideIcon> = {
+  Home, Heart, BookOpen, Clock, Plane, Laptop,
+  Coffee, Globe, Zap, Smile, Users, Award, ShieldCheck
 };
 
 // --- INTERACTIVE BACKGROUND ---
@@ -46,7 +47,7 @@ const InteractiveBackground = () => {
       <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-blue-600/20 via-purple-600/5 to-transparent blur-[120px]" />
       <div className="absolute bottom-0 inset-x-0 h-[500px] bg-gradient-to-t from-indigo-600/20 via-blue-600/5 to-transparent blur-[120px]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-      <div 
+      <div
         className="absolute inset-0 transition-opacity duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 40%)`,
@@ -109,15 +110,10 @@ const CareersPage = () => {
     }
   ];
 
-  const handleApplyClick = (jobTitle: string) => {
-    const email = "mujahidraj65@gmail.com";
-    const subject = encodeURIComponent(`Application for ${jobTitle}`);
-    const body = encodeURIComponent(`Hi there,\n\nI am writing to apply for the ${jobTitle} position.\n\nPlease find my resume attached.\n\nBest regards,`);
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-  };
+
 
   const handleGeneralEmailClick = () => {
-    const email = "mujahidraj65@gmail.com";
+    const email = "twtech.contact@gmail.com";
     const subject = encodeURIComponent("General Job Application / Resume Submission");
     const body = encodeURIComponent("Hi there,\n\nI am interested in joining your team. Please find my resume attached for your review.\n\nBest regards,");
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
@@ -126,7 +122,7 @@ const CareersPage = () => {
   return (
     <Layout>
       <SEOHead title="Careers - Join the Team" description={careers.subheadline} path="/careers" />
-      
+
       {/* --- BACKGROUND INJECTION --- */}
       <InteractiveBackground />
 
@@ -144,18 +140,18 @@ const CareersPage = () => {
               <Badge variant="outline" className="text-blue-400 border-blue-400/30 px-4 py-1 text-sm uppercase tracking-widest backdrop-blur-md bg-slate-900/30">
                 We are hiring
               </Badge>
-              
+
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
                 {careers.headline}
               </h1>
-              
+
               <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
                 {careers.subheadline}
               </p>
 
               <div className="pt-6 flex justify-center">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-12 text-base shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20"
                 >
@@ -174,15 +170,15 @@ const CareersPage = () => {
               <p className="text-slate-400 mt-2 text-lg">Perks that make your life easier and your work better.</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {allPerks.map((perk, i) => {
                 const Icon = iconMap[perk.icon] || Sparkles; // Fallback icon
                 return (
-                  <motion.div 
-                    key={i} 
-                    initial={{ opacity: 0, y: 20 }} 
-                    whileInView={{ opacity: 1, y: 0 }} 
-                    viewport={{ once: true }} 
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
                     <Card className="h-full border border-white/10 bg-slate-900/40 backdrop-blur-sm shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all duration-300 hover:-translate-y-1">
@@ -218,16 +214,16 @@ const CareersPage = () => {
 
             <div className="max-w-4xl mx-auto space-y-6">
               {careers.openings.map((job, i) => (
-                <motion.div 
-                  key={i} 
-                  initial={{ opacity: 0, x: -10 }} 
-                  whileInView={{ opacity: 1, x: 0 }} 
-                  viewport={{ once: true }} 
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
                   <Card className="group border border-white/10 bg-slate-900/60 backdrop-blur-md hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300">
                     <div className="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                      
+
                       {/* Left: Job Info */}
                       <div className="space-y-3">
                         <div className="flex flex-wrap gap-2 mb-2">
@@ -260,12 +256,14 @@ const CareersPage = () => {
 
                       {/* Right: Action */}
                       <div className="flex-shrink-0">
-                        <Button 
-                          onClick={() => handleApplyClick(job.title)}
-                          className="w-full md:w-auto bg-white text-slate-900 hover:bg-blue-50 transition-colors font-semibold"
-                        >
-                          Apply Now
-                        </Button>
+                        {/* Replace the old Button with this Link wrapper */}
+                        <Link to={`/careers/${job.id}`}>
+                          <Button
+                            className="w-full md:w-auto bg-white text-slate-900 hover:bg-blue-50 transition-colors font-semibold"
+                          >
+                            View Details
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </Card>
@@ -285,7 +283,7 @@ const CareersPage = () => {
         <section className="py-24 bg-transparent border-t border-white/5">
           <div className="container px-4 text-center">
             <div className="max-w-3xl mx-auto rounded-[2.5rem] bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 overflow-hidden px-6 py-16 text-center md:px-12 md:py-20 shadow-2xl backdrop-blur-xl relative">
-              
+
               {/* Decorative Glows */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none" />
@@ -298,8 +296,8 @@ const CareersPage = () => {
                 <p className="text-slate-300 mb-8 max-w-lg mx-auto text-lg">
                   We are always looking for talented individuals. Send us your resume and we'll keep you in mind for future openings.
                 </p>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={handleGeneralEmailClick}
                   className="bg-blue-600 hover:bg-blue-500 text-white h-12 px-8 font-semibold rounded-full shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20"
                 >

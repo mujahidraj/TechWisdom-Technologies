@@ -1,0 +1,260 @@
+{
+  "openings": [
+    {
+      "id": "senior-react-dev",
+      "title": "React Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "We're looking for a React developer to lead frontend development on our most challenging projects.",
+      "aboutRole": "As a React Developer at TechWisdom, you will be at the forefront of building highly interactive, scalable, and secure web applications. You will collaborate closely with our design and backend teams to turn complex business requirements into elegant, user-centric interfaces. This role requires deep expertise in modern React patterns and a passion for web performance.",
+      "responsibilities": [
+        "Develop new user-facing features using React.js and Next.js.",
+        "Build reusable components and front-end libraries for future use.",
+        "Translate designs and wireframes into high-quality code.",
+        "Optimize components for maximum performance across a vast array of web-capable devices and browsers.",
+        "Participate in code reviews and mentor junior developers."
+      ],
+      "requirements": [
+        "3+ years of professional experience with React.js and its core principles.",
+        "Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model.",
+        "Experience with popular React workflows (such as Redux, Zustand, or Context API).",
+        "Familiarity with RESTful APIs and modern frontend build pipelines.",
+        "Excellent communication skills and the ability to work in a remote-first environment."
+      ],
+      "salary": "Competitive / Based on Experience"
+    },
+    {
+      "id": "ft-backend-dev",
+      "title": "Backend Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Architect and build scalable server-side logic, optimize APIs, and manage databases for high-performance applications.",
+      "aboutRole": "We are seeking a strong Backend Developer to build the robust APIs and databases that power our client applications. You will be responsible for server-side web application logic and integration of the work front-end developers do. You will usually write the web services and APIs used by front-end developers and mobile application developers.",
+      "responsibilities": [
+        "Design and implement scalable backend architectures using Node.js/Nest.js or Python.",
+        "Create secure, efficient RESTful and GraphQL APIs.",
+        "Manage database schemas, migrations, and query optimization (PostgreSQL, MongoDB).",
+        "Implement data protection and security protocols.",
+        "Monitor server performance and troubleshoot bottlenecks."
+      ],
+      "requirements": [
+        "3+ years of experience in backend development.",
+        "Strong understanding of server-side languages (Node.js preferred).",
+        "Experience with relational databases (PostgreSQL) and NoSQL databases.",
+        "Knowledge of cloud platforms (AWS, GCP) and containerization (Docker).",
+        "Experience with CI/CD pipelines and automated testing."
+      ],
+      "salary": "Competitive / Based on Experience"
+    },
+    {
+      "id": "ft-fullstack-dev",
+      "title": "Full Stack Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Handle end-to-end development, bridging the gap between user-facing interfaces and complex backend infrastructure.",
+      "aboutRole": "As a Full Stack Developer, you are the bridge between the frontend user experience and the backend data architecture. You will be responsible for developing end-to-end features, requiring a deep understanding of both client-side and server-side technologies. You thrive in a fast-paced environment and enjoy taking ownership of entire product features.",
+      "responsibilities": [
+        "Develop comprehensive software solutions, working on both the frontend and backend.",
+        "Collaborate with product managers and designers to define feature requirements.",
+        "Design client-side and server-side architecture.",
+        "Develop and manage well-functioning databases and applications.",
+        "Write effective, testable, and scalable APIs."
+      ],
+      "requirements": [
+        "Proven experience as a Full Stack Developer or similar role.",
+        "Experience developing desktop and mobile applications.",
+        "Familiarity with common stacks (e.g., MERN or PERN stack).",
+        "Knowledge of multiple front-end languages and libraries (e.g., HTML/ CSS, JavaScript, XML, jQuery).",
+        "Knowledge of multiple back-end languages (e.g., C#, Java, Python) and JavaScript frameworks (e.g., Angular, React, Node.js)."
+      ],
+      "salary": "Competitive / Based on Experience"
+    },
+    {
+      "id": "mobile-app-dev",
+      "title": "Mobile App Developer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Build cross-platform mobile applications that provide seamless user experiences on iOS and Android.",
+      "aboutRole": "We need a passionate Mobile App Developer to create high-performance applications for iOS and Android. You will use cross-platform frameworks to deliver native-like experiences. You'll work closely with UI designers and backend engineers to bring digital products to the palm of our users' hands.",
+      "responsibilities": [
+        "Build and deploy cross-platform mobile apps using React Native or Flutter.",
+        "Ensure the performance, quality, and responsiveness of applications.",
+        "Collaborate with a team to define, design, and ship new features.",
+        "Identify and correct bottlenecks and fix bugs.",
+        "Help maintain code quality, organization, and automatization."
+      ],
+      "requirements": [
+        "2+ years of experience with React Native or Flutter.",
+        "Familiarity with native build tools, like XCode, Gradle (Android Studio, IntelliJ).",
+        "Understanding of REST APIs, the document request model, and offline storage.",
+        "Experience with automated testing suites, like Jest or Mocha.",
+        "Published at least one app on the Apple App Store or Google Play Store."
+      ],
+      "salary": "Competitive / Based on Experience"
+    },
+    {
+      "id": "pt-frontend-dev",
+      "title": "Frontend Developer (Part-Time)",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "shortDescription": "Collaborate with our team 20hrs/week to implement pixel-perfect UI designs and interactive web components.",
+      "aboutRole": "This is a flexible, part-time role ideal for someone looking to contribute to exciting projects for ~20 hours a week. You will focus on translating UI/UX design wireframes into actual code that will produce visual elements of the application.",
+      "responsibilities": [
+        "Develop responsive UI components using React and Tailwind CSS.",
+        "Ensure technical feasibility of UI/UX designs.",
+        "Collaborate with full-time developers to integrate APIs.",
+        "Fix UI bugs and improve layout accessibility."
+      ],
+      "requirements": [
+        "Solid understanding of HTML5, CSS3, and JavaScript.",
+        "Experience with modern frontend frameworks (React).",
+        "Availability to work 20 hours per week.",
+        "Good understanding of responsive design principles."
+      ],
+      "salary": "Hourly Rate / Based on Experience"
+    },
+    {
+      "id": "pt-backend-dev",
+      "title": "Backend Developer (Part-Time)",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "shortDescription": "Support our core engineering team by maintaining API endpoints and assisting with database management on a flexible schedule.",
+      "aboutRole": "A flexible role supporting our main engineering team. You will handle routine backend maintenance, API updates, and database script writing to ensure our systems run smoothly.",
+      "responsibilities": [
+        "Maintain and optimize existing API routes.",
+        "Write scripts for data migration and database cleanup.",
+        "Assist in troubleshooting server-side errors.",
+        "Write technical documentation for backend processes."
+      ],
+      "requirements": [
+        "Experience with Node.js and SQL/NoSQL databases.",
+        "Ability to read and debug complex codebases.",
+        "Availability for 20 hours per week.",
+        "Strong independent problem-solving skills."
+      ],
+      "salary": "Hourly Rate / Based on Experience"
+    },
+    {
+      "id": "pt-fullstack-dev",
+      "title": "Full Stack Developer (Part-Time)",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Part-time",
+      "shortDescription": "A flexible role for a versatile developer to tackle various feature requests and bug fixes across the entire stack.",
+      "aboutRole": "We need a versatile developer who can jump into any part of the stack to fix bugs or build small features. This part-time role is perfect for freelancers or students with strong full-stack skills.",
+      "responsibilities": [
+        "Address full-stack bug tickets reported by QA.",
+        "Develop minor features end-to-end.",
+        "Assist in maintaining CI/CD pipelines.",
+        "Perform routine dependency updates and security patches."
+      ],
+      "requirements": [
+        "Proficiency in JavaScript/TypeScript across the stack (React + Node.js).",
+        "Experience with Git and collaborative workflows.",
+        "Availability for 20 hours per week.",
+        "Self-motivated and able to work with minimal supervision."
+      ],
+      "salary": "Hourly Rate / Based on Experience"
+    },
+    {
+      "id": "web-intern",
+      "title": "Web Development Intern",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Internship",
+      "shortDescription": "A 3-6 month learning opportunity for aspiring developers to gain hands-on experience in modern web technologies.",
+      "aboutRole": "Kickstart your career with our paid internship program. You will work alongside senior developers on real client projects, learning modern tech stacks, agile methodologies, and professional coding standards.",
+      "responsibilities": [
+        "Assist in writing code for internal tools and client projects.",
+        "Participate in daily stand-ups and sprint planning.",
+        "Write unit tests and perform manual QA testing.",
+        "Learn and adopt the company's coding standards."
+      ],
+      "requirements": [
+        "Basic understanding of HTML, CSS, and JavaScript.",
+        "Familiarity with Git and GitHub.",
+        "Currently pursuing or recently completed a degree in Computer Science (or a related bootcamp).",
+        "A strong desire to learn and a positive attitude."
+      ],
+      "salary": "Paid Internship Stipend"
+    },
+    {
+      "id": "growth-marketer",
+      "title": "Growth Marketer",
+      "department": "Marketing",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Join our marketing team to drive growth through data-driven strategies, SEO optimization, and creative campaigns.",
+      "aboutRole": "We are looking for a data-driven Growth Marketer to lead customer acquisition and retention strategies. You will design, implement, and analyze campaigns across various digital channels to grow our user base and revenue.",
+      "responsibilities": [
+        "Develop and execute SEO and SEM strategies.",
+        "Manage paid advertising campaigns on Google Ads and Meta.",
+        "Analyze user data to identify conversion bottlenecks and optimize funnels.",
+        "Create and manage email marketing sequences.",
+        "Track and report on key performance indicators (KPIs)."
+      ],
+      "requirements": [
+        "2+ years of experience in digital marketing or growth hacking.",
+        "Strong analytical skills and experience with Google Analytics.",
+        "Proven track record of managing successful ad campaigns.",
+        "Excellent copywriting and communication skills.",
+        "Familiarity with A/B testing and conversion rate optimization (CRO)."
+      ],
+      "salary": "Competitive / Based on Experience"
+    },
+    {
+      "id": "sales-exec",
+      "title": "Sales Executive",
+      "department": "Sales",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Drive revenue by identifying new business opportunities, managing client relationships, and closing deals for our tech services.",
+      "aboutRole": "As a Sales Executive, you will be the driving force behind our revenue growth. You will be responsible for sourcing leads, pitching our tech services to potential clients, and guiding them through the sales pipeline to closed-won.",
+      "responsibilities": [
+        "Identify and qualify new business leads via cold outreach and networking.",
+        "Conduct discovery calls and product presentations.",
+        "Prepare customized proposals and negotiate contracts.",
+        "Maintain accurate records in the CRM.",
+        "Achieve and exceed monthly/quarterly sales quotas."
+      ],
+      "requirements": [
+        "2+ years of B2B sales experience, preferably in tech or agency services.",
+        "Strong presentation, negotiation, and closing skills.",
+        "Experience using CRM software (e.g., HubSpot, Salesforce).",
+        "Self-starter with a hunter mentality.",
+        "Excellent written and verbal communication in English."
+      ],
+      "salary": "Base Salary + Uncapped Commission"
+    },
+    {
+      "id": "biz-dev-mgr",
+      "title": "Business Development Manager",
+      "department": "Sales",
+      "location": "Remote",
+      "type": "Full-time",
+      "shortDescription": "Strategize and lead our market expansion efforts, forming strategic partnerships and overseeing the sales pipeline.",
+      "aboutRole": "We need a strategic thinker to lead our business development efforts. You will focus on building long-term partnerships, identifying new market opportunities, and creating high-level strategies to scale the agency's operations globally.",
+      "responsibilities": [
+        "Develop and execute business plans to enter new markets.",
+        "Identify and establish strategic partnerships with other agencies or platforms.",
+        "Oversee the entire sales team and pipeline.",
+        "Represent the company at industry events and conferences.",
+        "Collaborate with marketing to align lead generation strategies."
+      ],
+      "requirements": [
+        "5+ years of experience in business development or enterprise sales.",
+        "Proven track record of closing high-ticket B2B deals.",
+        "Deep understanding of the software development lifecycle and tech industry trends.",
+        "Strong leadership and team management skills.",
+        "Existing network of contacts in relevant industries is a major plus."
+      ],
+      "salary": "Competitive Base + Performance Bonuses"
+    }
+  ]
+}

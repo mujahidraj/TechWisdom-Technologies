@@ -30,6 +30,7 @@ import CookiesPolicy from './pages/CookiesPolicy';
 // --- Splash Screen Import ---
 import SplashScreen from './components/ui/SplashScreen';
 import GalleryPage from './pages/GalleryPage';
+import JobDetailsPage from './pages/JobDetailsPage';
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,7 @@ const App = () => {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/demo-projects" element={<DemoProjects />} />
                 <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
+                <Route path="/careers/:jobId" element={<JobDetailsPage />} />
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/services/:id" element={<ServiceDetails />} />
                 <Route path="/manifesto" element={<ManifestoPage />} />
