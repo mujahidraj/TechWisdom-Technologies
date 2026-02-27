@@ -388,6 +388,7 @@ const ServicesPage = () => {
         <section id="services-grid" className="py-24 bg-transparent relative z-20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-20">
+              <Badge variant="secondary" className="mb-4 bg-green-500/10 text-amber-300 border border-green-500/20">Serving Areas</Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white mb-4">Our Expertise</h2>
               <p className="text-slate-400 max-w-2xl mx-auto text-lg">
                 Scalable, secure, and user-centric solutions designed for the modern web.

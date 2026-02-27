@@ -2,8 +2,8 @@
   {
   "id": "digonto-bd",
   "title": "Digonto — The Spatial Travel OS",
-  "category": "Operating System-Style Travel Platform",
-  "image": "https://images.unsplash.com/photo-1623946051772-2f3427909384?q=80&w=1000",
+  "category": "Travel & Tourism",
+  "image": "https://www.lugaresincertos.com/wp-content/uploads/2025/01/Safari-de-jipe-Floresta-de-Sinharaja-Sri-Lanka-sri-lanka-jorge-duarte-estevao-1170-x768.jpg",
   "shortDescription": "A groundbreaking operating system-inspired travel platform with custom cursor, radial menu, comparison tray, drag-and-drop trip builder, and interactive map of Bangladesh.",
   "fullDescription": "Digonto is not a website — it's a Spatial Travel Operating System. This avant-garde platform reimagines domestic travel planning as an OS experience, featuring a left dock (navigation), right control center (live stats, weather, notifications), comparison tray, radial quick-action menu, custom cursor with ring, and eight fully interactive modules. Built on a deep indigo (#1E1B4B) color scheme with amber accents, the interface uses advanced glassmorphism, animated blob backgrounds, and cinematic transitions. Modules include: Command Center (home with trending destinations, platform stats, quick links), Interactive Map (clickable division polygons with data panels), Marketplace (filterable packages with expand overlay and comparison tray), Trip Engine (drag-and-drop trip builder with live cost breakdown), DNA (story slider about the company), Blog Feed (masonry layout with infinite scroll), Support Portal (conversational chat with option buttons), and Lens (draggable polaroid gallery).",
   "liveLink": "https://twtech-hub.github.io/Diganto-Travelling-D15/",

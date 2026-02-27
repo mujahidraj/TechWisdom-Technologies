@@ -151,14 +151,14 @@ const DemoProjectDetails = () => {
               >
                 <div className="relative group">
                   {/* Neon Glow */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                   
                   {/* Button */}
                   <a 
                     href={project.liveLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="relative flex items-center gap-3 px-8 py-5 rounded-2xl bg-slate-900 text-white font-bold text-lg border border-white/10 hover:bg-slate-800 transition-all"
+                    className="relative flex items-center gap-3 px-8 py-5 rounded-2xl bg-blue-700  text-white font-bold text-lg border border-white/10 hover:bg-slate-800 transition-all"
                   >
                     <Rocket size={24} className="text-blue-400 group-hover:animate-pulse" />
                     <span className="tracking-wide">View Live Demo</span>
