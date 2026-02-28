@@ -280,27 +280,33 @@
   "gallery": [
     {
       "src": "https://i.postimg.cc/0Qp3cTyZ/2025-12-04-14-34-IMG-5377.avif",
-      "alt": "Our main office space"
+      "alt": "Our main office space",
+      "title": "TechWisdom Dev Night"
     },
     {
       "src": "https://i.postimg.cc/8s8SjRcn/AAA-0111.jpg",
-      "alt": "Strategic planning session"
+      "alt": "Cox's Bazar tour",
+      "title": "Cox's Bazar Team Tour"
     },
     {
       "src": "https://i.postimg.cc/j21jvn5T/2025-09-02-19-02-IMG-4646.avif",
-      "alt": "Developer workshop"
+      "alt": "Product Launch Success Celebration",
+      "title": "Product Launch Success Celebration"
     },
     {
       "src": "https://i.postimg.cc/Bbn8mGCs/2025_09_02_18_21_IMG_4634.avif",
-      "alt": "Receiving Industry Award"
+      "alt": "Fun Time after Project Completion",
+      "title": "Fun Time after Project Completion"
     },
     {
       "src": "https://i.postimg.cc/cCTXgZFv/Gemini-Generated-Image-vinf1fvinf1fvinf.png",
-      "alt": "Annual team retreat"
+      "alt": "Project Planning session",
+      "title": "Project Planning Session"
     },
     {
       "src": "https://i.postimg.cc/Hs632Yd7/Gemini-Generated-Image-87ntty87ntty87nt.png",
-      "alt": "Creative brainstorming"
+      "alt": "Tree Plantation Program",
+      "title": "Tree Plantation Program"
     }
   ],
   "services": [
@@ -2384,7 +2390,7 @@
         "excerpt": "From AI-driven coding assistants to the rise of WebAssembly, we explore the technologies shaping the next generation of the web.",
         "category": "Engineering",
         "author": "Mujahid Raj",
-        "date": "2024-01-15",
+        "date": "2026-01-15",
         "readTime": "8 min",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
         "content": [
@@ -2408,7 +2414,7 @@
         "excerpt": "A comprehensive guide to creating a design language that ensures consistency, efficiency, and beauty across fragmented product ecosystems.",
         "category": "Design",
         "author": "Alin Das",
-        "date": "2024-01-10",
+        "date": "2026-01-10",
         "readTime": "12 min",
         "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
         "content": [
@@ -2432,7 +2438,7 @@
         "excerpt": "Stop unnecessary re-renders. We dive deep into useMemo, virtualization, and concurrent mode to make your apps fly.",
         "category": "Engineering",
         "author": "Fidbi Hasan",
-        "date": "2024-01-05",
+        "date": "2026-01-05",
         "readTime": "10 min",
         "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
         "content": [
@@ -2456,7 +2462,7 @@
         "excerpt": "Understanding how the human brain processes information is the key to designing intuitive user interfaces that convert.",
         "category": "Design",
         "author": "Alin Das",
-        "date": "2023-12-28",
+        "date": "2025-12-28",
         "readTime": "7 min",
         "image": "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?auto=format&fit=crop&w=1200&q=80",
         "content": [
@@ -2480,7 +2486,7 @@
         "excerpt": "How to integrate LLMs into your workflow to boost productivity while maintaining code quality and architectural integrity.",
         "category": "Innovation",
         "author": "Mujahid Raj",
-        "date": "2023-12-20",
+        "date": "2025-12-20",
         "readTime": "9 min",
         "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
         "content": [

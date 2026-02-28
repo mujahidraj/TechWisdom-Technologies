@@ -11,62 +11,62 @@ const GALLERY_ITEMS = [
   { 
     id: 2, category: "events", 
     src: "https://i.postimg.cc/8s8SjRcn/AAA-0111.jpg", 
-    alt: "Team brainstorming session", title: "SaaS Design Sprint", 
-    desc: "The UI/UX team mapping out user journeys for a new Fintech client. We believe the best digital products start with whiteboards and sticky notes." 
+    alt: "TechWisdom Tour to Cox's Bazar", title: "TechWisdom Tour to Cox's Bazar", 
+    desc: "Our team took a break from the code to soak in the sun and sand at Cox's Bazar. This annual retreat is a chance for us to bond, brainstorm, and recharge in one of the most beautiful coastal spots in the world." 
   },
   { 
     id: 3, category: "retreats", 
     src: "https://i.postimg.cc/j21jvn5T/2025-09-02-19-02-IMG-4646.avif", 
-    alt: "Annual team retreat at the beach", title: "Cox's Bazar Retreat 2024", 
-    desc: "Taking a break from screens to reconnect with nature. Our annual retreats are focused on team building, relaxation, and celebrating the year's milestones." 
+    alt: "TechWisdom Team Success treat", title: "Success Treat: Nila Market Dinner", 
+    desc: "After a successful product launch, we celebrated with a team dinner at Nila Market, indulging in local delicacies and sharing stories of our journey. Moments like these remind us that behind every line of code is a team that cares deeply about each other and the impact we create." 
   },
   { 
     id: 4, category: "office", 
     src: "https://i.postimg.cc/Bbn8mGCs/2025_09_02_18_21_IMG_4634.avif", 
-    alt: "Developers coding", title: "Engineering in the Zone", 
-    desc: "Our backend developers locked in during a two-week sprint. We provide top-tier hardware and noise-canceling setups to ensure maximum productivity." 
+    alt: "Fun time with Colleagues", title: "Focused Sprints & Fun Breaks", 
+    desc: "Our office is designed for both deep focus and spontaneous fun. Whether it's a high-energy sprint session or a quick ping-pong match to clear our heads, we believe that a balanced work environment fosters creativity and camaraderie." 
   },
   { 
     id: 5, category: "events", 
     src: "https://i.postimg.cc/4yX9990B/Gemini-Generated-Image-72b3ro72b3ro72b3.png", 
-    alt: "Tech meetup hosted by TechWisdom", title: "React Native Meetup", 
-    desc: "Hosting the local developer community for an evening of knowledge sharing, pizza, and live coding demonstrations led by our senior engineers." 
+    alt: "Techwisdom Team in a Research Conference", title: "TechWisdom Dev Night", 
+    desc: "Our monthly Dev Night is a highlight for the team. It's a chance to share knowledge, showcase side projects, and discuss the latest trends in tech. From AI breakthroughs to new programming languages, we keep our fingers on the pulse of innovation." 
   },
   { 
     id: 6, category: "retreats", 
     src: "https://i.postimg.cc/y8x0j08S/Gemini-Generated-Image-s8f7ccs8f7ccs8f7.png", 
-    alt: "Team dinner", title: "Project Launch Gala", 
-    desc: "A massive celebration dinner after successfully migrating a legacy enterprise system to the cloud with zero downtime. Work hard, celebrate harder." 
+    alt: "TechWisdom Team in Research Conference", title: "TechWisdom Team in Research Conference", 
+    desc: "Our team members are actively engaged in research and development activities, exploring cutting-edge technologies and contributing to open-source projects." 
   },
   { 
     id: 7, category: "office", 
     src: "https://i.postimg.cc/Jhycrjwm/Gemini-Generated-Image-t8uifft8uifft8ui.png", 
-    alt: "Casual meeting area", title: "The Brainstorm Lounge", 
-    desc: "A casual corner of the office where the best spontaneous ideas happen over freshly brewed coffee." 
+    alt: "Project Planning ", title: "Project Planning Sessions", 
+    desc: "Our project planning sessions are where the magic begins. We gather around whiteboards, sketch out ideas, and map out our product roadmaps. It's a collaborative process that ensures everyone has a voice and a clear understanding of our goals." 
   },
   { 
     id: 8, category: "events", 
     src: "https://i.postimg.cc/kgYzYNNZ/Gemini-Generated-Image-oq3r09oq3r09oq3r.png", 
-    alt: "Hackathon winners", title: "Internal Hackathon 3.0", 
+    alt: "Hackathon participants", title: "Internal Hackathon 3.0", 
     desc: "24 hours of non-stop coding. Our internal hackathons push the team to experiment with AI, new frameworks, and out-of-the-box product ideas." 
   },
   { 
     id: 9, category: "events", 
     src: "https://i.postimg.cc/cCTXgZFv/Gemini-Generated-Image-vinf1fvinf1fvinf.png", 
-    alt: "Hackathon winners", title: "Internal Hackathon 3.0", 
-    desc: "24 hours of non-stop coding. Our internal hackathons push the team to experiment with AI, new frameworks, and out-of-the-box product ideas." 
+    alt: "Project Planning session", title: "Project Planning session", 
+    desc: "Our project planning sessions are where the magic begins. We gather around whiteboards, sketch out ideas, and map out our product roadmaps. It's a collaborative process that ensures everyone has a voice and a clear understanding of our goals." 
   },
   { 
     id: 10, category: "events", 
     src: "https://i.postimg.cc/CM8PHTQ8/DSC-0037.jpg", 
-    alt: "Hackathon winners", title: "Internal Hackathon 3.0", 
-    desc: "24 hours of non-stop coding. Our internal hackathons push the team to experiment with AI, new frameworks, and out-of-the-box product ideas." 
+    alt: "Cox's Bazar tour", title: "Cox's Bazar Team Tour", 
+    desc: "Our team took a well-deserved break to explore the beautiful Cox's Bazar region, bonding over shared experiences and creating lasting memories." 
   },
   { 
     id: 11, category: "events", 
     src: "https://i.postimg.cc/Hs632Yd7/Gemini-Generated-Image-87ntty87ntty87nt.png", 
-    alt: "Hackathon winners", title: "Internal Hackathon 3.0", 
-    desc: "24 hours of non-stop coding. Our internal hackathons push the team to experiment with AI, new frameworks, and out-of-the-box product ideas." 
+    alt: "Tree Plantation Program", title: "Tree Plantation Program", 
+    desc: "Our team participated in a tree plantation program to contribute to environmental sustainability and community development." 
   },
    { 
     id: 12, category: "events", 
@@ -77,8 +77,8 @@ const GALLERY_ITEMS = [
    { 
     id: 14, category: "events", 
     src: "https://i.postimg.cc/k4MBfmnq/Gemini-Generated-Image-rkbto9rkbto9rkbt.png", 
-    alt: "Hackathon winners", title: "Internal Hackathon 3.0", 
-    desc: "24 hours of non-stop coding. Our internal hackathons push the team to experiment with AI, new frameworks, and out-of-the-box product ideas." 
+    alt: "Office Working", title: "Office Working", 
+    desc: "Our team members are actively engaged in their daily work, contributing to the success of our projects and maintaining a high level of productivity." 
   }
 ];
 

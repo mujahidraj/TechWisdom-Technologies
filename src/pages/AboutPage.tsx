@@ -669,7 +669,7 @@ const AboutPage = () => {
                        onError={(e) => {e.currentTarget.src = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80'}}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                         <span className="text-white font-medium text-sm">Team Event 2024</span>
+                         <span className="text-white font-medium text-sm">{img.title}</span>
                       </div>
                   </AspectRatio>
                 </motion.div>
