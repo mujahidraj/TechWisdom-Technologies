@@ -232,27 +232,47 @@
   "team": [
     {
       "name": "Moizuddin Mohammad Mujahid Rashid (Raj)",
-      "role": "Founder & Full Stack Developer",
+      "role": "Managing Director & Full Stack Developer",
       "bio": "A forward-thinking digital strategist and technologist. I bridge the gap between complex engineering and high-level business goals, designing scalable web ecosystems that drive growth. My focus is on merging technical precision with strategic foresight to create digital solutions that deliver lasting impact.",
-      "image": "https://i.postimg.cc/d0LwTwVh/Raj-1.png"
+      "image": "https://i.postimg.cc/d0LwTwVh/Raj-1.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/moizuddin-mohammad-mujahid-rashid-raj-9aab65210/",
+        "email": "mujahid@techwisdom.site",
+        "portfolio": "https://mujahidraj.site/"
+      }
     },
     {
       "name": "Fidbi Hasan",
       "role": "CEO & Full Stack Developer",
       "bio": "Driving operational excellence through technical innovation. I balance strategic foresight with practitioner-level skill, ensuring that every business decision is grounded in technical feasibility. My focus is on scaling company infrastructure and revenue simultaneously, leveraging cutting-edge tools to accelerate market expansion.",
-      "image": "https://i.postimg.cc/vHbytWm9/Fidbi.png"
+      "image": "https://i.postimg.cc/vHbytWm9/Fidbi.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/fidbi-hasan-9aab65210/",
+        "email": "fidbi@techwisdom.site",
+        "portfolio": "https://fidbi-hasan-portfolio.vercel.app/"
+      }
     },
     {
       "name": "Asmaul Husna Mayad",
-      "role": "COO & CMS/WordPress Designer",
+      "role": "COO & WordPress| UIUX Designer",
       "bio": "Streamlining the digital delivery pipeline with expert oversight. I combine high-level operational planning with granular WordPress expertise to eliminate bottlenecks and mitigate risks. By fostering a culture of efficiency and quality, I ensure that projects are not just delivered, but are engineered for stability and performance.",
-      "image": "https://i.postimg.cc/NjnZSTQ6/mayad.jpg"
+      "image": "https://i.postimg.cc/ryj1yvvg/Gemini-Generated-Image-fr23tifr23tifr23.png",
+      "socials": {
+       "linkedin": "https://www.linkedin.com/in/asmaul-husna-mayad-9aab65210/",
+      "email": "mayad@techwisdom.site",
+      "portfolio": "https://asmaul-husna-mayad-portfolio.vercel.app/"
+      } 
     },
     {
       "name": "Alin Das",
-      "role": "CTO & UI/UX Designer",
+      "role": "CTO & lead Generator specialist",
       "bio": "Dedicated to humanizing technology through intuitive design and seamless functionality. I champion the user’s perspective throughout the entire product lifecycle, ensuring that every interaction is frictionless and meaningful. My goal is to transform static interfaces into dynamic experiences that foster engagement, loyalty, and delight.",
-      "image": "https://i.postimg.cc/Bbc0Gvm3/Alin.png"
+      "image": "https://i.postimg.cc/Bbc0Gvm3/Alin.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/alin-das-9aab65210/",
+        "email": "alin@techwisdom.site",
+        "portfolio": "https://alin-das-portfolio.vercel.app/"
+      }
     }
   ],
   "timeline": [

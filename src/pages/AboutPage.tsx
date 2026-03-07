@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { 
   Target, Compass, Flag, ImageIcon, ArrowDown, Calendar, User, 
   Lightbulb, Coffee, Globe, Briefcase, Heart, BookOpen, Zap, 
-  Smile, Laptop, Users, TrendingDown, XCircle, TrendingUp, CheckCircle 
+  Smile, Laptop, Users, TrendingDown, XCircle, TrendingUp, CheckCircle, 
+  Linkedin,
+  Mail
 } from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -445,6 +447,23 @@ const AboutPage = () => {
                       <p className="text-sm text-slate-400 leading-relaxed pt-2">
                         {member.bio}
                       </p>
+                      <div className="flex justify-center gap-4 mt-4">
+                        {member.socials?.linkedin && (
+                          <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                            <Linkedin size={20} />
+                          </a>
+                        )}
+                        {member.socials?.email && (
+                          <a href={`mailto:${member.socials.email}`} className="text-blue-400 hover:text-blue-300 transition-colors">
+                            <Mail size={20} />
+                          </a>
+                        )}
+                        {member.socials?.portfolio && (
+                          <a href={member.socials.portfolio} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                            <Globe size={20} />
+                          </a>
+                        )}
+                      </div>
                     </div>
 
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
