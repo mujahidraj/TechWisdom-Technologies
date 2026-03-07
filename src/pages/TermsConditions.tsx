@@ -234,7 +234,7 @@ const TermsConditions = () => {
                     <Mail className="text-blue-400 mt-1 shrink-0" size={20} />
                     <div>
                       <h4 className="text-white font-medium">Email</h4>
-                      <a href="mailto:twtech.contact@gmail.com" className="text-slate-400 hover:text-white transition-colors">twtech.contact@gmail.com</a>
+                      <a href="mailto:official@techwisdom.site" className="text-slate-400 hover:text-white transition-colors">official@techwisdom.site</a>
                     </div>
                   </div>
                   

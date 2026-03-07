@@ -90,7 +90,7 @@ const JobDetailsPage = () => {
   if (!job) return null; // Or a loading spinner
 
   const handleApplyClick = () => {
-    const email = "twtech.contact@gmail.com";
+    const email = "official@techwisdom.site"; // Replace with your actual email address
     const subject = encodeURIComponent(`Application for ${job.title}`);
     const body = encodeURIComponent(`Hi TechWisdom Team,\n\nI am writing to apply for the ${job.title} position.\n\nPlease find my resume attached.\n\nBest regards,`);
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;

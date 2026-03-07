@@ -113,7 +113,7 @@ const CareersPage = () => {
 
 
   const handleGeneralEmailClick = () => {
-    const email = "twtech.contact@gmail.com";
+    const email = "official@techwisdom.site"; // Replace with your actual email address
     const subject = encodeURIComponent("General Job Application / Resume Submission");
     const body = encodeURIComponent("Hi there,\n\nI am interested in joining your team. Please find my resume attached for your review.\n\nBest regards,");
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
