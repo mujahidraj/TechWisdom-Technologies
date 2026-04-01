@@ -1,4 +1,59 @@
-[ 
+[ {
+  "id": "kickz-sneaker-store",
+  "title": "KICKZ — Urban Sneaker Platform",
+  "category": "E-Commerce / Footwear",
+  "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A high-energy, modern Angular e-commerce platform featuring reactive state management with RxJS, dynamic routing, and bold streetwear aesthetics.",
+  "fullDescription": "KICKZ is a bold, visually striking e-commerce platform tailored for sneakerheads and urban streetwear enthusiasts. Built with modern Angular (TypeScript) and styled aggressively with Tailwind CSS, the site bypasses a traditional backend by rendering dynamic product grids and detail pages straight from a localized JSON architecture. The platform heavily utilizes RxJS for seamless, reactive state management—specifically using BehaviorSubjects to keep the shopping cart and navigation badge perfectly in sync in real-time. The UI focuses on high-impact visuals, featuring massive typography, stark contrasts, and subtle floating animations that make the footwear the absolute focal point.",
+  "liveLink": "https://kickz-demo.vercel.app/",
+  "techStack": [
+    "Angular (TypeScript)",
+    "Tailwind CSS",
+    "RxJS",
+    "Node.js (Build Automation)",
+    "HTML5/SCSS"
+  ],
+  "features": [
+    "Reactive Cart State Management (RxJS)",
+    "Local JSON Data Architecture",
+    "Dynamic Product Routing (/shop/:id)",
+    "High-Performance Image Rendering",
+    "Split-Layout Product Detail Pages",
+    "CSS Transform Animations (Floating Shoes)",
+    "Mobile-First Responsive Grid System",
+    "Automated Project Generation Script"
+  ],
+  "designUnique": "The aesthetic draws heavy inspiration from top-tier streetwear brands and sneaker drop platforms like Nike SNKRS. It utilizes a stark, high-contrast palette—pure white backgrounds contrasted with heavy, oversized black typography and sharp neon accent colors (like volt green or hyper crimson). The design intentionally breaks traditional grid constraints by making the shoe images massive, allowing them to overlap containers slightly. Subtle CSS rotations and floating hover states are applied to the transparent PNG shoe images to give the interface a dynamic, energetic feel.",
+  "developmentProcess": "The development workflow for this project was highly unconventional and automated. Instead of a manual setup, a custom Node.js build script was engineered using the `fs` module to autonomously generate the entire Angular project structure, inject component logic, configure Tailwind CSS, and populate the mock `data.json` database in a single command. The application's core logic relies heavily on RxJS; a centralized `CartService` was built using a `BehaviorSubject` to broadcast state changes across isolated components without prop drilling, ensuring the navigation cart badge updates instantaneously when a user adds a product from any route."
+},
+  {
+  "id": "nexus-store-gadgets",
+  "title": "Nexus Store — Premium Tech & Gadgets",
+  "category": "E-Commerce / Electronics",
+  "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An ultra-modern, high-tech e-commerce platform built with Next.js featuring a sleek dark mode UI, glassmorphism effects, and a tabbed interface for detailed product specifications.",
+  "fullDescription": "Nexus Store is a premium e-commerce experience designed specifically for tech enthusiasts and audiophiles. Operating completely without a traditional backend by dynamically fetching localized JSON data, the platform delivers lightning-fast performance and seamless routing using Next.js App Router. The UI is steeped in a cinematic, tech-focused aesthetic—defaulting to a deep dark mode with high-contrast electric accents and frosted glass (glassmorphism) navigation elements. Key features include an immersive hero section showcasing flagship devices, a structured product grid with sidebar filtering, and dynamic product pages equipped with accessible tabbed interfaces to organize complex technical specifications.",
+  "liveLink": "https://sprightly-alfajores-c80a0a.netlify.app/",
+  "techStack": [
+    "Next.js (App Router)",
+    "React",
+    "Tailwind CSS",
+    "Radix UI",
+    "Zustand"
+  ],
+  "features": [
+    "Local JSON Data Architecture",
+    "Frosted Glass (Glassmorphism) Navigation",
+    "Dark Mode Default UI with High-Contrast Accents",
+    "Radix UI Tabbed Interface for Tech Specs",
+    "Dynamic Product Routing (/store/[id])",
+    "Sleek Slide-Out Shopping Cart",
+    "Cinematic Hero Section for Featured Products",
+    "Sidebar Category Filtering"
+  ],
+  "designUnique": "The aesthetic is heavily inspired by premium consumer electronics brands. It leverages deep blacks and slate grays, utilizing transparent PNG product images with subtle drop-shadows to create a 'floating' 3D effect against the dark backgrounds. Glassmorphism is heavily used on the sticky navigation and cart overlays to create a sense of depth without visual clutter. The user experience prioritizes information density for tech lovers, using a clean, accessible tabbed interface on product pages to neatly separate product overviews, technical specs, and 'in-the-box' details.",
+  "developmentProcess": "Engineered using Next.js Server Components to rapidly parse the local `data.json` file, ensuring optimal SEO and instantaneous initial page loads. Interactive elements like the multi-tab specification layout, image galleries, and the Zustand-powered shopping cart were strictly isolated as client components ('use client'). Complex UI elements, such as the frosted glass overlays and accessible tab panels, were constructed using a combination of Tailwind's backdrop-blur utilities and Radix UI primitives, ensuring cross-browser accessibility and a highly polished look."
+},
   {
     "id": "thread-minimal-clothing",
     "title": "Thread & Form — Minimalist Apparel Store",
@@ -6,7 +61,7 @@
     "image": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200",
     "shortDescription": "A sleek, minimalist Next.js e-commerce platform fetching data seamlessly from local JSON, featuring dynamic routing, product filtering, and a slide-out cart.",
     "fullDescription": "Thread & Form is a modern, high-converting clothing e-commerce site built on Next.js App Router. Designed with a stark minimalist aesthetic, it uses Tailwind CSS to deliver a strictly mobile-responsive, lightning-fast shopping experience. All product data is dynamically fetched from a localized JSON file, completely bypassing the need for a traditional backend while maintaining robust frontend functionality. Features include a sticky navigation bar with real-time cart state, a responsive trending product grid, comprehensive category filtering on the catalog page, and dynamic product detail pages equipped with interactive color and size selectors.",
-    "liveLink": "https://resonant-narwhal-c743fd.netlify.app",
+    "liveLink": "https://resonant-narwhal-c743fd.netlify.app/",
     "techStack": [
       "Next.js (App Router)",
       "React",
