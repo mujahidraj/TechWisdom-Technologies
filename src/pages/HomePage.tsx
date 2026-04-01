@@ -48,8 +48,6 @@ import {Infinity as InfinityIcon, // Renamed to avoid TypeScript error,
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
-import { jsPDF } from 'jspdf';
-
 // --- UI COMPONENTS ---
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -437,8 +435,6 @@ const HomePage = () => {
   const [step, setStep] = useState(0);
   const [selections, setSelections] = useState<Record<string, any>>({});
   const [showResult, setShowResult] = useState(false);
-  const [requirementsInput, setRequirementsInput] = useState('');
-  const [assistantDraft, setAssistantDraft] = useState<{ scopeChecklist: string[]; timelineDraft: string[]; notes: string[] } | null>(null);
 
   // Calculation Logic
   const calculateScore = () => {
@@ -491,222 +487,6 @@ const HomePage = () => {
     timeline: selections.timeline?.label,
     scope: estimatorScope,
     estimateTotal,
-  };
-
-  const generateRequirementDraft = () => {
-    const normalizedText = requirementsInput.trim().toLowerCase();
-    if (!normalizedText) {
-      setAssistantDraft(null);
-      return;
-    }
-
-    const scopeRules = [
-      { keywords: ['ecommerce', 'cart', 'product', 'checkout', 'order'], checklist: 'E-Commerce flow: product catalog, cart, checkout, and order lifecycle' },
-      { keywords: ['booking', 'appointment', 'slot', 'schedule'], checklist: 'Booking engine: availability, booking flow, and automated confirmations' },
-      { keywords: ['dashboard', 'analytics', 'report', 'kpi'], checklist: 'Analytics dashboard with role-based reports and KPI snapshots' },
-      { keywords: ['admin', 'cms', 'manage', 'panel'], checklist: 'Admin/CMS module for content and operations management' },
-      { keywords: ['mobile', 'android', 'ios', 'app'], checklist: 'Mobile companion scope for iOS and Android users' },
-      { keywords: ['payment', 'bkash', 'nagad', 'sslcommerz'], checklist: 'Payment integration planning with local BD gateways' },
-      { keywords: ['auth', 'login', 'otp', 'role', 'permission'], checklist: 'Secure authentication with user roles and access control' },
-      { keywords: ['seo', 'speed', 'performance', 'rank'], checklist: 'Technical SEO and performance optimization baseline' },
-      { keywords: ['api', 'integration', 'crm', 'erp', 'whatsapp'], checklist: 'Third-party integration map (API, CRM/ERP, communication channels)' },
-    ];
-
-    const matchedChecklist = scopeRules
-      .filter((rule) => rule.keywords.some((keyword) => normalizedText.includes(keyword)))
-      .map((rule) => rule.checklist);
-
-    if (matchedChecklist.length === 0) {
-      matchedChecklist.push(
-        'Core business scope: branding-aligned UI, responsive pages, and conversion-focused user journeys',
-        'Technical scope: secure architecture, deployment pipeline, and maintenance readiness',
-      );
-    }
-
-    const urgencyScore = ['asap', 'urgent', 'rush', 'immediately'].some((word) => normalizedText.includes(word)) ? 1 : 0;
-    const complexityScore = matchedChecklist.length + (normalizedText.length > 500 ? 1 : 0);
-
-    let timelineBand = '6-8 weeks';
-    if (urgencyScore > 0) {
-      timelineBand = '3-5 weeks (priority delivery)';
-    } else if (complexityScore >= 6) {
-      timelineBand = '10-14 weeks';
-    } else if (complexityScore >= 4) {
-      timelineBand = '8-10 weeks';
-    }
-
-    const timelineDraft = [
-      `Discovery and scope workshop: Week 1`,
-      `UI/UX and architecture blueprint: Weeks 2-3`,
-      `Core development and integrations: Weeks 4-${urgencyScore > 0 ? '4' : '7'}`,
-      `QA, security checks, and launch prep: Final 1-2 weeks`,
-      `Estimated total timeline: ${timelineBand}`,
-    ];
-
-    const notes = [
-      'This draft is generated from your text and should be reviewed in a quick requirement workshop.',
-      'Priority delivery can shorten timeline but may require tighter decision turnaround from stakeholders.',
-    ];
-
-    setAssistantDraft({ scopeChecklist: matchedChecklist, timelineDraft, notes });
-  };
-
-  const applyAssistantToEstimator = () => {
-    const normalizedText = requirementsInput.trim().toLowerCase();
-    if (!normalizedText) {
-      return;
-    }
-
-    const scopeStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'scope');
-    const scopeOptions = (scopeStep?.options as Array<{ id: string; label: string; points?: number; icon?: string; description?: string }>) || [];
-
-    const scopeKeywordMap: Array<{ id: string; keywords: string[] }> = [
-      { id: 'auth', keywords: ['auth', 'login', 'otp', 'role', 'permission'] },
-      { id: 'payments', keywords: ['payment', 'bkash', 'nagad', 'sslcommerz', 'checkout'] },
-      { id: 'admin', keywords: ['admin', 'cms', 'manage', 'panel'] },
-      { id: 'analytics', keywords: ['analytics', 'report', 'kpi', 'dashboard'] },
-      { id: 'integrations', keywords: ['integration', 'api', 'crm', 'erp', 'whatsapp'] },
-      { id: 'seo', keywords: ['seo', 'rank', 'speed', 'performance'] },
-      { id: 'mobile-app', keywords: ['mobile', 'android', 'ios', 'app'] },
-      { id: 'multi-language', keywords: ['multi-language', 'multilingual', 'bangla', 'english', 'translation'] },
-      { id: 'booking-engine', keywords: ['booking', 'appointment', 'schedule', 'slot'] },
-      { id: 'inventory', keywords: ['inventory', 'stock', 'warehouse', 'order management'] },
-      { id: 'notifications', keywords: ['notification', 'sms', 'email alert', 'whatsapp alert'] },
-      { id: 'audit', keywords: ['audit', 'activity log', 'compliance', 'history'] },
-      { id: 'ai-assistant', keywords: ['ai', 'assistant', 'smart', 'recommendation', 'automation'] },
-    ];
-
-    const matchedScopeIds = scopeKeywordMap
-      .filter((item) => item.keywords.some((keyword) => normalizedText.includes(keyword)))
-      .map((item) => item.id);
-
-    const matchedScopeOptions = scopeOptions.filter((option) => matchedScopeIds.includes(option.id));
-
-    const projectTypeStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'projectType');
-    const timelineStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'timeline');
-    const supportStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'supportPlan');
-
-    const projectTypeOptions = (projectTypeStep?.options as Array<{ id: string; label: string }>) || [];
-    const timelineOptions = (timelineStep?.options as Array<{ id: string; label: string }>) || [];
-    const supportOptions = (supportStep?.options as Array<{ id: string; label: string }>) || [];
-
-    const projectTypeId = normalizedText.includes('ecommerce') || normalizedText.includes('checkout') || normalizedText.includes('product')
-      ? 'ecommerce'
-      : normalizedText.includes('saas') || normalizedText.includes('erp')
-        ? 'saas-mvp'
-        : normalizedText.includes('dashboard') || normalizedText.includes('portal') || normalizedText.includes('workflow')
-          ? 'custom-app'
-          : 'business-site';
-
-    const timelineId = ['asap', 'urgent', 'rush', 'immediately'].some((word) => normalizedText.includes(word))
-      ? 'urgent'
-      : ['fast', 'quick', 'priority'].some((word) => normalizedText.includes(word))
-        ? 'priority'
-        : 'standard';
-
-    const supportId = normalizedText.includes('support') || normalizedText.includes('maintenance')
-      ? 'care-3m'
-      : 'handover';
-
-    const nextSelections: Record<string, any> = {
-      ...selections,
-      projectType: projectTypeOptions.find((option) => option.id === projectTypeId) || selections.projectType,
-      timeline: timelineOptions.find((option) => option.id === timelineId) || selections.timeline,
-      supportPlan: supportOptions.find((option) => option.id === supportId) || selections.supportPlan,
-    };
-
-    if (matchedScopeOptions.length > 0) {
-      nextSelections.scope = matchedScopeOptions;
-    }
-
-    setSelections(nextSelections);
-    setShowResult(false);
-
-    const estimatorSection = document.getElementById('estimator-tool');
-    if (estimatorSection) {
-      estimatorSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const downloadProposalPdf = () => {
-    const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-    const margin = 40;
-    let y = 50;
-
-    const addWrappedLines = (lines: string[], indent = 0) => {
-      lines.forEach((line) => {
-        const wrapped = doc.splitTextToSize(line, 515 - indent);
-        wrapped.forEach((row: string) => {
-          if (y > 760) {
-            doc.addPage();
-            y = 50;
-          }
-          doc.text(row, margin + indent, y);
-          y += 16;
-        });
-      });
-    };
-
-    doc.setFillColor(30, 64, 175);
-    doc.rect(0, 0, 595, 85, 'F');
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(22);
-    doc.text('TechWisdom Proposal Outline', margin, 40);
-    doc.setFontSize(11);
-    doc.text(`Generated: ${new Date().toLocaleDateString('en-BD')}`, margin, 62);
-
-    doc.setTextColor(15, 23, 42);
-    y = 115;
-    doc.setFontSize(14);
-    doc.text('Estimator Snapshot', margin, y);
-    y += 22;
-    doc.setFontSize(11);
-
-    const selectedSingles = extendedEstimatorSteps
-      .filter((stepItem) => stepItem.type === 'single')
-      .map((stepItem) => {
-        const selected = selections[stepItem.key];
-        return selected ? `${stepItem.title}: ${selected.label}` : null;
-      })
-      .filter((line): line is string => Boolean(line));
-
-    addWrappedLines([
-      `Estimated budget range: ${formatEstimatorBDT(estimateLowerBound)} - ${formatEstimatorBDT(estimateUpperBound)}`,
-      ...selectedSingles,
-      `Selected feature scope: ${estimatorScope.length > 0 ? estimatorScope.join(', ') : 'None selected'}`,
-    ]);
-
-    y += 8;
-    doc.setFontSize(14);
-    doc.text('AI Requirement Draft', margin, y);
-    y += 22;
-    doc.setFontSize(11);
-
-    if (assistantDraft) {
-      addWrappedLines(['Scope checklist:']);
-      addWrappedLines(assistantDraft.scopeChecklist.map((item) => `- ${item}`), 14);
-      y += 6;
-      addWrappedLines(['Timeline draft:']);
-      addWrappedLines(assistantDraft.timelineDraft.map((item) => `- ${item}`), 14);
-      y += 6;
-      addWrappedLines(['Notes:']);
-      addWrappedLines(assistantDraft.notes.map((item) => `- ${item}`), 14);
-    } else {
-      addWrappedLines(['AI requirement assistant output not generated yet.']);
-    }
-
-    y += 10;
-    doc.setFontSize(14);
-    doc.text('Next Steps', margin, y);
-    y += 22;
-    doc.setFontSize(11);
-    addWrappedLines([
-      '- Validate this draft in a 30-minute requirement workshop',
-      '- Finalize scope and timeline with stakeholders',
-      '- Confirm execution roadmap and kickoff plan',
-    ]);
-
-    doc.save('techwisdom-proposal-outline.pdf');
   };
 
   return (
@@ -994,78 +774,7 @@ const HomePage = () => {
           </div>
         </section>
 
-{/* ==================== 4.8 SEAMLESS INTEGRATIONS ==================== */}
-        <section id="ai-requirement-assistant" className="py-24 bg-transparent border-t border-white/5">
-          <div className="container px-4">
-            <div className="text-center mb-10">
-              <Badge variant="outline" className="mb-4 border-emerald-500/30 bg-emerald-500/10 text-emerald-300">AI Requirement Assistant</Badge>
-              <h2 className="text-3xl font-bold text-white mb-3">Turn Idea Text into Scope Draft</h2>
-              <p className="text-slate-400">Paste your project idea in plain text and get a scope checklist and timeline draft instantly.</p>
-            </div>
-
-            <Card className="max-w-5xl mx-auto bg-slate-900/50 backdrop-blur-sm border border-white/10 shadow-2xl">
-              <CardContent className="p-6 md:p-8">
-                <div className="space-y-5">
-                  <textarea
-                    value={requirementsInput}
-                    onChange={(event) => setRequirementsInput(event.target.value)}
-                    placeholder="Example: We need an e-commerce site for Bangladesh with bKash payment, admin panel, analytics, and mobile app support."
-                    className="w-full min-h-[150px] rounded-2xl border border-white/10 bg-slate-950/50 text-white placeholder:text-slate-500 p-4 focus:outline-none focus:border-emerald-400"
-                  />
-
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button onClick={generateRequirementDraft} className="bg-blue-600 hover:bg-blue-500 text-white">
-                      Generate Draft
-                    </Button>
-                    <Button onClick={applyAssistantToEstimator} className="bg-blue-600 hover:bg-blue-500 text-white">
-                      Apply to Estimator
-                    </Button>
-                    <Button
-                      className="bg-red-600 hover:bg-red-500 text-white border border-red-400/20"
-                      onClick={() => {
-                        setRequirementsInput('');
-                        setAssistantDraft(null);
-                      }}
-                    >
-                      Clear
-                    </Button>
-                  </div>
-
-                  {assistantDraft && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
-                      <div className="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
-                        <h4 className="text-white font-bold mb-3">Scope Checklist</h4>
-                        <ul className="space-y-2 text-sm text-slate-300">
-                          {assistantDraft.scopeChecklist.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <CheckCircle2 size={16} className="text-emerald-400 mt-0.5 shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
-                        <h4 className="text-white font-bold mb-3">Timeline Draft</h4>
-                        <ul className="space-y-2 text-sm text-slate-300">
-                          {assistantDraft.timelineDraft.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <Clock size={16} className="text-blue-400 mt-0.5 shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-
-
-
+ 
 {/* ==================== 5. PREMIUM AUDIO TESTIMONIALS ==================== */}
         <section className="py-24 bg-transparent relative overflow-hidden">
           {/* Subtle background effects */}
@@ -1444,9 +1153,6 @@ const HomePage = () => {
                           {originalEstimator.result.buttonText}
                         </Button>
                       </Link>
-                      <Button onClick={downloadProposalPdf} className="mt-3 w-full max-w-xs bg-blue-600 hover:bg-blue-500 text-white">
-                        Download Branded Proposal PDF
-                      </Button>
                       <Button variant="link" onClick={() => { setShowResult(false); setStep(0); setSelections({}); }} className="mt-4 text-slate-500 hover:text-slate-300">
                         Start Over
                       </Button>

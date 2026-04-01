@@ -16,9 +16,11 @@ import {
   CalendarDays
 } from 'lucide-react';
 import data from '@/data.json'; 
+import RequirementAssistantDialog from './RequirementAssistantDialog';
 
 const FloatingSpeedButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [assistantOpen, setAssistantOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,16 +42,7 @@ const FloatingSpeedButton = () => {
 
   const handleAiAssistantClick = () => {
     setIsOpen(false);
-    if (location.pathname === '/') {
-      const element = document.getElementById('ai-requirement-assistant');
-      if (element) element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById('ai-requirement-assistant');
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
-      }, 500);
-    }
+    setAssistantOpen(true);
   };
 
   const ACTIONS = [
@@ -136,6 +129,11 @@ const FloatingSpeedButton = () => {
       
       {/* --- POPUP MENU ITEMS --- */}
       <AnimatePresence>
+
+      <RequirementAssistantDialog
+        open={assistantOpen}
+        onOpenChange={setAssistantOpen}
+      />
         {isOpen && (
           <div className="grid grid-cols-2 gap-3 mb-2 ml-1 max-w-[320px]">
             {ACTIONS.map((item, index) => (
