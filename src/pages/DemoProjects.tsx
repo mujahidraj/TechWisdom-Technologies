@@ -65,14 +65,36 @@ const InteractiveBackground = () => {
 };
 
 const DemoProjects = () => {
+  const PROJECTS_PER_PAGE = 12;
+
   // 👇 DIRECT USAGE OF IMPORTED ARRAY
   const categories = ['All', ...new Set(demoProjects.map(item => item.category))];
   const [activeCategory, setActiveCategory] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const filteredProjects = activeCategory === 'All' 
     ? demoProjects 
     : demoProjects.filter(project => project.category === activeCategory);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
+
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * PROJECTS_PER_PAGE,
+    currentPage * PROJECTS_PER_PAGE,
+  );
+
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [currentPage, totalPages]);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -221,7 +243,10 @@ const DemoProjects = () => {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => {
+                  setActiveCategory(cat);
+                  setCurrentPage(1);
+                }}
                 className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   activeCategory === cat
                     ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
@@ -236,7 +261,7 @@ const DemoProjects = () => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project, i) => (
+              {paginatedProjects.map((project, i) => (
                 <motion.div
                   layout
                   key={project.id}
@@ -305,6 +330,44 @@ const DemoProjects = () => {
               ))}
             </AnimatePresence>
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-20">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 rounded-xl border border-white/10 bg-slate-900/60 text-slate-200 font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800/80 transition-colors"
+              >
+                Previous
+              </button>
+
+              {pageNumbers.map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 rounded-xl text-sm font-bold border transition-colors ${
+                    currentPage === page
+                      ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/30'
+                      : 'bg-slate-900/60 border-white/10 text-slate-300 hover:bg-slate-800/80'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                type="button"
+                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 rounded-xl border border-white/10 bg-slate-900/60 text-slate-200 font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800/80 transition-colors"
+              >
+                Next
+              </button>
+            </div>
+          )}
 
           {/* --- CUSTOM DEMO REQUEST CTA --- */}
           <div className="relative rounded-3xl bg-gradient-to-r from-slate-900 to-blue-950 overflow-hidden shadow-2xl shadow-blue-900/20 mb-24 border border-white/10">
