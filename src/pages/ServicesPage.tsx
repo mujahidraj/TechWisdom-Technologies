@@ -626,6 +626,11 @@ const ServicesPage = () => {
                       Get Started Today
                     </Button>
                   </Link>
+                  <Link to="/contact#live-walkthrough" className="inline-block">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-14 text-lg font-semibold shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
+                      Book Live Walkthrough
+                    </Button>
+                  </Link>
                   
                   {/* --- FIXED: Added Link for Case Studies --- */}
                   <Link to="/demo-projects">

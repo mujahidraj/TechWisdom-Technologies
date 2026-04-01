@@ -10,7 +10,10 @@ import {
   Calculator, 
   CreditCard, 
   LifeBuoy,   
-  Headphones 
+  Headphones,
+  Bot,
+  Layers,
+  CalendarDays
 } from 'lucide-react';
 import data from '@/data.json'; 
 
@@ -24,44 +27,85 @@ const FloatingSpeedButton = () => {
   const handleEstimatorClick = () => {
     setIsOpen(false);
     if (location.pathname === '/') {
-      const element = document.getElementById('estimator');
+      const element = document.getElementById('estimator-tool');
       if (element) element.scrollIntoView({ behavior: 'smooth' });
     } else {
       navigate('/');
       setTimeout(() => {
-        const element = document.getElementById('estimator');
+        const element = document.getElementById('estimator-tool');
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
+  };
+
+  const handleAiAssistantClick = () => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      const element = document.getElementById('ai-requirement-assistant');
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('ai-requirement-assistant');
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 500);
     }
   };
 
   const ACTIONS = [
+    {
+      id: 'ai-assistant',
+      label: 'AI Assistant',
+      icon: Bot,
+      gradient: 'from-blue-600 to-cyan-500',
+      action: handleAiAssistantClick,
+    },
     { 
       id: 'estimator', 
       label: 'Cost Estimator', 
       icon: Calculator, 
-      gradient: 'from-purple-600 to-indigo-600', 
+      gradient: 'from-blue-600 to-indigo-600', 
       action: handleEstimatorClick 
+    },
+    {
+      id: 'live-walkthrough',
+      label: 'Book Walkthrough',
+      icon: CalendarDays,
+      gradient: 'from-blue-600 to-cyan-500',
+      action: () => {
+        setIsOpen(false);
+        navigate('/contact#live-walkthrough');
+      },
+    },
+    {
+      id: 'demo-compare',
+      label: 'Demo Compare',
+      icon: Layers,
+      gradient: 'from-blue-600 to-indigo-600',
+      action: () => {
+        setIsOpen(false);
+        navigate('/demo-projects');
+      },
     },
     { 
       id: 'pricing', 
       label: 'Pricing Plans', 
       icon: CreditCard, 
-      gradient: 'from-emerald-500 to-teal-600', 
+      gradient: 'from-blue-600 to-indigo-600', 
       action: () => { setIsOpen(false); navigate('/pricing'); } 
     },
     { 
       id: 'support', 
       label: 'Get Support', 
       icon: LifeBuoy, 
-      gradient: 'from-red-500 to-pink-600', 
+      gradient: 'from-blue-600 to-indigo-600', 
       action: () => { setIsOpen(false); navigate('/contact'); } 
     },
     { 
       id: 'quote', 
       label: 'Request Quote', 
       icon: FileText, 
-      gradient: 'from-blue-600 to-cyan-500', 
+      gradient: 'from-blue-600 to-indigo-600', 
       action: () => { setIsOpen(false); navigate('/contact'); } 
     },
     { 
@@ -93,7 +137,7 @@ const FloatingSpeedButton = () => {
       {/* --- POPUP MENU ITEMS --- */}
       <AnimatePresence>
         {isOpen && (
-          <div className="flex flex-col items-start gap-3 mb-2 ml-1">
+          <div className="grid grid-cols-2 gap-3 mb-2 ml-1 max-w-[320px]">
             {ACTIONS.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -106,7 +150,7 @@ const FloatingSpeedButton = () => {
                   damping: 20,
                   delay: 0.05 + (index * 0.03) 
                 }}
-                className="flex items-center gap-3 cursor-pointer group"
+                className="flex items-center gap-2 cursor-pointer group"
                 onClick={item.action}
               >
                 {/* Icon Button */}
@@ -116,7 +160,7 @@ const FloatingSpeedButton = () => {
                 </div>
 
                 {/* Glassmorphic Label */}
-                <div className="px-3 py-1.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/10 text-slate-200 text-xs font-bold shadow-xl group-hover:bg-slate-800/80 group-hover:text-white group-hover:border-white/20 transition-all origin-left whitespace-nowrap">
+                <div className="px-2.5 py-1.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/10 text-slate-200 text-[11px] font-bold shadow-xl group-hover:bg-slate-800/80 group-hover:text-white group-hover:border-white/20 transition-all origin-left whitespace-nowrap">
                   {item.label}
                 </div>
               </motion.div>

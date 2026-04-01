@@ -368,6 +368,11 @@ const WorkPage = () => {
                       Start a Project
                     </Button>
                   </Link>
+                  <Link to="/contact#live-walkthrough">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white h-14 px-8 text-lg font-semibold rounded-full shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
+                      Book Live Walkthrough
+                    </Button>
+                  </Link>
                   <Link to="/contact">
                     <Button size="lg" variant="outline" className="text-white border-white/10 bg-white/5 hover:bg-white/10 h-14 px-8 text-lg font-semibold rounded-full backdrop-blur-sm">
                       Contact Us

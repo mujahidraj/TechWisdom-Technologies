@@ -475,6 +475,35 @@ const PricingPage = () => {
           </div>
         </section>
 
+        {/* ==================== 4. CTA ==================== */}
+        <section className="py-24 bg-transparent border-t border-white/5">
+          <div className="container px-4 md:px-6">
+            <div className="relative rounded-[2.5rem] bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 overflow-hidden px-6 py-20 text-center md:px-12 md:py-24 shadow-2xl backdrop-blur-xl">
+              <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+              <div className="relative z-10 max-w-3xl mx-auto space-y-8">
+                <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                  Ready to Start Your Project?
+                </h2>
+                <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
+                  Pick your package, then book a quick live walkthrough to finalize scope and timeline.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link to="/contact" className="inline-block">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-14 text-lg font-semibold shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
+                      Start Your Project Now
+                    </Button>
+                  </Link>
+                  <Link to="/contact#live-walkthrough" className="inline-block">
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 h-14 text-lg font-semibold shadow-[0_0_20px_rgba(37,99,235,0.3)] border border-blue-400/20">
+                      Book Live Walkthrough
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </Layout>
   );

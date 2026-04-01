@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Layout as LayoutIcon, Code2, Layers, MessageSquare, Plus, Minus, HelpCircle, 
   Sparkles, MonitorPlay, Smartphone, Palette, TrendingUp, Cpu, Server, PenTool, Eye,
-  
+  ExternalLink,
   Lock,
   BarChart3
 } from 'lucide-react';
@@ -67,13 +67,17 @@ const InteractiveBackground = () => {
 const DemoProjects = () => {
   const PROJECTS_PER_PAGE = 12;
   const GRID_SCROLL_OFFSET = 110;
+  const MAX_COMPARE_ITEMS = 3;
+  const COMPARE_STORAGE_KEY = 'demoProjects.compareIds';
 
   // 👇 DIRECT USAGE OF IMPORTED ARRAY
   const categories = ['All', ...new Set(demoProjects.map(item => item.category))];
   const [activeCategory, setActiveCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [compareIds, setCompareIds] = useState<string[]>([]);
   const projectsGridRef = useRef<HTMLDivElement | null>(null);
+  const compareSectionRef = useRef<HTMLDivElement | null>(null);
   const shouldScrollOnPageChangeRef = useRef(false);
 
   const filteredProjects = activeCategory === 'All' 
@@ -88,10 +92,44 @@ const DemoProjects = () => {
   );
 
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const compareProjects = compareIds
+    .map((projectId) => demoProjects.find((project) => project.id === projectId))
+    .filter((project): project is (typeof demoProjects)[number] => Boolean(project));
 
   useEffect(() => {
     setCurrentPage(1);
   }, [activeCategory]);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(COMPARE_STORAGE_KEY);
+      if (!raw) {
+        return;
+      }
+
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) {
+        return;
+      }
+
+      const validIds = parsed
+        .filter((value): value is string => typeof value === 'string')
+        .filter((id) => demoProjects.some((project) => project.id === id))
+        .slice(0, MAX_COMPARE_ITEMS);
+
+      setCompareIds(validIds);
+    } catch {
+      window.localStorage.removeItem(COMPARE_STORAGE_KEY);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(COMPARE_STORAGE_KEY, JSON.stringify(compareIds));
+    } catch {
+      // Ignore storage write failures (private mode, quota, etc.)
+    }
+  }, [compareIds]);
 
   useEffect(() => {
     if (currentPage > totalPages) {
@@ -118,6 +156,32 @@ const DemoProjects = () => {
     }
     shouldScrollOnPageChangeRef.current = true;
     setCurrentPage(nextPage);
+  };
+
+  const handleToggleCompare = (projectId: string) => {
+    setCompareIds((previousIds) => {
+      if (previousIds.includes(projectId)) {
+        return previousIds.filter((id) => id !== projectId);
+      }
+
+      if (previousIds.length >= MAX_COMPARE_ITEMS) {
+        return previousIds;
+      }
+
+      return [...previousIds, projectId];
+    });
+  };
+
+  const scrollToCompareSection = () => {
+    if (!compareSectionRef.current) {
+      return;
+    }
+
+    const compareTop = compareSectionRef.current.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: Math.max(0, compareTop - GRID_SCROLL_OFFSET),
+      behavior: 'smooth',
+    });
   };
 
   const toggleFaq = (index: number) => {
@@ -326,6 +390,24 @@ const DemoProjects = () => {
                           {project.category}
                         </span>
                       </div>
+
+                      {/* Compare Toggle */}
+                      <button
+                        type="button"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          handleToggleCompare(project.id);
+                        }}
+                        disabled={!compareIds.includes(project.id) && compareIds.length >= MAX_COMPARE_ITEMS}
+                        className={`absolute bottom-4 left-4 z-10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide rounded border transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                          compareIds.includes(project.id)
+                            ? 'bg-blue-600 text-white border-blue-500'
+                            : 'bg-slate-900/90 text-slate-200 border-white/20 hover:border-blue-400'
+                        }`}
+                      >
+                        {compareIds.includes(project.id) ? 'Selected' : 'Add to Compare'}
+                      </button>
                     </div>
 
                     {/* Card Body */}
@@ -393,6 +475,145 @@ const DemoProjects = () => {
             </div>
           )}
 
+          {/* Compare Tray */}
+          {compareIds.length > 0 && (
+            <div className="sticky bottom-4 z-30 mb-16 rounded-2xl border border-blue-500/30 bg-slate-900/90 backdrop-blur-xl shadow-2xl shadow-blue-500/10 p-4 md:p-5">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <p className="text-white font-bold text-sm md:text-base">
+                    Compare Tray: {compareIds.length}/{MAX_COMPARE_ITEMS} selected
+                  </p>
+                  <p className="text-slate-400 text-xs md:text-sm">
+                    Select at least 2 projects to unlock side-by-side comparison.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setCompareIds([])}
+                    className="px-4 py-2 rounded-xl border border-white/15 text-slate-200 hover:bg-white/5 transition-colors text-sm font-semibold"
+                  >
+                    Clear
+                  </button>
+                  <button
+                    type="button"
+                    onClick={scrollToCompareSection}
+                    disabled={compareProjects.length < 2}
+                    className="px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Compare Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Comparison Section */}
+          {compareProjects.length >= 2 && (
+            <div ref={compareSectionRef} className="mb-24 rounded-3xl border border-white/10 bg-slate-900/50 backdrop-blur-md overflow-hidden">
+              <div className="px-6 py-5 border-b border-white/10 bg-slate-950/40 flex items-center justify-between gap-3 flex-wrap">
+                <h3 className="text-xl md:text-2xl font-bold text-white">Project Comparison</h3>
+                <span className="text-xs md:text-sm text-slate-300 bg-slate-800/80 border border-white/10 px-3 py-1 rounded-full">
+                  {compareProjects.length} projects selected
+                </span>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="min-w-full text-left">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="p-4 md:p-5 text-slate-300 text-xs uppercase tracking-wider">Field</th>
+                      {compareProjects.map((project) => (
+                        <th key={project.id} className="p-4 md:p-5 min-w-[260px] align-top">
+                          <div className="space-y-2">
+                            <p className="text-white font-bold text-base md:text-lg leading-snug">{project.title}</p>
+                            <button
+                              type="button"
+                              onClick={() => handleToggleCompare(project.id)}
+                              className="text-xs font-semibold text-blue-300 hover:text-blue-200"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-white/5 align-top">
+                      <td className="p-4 md:p-5 text-slate-400 text-sm font-semibold">Category</td>
+                      {compareProjects.map((project) => (
+                        <td key={`${project.id}-category`} className="p-4 md:p-5 text-slate-200 text-sm">{project.category}</td>
+                      ))}
+                    </tr>
+
+                    <tr className="border-b border-white/5 align-top">
+                      <td className="p-4 md:p-5 text-slate-400 text-sm font-semibold">Short Description</td>
+                      {compareProjects.map((project) => (
+                        <td key={`${project.id}-description`} className="p-4 md:p-5 text-slate-300 text-sm leading-relaxed">{project.shortDescription}</td>
+                      ))}
+                    </tr>
+
+                    <tr className="border-b border-white/5 align-top">
+                      <td className="p-4 md:p-5 text-slate-400 text-sm font-semibold">Tech Stack</td>
+                      {compareProjects.map((project) => (
+                        <td key={`${project.id}-tech`} className="p-4 md:p-5">
+                          <div className="flex flex-wrap gap-2">
+                            {project.techStack.slice(0, 5).map((tech) => (
+                              <span key={`${project.id}-${tech}`} className="text-xs text-slate-200 bg-slate-800 border border-white/10 rounded-md px-2 py-1">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+
+                    <tr className="border-b border-white/5 align-top">
+                      <td className="p-4 md:p-5 text-slate-400 text-sm font-semibold">Top Features</td>
+                      {compareProjects.map((project) => (
+                        <td key={`${project.id}-features`} className="p-4 md:p-5">
+                          <ul className="space-y-2">
+                            {project.features.slice(0, 5).map((feature) => (
+                              <li key={`${project.id}-${feature}`} className="text-sm text-slate-300 leading-snug">
+                                • {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </td>
+                      ))}
+                    </tr>
+
+                    <tr className="align-top">
+                      <td className="p-4 md:p-5 text-slate-400 text-sm font-semibold">Actions</td>
+                      {compareProjects.map((project) => (
+                        <td key={`${project.id}-actions`} className="p-4 md:p-5">
+                          <div className="flex flex-col sm:flex-row gap-2">
+                            <Link
+                              to={`/demo-projects/${project.id}`}
+                              className="inline-flex items-center justify-center px-3 py-2 rounded-lg text-sm font-semibold bg-slate-800 text-slate-100 hover:bg-slate-700 transition-colors"
+                            >
+                              View Details
+                            </Link>
+                            <a
+                              href={project.liveLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-colors"
+                            >
+                              Live Demo <ExternalLink size={14} />
+                            </a>
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
           {/* --- CUSTOM DEMO REQUEST CTA --- */}
           <div className="relative rounded-3xl bg-gradient-to-r from-slate-900 to-blue-950 overflow-hidden shadow-2xl shadow-blue-900/20 mb-24 border border-white/10">
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
@@ -406,13 +627,22 @@ const DemoProjects = () => {
                   Tell us your requirements, and we'll build a tailored demo for you.
                 </p>
               </div>
-              <Link 
-                to="/contact" 
-                className="shrink-0 px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg transform hover:-translate-y-1 flex items-center gap-2"
-              >
-                <MessageSquare size={20} />
-                Request Custom Demo
-              </Link>
+              <div className="shrink-0 flex flex-col sm:flex-row gap-3">
+                <Link 
+                  to="/contact#live-walkthrough" 
+                  className="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-all shadow-lg transform hover:-translate-y-1 flex items-center gap-2"
+                >
+                  <MessageSquare size={20} />
+                  Book Live Walkthrough
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition-all shadow-lg transform hover:-translate-y-1 flex items-center gap-2"
+                >
+                  <MessageSquare size={20} />
+                  Request Custom Demo
+                </Link>
+              </div>
             </div>
           </div>
 

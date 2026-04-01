@@ -48,6 +48,7 @@ import {Infinity as InfinityIcon, // Renamed to avoid TypeScript error,
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
 import data from '@/data.json';
+import { jsPDF } from 'jspdf';
 
 // --- UI COMPONENTS ---
 import { Button } from '@/components/ui/button';
@@ -331,63 +332,131 @@ const HomePage = () => {
 
   // --- EXTENDED ESTIMATOR DATA ---
   const extendedEstimatorSteps = [
-    { ...originalEstimator.steps[0], type: 'single', key: 'platform' },
-    { ...originalEstimator.steps[1], type: 'single', key: 'design' },
-    { ...originalEstimator.steps[2], type: 'multi', key: 'features' },
     {
-      title: "Integrations",
-      description: "Do you need to connect with other systems?",
-      type: 'multi',
-      key: 'integrations',
+      title: 'Project Type',
+      description: 'What are you planning to build?',
+      type: 'single',
+      key: 'projectType',
       options: [
-        { id: "crm", label: "CRM (Salesforce/HubSpot)", icon: "Blocks", points: 15, description: "Sync customer data." },
-        { id: "chat", label: "Live Chat / Chatbot", icon: "Headphones", points: 10, description: "Automated support." },
-        { id: "maps", label: "Google Maps / Location", icon: "MapPin", points: 8, description: "Geolocation services." }
-      ]
+        { id: 'business-site', label: 'Business Website', icon: 'Globe', basePrice: 90000, description: 'Company profile, services, lead capture.' },
+        { id: 'ecommerce', label: 'E-Commerce Platform', icon: 'CreditCard', basePrice: 180000, description: 'Catalog, checkout, payment integrations.' },
+        { id: 'custom-app', label: 'Custom Web Application', icon: 'Server', basePrice: 260000, description: 'Dashboards, workflows, user roles.' },
+        { id: 'saas-mvp', label: 'SaaS / ERP MVP', icon: 'Blocks', basePrice: 420000, description: 'Multi-module product with scale-ready architecture.' },
+      ],
     },
     {
-      title: "Content & Growth",
-      description: "How do you want to handle content and visibility?",
-      type: 'multi',
-      key: 'marketing',
-      options: [
-        { id: "seo", label: "Advanced SEO Setup", icon: "BarChart", points: 12, description: "Rank higher on Google." },
-        { id: "copy", label: "Professional Copywriting", icon: "FileText", points: 20, description: "We write your content." },
-        { id: "social", label: "Social Media Integration", icon: "Megaphone", points: 5, description: "Feed & Sharing." }
-      ]
-    },
-    {
-      title: "Timeline",
-      description: "How fast do you need this delivered?",
+      title: 'Delivery Timeline',
+      description: 'How quickly do you want to launch?',
       type: 'single',
       key: 'timeline',
       options: [
-        { id: "standard", label: "Standard", icon: "Calendar", multiplier: 1, description: "Regular flexible pace." },
-        { id: "fast", label: "Expedited", icon: "Zap", multiplier: 1.25, description: "Priority development (+25%)." },
-        { id: "rush", label: "Rush / ASAP", icon: "Shield", multiplier: 1.5, description: "All hands on deck (+50%)." }
-      ]
-    }
+        { id: 'standard', label: 'Standard (6-10 weeks)', icon: 'Calendar', multiplier: 1, description: 'Balanced speed and budget.' },
+        { id: 'priority', label: 'Priority (4-6 weeks)', icon: 'Zap', multiplier: 1.22, description: 'Dedicated lane for faster execution.' },
+        { id: 'urgent', label: 'Urgent Sprint (2-4 weeks)', icon: 'Shield', multiplier: 1.45, description: 'High-intensity fast-track delivery.' },
+      ],
+    },
+    {
+      title: 'Solution Complexity',
+      description: 'How advanced should the system logic be?',
+      type: 'single',
+      key: 'complexity',
+      options: [
+        { id: 'core', label: 'Core Workflow', icon: 'Settings', multiplier: 1, description: 'Straightforward functionality and flows.' },
+        { id: 'advanced', label: 'Advanced Workflow', icon: 'Server', multiplier: 1.15, description: 'Custom workflows and role-specific logic.' },
+        { id: 'enterprise', label: 'Enterprise-grade Logic', icon: 'Shield', multiplier: 1.3, description: 'Complex operations and process automation.' },
+      ],
+    },
+    {
+      title: 'Expected User Scale',
+      description: 'How much usage are you planning for?',
+      type: 'single',
+      key: 'userScale',
+      options: [
+        { id: 'starter', label: 'Starter (Up to 5k users)', icon: 'Users', multiplier: 1, description: 'Ideal for new launches and pilots.' },
+        { id: 'growth', label: 'Growth (5k - 50k users)', icon: 'TrendingUp', multiplier: 1.12, description: 'Scaling with active usage growth.' },
+        { id: 'high', label: 'High Scale (50k+ users)', icon: 'Cloud', multiplier: 1.24, description: 'Performance-focused large traffic readiness.' },
+      ],
+    },
+    {
+      title: 'UI Experience Depth',
+      description: 'How polished should the interface experience be?',
+      type: 'single',
+      key: 'uxDepth',
+      options: [
+        { id: 'standard-ui', label: 'Standard UI', icon: 'LayoutTemplate', multiplier: 1, description: 'Clean, reliable and conversion-focused interface.' },
+        { id: 'premium-ui', label: 'Premium UI/UX', icon: 'Figma', multiplier: 1.1, description: 'Enhanced visuals, interactions, and flows.' },
+        { id: 'signature-ui', label: 'Signature Interaction Design', icon: 'Palette', multiplier: 1.2, description: 'Highly customized motion and brand experience.' },
+      ],
+    },
+    {
+      title: 'Content Readiness',
+      description: 'How ready is your content for launch?',
+      type: 'single',
+      key: 'contentReadiness',
+      options: [
+        { id: 'ready', label: 'Content Ready', icon: 'CheckCircle', multiplier: 0.95, description: 'Text/media already available and organized.' },
+        { id: 'partial', label: 'Partially Ready', icon: 'FileText', multiplier: 1, description: 'Some content exists, more needed during build.' },
+        { id: 'full-support', label: 'Need Full Content Support', icon: 'Megaphone', multiplier: 1.12, description: 'Need strategy, writing, and structure support.' },
+      ],
+    },
+    {
+      title: 'Post-launch Support',
+      description: 'What support level do you want after go-live?',
+      type: 'single',
+      key: 'supportPlan',
+      options: [
+        { id: 'handover', label: 'Handover Only', icon: 'ArrowRight', points: 0, description: 'Project handoff with documentation only.' },
+        { id: 'care-3m', label: '3-Month Care Plan', icon: 'Headphones', points: 10, description: 'Stability support and optimization updates.' },
+        { id: 'care-6m', label: '6-Month Growth Plan', icon: 'Rocket', points: 18, description: 'Priority fixes and iterative improvements.' },
+      ],
+    },
+    {
+      title: 'Feature Scope',
+      description: 'Select the capabilities you need.',
+      type: 'multi',
+      key: 'scope',
+      options: [
+        { id: 'auth', label: 'Authentication & User Roles', icon: 'Lock', points: 25, description: 'Secure login, permissions, access control.' },
+        { id: 'payments', label: 'Payment Integration (bKash/Nagad/SSLCommerz)', icon: 'CreditCard', points: 30, description: 'Online payment collection and order flow.' },
+        { id: 'admin', label: 'Admin Panel / CMS', icon: 'Blocks', points: 32, description: 'Content and operational management tools.' },
+        { id: 'analytics', label: 'Business Dashboard & Reports', icon: 'BarChart', points: 26, description: 'Insights and performance tracking.' },
+        { id: 'integrations', label: 'External APIs & Automation', icon: 'Headphones', points: 22, description: 'Connect CRM, email, WhatsApp, and more.' },
+        { id: 'seo', label: 'SEO + Performance Optimization', icon: 'FileText', points: 18, description: 'Technical SEO and speed tuning.' },
+        { id: 'mobile-app', label: 'Mobile App Companion (iOS/Android)', icon: 'Smartphone', points: 36, description: 'Extend experience to mobile users.' },
+        { id: 'multi-language', label: 'Multi-language Support', icon: 'Globe', points: 14, description: 'Serve users in Bangla and English.' },
+        { id: 'booking-engine', label: 'Booking / Appointment Engine', icon: 'Calendar', points: 24, description: 'Scheduling, slots, confirmations.' },
+        { id: 'inventory', label: 'Inventory & Order Management', icon: 'Server', points: 28, description: 'Stock, order lifecycle, fulfillment.' },
+        { id: 'notifications', label: 'SMS/Email/WhatsApp Notifications', icon: 'Megaphone', points: 16, description: 'Real-time customer communication.' },
+        { id: 'audit', label: 'Audit Logs & Activity Tracking', icon: 'Shield', points: 15, description: 'Track critical actions for compliance.' },
+        { id: 'ai-assistant', label: 'AI Assistant / Smart Suggestions', icon: 'Brain', points: 20, description: 'AI-powered recommendation layer.' },
+      ],
+    },
   ];
 
   // Cost Estimator State
   const [step, setStep] = useState(0);
   const [selections, setSelections] = useState<Record<string, any>>({});
   const [showResult, setShowResult] = useState(false);
+  const [requirementsInput, setRequirementsInput] = useState('');
+  const [assistantDraft, setAssistantDraft] = useState<{ scopeChecklist: string[]; timelineDraft: string[]; notes: string[] } | null>(null);
 
   // Calculation Logic
   const calculateScore = () => {
-    let score = 3000;
-    if (selections.platform) score *= selections.platform.multiplier || 1;
-    if (selections.design) score *= selections.design.multiplier || 1;
-    if (selections.timeline) score *= selections.timeline.multiplier || 1;
+    const basePrice = selections.projectType?.basePrice || 0;
+    const multiplierKeys = ['timeline', 'complexity', 'userScale', 'uxDepth', 'contentReadiness'];
+    const compoundedMultiplier = multiplierKeys.reduce((acc, key) => {
+      return acc * (selections[key]?.multiplier || 1);
+    }, 1);
+    const scopePoints = ((selections.scope as Array<{ points?: number }>) || []).reduce(
+      (acc, item) => acc + (item.points || 0),
+      0,
+    );
+    const supportPoints = selections.supportPlan?.points || 0;
 
-    const addOnKeys = ['features', 'integrations', 'marketing'];
-    addOnKeys.forEach(key => {
-      if (selections[key]) {
-        score += selections[key].reduce((acc: number, item: any) => acc + (item.points * 150 || 0), 0);
-      }
-    });
-    return Math.round(score);
+    const scopeCost = (scopePoints + supportPoints) * 1200;
+    const subtotal = (basePrice + scopeCost) * compoundedMultiplier;
+    const qualityAndManagement = subtotal * 0.13;
+    return Math.round((subtotal + qualityAndManagement) * 0.6);
   };
 
   const currentStepData = extendedEstimatorSteps[step];
@@ -409,6 +478,235 @@ const HomePage = () => {
     const key = currentStepData.key;
     if (currentStepData.type === 'single') return selections[key]?.id === optionId;
     return (selections[key] as Array<{ id: string }>)?.some((item: { id: string }) => item.id === optionId);
+  };
+
+  const estimateTotal = calculateScore();
+  const estimateLowerBound = Math.round(estimateTotal * 0.9);
+  const estimateUpperBound = Math.round(estimateTotal * 1.1);
+  const formatEstimatorBDT = (amount: number) => `BDT${amount.toLocaleString()}`;
+  const estimatorScope = ((selections.scope as Array<{ label: string }>) || []).map((item) => item.label);
+  const estimatorPrefill = {
+    source: 'home-estimator',
+    projectType: selections.projectType?.label,
+    timeline: selections.timeline?.label,
+    scope: estimatorScope,
+    estimateTotal,
+  };
+
+  const generateRequirementDraft = () => {
+    const normalizedText = requirementsInput.trim().toLowerCase();
+    if (!normalizedText) {
+      setAssistantDraft(null);
+      return;
+    }
+
+    const scopeRules = [
+      { keywords: ['ecommerce', 'cart', 'product', 'checkout', 'order'], checklist: 'E-Commerce flow: product catalog, cart, checkout, and order lifecycle' },
+      { keywords: ['booking', 'appointment', 'slot', 'schedule'], checklist: 'Booking engine: availability, booking flow, and automated confirmations' },
+      { keywords: ['dashboard', 'analytics', 'report', 'kpi'], checklist: 'Analytics dashboard with role-based reports and KPI snapshots' },
+      { keywords: ['admin', 'cms', 'manage', 'panel'], checklist: 'Admin/CMS module for content and operations management' },
+      { keywords: ['mobile', 'android', 'ios', 'app'], checklist: 'Mobile companion scope for iOS and Android users' },
+      { keywords: ['payment', 'bkash', 'nagad', 'sslcommerz'], checklist: 'Payment integration planning with local BD gateways' },
+      { keywords: ['auth', 'login', 'otp', 'role', 'permission'], checklist: 'Secure authentication with user roles and access control' },
+      { keywords: ['seo', 'speed', 'performance', 'rank'], checklist: 'Technical SEO and performance optimization baseline' },
+      { keywords: ['api', 'integration', 'crm', 'erp', 'whatsapp'], checklist: 'Third-party integration map (API, CRM/ERP, communication channels)' },
+    ];
+
+    const matchedChecklist = scopeRules
+      .filter((rule) => rule.keywords.some((keyword) => normalizedText.includes(keyword)))
+      .map((rule) => rule.checklist);
+
+    if (matchedChecklist.length === 0) {
+      matchedChecklist.push(
+        'Core business scope: branding-aligned UI, responsive pages, and conversion-focused user journeys',
+        'Technical scope: secure architecture, deployment pipeline, and maintenance readiness',
+      );
+    }
+
+    const urgencyScore = ['asap', 'urgent', 'rush', 'immediately'].some((word) => normalizedText.includes(word)) ? 1 : 0;
+    const complexityScore = matchedChecklist.length + (normalizedText.length > 500 ? 1 : 0);
+
+    let timelineBand = '6-8 weeks';
+    if (urgencyScore > 0) {
+      timelineBand = '3-5 weeks (priority delivery)';
+    } else if (complexityScore >= 6) {
+      timelineBand = '10-14 weeks';
+    } else if (complexityScore >= 4) {
+      timelineBand = '8-10 weeks';
+    }
+
+    const timelineDraft = [
+      `Discovery and scope workshop: Week 1`,
+      `UI/UX and architecture blueprint: Weeks 2-3`,
+      `Core development and integrations: Weeks 4-${urgencyScore > 0 ? '4' : '7'}`,
+      `QA, security checks, and launch prep: Final 1-2 weeks`,
+      `Estimated total timeline: ${timelineBand}`,
+    ];
+
+    const notes = [
+      'This draft is generated from your text and should be reviewed in a quick requirement workshop.',
+      'Priority delivery can shorten timeline but may require tighter decision turnaround from stakeholders.',
+    ];
+
+    setAssistantDraft({ scopeChecklist: matchedChecklist, timelineDraft, notes });
+  };
+
+  const applyAssistantToEstimator = () => {
+    const normalizedText = requirementsInput.trim().toLowerCase();
+    if (!normalizedText) {
+      return;
+    }
+
+    const scopeStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'scope');
+    const scopeOptions = (scopeStep?.options as Array<{ id: string; label: string; points?: number; icon?: string; description?: string }>) || [];
+
+    const scopeKeywordMap: Array<{ id: string; keywords: string[] }> = [
+      { id: 'auth', keywords: ['auth', 'login', 'otp', 'role', 'permission'] },
+      { id: 'payments', keywords: ['payment', 'bkash', 'nagad', 'sslcommerz', 'checkout'] },
+      { id: 'admin', keywords: ['admin', 'cms', 'manage', 'panel'] },
+      { id: 'analytics', keywords: ['analytics', 'report', 'kpi', 'dashboard'] },
+      { id: 'integrations', keywords: ['integration', 'api', 'crm', 'erp', 'whatsapp'] },
+      { id: 'seo', keywords: ['seo', 'rank', 'speed', 'performance'] },
+      { id: 'mobile-app', keywords: ['mobile', 'android', 'ios', 'app'] },
+      { id: 'multi-language', keywords: ['multi-language', 'multilingual', 'bangla', 'english', 'translation'] },
+      { id: 'booking-engine', keywords: ['booking', 'appointment', 'schedule', 'slot'] },
+      { id: 'inventory', keywords: ['inventory', 'stock', 'warehouse', 'order management'] },
+      { id: 'notifications', keywords: ['notification', 'sms', 'email alert', 'whatsapp alert'] },
+      { id: 'audit', keywords: ['audit', 'activity log', 'compliance', 'history'] },
+      { id: 'ai-assistant', keywords: ['ai', 'assistant', 'smart', 'recommendation', 'automation'] },
+    ];
+
+    const matchedScopeIds = scopeKeywordMap
+      .filter((item) => item.keywords.some((keyword) => normalizedText.includes(keyword)))
+      .map((item) => item.id);
+
+    const matchedScopeOptions = scopeOptions.filter((option) => matchedScopeIds.includes(option.id));
+
+    const projectTypeStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'projectType');
+    const timelineStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'timeline');
+    const supportStep = extendedEstimatorSteps.find((stepItem) => stepItem.key === 'supportPlan');
+
+    const projectTypeOptions = (projectTypeStep?.options as Array<{ id: string; label: string }>) || [];
+    const timelineOptions = (timelineStep?.options as Array<{ id: string; label: string }>) || [];
+    const supportOptions = (supportStep?.options as Array<{ id: string; label: string }>) || [];
+
+    const projectTypeId = normalizedText.includes('ecommerce') || normalizedText.includes('checkout') || normalizedText.includes('product')
+      ? 'ecommerce'
+      : normalizedText.includes('saas') || normalizedText.includes('erp')
+        ? 'saas-mvp'
+        : normalizedText.includes('dashboard') || normalizedText.includes('portal') || normalizedText.includes('workflow')
+          ? 'custom-app'
+          : 'business-site';
+
+    const timelineId = ['asap', 'urgent', 'rush', 'immediately'].some((word) => normalizedText.includes(word))
+      ? 'urgent'
+      : ['fast', 'quick', 'priority'].some((word) => normalizedText.includes(word))
+        ? 'priority'
+        : 'standard';
+
+    const supportId = normalizedText.includes('support') || normalizedText.includes('maintenance')
+      ? 'care-3m'
+      : 'handover';
+
+    const nextSelections: Record<string, any> = {
+      ...selections,
+      projectType: projectTypeOptions.find((option) => option.id === projectTypeId) || selections.projectType,
+      timeline: timelineOptions.find((option) => option.id === timelineId) || selections.timeline,
+      supportPlan: supportOptions.find((option) => option.id === supportId) || selections.supportPlan,
+    };
+
+    if (matchedScopeOptions.length > 0) {
+      nextSelections.scope = matchedScopeOptions;
+    }
+
+    setSelections(nextSelections);
+    setShowResult(false);
+
+    const estimatorSection = document.getElementById('estimator-tool');
+    if (estimatorSection) {
+      estimatorSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const downloadProposalPdf = () => {
+    const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+    const margin = 40;
+    let y = 50;
+
+    const addWrappedLines = (lines: string[], indent = 0) => {
+      lines.forEach((line) => {
+        const wrapped = doc.splitTextToSize(line, 515 - indent);
+        wrapped.forEach((row: string) => {
+          if (y > 760) {
+            doc.addPage();
+            y = 50;
+          }
+          doc.text(row, margin + indent, y);
+          y += 16;
+        });
+      });
+    };
+
+    doc.setFillColor(30, 64, 175);
+    doc.rect(0, 0, 595, 85, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(22);
+    doc.text('TechWisdom Proposal Outline', margin, 40);
+    doc.setFontSize(11);
+    doc.text(`Generated: ${new Date().toLocaleDateString('en-BD')}`, margin, 62);
+
+    doc.setTextColor(15, 23, 42);
+    y = 115;
+    doc.setFontSize(14);
+    doc.text('Estimator Snapshot', margin, y);
+    y += 22;
+    doc.setFontSize(11);
+
+    const selectedSingles = extendedEstimatorSteps
+      .filter((stepItem) => stepItem.type === 'single')
+      .map((stepItem) => {
+        const selected = selections[stepItem.key];
+        return selected ? `${stepItem.title}: ${selected.label}` : null;
+      })
+      .filter((line): line is string => Boolean(line));
+
+    addWrappedLines([
+      `Estimated budget range: ${formatEstimatorBDT(estimateLowerBound)} - ${formatEstimatorBDT(estimateUpperBound)}`,
+      ...selectedSingles,
+      `Selected feature scope: ${estimatorScope.length > 0 ? estimatorScope.join(', ') : 'None selected'}`,
+    ]);
+
+    y += 8;
+    doc.setFontSize(14);
+    doc.text('AI Requirement Draft', margin, y);
+    y += 22;
+    doc.setFontSize(11);
+
+    if (assistantDraft) {
+      addWrappedLines(['Scope checklist:']);
+      addWrappedLines(assistantDraft.scopeChecklist.map((item) => `- ${item}`), 14);
+      y += 6;
+      addWrappedLines(['Timeline draft:']);
+      addWrappedLines(assistantDraft.timelineDraft.map((item) => `- ${item}`), 14);
+      y += 6;
+      addWrappedLines(['Notes:']);
+      addWrappedLines(assistantDraft.notes.map((item) => `- ${item}`), 14);
+    } else {
+      addWrappedLines(['AI requirement assistant output not generated yet.']);
+    }
+
+    y += 10;
+    doc.setFontSize(14);
+    doc.text('Next Steps', margin, y);
+    y += 22;
+    doc.setFontSize(11);
+    addWrappedLines([
+      '- Validate this draft in a 30-minute requirement workshop',
+      '- Finalize scope and timeline with stakeholders',
+      '- Confirm execution roadmap and kickoff plan',
+    ]);
+
+    doc.save('techwisdom-proposal-outline.pdf');
   };
 
   return (
@@ -697,75 +995,71 @@ const HomePage = () => {
         </section>
 
 {/* ==================== 4.8 SEAMLESS INTEGRATIONS ==================== */}
-        <section className="py-24 bg-transparent border-t border-white/5">
+        <section id="ai-requirement-assistant" className="py-24 bg-transparent border-t border-white/5">
           <div className="container px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-                <Badge variant="outline" className="bg-blue-500/10 text-blue-300 border border-blue-500/20">Ecosystem</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-white">We play nicely with others.</h2>
-                <p className="text-slate-400 text-lg leading-relaxed">
-                  A powerful digital product doesn't live in isolation. We build robust APIs and webhooks to seamlessly connect your new platform with the tools you already use every day.
-                </p>
-                <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">
-                  {["Payment Gateways", "CRM Systems", "Email Marketing", "ERP Software", "Social APIs"].map((tag, i) => (
-                    <Badge key={i} variant="secondary" className="bg-slate-800 text-slate-300 border-white/5">{tag}</Badge>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="w-3/4 lg:w-2/5 relative h-[350px] flex items-center justify-center mt-10 lg:mt-0">
-                {/* Central Node */}
-                <div className="absolute z-20 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(37,99,235,0.5)] border-4 border-[#020617]">
-                  <Link2 size={32} className="text-white" />
-                </div>
-                
-                {/* 8 Orbiting/Connected Nodes */}
-                {[
-                  // Original 4 (Corners)
-                  { icon: CreditCard, color: "text-green-400", pos: "-top-0 left-1" },
-                  { icon: MessageSquare, color: "text-blue-400", pos: "top-0 -right-2" },
-                  { icon: Mail, color: "text-red-400", pos: "-bottom-0 right-0" },
-                  { icon: Database, color: "text-purple-400", pos: "bottom-0 -left-4" },
-                  
-                  // New 4 (Top, Bottom, Left, Right edges)
-                  { icon: ShoppingCart, color: "text-orange-400", pos: "top-1/5 -left-12 -translate-y-1/2" },
-                  { icon: Cloud, color: "text-sky-400", pos: "top-1/5 -right-12 -translate-y-1/2" },
-                  { icon: Activity, color: "text-yellow-400", pos: "-top-12 left-1/5 -translate-x-1/2" },
-                  { icon: Shield, color: "text-emerald-400", pos: "-bottom-12 left-1/5 -translate-x-1/2" },
-                ].map((node, i) => (
-                  <motion.div 
-                    key={i}
-                    animate={{ 
-                      y: [0, -10, 0],
-                    }}
-                    transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
-                      delay: i * 0.3, // staggered floating effect
-                      ease: "easeInOut" 
-                    }}
-                    className={`absolute z-10 w-14 h-14 bg-slate-800 border border-white/10 rounded-2xl flex items-center justify-center shadow-lg ${node.pos}`}
-                  >
-                    <node.icon size={24} className={node.color} />
-                  </motion.div>
-                ))}
-
-                {/* Connecting Lines (SVG) - Updated with 8 lines */}
-                <svg className="absolute inset-0 w-full h-full z-0 opacity-20" style={{ strokeDasharray: "4 4" }}>
-                  {/* Lines to corners */}
-                  <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="75%" y2="30%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="25%" y2="70%" stroke="white" strokeWidth="2" />
-                  
-                  {/* Lines to edges */}
-                  <line x1="50%" y1="50%" x2="0%" y2="50%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="100%" y2="50%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="50%" y2="0%" stroke="white" strokeWidth="2" />
-                  <line x1="50%" y1="50%" x2="50%" y2="100%" stroke="white" strokeWidth="2" />
-                </svg>
-              </div>
+            <div className="text-center mb-10">
+              <Badge variant="outline" className="mb-4 border-emerald-500/30 bg-emerald-500/10 text-emerald-300">AI Requirement Assistant</Badge>
+              <h2 className="text-3xl font-bold text-white mb-3">Turn Idea Text into Scope Draft</h2>
+              <p className="text-slate-400">Paste your project idea in plain text and get a scope checklist and timeline draft instantly.</p>
             </div>
+
+            <Card className="max-w-5xl mx-auto bg-slate-900/50 backdrop-blur-sm border border-white/10 shadow-2xl">
+              <CardContent className="p-6 md:p-8">
+                <div className="space-y-5">
+                  <textarea
+                    value={requirementsInput}
+                    onChange={(event) => setRequirementsInput(event.target.value)}
+                    placeholder="Example: We need an e-commerce site for Bangladesh with bKash payment, admin panel, analytics, and mobile app support."
+                    className="w-full min-h-[150px] rounded-2xl border border-white/10 bg-slate-950/50 text-white placeholder:text-slate-500 p-4 focus:outline-none focus:border-emerald-400"
+                  />
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button onClick={generateRequirementDraft} className="bg-blue-600 hover:bg-blue-500 text-white">
+                      Generate Draft
+                    </Button>
+                    <Button onClick={applyAssistantToEstimator} className="bg-blue-600 hover:bg-blue-500 text-white">
+                      Apply to Estimator
+                    </Button>
+                    <Button
+                      className="bg-red-600 hover:bg-red-500 text-white border border-red-400/20"
+                      onClick={() => {
+                        setRequirementsInput('');
+                        setAssistantDraft(null);
+                      }}
+                    >
+                      Clear
+                    </Button>
+                  </div>
+
+                  {assistantDraft && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+                      <div className="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+                        <h4 className="text-white font-bold mb-3">Scope Checklist</h4>
+                        <ul className="space-y-2 text-sm text-slate-300">
+                          {assistantDraft.scopeChecklist.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <CheckCircle2 size={16} className="text-emerald-400 mt-0.5 shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="rounded-2xl border border-white/10 bg-slate-950/40 p-5">
+                        <h4 className="text-white font-bold mb-3">Timeline Draft</h4>
+                        <ul className="space-y-2 text-sm text-slate-300">
+                          {assistantDraft.timelineDraft.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <Clock size={16} className="text-blue-400 mt-0.5 shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -1052,8 +1346,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        {/* ==================== 7. EXTENDED COST ESTIMATOR ==================== */}
-        <section className="py-24 bg-transparent">
+        {/* ==================== 8. EXTENDED COST ESTIMATOR ==================== */}
+        <section id="estimator-tool" className="py-24 bg-transparent">
           <div className="container max-w-5xl px-4">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4 border-blue-500/30 bg-blue-500/10 text-blue-400">Interactive Tool</Badge>
@@ -1066,7 +1360,7 @@ const HomePage = () => {
                 <div className="mb-8">
                   <Calculator className="w-10 h-10 text-blue-400 mb-6" />
                   <h3 className="text-xl font-bold mb-2">Estimate Cost</h3>
-                  <p className="text-slate-400 text-sm">Select options to get an instant figure.</p>
+                  <p className="text-slate-400 text-sm">Choose your requirements. We reveal only the final estimated total.</p>
                 </div>
                 <div className="space-y-4 overflow-y-auto pr-2 custom-scrollbar">
                   {extendedEstimatorSteps.map((s, i) => (
@@ -1138,18 +1432,21 @@ const HomePage = () => {
                       <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mb-6 border border-emerald-500/20">
                         <DollarSignIcon />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">Estimated Investment</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">Estimated Budget Range</h3>
                       <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-6">
-                        BDT{calculateScore().toLocaleString()}
+                        {formatEstimatorBDT(estimateLowerBound)} - {formatEstimatorBDT(estimateUpperBound)}
                       </div>
                       <p className="text-slate-400 mb-8 max-w-sm">
-                        {originalEstimator.result.title}. This is a rough estimate based on your selections.
+                        This is a planning range based on your selections. Final amount is confirmed after requirement workshop.
                       </p>
-                      <Link to="/contact" className="w-full max-w-xs">
+                      <Link to="/contact" state={{ estimatorPrefill }} className="w-full max-w-xs">
                         <Button size="lg" className="w-full bg-white text-slate-900 hover:bg-slate-200">
                           {originalEstimator.result.buttonText}
                         </Button>
                       </Link>
+                      <Button onClick={downloadProposalPdf} className="mt-3 w-full max-w-xs bg-blue-600 hover:bg-blue-500 text-white">
+                        Download Branded Proposal PDF
+                      </Button>
                       <Button variant="link" onClick={() => { setShowResult(false); setStep(0); setSelections({}); }} className="mt-4 text-slate-500 hover:text-slate-300">
                         Start Over
                       </Button>

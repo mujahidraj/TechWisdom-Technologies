@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Send, MessageSquare, ArrowRight, Clock, Sparkles } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Mail, Phone, MapPin, Send, MessageSquare, ArrowRight, Clock, Sparkles, CalendarDays, Clock3, BellRing, Globe2, CheckCircle2 } from 'lucide-react';
 import emailjs from '@emailjs/browser'; 
 
 import SEOHead from '@/components/seo/SEOHead';
@@ -17,6 +17,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { Calendar } from '@/components/ui/calendar';
 
 // --- INTERACTIVE BACKGROUND ---
 const InteractiveBackground = () => {
@@ -68,6 +69,19 @@ const InteractiveBackground = () => {
 
 const ContactPage = () => {
   const { contact, site } = data;
+  const location = useLocation();
+  const walkthroughSlots = [
+    { id: 'slot-1', label: '10:00 AM - 10:45 AM', start: '10:00' },
+    { id: 'slot-2', label: '11:30 AM - 12:15 PM', start: '11:30' },
+    { id: 'slot-3', label: '2:00 PM - 2:45 PM', start: '14:00' },
+    { id: 'slot-4', label: '4:00 PM - 4:45 PM', start: '16:00' },
+    { id: 'slot-5', label: '8:00 PM - 8:45 PM', start: '20:00' },
+  ];
+  const reminderOptions = [
+    { id: '15m', label: '15 minutes before' },
+    { id: '1h', label: '1 hour before' },
+    { id: '24h', label: '24 hours before' },
+  ];
   
   // State for form data
   const [formData, setFormData] = useState({ 
@@ -79,6 +93,233 @@ const ContactPage = () => {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [walkthroughDate, setWalkthroughDate] = useState<Date | undefined>(undefined);
+  const [walkthroughSlotId, setWalkthroughSlotId] = useState('');
+  const [walkthroughName, setWalkthroughName] = useState('');
+  const [walkthroughEmail, setWalkthroughEmail] = useState('');
+  const [walkthroughCompany, setWalkthroughCompany] = useState('');
+  const [walkthroughReminder, setWalkthroughReminder] = useState('24h');
+  const [walkthroughReminderChannel, setWalkthroughReminderChannel] = useState('Email');
+  const [userTimezone, setUserTimezone] = useState('Asia/Dhaka');
+  const [bookingError, setBookingError] = useState('');
+  const [confirmedBooking, setConfirmedBooking] = useState<{
+    name: string;
+    email: string;
+    company: string;
+    date: Date;
+    slotLabel: string;
+    slotStart: string;
+    timezone: string;
+    reminder: string;
+    reminderChannel: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const detectedTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (detectedTimezone) {
+      setUserTimezone(detectedTimezone);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (location.hash === '#live-walkthrough') {
+      setTimeout(() => {
+        const section = document.getElementById('live-walkthrough');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 120);
+    }
+  }, [location.hash]);
+
+  useEffect(() => {
+    const state = location.state as
+      | {
+          estimatorPrefill?: {
+            source?: string;
+            projectType?: string;
+            timeline?: string;
+            scope?: string[];
+            estimateTotal?: number;
+            milestones?: {
+              kickoff?: number;
+              midpoint?: number;
+              launch?: number;
+            };
+          };
+        }
+      | null;
+
+    const prefill = state?.estimatorPrefill;
+
+    if (!prefill || (prefill.source !== 'demo-projects-estimator' && prefill.source !== 'home-estimator')) {
+      return;
+    }
+
+    const formatBDT = (amount: number) =>
+      new Intl.NumberFormat('en-BD', {
+        style: 'currency',
+        currency: 'BDT',
+        maximumFractionDigits: 0,
+      })
+        .format(amount)
+        .replace('BDT', '৳')
+        .trim();
+
+    const pickBudgetBucket = (amount: number | undefined) => {
+      if (!amount) return '';
+      if (amount < 5000) return 'Under BDT5,000';
+      if (amount < 15000) return 'BDT5,000 - BDT15,000';
+      if (amount < 25000) return 'BDT15,000 - BDT25,000';
+      if (amount < 40000) return 'BDT25,000 - BDT40,000';
+      if (amount < 50000) return 'BDT40,000 - BDT50,000';
+      return 'BDT50,000+';
+    };
+
+    const service = prefill.projectType?.toLowerCase().includes('commerce') ? 'E-Commerce' : 'Web Development';
+    const budget = pickBudgetBucket(prefill.estimateTotal);
+    const scopeText = prefill.scope?.length ? prefill.scope.join(', ') : 'Not selected';
+
+    const sourceLabel = prefill.source === 'home-estimator' ? 'Home Page' : 'Demo Projects';
+
+    const messageLines = [
+      `Estimator Request (Auto-filled from ${sourceLabel}):`,
+      `Project Type: ${prefill.projectType ?? 'N/A'}`,
+      `Timeline: ${prefill.timeline ?? 'N/A'}`,
+      `Feature Scope: ${scopeText}`,
+      `Estimated Total: ${prefill.estimateTotal ? formatBDT(prefill.estimateTotal) : 'N/A'}`,
+      '',
+      'Please contact me with a detailed proposal, timeline breakdown, and technical implementation plan.',
+    ];
+
+    const hasMilestones = Boolean(
+      prefill.milestones?.kickoff || prefill.milestones?.midpoint || prefill.milestones?.launch,
+    );
+
+    if (hasMilestones) {
+      messageLines.splice(
+        5,
+        0,
+        'Preferred Payment Milestones:',
+        `- Kickoff: ${prefill.milestones?.kickoff ? formatBDT(prefill.milestones.kickoff) : 'N/A'}`,
+        `- Midpoint: ${prefill.milestones?.midpoint ? formatBDT(prefill.milestones.midpoint) : 'N/A'}`,
+        `- Launch: ${prefill.milestones?.launch ? formatBDT(prefill.milestones.launch) : 'N/A'}`,
+        '',
+      );
+    }
+
+    const message = messageLines.join('\n');
+
+    setFormData((previous) => ({
+      ...previous,
+      service,
+      budget,
+      message,
+    }));
+  }, [location.state]);
+
+  const formatDateReadable = (date: Date) => {
+    return date.toLocaleDateString('en-BD', {
+      weekday: 'short',
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
+  };
+
+  const buildICSContent = () => {
+    if (!confirmedBooking) {
+      return '';
+    }
+
+    const start = new Date(confirmedBooking.date);
+    const [hour, minute] = confirmedBooking.slotStart.split(':').map(Number);
+    start.setHours(hour, minute, 0, 0);
+    const end = new Date(start.getTime() + 45 * 60 * 1000);
+
+    const toICSDate = (date: Date) => {
+      const year = date.getUTCFullYear();
+      const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(date.getUTCDate()).padStart(2, '0');
+      const hours = String(date.getUTCHours()).padStart(2, '0');
+      const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+      const seconds = String(date.getUTCSeconds()).padStart(2, '0');
+      return `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
+    };
+
+    const triggerMap: Record<string, string> = {
+      '15m': '-PT15M',
+      '1h': '-PT1H',
+      '24h': '-PT24H',
+    };
+
+    const alarmTrigger = triggerMap[confirmedBooking.reminder] || '-PT24H';
+    const uid = `techwisdom-walkthrough-${start.getTime()}@techwisdom.local`;
+
+    return [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//TechWisdom//Live Walkthrough//EN',
+      'BEGIN:VEVENT',
+      `UID:${uid}`,
+      `DTSTAMP:${toICSDate(new Date())}`,
+      `DTSTART:${toICSDate(start)}`,
+      `DTEND:${toICSDate(end)}`,
+      'SUMMARY:TechWisdom Live Demo Walkthrough',
+      `DESCRIPTION:Live walkthrough session for ${confirmedBooking.name} (${confirmedBooking.company || 'N/A'})\\nTimezone: ${confirmedBooking.timezone}`,
+      'LOCATION:Google Meet (shared after confirmation)',
+      'BEGIN:VALARM',
+      `TRIGGER:${alarmTrigger}`,
+      'ACTION:DISPLAY',
+      'DESCRIPTION:Reminder - TechWisdom walkthrough starts soon',
+      'END:VALARM',
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+  };
+
+  const downloadInvite = () => {
+    const ics = buildICSContent();
+    if (!ics) {
+      return;
+    }
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'techwisdom-live-walkthrough.ics';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  };
+
+  const handleBookWalkthrough = (event: React.FormEvent) => {
+    event.preventDefault();
+    setBookingError('');
+
+    if (!walkthroughDate || !walkthroughSlotId || !walkthroughName.trim() || !walkthroughEmail.trim()) {
+      setBookingError('Please select date and time, and complete your name and email.');
+      return;
+    }
+
+    const selectedSlot = walkthroughSlots.find((slot) => slot.id === walkthroughSlotId);
+    if (!selectedSlot) {
+      setBookingError('Please choose a valid walkthrough slot.');
+      return;
+    }
+
+    setConfirmedBooking({
+      name: walkthroughName.trim(),
+      email: walkthroughEmail.trim(),
+      company: walkthroughCompany.trim(),
+      date: walkthroughDate,
+      slotLabel: selectedSlot.label,
+      slotStart: selectedSlot.start,
+      timezone: userTimezone,
+      reminder: walkthroughReminder,
+      reminderChannel: walkthroughReminderChannel,
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -278,7 +519,7 @@ const ContactPage = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                           <Label htmlFor="service" className="text-slate-300">{contact.form.serviceLabel}</Label>
-                          <Select onValueChange={(val) => setFormData({...formData, service: val})}>
+                          <Select value={formData.service} onValueChange={(val) => setFormData({...formData, service: val})}>
                             <SelectTrigger className="bg-slate-950/50 border-white/10 text-white h-12">
                               <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
@@ -291,7 +532,7 @@ const ContactPage = () => {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="budget" className="text-slate-300">{contact.form.budgetLabel}</Label>
-                          <Select onValueChange={(val) => setFormData({...formData, budget: val})}>
+                          <Select value={formData.budget} onValueChange={(val) => setFormData({...formData, budget: val})}>
                             <SelectTrigger className="bg-slate-950/50 border-white/10 text-white h-12">
                               <SelectValue placeholder="Select your budget" />
                             </SelectTrigger>
@@ -333,6 +574,197 @@ const ContactPage = () => {
                 </Card>
               </motion.div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* ==================== 3. LIVE WALKTHROUGH BOOKING ==================== */}
+        <section id="live-walkthrough" className="py-20 bg-transparent border-t border-white/10 relative z-20">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="mb-8 text-center">
+              <Badge variant="outline" className="mb-4 border-blue-500/30 bg-blue-500/10 text-blue-400">Live Session</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Book a Live Walkthrough</h2>
+              <p className="text-slate-300 max-w-2xl mx-auto">Pick your preferred date/time with timezone detection and reminder preferences.</p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-slate-900/60 backdrop-blur-md overflow-hidden">
+              <div className="px-6 md:px-8 py-6 border-b border-white/10 bg-slate-950/40 flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm text-slate-300">Session format: 45-minute Google Meet walkthrough</p>
+                <div className="inline-flex items-center gap-2 text-xs text-slate-300 bg-slate-800/80 border border-white/10 rounded-full px-3 py-1.5">
+                  <Globe2 size={14} className="text-blue-300" /> Timezone: {userTimezone}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-5">
+                <div className="lg:col-span-2 p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-white/10">
+                  <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                    <CalendarDays size={18} className="text-blue-300" /> Pick a date
+                  </h4>
+                  <div className="rounded-2xl border border-white/10 bg-slate-950/40 p-3">
+                    <Calendar
+                      mode="single"
+                      selected={walkthroughDate}
+                      onSelect={setWalkthroughDate}
+                      disabled={{ before: new Date(new Date().setHours(0, 0, 0, 0)) }}
+                      className="text-slate-100"
+                    />
+                  </div>
+
+                  <h4 className="text-white font-semibold mt-6 mb-3 flex items-center gap-2">
+                    <Clock3 size={18} className="text-blue-300" /> Available slots
+                  </h4>
+                  <div className="space-y-2">
+                    {walkthroughSlots.map((slot) => (
+                      <button
+                        key={slot.id}
+                        type="button"
+                        onClick={() => setWalkthroughSlotId(slot.id)}
+                        className={`w-full text-left px-4 py-2.5 rounded-xl border text-sm transition-colors ${
+                          walkthroughSlotId === slot.id
+                            ? 'border-blue-500 bg-blue-500/15 text-white'
+                            : 'border-white/10 bg-slate-900/40 text-slate-300 hover:border-white/20'
+                        }`}
+                      >
+                        {slot.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="lg:col-span-3 p-6 md:p-8">
+                  {!confirmedBooking ? (
+                    <form onSubmit={handleBookWalkthrough} className="space-y-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm text-slate-300 mb-2">Your name</label>
+                          <input
+                            value={walkthroughName}
+                            onChange={(event) => setWalkthroughName(event.target.value)}
+                            type="text"
+                            placeholder="Mujahid Raj"
+                            className="w-full h-11 px-3 rounded-xl border border-white/10 bg-slate-950/40 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-slate-300 mb-2">Email</label>
+                          <input
+                            value={walkthroughEmail}
+                            onChange={(event) => setWalkthroughEmail(event.target.value)}
+                            type="email"
+                            placeholder="you@company.com"
+                            className="w-full h-11 px-3 rounded-xl border border-white/10 bg-slate-950/40 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm text-slate-300 mb-2">Company (optional)</label>
+                        <input
+                          value={walkthroughCompany}
+                          onChange={(event) => setWalkthroughCompany(event.target.value)}
+                          type="text"
+                          placeholder="TechWisdom"
+                          className="w-full h-11 px-3 rounded-xl border border-white/10 bg-slate-950/40 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm text-slate-300 mb-2">Reminder time</label>
+                          <div className="space-y-2">
+                            {reminderOptions.map((option) => (
+                              <button
+                                key={option.id}
+                                type="button"
+                                onClick={() => setWalkthroughReminder(option.id)}
+                                className={`w-full px-3 py-2.5 rounded-xl border text-sm text-left transition-colors ${
+                                  walkthroughReminder === option.id
+                                    ? 'border-blue-500 bg-blue-500/15 text-white'
+                                    : 'border-white/10 bg-slate-900/40 text-slate-300 hover:border-white/20'
+                                }`}
+                              >
+                                {option.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-sm text-slate-300 mb-2">Reminder channel</label>
+                          <div className="space-y-2">
+                            {['Email', 'WhatsApp', 'SMS'].map((channel) => (
+                              <button
+                                key={channel}
+                                type="button"
+                                onClick={() => setWalkthroughReminderChannel(channel)}
+                                className={`w-full px-3 py-2.5 rounded-xl border text-sm text-left transition-colors ${
+                                  walkthroughReminderChannel === channel
+                                    ? 'border-blue-500 bg-blue-500/15 text-white'
+                                    : 'border-white/10 bg-slate-900/40 text-slate-300 hover:border-white/20'
+                                }`}
+                              >
+                                {channel}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {bookingError && (
+                        <p className="text-sm text-rose-300 bg-rose-500/10 border border-rose-500/30 px-3 py-2 rounded-lg">
+                          {bookingError}
+                        </p>
+                      )}
+
+                      <button
+                        type="submit"
+                        className="w-full h-12 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-colors"
+                      >
+                        Confirm Walkthrough Booking
+                      </button>
+                    </form>
+                  ) : (
+                    <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 md:p-6">
+                      <div className="flex items-center gap-2 mb-3 text-emerald-300">
+                        <CheckCircle2 size={20} />
+                        <p className="font-bold text-lg">Session Confirmed</p>
+                      </div>
+                      <div className="space-y-2 text-sm text-slate-200">
+                        <p><strong>Name:</strong> {confirmedBooking.name}</p>
+                        <p><strong>Email:</strong> {confirmedBooking.email}</p>
+                        <p><strong>Date:</strong> {formatDateReadable(confirmedBooking.date)}</p>
+                        <p><strong>Time:</strong> {confirmedBooking.slotLabel}</p>
+                        <p><strong>Timezone:</strong> {confirmedBooking.timezone}</p>
+                        <p><strong>Reminder:</strong> {reminderOptions.find((r) => r.id === confirmedBooking.reminder)?.label || '24 hours before'} via {confirmedBooking.reminderChannel}</p>
+                      </div>
+
+                      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button
+                          type="button"
+                          onClick={downloadInvite}
+                          className="h-11 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200 transition-colors"
+                        >
+                          Download Calendar Invite
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setConfirmedBooking(null);
+                            setBookingError('');
+                          }}
+                          className="h-11 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors"
+                        >
+                          Book Another Slot
+                        </button>
+                      </div>
+
+                      <div className="mt-4 inline-flex items-center gap-2 text-xs text-slate-300 bg-slate-900/60 border border-white/10 rounded-full px-3 py-1.5">
+                        <BellRing size={14} className="text-blue-300" /> Reminder settings saved for planning.
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </section>
