@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -66,12 +66,15 @@ const InteractiveBackground = () => {
 
 const DemoProjects = () => {
   const PROJECTS_PER_PAGE = 12;
+  const GRID_SCROLL_OFFSET = 110;
 
   // 👇 DIRECT USAGE OF IMPORTED ARRAY
   const categories = ['All', ...new Set(demoProjects.map(item => item.category))];
   const [activeCategory, setActiveCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const projectsGridRef = useRef<HTMLDivElement | null>(null);
+  const shouldScrollOnPageChangeRef = useRef(false);
 
   const filteredProjects = activeCategory === 'All' 
     ? demoProjects 
@@ -95,6 +98,27 @@ const DemoProjects = () => {
       setCurrentPage(totalPages);
     }
   }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    if (!shouldScrollOnPageChangeRef.current || !projectsGridRef.current) {
+      return;
+    }
+
+    const gridTop = projectsGridRef.current.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: Math.max(0, gridTop - GRID_SCROLL_OFFSET),
+      behavior: 'smooth',
+    });
+    shouldScrollOnPageChangeRef.current = false;
+  }, [currentPage]);
+
+  const handlePageChange = (nextPage: number) => {
+    if (nextPage === currentPage) {
+      return;
+    }
+    shouldScrollOnPageChangeRef.current = true;
+    setCurrentPage(nextPage);
+  };
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -259,7 +283,7 @@ const DemoProjects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div ref={projectsGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             <AnimatePresence mode="popLayout">
               {paginatedProjects.map((project, i) => (
                 <motion.div
@@ -336,7 +360,7 @@ const DemoProjects = () => {
             <div className="flex flex-wrap items-center justify-center gap-2 mb-20">
               <button
                 type="button"
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
                 disabled={currentPage === 1}
                 className="px-4 py-2 rounded-xl border border-white/10 bg-slate-900/60 text-slate-200 font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800/80 transition-colors"
               >
@@ -347,7 +371,7 @@ const DemoProjects = () => {
                 <button
                   key={page}
                   type="button"
-                  onClick={() => setCurrentPage(page)}
+                  onClick={() => handlePageChange(page)}
                   className={`w-10 h-10 rounded-xl text-sm font-bold border transition-colors ${
                     currentPage === page
                       ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/30'
@@ -360,7 +384,7 @@ const DemoProjects = () => {
 
               <button
                 type="button"
-                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                onClick={() => handlePageChange(Math.min(currentPage + 1, totalPages))}
                 disabled={currentPage === totalPages}
                 className="px-4 py-2 rounded-xl border border-white/10 bg-slate-900/60 text-slate-200 font-semibold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-800/80 transition-colors"
               >
