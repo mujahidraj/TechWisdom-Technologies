@@ -6,7 +6,7 @@
     "image": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200",
     "shortDescription": "A sleek, minimalist Next.js e-commerce platform fetching data seamlessly from local JSON, featuring dynamic routing, product filtering, and a slide-out cart.",
     "fullDescription": "Thread & Form is a modern, high-converting clothing e-commerce site built on Next.js App Router. Designed with a stark minimalist aesthetic, it uses Tailwind CSS to deliver a strictly mobile-responsive, lightning-fast shopping experience. All product data is dynamically fetched from a localized JSON file, completely bypassing the need for a traditional backend while maintaining robust frontend functionality. Features include a sticky navigation bar with real-time cart state, a responsive trending product grid, comprehensive category filtering on the catalog page, and dynamic product detail pages equipped with interactive color and size selectors.",
-    "liveLink": "https://thread-and-form-demo.vercel.app/",
+    "liveLink": "https://resonant-narwhal-c743fd.netlify.app",
     "techStack": [
       "Next.js (App Router)",
       "React",
@@ -34,7 +34,7 @@
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200",
     "shortDescription": "A vibrant, earthy digital farmer's market built with Next.js and Framer Motion, focusing on rapid grocery shopping with Quick Add functionality and smooth animations.",
     "fullDescription": "Harvest Direct reimagines the digital grocery experience. Moving away from sterile corporate layouts, this platform features an earthy, organic aesthetic using sage greens and warm off-whites. Built on Next.js and animated with Framer Motion, it provides a buttery-smooth UX tailored for speed. Shoppers can rapidly build their carts using 'Quick Add' controls directly on product cards. The application reads from a structured JSON file, dynamically rendering categories like Produce, Dairy, and Pantry, while showcasing farm sources and nutritional details on dynamic individual product pages.",
-    "liveLink": "https://harvest-direct-demo.vercel.app/",
+    "liveLink": "https://teal-vacherin-1acbb9.netlify.app/",
     "techStack": [
       "Next.js (App Router)",
       "React",
