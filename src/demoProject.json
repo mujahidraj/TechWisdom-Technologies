@@ -1,4 +1,33 @@
-[ {
+[ 
+{
+  "id": "aura-carat-react",
+  "title": "Aura & Carat — Luxury Jewelry Boutique",
+  "category": "E-Commerce / Luxury",
+  "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An ultra-luxury, editorial-style e-commerce platform featuring asymmetrical masonry layouts, Framer Motion parallax effects, and an interactive consultation booking system.",
+  "fullDescription": "Aura & Carat is a masterclass in high-end, editorial UI/UX design. Moving deliberately away from the standard, grid-heavy templates of traditional e-commerce, this React application functions more like a digital art gallery or a high-fashion magazine. Built with a luminous light theme utilizing warm creams, ivories, and elegant serif typography, the platform relies on Framer Motion to deliver slow, deliberate animations and parallax scrolling that evoke a sense of prestige and exclusivity. The frontend architecture manages complex client-side interactions, including a bespoke 'Engraving/Personalization' simulator and a global state for luxury consultation bookings.",
+  "liveLink": "https://effervescent-kheer-16d5d0.netlify.app/",
+  "techStack": [
+    "React 18",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router DOM",
+    "Context API"
+  ],
+  "features": [
+    "Editorial / Asymmetrical Masonry Layouts",
+    "Cinematic Parallax Scrolling & Fade Transitions",
+    "Interactive 'Engraving & Personalization' Simulator",
+    "Global 'Book a Consultation' Modal System",
+    "Dual Global State (Secure Cart & Wishlist)",
+    "Elegant Accordion UI for Product Specifications",
+    "Visual 'Ring Sizer' Interactive Guide",
+    "Luminous Light Theme with Custom Color Palette"
+  ],
+  "designUnique": "The UI design is a radical departure from standard conversion-optimized storefronts, focusing instead on brand storytelling and emotional resonance. It leverages massive amounts of negative space (whitespace) to allow high-resolution lifestyle and macro jewelry photography to breathe. The typography pairs classic, high-contrast serif headers with minimalist sans-serif body text. Interactions are intentionally slowed down; hover states are subtle and page transitions are buttery smooth, mimicking the careful, unhurried experience of shopping in a physical high-end boutique.",
+  "developmentProcess": "Engineered as a premium frontend showcase, the project utilizes Vite for rapid compilation and relies on a sophisticated local JSON architecture to handle complex luxury product variants (like carat weight, cut, and material). React's Context API manages the shopping bag, persistent wishlists, and the visibility state of the global consultation forms without prop drilling. Tailwind CSS was utilized extensively, specifically leveraging arbitrary values to nail the exact, subtle off-white and muted gold hex codes required for authentic luxury branding."
+},  
+{
   "id": "zenith-mobile-v2-react",
   "title": "Zenith Mobile — Enterprise Tech E-Commerce",
   "category": "E-Commerce / Electronics",
