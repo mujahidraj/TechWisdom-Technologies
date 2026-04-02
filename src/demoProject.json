@@ -1,4 +1,36 @@
-[ {
+[ 
+{
+  "id": "terroir-artisan-grocery",
+  "title": "Terroir — Artisan Provisions",
+  "category": "E-Commerce / Premium Food",
+  "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A cinematic, dark-mode artisan grocery app built in React 18 + Vite, featuring global cart state, a slide-out drawer, live search, multi-parameter filtering, and a full product detail experience — all driven by a structured local JSON database.",
+  "fullDescription": "Terroir is a premium farm-to-table grocery platform that rejects the sterile brightness of conventional e-commerce in favour of a deep, earthy aesthetic inspired by high-end culinary editorial. Built entirely on the client side with React 18, Vite, Tailwind CSS, and React Router DOM, the application manages all product relationships, filtering logic, and transactional state without any backend. The design language — Playfair Display serifs, DM Mono labels, deep charcoal and forest-green palettes, hair-line gap-grid layouts, and staggered fade-up animations — deliberately mirrors the visual grammar of luxury food magazines. Ten artisan products (Wagyu, Alba Truffle Oil, Heirloom Tomatoes, Jamón Ibérico, Parmigiano Reggiano, and more) are stored in a relational JSON structure that powers dynamic category filtering, algorithmic related-product mapping, and a live navbar search with instant results.",
+  "liveLink": "https://silly-bublanina-074e43.netlify.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "React Router DOM",
+    "Context API + useReducer"
+  ],
+  "features": [
+    "Global Cart State via Context API + useReducer (add, remove, update qty, clear)",
+    "Slide-Out Cart Drawer with quantity controls, line totals, and live item count badge",
+    "Live Navbar Search with instant dropdown results filtered across name, category, and origin",
+    "Multi-Parameter Shop Filtering: category tabs + sort (price, name, featured) + text search",
+    "Dynamic Related Products — algorithmically mapped by category and region of origin",
+    "Product Detail Pages with image gallery, provenance details, pairings, and qty selector",
+    "Quick Add on product grid cards with hover overlay and success micro-interaction",
+    "Staggered fade-up grid animations with per-card animation-delay for cinematic reveal",
+    "Body scroll-lock when cart drawer is open",
+    "Fully responsive across mobile, tablet, and desktop"
+  ],
+  "designUnique": "The aesthetic is deliberately cinematic and editorial — modelled on luxury food publications rather than grocery apps. The base palette of deep charcoal (#100d0a) and muted forest green is kept intentionally dark so that the natural colours of high-resolution food photography act as the sole visual accent. A gap-px grid technique using Tailwind creates seamless hair-line borders between product cards without any traditional border declarations. Typography pairs Playfair Display (elegant, slightly condensed serif for headings and prices) with DM Mono (utilitarian, precise for labels and metadata), creating a constant tension between warmth and precision. Micro-interactions are deliberately slow and subtle — 500–700ms transitions — reinforcing a sense of calm luxury rather than reactive urgency.",
+  "developmentProcess": "Architected as a fully self-contained client-side application, the project uses a structured local JSON file that mimics relational database logic: each product carries its own category, origin, badge, gallery array, pairings list, and provenance details, enabling the related-products engine to cross-reference by both category and geographic region at runtime. The CartContext is built on useReducer for predictable state transitions (ADD, REMOVE, UPDATE_QTY, CLEAR, OPEN_DRAWER, CLOSE_DRAWER), with all derived values (totalItems, totalPrice) computed inline to avoid stale state. React Router DOM handles three route levels — Home (/), Shop (/shop), and Product Detail (/shop/:id) — with useParams driving the detail page data lookup. Tailwind CSS is configured with a fully custom design token set (earth, forest, charcoal colour scales; Playfair + DM Sans + DM Mono font stacks; custom keyframe animations) defined in tailwind.config.js, keeping all styling decisions in a single source of truth."
+},
+  
+  {
   "id": "kickz-sneaker-store",
   "title": "KICKZ — Urban Sneaker Platform",
   "category": "E-Commerce / Footwear",
