@@ -1,5 +1,61 @@
 [ 
   {
+  "id": "hatbazaar-c2c-react",
+  "title": "HatBazaar — C2C Local Marketplace",
+  "category": "Marketplace",
+  "image": "https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A peer-to-peer marketplace platform utilizing a modern 'Bento Box' UI, featuring simulated seller dashboards, an 'Offer/Chat' interface, and an ad-posting workflow.",
+  "fullDescription": "HatBazaar is a dynamic Consumer-to-Consumer (C2C) marketplace designed to facilitate local trade. Radically shifting away from traditional B2C e-commerce layouts, this platform adopts a trending 'Bento Box' and soft-Neubrutalism aesthetic. By utilizing bold borders, solid drop shadows, and modular card systems, the UI organizes chaotic user-generated content into a highly digestible, dashboard-like experience. Built entirely in React 18, the application simulates a full two-sided marketplace architecture completely on the client side via a relational JSON data structure, linking item listings to specific seller profiles.",
+  "liveLink": "https://hatbazaar-c2c-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "React Router DOM",
+    "Context API"
+  ],
+  "features": [
+    "Modular 'Bento Box' UI Architecture",
+    "Simulated Multi-Step 'Post an Ad' Form Workflow",
+    "Two-Sided Data Relational Mapping (Sellers & Items)",
+    "Interactive User Dashboard (Listings & Inbox)",
+    "Simulated 'Make an Offer' & Chat UI",
+    "Soft-Neubrutalism Design System",
+    "Global Context State for Saved Items & Active Ads",
+    "Category-Driven Color Theming"
+  ],
+  "designUnique": "The UI eschews the standard, polished e-commerce look for something more utilitarian, playful, and distinct. Inspired by Neubrutalism, it employs stark contrasting borders, hard unblurred shadows, and distinct pastel color-coding for different market categories. The layout relies heavily on the 'Bento Box' concept, breaking information down into discrete, highly visual modules that adapt perfectly across mobile and desktop breakpoints, making the browsing experience feel like navigating a personalized operating system.",
+  "developmentProcess": "Developed to demonstrate proficiency in handling complex, multi-actor state management. React's Context API was utilized to build a robust simulated backend, allowing users to not only browse and save items but also simulate the creation of new listings that dynamically render into their personal dashboard. The local `data.json` was structured as a relational database, mapping unique `seller_id` tags from the listings array to corresponding seller profiles, proving an understanding of full-stack data relationships implemented purely on the frontend."
+},
+  {
+  "id": "chapterhouse-bookstore-react",
+  "title": "ChapterHouse — Digital Bookstore",
+  "category": "E-Commerce / Literature",
+  "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An immersive, 'Dark Academia' themed digital bookstore featuring complex multi-format pricing states, Framer Motion 3D book hover effects, and an interactive 'Read Excerpt' modal.",
+  "fullDescription": "ChapterHouse is a highly specialized e-commerce platform designed to replicate the tactile, cozy experience of browsing an independent bookstore. Stepping away from sterile retail templates, this application utilizes a rich 'Dark Academia' aesthetic, relying on deep espresso backgrounds, parchment-toned typography, and elegant Serif fonts. Built with React 18 and Vite, the platform uses Framer Motion to apply subtle 3D tilt effects to product cards, giving the digital book covers a physical, weighted presence. The frontend architecture manages complex variable pricing states, allowing users to seamlessly toggle between Hardcover, E-book, and Audiobook formats, which dynamically updates the shopping cart context in real-time.",
+  "liveLink": "https://chapterhouse-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Multi-Format Dynamic Pricing State (Physical/Digital/Audio)",
+    "3D Tilt/Hover Effects for Product Images (Framer Motion)",
+    "Interactive 'Read Excerpt' Simulated Modal",
+    "Draggable Horizontal Product Carousels",
+    "Complex Client-Side Filtering (Genre & Rating)",
+    "Rich 'Dark Academia' UI Theme",
+    "Global 'Recently Viewed' Persistent State",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The UI design is meticulously crafted to appeal to bibliophiles. It relies on a warm, low-contrast dark mode that reduces eye strain, mimicking the feeling of reading in a dimly lit library. The typography hierarchy uses classic serif fonts for titles to evoke traditional publishing, paired with highly legible sans-serifs for the actual synopsis text. The 'Read Excerpt' feature utilizes custom CSS styling to make the modal text look and feel like an actual printed page, prioritizing reading comfort and immersion over aggressive sales funnels.",
+  "developmentProcess": "Developed to demonstrate mastery over complex product variants and immersive UI animations. React's Context API was utilized to build a robust global state that tracks not just the cart and wishlist, but also a 'Recently Viewed' history array to enhance user discovery. The `data.json` schema was heavily nested to accommodate different book formats and their respective prices, requiring sophisticated state management on the product detail pages to ensure the correct price and format type was passed to the global shopping cart object."
+},
+  {
   "id": "banalata-fabrics-react",
   "title": "Banalata Fine Fabrics — Traditional Luxury Boutique",
   "category": "E-Commerce / Fashion",
