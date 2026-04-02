@@ -1,4 +1,33 @@
 [ 
+  {
+  "id": "banalata-fabrics-react",
+  "title": "Banalata Fine Fabrics — Traditional Luxury Boutique",
+  "category": "E-Commerce / Luxury Clothing & Jewelry",
+  "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An immersive, editorial-style React platform featuring an unconventional narrative layout, an interactive lighting simulator for textiles, non-linear navigation, and an emotional personalization quiz.",
+  "fullDescription": "Banalata Fine Fabrics is a flagship demonstration of high-end, storytelling-driven UI/UX design. Shifting radically away from standard e-commerce grid layouts, this React application functions as a digital 'unfolding lookbook,' prioritizing emotional narrative and playful discovery over immediate conversion metrics. Built in React 18 with Vite, the platform features a warm luminous light theme using warm off-whites and soft terracottas, relying heavily on Framer Motion for sophisticated parallax and unfolding reveal animations. Key unique features include on-screen hotspots for non-linear category exploration, a custom-built 'Illuminate' lighting slider to view textile textures under different conditions, and an interactive 'Build Your Story' quiz to generate curated product 'constellations.'",
+  "liveLink": "https://lighthearted-manatee-a9671b.netlify.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router DOM",
+    "Context API"
+  ],
+  "features": [
+    "Editorial Asymmetrical Layouts",
+    "Non-Linear Hotspot Discovery Navigation",
+    "Interactive 'Illuminate' Textile Lighting Simulator",
+    "Interactive 'Build Your Story' Emotional Quiz",
+    "Cinematic 'Unfolding' Reveal Animations",
+    "Dual Global State (Cart & Wishlist)",
+    "Personalized Engraving/Monogram Simulator",
+    "Warm Luminous Light Theme with Custom Palette"
+  ],
+  "designUnique": "The aesthetic is deliberately cinematic, evoking the feeling of an exclusive art gallery or high-end fashion magazine rather than a storefront. The color palette relies heavily on warm creams, ivory, and soft taupe to create a luminous, inviting, and organic atmosphere. Interactions are intentionally non-linear and playful, forcing users to explore and discover categories via interactive points rather than a traditional menu. Page transitions and component reveals employ complex 'unfolding origami' animations to reinforce the hand-crafted, delicate branding of the traditional fabrics.",
+  "developmentProcess": "Developed as a showcase of complex client-side interactions and unique UI/UX state, the project was structured for automated Vite build generation. The data architecture in `data.json` was specifically designed to handle nested objects for detailed fabric compositions (like carat weight for jewelry accents and specific thread counts for Muslin), proving the ability to handle high-fidelity, nested product schemas on the frontend. React's Context API was deployed to handle multiple intersecting global states—managing the shopping cart while simultaneously tracking a volatile 'Storybuilder' state and persistent wishlist favorites accessible from any route."
+},
 {
   "id": "aura-carat-react",
   "title": "Aura & Carat — Luxury Jewelry Boutique",
