@@ -57,7 +57,7 @@
 {
   "id": "terroir-artisan-grocery",
   "title": "Terroir — Artisan Provisions",
-  "category": "E-Commerce / Premium Food",
+  "category": "E-Commerce / Grocery",
   "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A cinematic, dark-mode artisan grocery app built in React 18 + Vite, featuring global cart state, a slide-out drawer, live search, multi-parameter filtering, and a full product detail experience — all driven by a structured local JSON database.",
   "fullDescription": "Terroir is a premium farm-to-table grocery platform that rejects the sterile brightness of conventional e-commerce in favour of a deep, earthy aesthetic inspired by high-end culinary editorial. Built entirely on the client side with React 18, Vite, Tailwind CSS, and React Router DOM, the application manages all product relationships, filtering logic, and transactional state without any backend. The design language — Playfair Display serifs, DM Mono labels, deep charcoal and forest-green palettes, hair-line gap-grid layouts, and staggered fade-up animations — deliberately mirrors the visual grammar of luxury food magazines. Ten artisan products (Wagyu, Alba Truffle Oil, Heirloom Tomatoes, Jamón Ibérico, Parmigiano Reggiano, and more) are stored in a relational JSON structure that powers dynamic category filtering, algorithmic related-product mapping, and a live navbar search with instant results.",
@@ -88,7 +88,7 @@
   {
   "id": "kickz-sneaker-store",
   "title": "KICKZ — Urban Sneaker Platform",
-  "category": "E-Commerce / Footwear",
+  "category": "E-Commerce / Fashion",
   "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A high-energy, modern Angular e-commerce platform featuring reactive state management with RxJS, dynamic routing, and bold streetwear aesthetics.",
   "fullDescription": "KICKZ is a bold, visually striking e-commerce platform tailored for sneakerheads and urban streetwear enthusiasts. Built with modern Angular (TypeScript) and styled aggressively with Tailwind CSS, the site bypasses a traditional backend by rendering dynamic product grids and detail pages straight from a localized JSON architecture. The platform heavily utilizes RxJS for seamless, reactive state management—specifically using BehaviorSubjects to keep the shopping cart and navigation badge perfectly in sync in real-time. The UI focuses on high-impact visuals, featuring massive typography, stark contrasts, and subtle floating animations that make the footwear the absolute focal point.",

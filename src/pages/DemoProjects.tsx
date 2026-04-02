@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -6,7 +6,9 @@ import {
   Sparkles, MonitorPlay, Smartphone, Palette, TrendingUp, Cpu, Server, PenTool, Eye,
   ExternalLink,
   Lock,
-  BarChart3
+  BarChart3,
+  Search,
+  X
 } from 'lucide-react';
 import SEOHead from '@/components/seo/SEOHead';
 import Layout from '@/components/layout/Layout';
@@ -64,15 +66,91 @@ const InteractiveBackground = () => {
   );
 };
 
+const getSearchableText = (project: (typeof demoProjects)[number]) => {
+  return [
+    project.title,
+    project.category,
+    project.shortDescription,
+    ...(project.techStack ?? []),
+  ]
+    .join(' ')
+    .toLowerCase();
+};
+
+const normalizeText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const getEditDistanceWithinLimit = (first: string, second: string, maxDistance: number) => {
+  if (Math.abs(first.length - second.length) > maxDistance) {
+    return maxDistance + 1;
+  }
+
+  const previous = Array.from({ length: second.length + 1 }, (_, index) => index);
+  const current = new Array(second.length + 1).fill(0);
+
+  for (let i = 1; i <= first.length; i += 1) {
+    current[0] = i;
+    let rowMin = current[0];
+
+    for (let j = 1; j <= second.length; j += 1) {
+      const substitutionCost = first[i - 1] === second[j - 1] ? 0 : 1;
+      current[j] = Math.min(
+        previous[j] + 1,
+        current[j - 1] + 1,
+        previous[j - 1] + substitutionCost,
+      );
+      rowMin = Math.min(rowMin, current[j]);
+    }
+
+    if (rowMin > maxDistance) {
+      return maxDistance + 1;
+    }
+
+    for (let j = 0; j <= second.length; j += 1) {
+      previous[j] = current[j];
+    }
+  }
+
+  return previous[second.length];
+};
+
+const doesQueryMatchWords = (query: string, words: string[]) => {
+  const normalizedTerms = normalizeText(query).split(' ').filter(Boolean);
+  if (normalizedTerms.length === 0) {
+    return true;
+  }
+
+  return normalizedTerms.every((term) => {
+    const maxDistance = term.length <= 4 ? 1 : 2;
+
+    return words.some((word) => {
+      if (word.includes(term) || term.includes(word)) {
+        return true;
+      }
+
+      const distance = getEditDistanceWithinLimit(term, word, maxDistance);
+      return distance <= maxDistance;
+    });
+  });
+};
+
 const DemoProjects = () => {
   const PROJECTS_PER_PAGE = 12;
   const GRID_SCROLL_OFFSET = 110;
   const MAX_COMPARE_ITEMS = 3;
   const COMPARE_STORAGE_KEY = 'demoProjects.compareIds';
 
-  // 👇 DIRECT USAGE OF IMPORTED ARRAY
-  const categories = ['All', ...new Set(demoProjects.map(item => item.category))];
+  const categories = useMemo(
+    () => ['All', ...new Set(demoProjects.map((item) => item.category))],
+    [],
+  );
+
   const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [compareIds, setCompareIds] = useState<string[]>([]);
@@ -80,9 +158,26 @@ const DemoProjects = () => {
   const compareSectionRef = useRef<HTMLDivElement | null>(null);
   const shouldScrollOnPageChangeRef = useRef(false);
 
-  const filteredProjects = activeCategory === 'All' 
-    ? demoProjects 
-    : demoProjects.filter(project => project.category === activeCategory);
+  const filteredProjects = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+
+    return demoProjects.filter((project) => {
+      const categoryMatch = activeCategory === 'All' || project.category === activeCategory;
+
+      if (normalizedQuery.length === 0) {
+        return categoryMatch;
+      }
+
+      const searchableText = getSearchableText(project);
+      const searchableWords = normalizeText(searchableText).split(' ').filter(Boolean);
+
+      const searchMatch =
+        searchableText.includes(normalizedQuery) ||
+        doesQueryMatchWords(normalizedQuery, searchableWords);
+
+      return categoryMatch && searchMatch;
+    });
+  }, [activeCategory, searchQuery]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
 
@@ -98,7 +193,7 @@ const DemoProjects = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [activeCategory]);
+  }, [activeCategory, searchQuery]);
 
   useEffect(() => {
     try {
@@ -186,6 +281,11 @@ const DemoProjects = () => {
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const resetFilters = () => {
+    setActiveCategory('All');
+    setSearchQuery('');
   };
 
   const faqs = [
@@ -326,24 +426,67 @@ const DemoProjects = () => {
         {/* --- CONTENT SECTION --- */}
         <div className="container mx-auto px-6 relative z-20 pb-20">
           
-          {/* Category Filter */}
-          <div className="bg-slate-900/60 p-2 rounded-2xl shadow-xl border border-white/10 max-w-fit mx-auto mb-16 flex flex-wrap justify-center gap-2 backdrop-blur-sm">
-            {categories.map((cat) => (
+          {/* Advanced Search + Filters */}
+          <div className="bg-slate-900/70 rounded-2xl border border-white/10 p-5 md:p-6 shadow-2xl backdrop-blur-sm mb-12 space-y-5">
+            <div className="flex flex-col lg:flex-row gap-3 lg:items-center">
+              <div className="relative flex-1 flex gap-2">
+                <div className="relative flex-1">
+                  <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Search by project name, category, or technology..."
+                    className="w-full rounded-xl bg-slate-950/70 border border-white/10 pl-10 pr-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/40"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    /* Search is instant, but this button provides visual feedback */
+                  }}
+                  className="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-colors border border-blue-500"
+                  title="Search"
+                >
+                  <Search size={18} />
+                </button>
+              </div>
+
               <button
-                key={cat}
-                onClick={() => {
-                  setActiveCategory(cat);
-                  setCurrentPage(1);
-                }}
-                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                  activeCategory === cat
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
-                    : 'bg-transparent text-slate-400 hover:text-white hover:bg-white/5'
-                }`}
+                type="button"
+                onClick={resetFilters}
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-white/15 text-slate-200 hover:bg-white/5 transition-colors text-sm font-semibold"
               >
-                {cat}
+                <X size={16} /> Clear Filters
               </button>
-            ))}
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Categories</p>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 border ${
+                      activeCategory === cat
+                        ? 'bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/25'
+                        : 'bg-slate-950/60 border-white/10 text-slate-300 hover:bg-white/5'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-1 text-xs text-slate-400">
+              Showing <span className="text-white font-semibold">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''}
+              {(searchQuery || activeCategory !== 'All') && (
+                <span> based on your current filters.</span>
+              )}
+            </div>
           </div>
 
           {/* Projects Grid */}
