@@ -1,4 +1,32 @@
 [ 
+  {
+  "id": "aeromobile-v2-react",
+  "title": "AeroMobile OS — Enterprise Tech E-Commerce",
+  "category": "E-Commerce / Electronics",
+  "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An enterprise-grade smartphone platform featuring a side-by-side device comparison engine, interactive trade-in calculator, dynamic reviews system, and Dark/Light mode.",
+  "fullDescription": "AeroMobile OS is a massive, highly interactive frontend architecture designed to mirror the complexity of top-tier electronics retailers like Apple and BestBuy. Built entirely in React 18, it leverages the Context API to manage complex intersecting states across a multi-page routing structure. The platform goes far beyond basic e-commerce by introducing a side-by-side 'Device Comparison' data table, a multi-step 'Trade-In' value calculator, and a dynamic customer reviews engine. The UI is enveloped in a seamless Dark/Light mode theme system, utilizing Framer Motion to deliver cinematic, 60fps page transitions and glassmorphism scroll effects.",
+  "liveLink": "https://heroic-starlight-1b4a2d.netlify.app/",
+  "techStack": [
+    "React 18",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router DOM",
+    "Context API"
+  ],
+  "features": [
+    "Side-by-Side Device Comparison Engine",
+    "Interactive Multi-Step Trade-in Calculator",
+    "Dynamic Client-Side Reviews System & Modals",
+    "Global Dark/Light Theme Toggle",
+    "Complex Context API State (Cart & Compare Lists)",
+    "Tabbed Technical Specifications Interface",
+    "Sticky 'Buy' Navigation Bar on Scroll",
+    "Interactive Product Variant Selection (Colors)"
+  ],
+  "designUnique": "The aesthetic is relentlessly modern, utilizing advanced CSS backdrop-filters (glassmorphism) and a fully operational Dark/Light mode system that dynamically recolors the entire application state. The UX is highly tactile; every user action—from adding a phone to the comparison tray to submitting a simulated review—is met with instant visual feedback via a global Toast notification system. Framer Motion is utilized to give elements a feeling of weight and prestige, with phones elegantly floating into the viewport upon scroll.",
+  "developmentProcess": "Engineered as a comprehensive demonstration of complex client-side state management, the application relies on an intricate, relational JSON structure that houses products, nested technical specifications, and arrays of user reviews. The React Context API was deployed to handle simultaneous global states—managing the shopping cart while also tracking a volatile 'Compare List' array accessible from any route. The Trade-in calculator and Review submission modals were built using isolated component state to demonstrate proficiency in handling complex, multi-step user inputs without requiring backend validation."
+},
 {
   "id": "terroir-artisan-grocery",
   "title": "Terroir — Artisan Provisions",
