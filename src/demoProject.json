@@ -2,7 +2,7 @@
   {
   "id": "banalata-fabrics-react",
   "title": "Banalata Fine Fabrics — Traditional Luxury Boutique",
-  "category": "E-Commerce / Luxury Clothing & Jewelry",
+  "category": "E-Commerce / Fashion",
   "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "An immersive, editorial-style React platform featuring an unconventional narrative layout, an interactive lighting simulator for textiles, non-linear navigation, and an emotional personalization quiz.",
   "fullDescription": "Banalata Fine Fabrics is a flagship demonstration of high-end, storytelling-driven UI/UX design. Shifting radically away from standard e-commerce grid layouts, this React application functions as a digital 'unfolding lookbook,' prioritizing emotional narrative and playful discovery over immediate conversion metrics. Built in React 18 with Vite, the platform features a warm luminous light theme using warm off-whites and soft terracottas, relying heavily on Framer Motion for sophisticated parallax and unfolding reveal animations. Key unique features include on-screen hotspots for non-linear category exploration, a custom-built 'Illuminate' lighting slider to view textile textures under different conditions, and an interactive 'Build Your Story' quiz to generate curated product 'constellations.'",
@@ -31,7 +31,7 @@
 {
   "id": "aura-carat-react",
   "title": "Aura & Carat — Luxury Jewelry Boutique",
-  "category": "E-Commerce / Luxury",
+  "category": "E-Commerce / Fashion",
   "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "An ultra-luxury, editorial-style e-commerce platform featuring asymmetrical masonry layouts, Framer Motion parallax effects, and an interactive consultation booking system.",
   "fullDescription": "Aura & Carat is a masterclass in high-end, editorial UI/UX design. Moving deliberately away from the standard, grid-heavy templates of traditional e-commerce, this React application functions more like a digital art gallery or a high-fashion magazine. Built with a luminous light theme utilizing warm creams, ivories, and elegant serif typography, the platform relies on Framer Motion to deliver slow, deliberate animations and parallax scrolling that evoke a sense of prestige and exclusivity. The frontend architecture manages complex client-side interactions, including a bespoke 'Engraving/Personalization' simulator and a global state for luxury consultation bookings.",
