@@ -1,4 +1,61 @@
 [ {
+  "id": "lumiere-botanicals-skincare",
+  "title": "Lumière — Clinical Beauty & Skincare",
+  "category": "E-Commerce / Beauty & Wellness",
+  "image": "https://images.unsplash.com/photo-1615397323812-32a2656911c4?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An ultra-luxury 'clean beauty' e-commerce platform featuring an interactive Routine Builder quiz, custom Before/After image sliders, and glassmorphism UI.",
+  "fullDescription": "Lumière Botanicals is a masterclass in 'Clinical Luxury' frontend design. Abandoning the heavy grids of traditional retail, this React application utilizes a pristine 'Pearl and Blush' color palette, vast negative space, and ultra-thin typography to emulate the expensive, calming atmosphere of a high-end apothecary. Built with React 18 and Vite, the platform relies on Framer Motion to deliver 'liquid' page transitions and soft, glowing micro-interactions. The architecture goes beyond standard e-commerce by introducing deeply interactive elements: a dynamic 'Routine Builder' quiz that programmatically generates a personalized skincare regimen, and a custom-built draggable Before/After image slider component on product pages to visually communicate product efficacy.",
+  "liveLink": "https://lumiere-botanicals-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Interactive 'Build Your Routine' Multi-Step Quiz",
+    "Custom Draggable 'Before/After' Image Slider Component",
+    "Dynamic Ingredient Glossary Tooltips",
+    "Clinical Luxury Aesthetic with Glassmorphism",
+    "Liquid/Soft-Glow Hover Animations (Framer Motion)",
+    "Minimalist 'Quick Add' Grid Functionality",
+    "Global Context State for Curated Routines",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The UI design is highly refined, focusing on brand trust and elegance. It utilizes extremely delicate borders (`border-[0.5px]`) and relies on precise padding rather than lines to separate content, ensuring the interface feels airy and weightless. The typography pairs technical, clean sans-serifs for product specifications with elegant, thin serif fonts for branding to strike a balance between clinical efficacy and luxury. Hover states are intentionally subdued, utilizing soft shadows to mimic light refraction rather than standard geometric drops.",
+  "developmentProcess": "Developed to demonstrate proficiency in building specialized, high-end React components. The 'Routine Builder' required implementing a multi-step state machine within the component to capture user input and conditionally render a personalized array of products from the local `data.json` file. The custom Before/After slider was engineered using React state to track mouse/touch coordinates, dynamically adjusting the CSS `clip-path` of the top image layer to create a seamless, interactive reveal effect without relying on external libraries."
+},
+  {
+  "id": "zenithmall-neo-retail",
+  "title": "ZenithMall — Neo-Retail Mega-Marketplace",
+  "category": "E-Commerce / Mega-Marketplace",
+  "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A modernized, high-density marketplace platform featuring 'Neo-Retail' soft UI, simulated skeleton loading states, and sticky floating conversion elements.",
+  "fullDescription": "ZenithMall is an enterprise-scale marketplace architecture that reimagines the high-density e-commerce experience. Moving away from the cluttered, aggressive UI typical of legacy mega-markets like Amazon or eBay, this React application utilizes a 'Neo-Retail' design language characterized by pill-shaped inputs, soft rounded containers, and sophisticated deep-charcoal accents. Built purely on the client side with Vite and React 18, it mimics enterprise-level data fetching by employing simulated skeleton loader states before rendering robust JSON-driven product grids. The platform introduces modern UX paradigms like 'Floating Sticky Buy Bars' to optimize conversion rates without breaking the user's scrolling experience.",
+  "liveLink": "https://zenithmall-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Soft 'Neo-Retail' UI with Pill-Shaped Architecture",
+    "Simulated API Skeleton Loading States",
+    "Floating Sticky 'Buy Bar' Conversion Element",
+    "Complex Multi-Tiered Sidebar Filtering",
+    "Dynamic 'Fast Shipping' Badge Rendering Logic",
+    "Multi-Vendor Cart Aggregation by Storefront",
+    "Global 'Recently Viewed' State Management",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The aesthetic directly challenges traditional high-density retail design by prioritizing whitespace and soft geometry. Sharp corners are replaced with generous border-radii (`rounded-3xl`), and harsh drop shadows are swapped for subtle, physics-based hover lifts using Framer Motion. The navigation abandons the standard boxy mega-menu in favor of a sleek, deep-charcoal header housing a massive pill-shaped search input, giving the interface a friendly, app-like feel even on wide desktop displays.",
+  "developmentProcess": "Developed to demonstrate advanced UI rendering techniques and large-scale state management. To replicate the feel of a massive production database, a custom timeout hook was engineered to display layout-accurate skeleton loaders before injecting the local `data.json` payload into the DOM. The React Context API was utilized to handle a complex cart state that specifically groups items by their respective `seller_storefront` keys, proving an understanding of multi-vendor checkout logic."
+},
+
+  {
   "id": "drapers-study-menswear",
   "title": "The Draper's Study — Heritage Menswear",
   "category": "E-Commerce / Fashion",
