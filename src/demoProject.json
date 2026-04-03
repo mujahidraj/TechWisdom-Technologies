@@ -1,4 +1,143 @@
-[ 
+[ {
+  "id": "forma-furniture-react",
+  "title": "Forma — Scandinavian Furniture Studio",
+  "category": "E-Commerce / Interior Design",
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An architectural, Japandi-style furniture platform featuring spatial UI design, staggered Framer Motion load states, and a simulated 'View in Your Space' AR modal.",
+  "fullDescription": "Forma Studio represents the intersection of digital commerce and interior architecture. Designed with a strict 'Japandi' (Japanese-Scandinavian) minimalist aesthetic, the application shuns traditional aggressive retail UI in favor of vast negative space, warm stone color palettes, and edge-to-edge lifestyle photography. Built with React 18 and Vite, the platform relies heavily on Framer Motion to orchestrate serene, staggered load-ins and scroll-reveal animations that mimic the feeling of walking through a physical showroom. The frontend architecture manages complex client-side interactions, including dynamic material swapping and an interactive 'Dimensions & Scale' UI tailored specifically for furniture buyers.",
+  "liveLink": "https://forma-studio-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Simulated 'View in Your Space' (AR) Camera Modal",
+    "Interactive Fabric & Material Variant Selection",
+    "Architectural 'Dimensions & Scale' Data Display",
+    "Staggered Masonry Grid Load Animations",
+    "Japandi Aesthetic with Warm Stone Color Palette",
+    "Split-Screen Parallax Hero Layout",
+    "Global 'Saved Rooms' Wishlist State",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The UI design is highly editorial and spatial. It uses a bespoke color palette rooted in nature—soft taupes, warm beiges, and muted sages—ensuring the interface never competes with the furniture photography. Typography is geometric and modern, enforcing a sense of structural integrity. To address the specific UX needs of buying furniture online, the product pages feature dedicated, highly visual sections for physical dimensions, and a simulated Augmented Reality (AR) modal to conceptualize how the platform would handle mobile-first spatial integration.",
+  "developmentProcess": "Developed to showcase proficiency in spatial UI/UX and complex product schemas. The application uses React's Context API to manage the cart and wishlist across an airy, minimally-tabbed routing structure. The local `data.json` was engineered to handle deep nesting, accommodating different physical dimensions, weight, and material variants for every item. Framer Motion was deployed globally to ensure that components don't just appear, but gracefully slide into the viewport, maintaining the serene, unhurried vibe of the brand."
+},
+{
+  "id": "forma-furniture-react",
+  "title": "Forma — Scandinavian Furniture Studio",
+  "category": "E-Commerce / Interior Design",
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An architectural, Japandi-style furniture platform featuring spatial UI design, staggered Framer Motion load states, and a simulated 'View in Your Space' AR modal.",
+  "fullDescription": "Forma Studio represents the intersection of digital commerce and interior architecture. Designed with a strict 'Japandi' (Japanese-Scandinavian) minimalist aesthetic, the application shuns traditional aggressive retail UI in favor of vast negative space, warm stone color palettes, and edge-to-edge lifestyle photography. Built with React 18 and Vite, the platform relies heavily on Framer Motion to orchestrate serene, staggered load-ins and scroll-reveal animations that mimic the feeling of walking through a physical showroom. The frontend architecture manages complex client-side interactions, including dynamic material swapping and an interactive 'Dimensions & Scale' UI tailored specifically for furniture buyers.",
+  "liveLink": "https://forma-studio-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Simulated 'View in Your Space' (AR) Camera Modal",
+    "Interactive Fabric & Material Variant Selection",
+    "Architectural 'Dimensions & Scale' Data Display",
+    "Staggered Masonry Grid Load Animations",
+    "Japandi Aesthetic with Warm Stone Color Palette",
+    "Split-Screen Parallax Hero Layout",
+    "Global 'Saved Rooms' Wishlist State",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The UI design is highly editorial and spatial. It uses a bespoke color palette rooted in nature—soft taupes, warm beiges, and muted sages—ensuring the interface never competes with the furniture photography. Typography is geometric and modern, enforcing a sense of structural integrity. To address the specific UX needs of buying furniture online, the product pages feature dedicated, highly visual sections for physical dimensions, and a simulated Augmented Reality (AR) modal to conceptualize how the platform would handle mobile-first spatial integration.",
+  "developmentProcess": "Developed to showcase proficiency in spatial UI/UX and complex product schemas. The application uses React's Context API to manage the cart and wishlist across an airy, minimally-tabbed routing structure. The local `data.json` was engineered to handle deep nesting, accommodating different physical dimensions, weight, and material variants for every item. Framer Motion was deployed globally to ensure that components don't just appear, but gracefully slide into the viewport, maintaining the serene, unhurried vibe of the brand."
+},
+  {
+  "id": "nocturne-roastery-react",
+  "title": "Nocturne Roastery — Artisanal Coffee Platform",
+  "category": "E-Commerce / Food & Beverage",
+  "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "An immersive, 'Dark Academia' themed specialty coffee and tea boutique featuring complex variant pricing states, Framer Motion 3D hover effects, and interactive 'Brew Guide' modals.",
+  "fullDescription": "Nocturne Roastery translates the cozy, tactile atmosphere of an independent cafe into a premium digital storefront. Utilizing a rich 'Dark Academia' design system, this React application relies on deep espresso backgrounds, parchment-toned typography, and elegant Serif fonts to create a highly atmospheric shopping experience. Built with React 18 and Vite, the platform uses Framer Motion to apply subtle 3D tilt effects to product cards, giving the digital inventory a physical, weighted presence. The frontend architecture manages complex variable pricing states, allowing users to seamlessly toggle between grind types and bag weights, which dynamically updates the global shopping cart context in real-time.",
+  "liveLink": "https://nocturne-roastery-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Context API"
+  ],
+  "features": [
+    "Dynamic Variant Pricing State (Grind Size / Weight)",
+    "3D Tilt/Hover Effects for Product Images (Framer Motion)",
+    "Interactive 'Brew Recipe Guide' Simulated Modal",
+    "Draggable Horizontal Product Carousels",
+    "Complex Client-Side Filtering (Roast Level & Origin)",
+    "Rich, Moody 'Dark Academia' UI Theme",
+    "Global 'Recently Viewed' Persistent State",
+    "Automated Zip Package Delivery Workflow"
+  ],
+  "designUnique": "The UI design is meticulously crafted to appeal to specialty coffee and tea enthusiasts. It relies on a warm, low-contrast dark mode that evokes the feeling of an evening cafe or a quiet study. The typography hierarchy uses classic serif fonts for titles to evoke traditional craftsmanship, paired with highly legible sans-serifs for the tasting notes and technical brewing details. The 'Brew Guide' feature utilizes custom CSS styling to make the modal look and feel like an actual vintage recipe card, prioritizing brand storytelling and customer education.",
+  "developmentProcess": "Developed to demonstrate the versatility of custom design systems and complex product variants. React's Context API was utilized to build a robust global state that tracks not just the cart, but a 'Recently Viewed' history array to enhance user discovery. The `data.json` schema was heavily nested to accommodate different grind profiles and their respective prices, requiring sophisticated state management on the product detail pages to ensure the correct price and variant type was passed to the global shopping cart object."
+},
+  {
+  "id": "volt-velo-configurator",
+  "title": "Volt & Velo — Luxury E-Bike Configurator",
+  "category": "E-Commerce / Hyper-Interactive",
+  "image": "https://images.unsplash.com/photo-1596131338575-b6d9da4e7494?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A cinematic e-commerce platform featuring a real-time, interactive product configurator for premium electric bikes, dynamic price modeling, and liquid-smooth animations.",
+  "fullDescription": "Volt & Velo is a flagship frontend application designed to replicate the immersive, high-stakes configuration experience offered by luxury automotive and tech brands like Tesla and Porsche. Operating entirely on the client side via a structured local JSON database, the platform allows users to visually build a custom electric bike in real-time. The UI transitions are powered by Framer Motion, offering buttery-smooth feedback as users swap colors, handlebars, and battery packs. The application manages a complex relational state across multiple routing structures, dynamic price aggregation, and component layering to ensure the visualization matches the user's technical selections instantly.",
+  "liveLink": "https://volt-and-velo-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router DOM",
+    "Advanced Context API"
+  ],
+  "features": [
+    "Hyper-Interactive Visual Product Configurator",
+    "Real-time Component Layering & Swap Animations",
+    "Dynamic price aggregation state modeling",
+    "Rolling Price Display Animation on Update",
+    "Light/Dark Mode System with Persistent State",
+    "Cinematic Hero & Horizontal Scroll Product Selection",
+    "Relational data schema (Products to Options)",
+    "Modular Control Panel UI for Selections"
+  ],
+  "designUnique": "The design is relentlessly minimalist, blending technology with luxury. Drawing inspiration from high-end retail and architecture, it utilizes a monochrome palette (Light/Dark mode) with technical serif typography to create a sense of prestige. Interactions are prioritized; elements don't just appear, they slide, fade, and roll with intention, using Framer Motion to reduce cognitive load and provide instant visual confirmation of user inputs. High-resolution imagery is treated like artwork, encased in high-negative-space frames.",
+  "developmentProcess": "Engineered to demonstrate mastery over complex visual state management. The application uses React's Context API to globally broadcast the state of the active configuration, ensuring that price calculations, specification summaries, and image layering components remain synchronized without layout thrashing. The `data.json` was designed with nested relational arrays (mapping specific customization options and price adders to individual bike models), proving an understanding of complex, data-driven UI rendering implemented purely on the frontend."
+},
+  {
+  "id": "omnimart-mega-marketplace",
+  "title": "OmniMart — Multi-Vendor Mega-Marketplace",
+  "category": "E-Commerce / Multi-Vendor",
+  "image": "https://images.unsplash.com/photo-1586528116311-ad8ed7c66364?auto=format&fit=crop&q=80&w=1200",
+  "shortDescription": "A robust, high-density marketplace platform inspired by Amazon and Daraz, featuring advanced sidebar filtering, flash sale timers, and complex 'Buy Box' product layouts.",
+  "fullDescription": "OmniMart is a massive frontend architecture designed to replicate the immense scale and high information density of leading global marketplaces like Amazon, Daraz, and eBay. Built with React 18 and Vite, the platform steps away from minimalist trends to focus purely on utility, conversion, and robust data presentation. The UI features a prominent mega-header with integrated search categories, dense product cards displaying calculated discount badges and review aggregates, and a highly structured 'Buy Box' layout on product pages. The application manages a complex array of multi-vendor data purely on the client side via a structured JSON database.",
+  "liveLink": "https://omnimart-demo.vercel.app/",
+  "techStack": [
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
+    "React Router DOM",
+    "Context API"
+  ],
+  "features": [
+    "High-Density 'Mega-Menu' & Search Navigation",
+    "Advanced Sidebar Filtering (Price, Brand, Rating)",
+    "Dynamic 'Flash Sale' Countdown Timers",
+    "Grid vs. List View Toggle Functionality",
+    "Complex 'Buy Box' Product Detail Layouts",
+    "Calculated Discount Percentage Badges",
+    "Image Gallery with Clickable Thumbnails",
+    "Multi-Vendor Cart Aggregation"
+  ],
+  "designUnique": "The aesthetic is driven entirely by e-commerce conversion best practices. It utilizes a crisp, trust-inspiring color palette with bright action colors designed to guide the user's eye toward search and checkout functions. The design excels at organizing chaotic, varied data—managing long product titles, varied image aspect ratios, and varying seller information within strict, responsive grid systems. Subtle visual cues, such as soft borders and calculated discount tags, are used to replicate the authoritative feel of a tier-one retail platform.",
+  "developmentProcess": "Developed to demonstrate the ability to handle large, complex UI states and deeply nested data. React's Context API was used to manage global cart interactions, while local state was heavily utilized for advanced features like the interactive image gallery and the dynamic filtering sidebar on the search page. The `data.json` structure was specifically engineered to mimic a relational database, including original prices vs. discount prices, allowing the frontend to dynamically calculate and render savings percentages on the fly."
+},
   {
   "id": "hatbazaar-c2c-react",
   "title": "HatBazaar — C2C Local Marketplace",
@@ -6,7 +145,7 @@
   "image": "https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A peer-to-peer marketplace platform utilizing a modern 'Bento Box' UI, featuring simulated seller dashboards, an 'Offer/Chat' interface, and an ad-posting workflow.",
   "fullDescription": "HatBazaar is a dynamic Consumer-to-Consumer (C2C) marketplace designed to facilitate local trade. Radically shifting away from traditional B2C e-commerce layouts, this platform adopts a trending 'Bento Box' and soft-Neubrutalism aesthetic. By utilizing bold borders, solid drop shadows, and modular card systems, the UI organizes chaotic user-generated content into a highly digestible, dashboard-like experience. Built entirely in React 18, the application simulates a full two-sided marketplace architecture completely on the client side via a relational JSON data structure, linking item listings to specific seller profiles.",
-  "liveLink": "https://hatbazaar-c2c-demo.vercel.app/",
+  "liveLink": "https://lively-twilight-29a8d7.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
@@ -34,7 +173,7 @@
   "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "An immersive, 'Dark Academia' themed digital bookstore featuring complex multi-format pricing states, Framer Motion 3D book hover effects, and an interactive 'Read Excerpt' modal.",
   "fullDescription": "ChapterHouse is a highly specialized e-commerce platform designed to replicate the tactile, cozy experience of browsing an independent bookstore. Stepping away from sterile retail templates, this application utilizes a rich 'Dark Academia' aesthetic, relying on deep espresso backgrounds, parchment-toned typography, and elegant Serif fonts. Built with React 18 and Vite, the platform uses Framer Motion to apply subtle 3D tilt effects to product cards, giving the digital book covers a physical, weighted presence. The frontend architecture manages complex variable pricing states, allowing users to seamlessly toggle between Hardcover, E-book, and Audiobook formats, which dynamically updates the shopping cart context in real-time.",
-  "liveLink": "https://chapterhouse-demo.vercel.app/",
+  "liveLink": "https://fluffy-dragon-c86941.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
