@@ -62,7 +62,7 @@
   "image": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A sophisticated, 'Dark Academia' themed bespoke menswear platform featuring interactive 'Shop the Look' hotspots, a Virtual Tailor size calculator, and live visual monogramming.",
   "fullDescription": "The Draper's Study is an enterprise-grade fashion e-commerce platform that marries classic, heritage aesthetics with cutting-edge retail functionality. Applying a moody, 'Dark Academia' design system (rich mahoganies, deep charcoals, and parchment typography), the UI invokes the tactile atmosphere of a bespoke Savile Row tailor. Built in React 18 and Vite, the platform steps far beyond standard shopping carts by introducing complex, interactive client-side features. Users can interact with editorial photography via coordinate-mapped 'Shop the Look' hotspots, utilize a simulated algorithm in the 'Virtual Tailor' modal to calculate their ideal fit based on physical metrics, and preview personalized engravings via a live CSS-overlay monogramming engine.",
-  "liveLink": "https://drapers-study-demo.vercel.app/",
+  "liveLink": "https://calm-basbousa-6b7238.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
