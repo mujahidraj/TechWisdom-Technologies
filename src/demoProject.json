@@ -2,7 +2,7 @@
   "id": "lumiere-botanicals-skincare",
   "title": "Lumière — Clinical Beauty & Skincare",
   "category": "E-Commerce / Beauty & Wellness",
-  "image": "https://images.unsplash.com/photo-1615397323812-32a2656911c4?auto=format&fit=crop&q=80&w=1200",
+  "image": "https://www.chicagomag.com/wp-content/archive/images/2019-boc/shop-skincare.jpg",
   "shortDescription": "An ultra-luxury 'clean beauty' e-commerce platform featuring an interactive Routine Builder quiz, custom Before/After image sliders, and glassmorphism UI.",
   "fullDescription": "Lumière Botanicals is a masterclass in 'Clinical Luxury' frontend design. Abandoning the heavy grids of traditional retail, this React application utilizes a pristine 'Pearl and Blush' color palette, vast negative space, and ultra-thin typography to emulate the expensive, calming atmosphere of a high-end apothecary. Built with React 18 and Vite, the platform relies on Framer Motion to deliver 'liquid' page transitions and soft, glowing micro-interactions. The architecture goes beyond standard e-commerce by introducing deeply interactive elements: a dynamic 'Routine Builder' quiz that programmatically generates a personalized skincare regimen, and a custom-built draggable Before/After image slider component on product pages to visually communicate product efficacy.",
   "liveLink": "https://lumiere-botanicals-demo.vercel.app/",
