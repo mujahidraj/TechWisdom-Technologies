@@ -1,7 +1,7 @@
 [ {
   "id": "lumiere-botanicals-skincare",
   "title": "Lumière — Clinical Beauty & Skincare",
-  "category": "E-Commerce / Beauty & Wellness",
+  "category": "E-Commerce / Fashion",
   "image": "https://www.chicagomag.com/wp-content/archive/images/2019-boc/shop-skincare.jpg",
   "shortDescription": "An ultra-luxury 'clean beauty' e-commerce platform featuring an interactive Routine Builder quiz, custom Before/After image sliders, and glassmorphism UI.",
   "fullDescription": "Lumière Botanicals is a masterclass in 'Clinical Luxury' frontend design. Abandoning the heavy grids of traditional retail, this React application utilizes a pristine 'Pearl and Blush' color palette, vast negative space, and ultra-thin typography to emulate the expensive, calming atmosphere of a high-end apothecary. Built with React 18 and Vite, the platform relies on Framer Motion to deliver 'liquid' page transitions and soft, glowing micro-interactions. The architecture goes beyond standard e-commerce by introducing deeply interactive elements: a dynamic 'Routine Builder' quiz that programmatically generates a personalized skincare regimen, and a custom-built draggable Before/After image slider component on product pages to visually communicate product efficacy.",
@@ -29,7 +29,7 @@
   {
   "id": "zenithmall-neo-retail",
   "title": "ZenithMall — Neo-Retail Mega-Marketplace",
-  "category": "E-Commerce / Mega-Marketplace",
+  "category": "E-Commerce / Marketplace",
   "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A modernized, high-density marketplace platform featuring 'Neo-Retail' soft UI, simulated skeleton loading states, and sticky floating conversion elements.",
   "fullDescription": "ZenithMall is an enterprise-scale marketplace architecture that reimagines the high-density e-commerce experience. Moving away from the cluttered, aggressive UI typical of legacy mega-markets like Amazon or eBay, this React application utilizes a 'Neo-Retail' design language characterized by pill-shaped inputs, soft rounded containers, and sophisticated deep-charcoal accents. Built purely on the client side with Vite and React 18, it mimics enterprise-level data fetching by employing simulated skeleton loader states before rendering robust JSON-driven product grids. The platform introduces modern UX paradigms like 'Floating Sticky Buy Bars' to optimize conversion rates without breaking the user's scrolling experience.",
@@ -199,7 +199,7 @@
   {
   "id": "hatbazaar-c2c-react",
   "title": "HatBazaar — C2C Local Marketplace",
-  "category": "Marketplace",
+  "category": "E-Commerce / Marketplace",
   "image": "https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A peer-to-peer marketplace platform utilizing a modern 'Bento Box' UI, featuring simulated seller dashboards, an 'Offer/Chat' interface, and an ad-posting workflow.",
   "fullDescription": "HatBazaar is a dynamic Consumer-to-Consumer (C2C) marketplace designed to facilitate local trade. Radically shifting away from traditional B2C e-commerce layouts, this platform adopts a trending 'Bento Box' and soft-Neubrutalism aesthetic. By utilizing bold borders, solid drop shadows, and modular card systems, the UI organizes chaotic user-generated content into a highly digestible, dashboard-like experience. Built entirely in React 18, the application simulates a full two-sided marketplace architecture completely on the client side via a relational JSON data structure, linking item listings to specific seller profiles.",
