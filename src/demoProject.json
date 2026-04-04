@@ -5,7 +5,7 @@
   "image": "https://www.chicagomag.com/wp-content/archive/images/2019-boc/shop-skincare.jpg",
   "shortDescription": "An ultra-luxury 'clean beauty' e-commerce platform featuring an interactive Routine Builder quiz, custom Before/After image sliders, and glassmorphism UI.",
   "fullDescription": "Lumière Botanicals is a masterclass in 'Clinical Luxury' frontend design. Abandoning the heavy grids of traditional retail, this React application utilizes a pristine 'Pearl and Blush' color palette, vast negative space, and ultra-thin typography to emulate the expensive, calming atmosphere of a high-end apothecary. Built with React 18 and Vite, the platform relies on Framer Motion to deliver 'liquid' page transitions and soft, glowing micro-interactions. The architecture goes beyond standard e-commerce by introducing deeply interactive elements: a dynamic 'Routine Builder' quiz that programmatically generates a personalized skincare regimen, and a custom-built draggable Before/After image slider component on product pages to visually communicate product efficacy.",
-  "liveLink": "https://lumiere-botanicals-demo.vercel.app/",
+  "liveLink": "https://super-cranachan-e62fbd.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
@@ -90,7 +90,7 @@
   "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "An architectural, Japandi-style furniture platform featuring spatial UI design, staggered Framer Motion load states, and a simulated 'View in Your Space' AR modal.",
   "fullDescription": "Forma Studio represents the intersection of digital commerce and interior architecture. Designed with a strict 'Japandi' (Japanese-Scandinavian) minimalist aesthetic, the application shuns traditional aggressive retail UI in favor of vast negative space, warm stone color palettes, and edge-to-edge lifestyle photography. Built with React 18 and Vite, the platform relies heavily on Framer Motion to orchestrate serene, staggered load-ins and scroll-reveal animations that mimic the feeling of walking through a physical showroom. The frontend architecture manages complex client-side interactions, including dynamic material swapping and an interactive 'Dimensions & Scale' UI tailored specifically for furniture buyers.",
-  "liveLink": "https://forma-studio-demo.vercel.app/",
+  "liveLink": "https://famous-cendol-42b56d.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
@@ -147,7 +147,7 @@
   "image": "https://www.digitaltrends.com/tachyon/2025/01/Segway-Xyber-e-Bike-parked-by-a-rock-wall-bordering-a-beach.jpg?resize=1200%2C720",
   "shortDescription": "A cinematic e-commerce platform featuring a real-time, interactive product configurator for premium electric bikes, dynamic price modeling, and liquid-smooth animations.",
   "fullDescription": "Volt & Velo is a flagship frontend application designed to replicate the immersive, high-stakes configuration experience offered by luxury automotive and tech brands like Tesla and Porsche. Operating entirely on the client side via a structured local JSON database, the platform allows users to visually build a custom electric bike in real-time. The UI transitions are powered by Framer Motion, offering buttery-smooth feedback as users swap colors, handlebars, and battery packs. The application manages a complex relational state across multiple routing structures, dynamic price aggregation, and component layering to ensure the visualization matches the user's technical selections instantly.",
-  "liveLink": "https://volt-and-velo-demo.vercel.app/",
+  "liveLink": "https://spontaneous-concha-150fd5.netlify.app/",
   "techStack": [
     "React 18",
     "Tailwind CSS",
