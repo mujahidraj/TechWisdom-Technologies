@@ -33,7 +33,7 @@
   "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "A modernized, high-density marketplace platform featuring 'Neo-Retail' soft UI, simulated skeleton loading states, and sticky floating conversion elements.",
   "fullDescription": "ZenithMall is an enterprise-scale marketplace architecture that reimagines the high-density e-commerce experience. Moving away from the cluttered, aggressive UI typical of legacy mega-markets like Amazon or eBay, this React application utilizes a 'Neo-Retail' design language characterized by pill-shaped inputs, soft rounded containers, and sophisticated deep-charcoal accents. Built purely on the client side with Vite and React 18, it mimics enterprise-level data fetching by employing simulated skeleton loader states before rendering robust JSON-driven product grids. The platform introduces modern UX paradigms like 'Floating Sticky Buy Bars' to optimize conversion rates without breaking the user's scrolling experience.",
-  "liveLink": "https://zenithmall-demo.vercel.app/",
+  "liveLink": "https://lustrous-kheer-b58a44.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
@@ -119,7 +119,7 @@
   "image": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1200",
   "shortDescription": "An immersive, 'Dark Academia' themed specialty coffee and tea boutique featuring complex variant pricing states, Framer Motion 3D hover effects, and interactive 'Brew Guide' modals.",
   "fullDescription": "Nocturne Roastery translates the cozy, tactile atmosphere of an independent cafe into a premium digital storefront. Utilizing a rich 'Dark Academia' design system, this React application relies on deep espresso backgrounds, parchment-toned typography, and elegant Serif fonts to create a highly atmospheric shopping experience. Built with React 18 and Vite, the platform uses Framer Motion to apply subtle 3D tilt effects to product cards, giving the digital inventory a physical, weighted presence. The frontend architecture manages complex variable pricing states, allowing users to seamlessly toggle between grind types and bag weights, which dynamically updates the global shopping cart context in real-time.",
-  "liveLink": "https://nocturne-roastery-demo.vercel.app/",
+  "liveLink": "https://grand-kataifi-190831.netlify.app/",
   "techStack": [
     "React 18",
     "Vite",
