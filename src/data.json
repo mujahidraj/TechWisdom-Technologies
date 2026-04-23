@@ -1810,6 +1810,38 @@
   ],
   "projects": [
     {
+  "id": "cambry-admission-centre",
+  "title": "Cambry International Admission Centre",
+  "category": "Full Stack",
+  "thumbnail": "https://i.postimg.cc/G2HpKYWS/Screenshot-2026-04-23-204028.png", 
+  "challenge": "Cambry International Admission Centre required a comprehensive digital platform to help students navigate the complex process of studying abroad. The challenge was to create an intuitive system where students could easily explore global education destinations, find suitable partner universities and courses, and book IELTS exams. Additionally, the administration needed a powerful, centralized dashboard to manage student leads, track CRM statuses, and update diverse content types without technical bottlenecks.",
+  "solution": "We developed a robust full-stack web application utilizing Next.js 16 (App Router), React 19, and Prisma with PostgreSQL. The public platform features a Study Destination Explorer, a dynamic University Finder, and an integrated Google Gemini-powered AI Chatbot that leverages full database context to assist students in real-time. For the backend, we built a secure, JWT-authenticated Admin Dashboard offering complete CRUD capabilities across 15 database models, a lead capture CRM with status tracking, and bulk CSV/JSON data import/export functionality, all wrapped in a responsive design with smooth Framer Motion animations.",
+  "techStack": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Prisma",
+    "PostgreSQL",
+    "Google Generative AI",
+    "Framer Motion"
+  ],
+  "results": [
+    {
+      "metric": "Database Models",
+      "value": "15"
+    },
+    {
+      "metric": "Admin Modules",
+      "value": "13"
+    },
+    {
+      "metric": "AI Support",
+      "value": "24/7 Contextual Chat"
+    }
+  ]
+},
+    {
       "id": "Agency",
       "title": "Cambry-Study Abroad Consultancy",
       "category": "Full Stack",
