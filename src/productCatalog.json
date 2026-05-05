@@ -1,0 +1,116 @@
+[
+  {
+    "id": "trust-guard",
+    "title": "TrustGuard",
+    "tagline": "Digital trust & identity toolkit",
+    "summary": "A secure, embeddable set of identity and verification widgets for marketplaces and platforms.",
+    "heroImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "overview": "TrustGuard gives product teams a reusable trust layer for onboarding, verification, and confidence-building flows. It is designed to fit inside existing marketplaces, SaaS dashboards, and customer portals without forcing a redesign of the host application.",
+    "highlights": [
+      "Embeddable verification widgets",
+      "Identity and trust checkpoints",
+      "Secure onboarding flow for platforms"
+    ],
+    "capabilities": [
+      "Inline identity capture and review states",
+      "Trust badges and verification summaries",
+      "Flexible integration into existing design systems",
+      "Conversion-friendly trust signals for checkout and onboarding"
+    ],
+    "comparison": {
+      "traditional": [
+        "Static trust badges",
+        "Manual verification steps",
+        "Limited conversion support"
+      ],
+      "withTechWisdom": [
+        "Embeddable trust components",
+        "Guided verification flows",
+        "Conversion-first UI patterns"
+      ]
+    },
+    "builtFor": "Marketplaces, platforms, and SaaS products that need to prove legitimacy fast.",
+    "status": "In active development"
+  },
+  {
+    "id": "insight-hub",
+    "title": "InsightHub",
+    "tagline": "Analytics & conversion insights",
+    "summary": "A lightweight analytics dashboard focused on conversions, funnels and campaign attribution.",
+    "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "overview": "InsightHub is a compact analytics surface for teams that want practical decision-making tools instead of noisy dashboards. It surfaces the numbers that matter most: traffic quality, funnel drop-off, campaign performance, and conversion signals.",
+    "highlights": [
+      "Focused conversion reporting",
+      "Campaign attribution views",
+      "Fast, lightweight dashboard UX"
+    ],
+    "capabilities": [
+      "Funnel and journey visibility",
+      "Campaign source breakdowns",
+      "Simple conversion trend tracking",
+      "Responsive dashboard cards for mobile and desktop"
+    ],
+    "comparison": {
+      "traditional": [
+        "Dense dashboards with too many metrics",
+        "Slow, cluttered reporting screens",
+        "Hard to interpret for non-analysts"
+      ],
+      "withTechWisdom": [
+        "Focused conversion-first reporting",
+        "Quick-glance dashboard layout",
+        "Clear views for growth decisions"
+      ]
+    },
+    "builtFor": "Founders, growth teams, and operators who need a clear view of performance.",
+    "status": "Production ready"
+  },
+  {
+    "id": "forms-flow",
+    "title": "FormsFlow",
+    "tagline": "Smart forms and workflows",
+    "summary": "No-code form builder with conditional flows, webhooks and submission pipelines.",
+    "heroImage": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "overview": "FormsFlow turns static forms into guided workflows. It is built for teams that need capture, qualification, and routing in one clean experience, with conditional logic and integrations handled behind the scenes.",
+    "highlights": [
+      "Conditional logic and branching",
+      "Webhook and pipeline ready outputs",
+      "Designed for fast qualification flows"
+    ],
+    "capabilities": [
+      "Multi-step form structures",
+      "Conditional fields and branching logic",
+      "Webhook-ready submission routing",
+      "Reusable form blocks for websites and portals"
+    ],
+    "comparison": {
+      "traditional": [
+        "One-size-fits-all contact forms",
+        "Manual lead routing",
+        "No branching logic or follow-up control"
+      ],
+      "withTechWisdom": [
+        "Multi-step guided intake",
+        "Webhook-ready workflow routing",
+        "Conditional logic that qualifies users faster"
+      ]
+    },
+    "builtFor": "Lead capture, intake, and workflow-heavy teams that want less friction.",
+    "status": "Available as a buildable module"
+  }
+]
