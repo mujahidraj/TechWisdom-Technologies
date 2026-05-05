@@ -26,6 +26,7 @@ import DemoProjectDetails from './pages/DemoProjectDetails';
 import ServiceDetails from './pages/ServiceDetails';
 import ManifestoPage from './pages/ManifestoPage';
 import CookiesPolicy from './pages/CookiesPolicy';
+import OurProduct from './pages/OurProduct';
 
 // --- Splash Screen Import ---
 import SplashScreen from './components/ui/SplashScreen';
@@ -81,6 +82,7 @@ const App = () => {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/demo-projects" element={<DemoProjects />} />
                 <Route path="/demo-projects/:id" element={<DemoProjectDetails />} />
+                <Route path="/our-product" element={<OurProduct />} />
                 <Route path="/careers/:jobId" element={<JobDetailsPage />} />
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/services/:id" element={<ServiceDetails />} />

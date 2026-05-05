@@ -20,7 +20,7 @@ const Navbar = () => {
 
   // Active state checks
   const isDemoActive = location.pathname === '/demo-projects';
-  const isContactActive = location.pathname === '/contact';
+  const isProductActive = location.pathname === '/our-product';
 
   // Handle scroll effect
   useEffect(() => {
@@ -110,18 +110,18 @@ const Navbar = () => {
                   </span>
                 </Link>
 
-                {/* Start Project Button */}
+                {/* Our Product Button (replaced Start Project) */}
                 <Link
-                  to="/contact"
+                  to="/our-product"
                   className={`relative flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-500 shadow-lg group overflow-hidden ${
-                    isContactActive
+                    isProductActive
                       ? 'bg-white text-blue-700 shadow-white/20'
                       : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-0.5'
                   }`}
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out rounded-full" />
-                  <Sun size={16} className={`relative z-10 ${isContactActive ? 'text-blue-600' : 'text-yellow-300'}`} />
-                  <span className="relative z-10">Start Project</span>
+                  <Sun size={16} className={`relative z-10 ${isProductActive ? 'text-blue-600' : 'text-yellow-300'}`} />
+                  <span className="relative z-10">Our Product</span>
                 </Link>
               </div>
 
@@ -196,15 +196,15 @@ const Navbar = () => {
                   transition={{ delay: 0.5 }}
                 >
                   <Link
-                    to="/contact"
+                    to="/our-product"
                     onClick={() => setIsOpen(false)}
                     className={`w-full flex items-center justify-center py-4 rounded-xl font-bold text-lg transition-all shadow-lg ${
-                      isContactActive 
+                      isProductActive 
                         ? 'bg-white text-blue-900' 
                         : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-blue-900/20'
                     }`}
                   >
-                    Start Project
+                    Our Product
                   </Link>
                 </motion.div>
 
