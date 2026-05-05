@@ -1,116 +1,164 @@
 [
   {
-    "id": "trust-guard",
-    "title": "TrustGuard",
-    "tagline": "Digital trust & identity toolkit",
-    "summary": "A secure, embeddable set of identity and verification widgets for marketplaces and platforms.",
-    "heroImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
+    "id": "vocab-vault",
+    "title": "VocabVault",
+    "developer": "TechWisdom Technologies",
+    "tagline": "Master language through gamified mastery",
+    "summary": "The flagship word mastery platform featuring a multi-dimensional 10-stage cognitive reinforcement engine and a high-performance zero-scroll dashboard architecture.",
+    "heroImage": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1400&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80"
     ],
-    "overview": "TrustGuard gives product teams a reusable trust layer for onboarding, verification, and confidence-building flows. It is designed to fit inside existing marketplaces, SaaS dashboards, and customer portals without forcing a redesign of the host application.",
+    "overview": "VocabVault represents the pinnacle of TechWisdom's mastery-based learning philosophy. Unlike traditional vocabulary tools that rely on passive memorization, VocabVault implements a rigorous 10-stage cognitive journey for every single word. Learners are guided through a progression that moves from basic recognition (Briefing & Immersion) to conceptual mapping (Synonyms/Antonyms), active recall across writing and listening, and finally to creative application in paragraph construction and speaking drills. The platform enforces a 'Zen' progression model: users must achieve at least an 8/10 score on every stage to move forward, ensuring 80% baseline proficiency before word completion. This is served through a state-of-the-art 'Zero-Scroll' Pro Dashboard—a viewport-constrained, high-performance interface that eliminates layout shifting and distractions, keeping the learner in a state of high cognitive focus.",
     "highlights": [
-      "Embeddable verification widgets",
-      "Identity and trust checkpoints",
-      "Secure onboarding flow for platforms"
+      "10-Stage Cognitive Reinforcement Cycle (Recognition to Application)",
+      "Strict Sequential Unlocking (Curriculum Sequence Protocols)",
+      "8/10 Minimum Mastery Score per Learning Phase",
+      "Zero-Scroll Viewport-Constrained Pro Dashboard Architecture",
+      "Real-time Social Competition with Global & Following Leaderboards",
+      "Bank-grade Session Security with 2-Device Concurrent Limit"
     ],
     "capabilities": [
-      "Inline identity capture and review states",
-      "Trust badges and verification summaries",
-      "Flexible integration into existing design systems",
-      "Conversion-friendly trust signals for checkout and onboarding"
+      "Deep-stack integration using Next.js 15+, Prisma, and PostgreSQL",
+      "High-speed session management and rate-limiting via Upstash Redis",
+      "Multi-dimensional learning modules including Audio Analysis and Voice Practice",
+      "AI-optimized 'Word of the Day' and automated Daily Word Set generation",
+      "Granular performance analytics with Weak Point heatmaps and accuracy tracking",
+      "Automated transaction workflows with Stripe and transactional emails via Resend"
     ],
     "comparison": {
       "traditional": [
-        "Static trust badges",
-        "Manual verification steps",
-        "Limited conversion support"
+        "Fragmented, low-retention flashcard review",
+        "Unstructured, overwhelming learning paths",
+        "Cluttered, ad-heavy, and scrolling-intensive layouts",
+        "Manual tracking of mastery and retention gaps"
       ],
       "withTechWisdom": [
-        "Embeddable trust components",
-        "Guided verification flows",
-        "Conversion-first UI patterns"
+        "Rigorous, multi-stage cognitive reinforcement",
+        "Strict, gated sequential progression that prevents 'skipping'",
+        "Immersive, motion-rich 'Zero-Scroll' Zen interface",
+        "Real-time, AI-driven performance optimization and habit-building"
       ]
     },
-    "builtFor": "Marketplaces, platforms, and SaaS products that need to prove legitimacy fast.",
-    "status": "In active development"
+    "builtFor": "Individual high-achievers, academic institutions, and corporate training programs requiring verified language proficiency and cognitive retention.",
+    "status": "Production ready",
+    "pricing": [
+      {
+        "plan": "Basic",
+        "price": "BDT 0/ Lifetime",
+        "features": [
+          "First 25 Words Full Access",
+          "Limited Daily Word Sets (5 words/day)",
+          "Global Leaderboard Participation",
+          "Basic Performance Analytics"
+        ],
+        "cta": "Start Journey"
+      },
+      {
+        "plan": "Pro",
+        "price": "BDT 499/ Lifetime",
+        "features": [
+          "Unlimited 5,000+ Word Curriculum Access",
+          "Full 10-Stage Learning Modules",
+          "Advanced Mastery Insights & Data Heatmaps",
+          "Exclusive Streak Rewards & Pro Badges",
+          "Priority Feedback Support",
+          "Multi-device Sync (2-device limit)"
+        ],
+        "cta": "Get Pro Lifetime",
+        "popular": true
+      }
+    ],
+    "platforms": [
+      "Web",
+      "Mobile App",
+      "Desktop"
+    ],
+    "webAppUrl": "https://www.vocabvault.site",
+    "appStoreUrl": "https://apps.apple.com/app/vocabvault",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.techwisdom.vocabvault"
   },
   {
-    "id": "insight-hub",
-    "title": "InsightHub",
-    "tagline": "Analytics & conversion insights",
-    "summary": "A lightweight analytics dashboard focused on conversions, funnels and campaign attribution.",
-    "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    "id": "myprep",
+    "title": "MyPrep",
+    "developer": "TechWisdom Technologies",
+    "tagline": "The ultimate test preparation OS",
+    "summary": "A high-stakes exam preparation platform for GRE, SAT, and IELTS, built on the core TechWisdom mastery engine.",
+    "heroImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1400&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
     ],
-    "overview": "InsightHub is a compact analytics surface for teams that want practical decision-making tools instead of noisy dashboards. It surfaces the numbers that matter most: traffic quality, funnel drop-off, campaign performance, and conversion signals.",
+    "overview": "MyPrep applies the rigor of TechWisdom's mastery-based learning to high-stakes standardized testing. It analyzes student performance in real-time to surface weak points, ensuring every hour of study is spent where it matters most. It features full-length timed mock exams and instant feedback loops.",
     "highlights": [
-      "Focused conversion reporting",
-      "Campaign attribution views",
-      "Fast, lightweight dashboard UX"
+      "Timed Mock Exam Engine",
+      "Weak Point Heatmaps",
+      "Predictive Score Analytics",
+      "Adaptive Learning Paths"
     ],
     "capabilities": [
-      "Funnel and journey visibility",
-      "Campaign source breakdowns",
-      "Simple conversion trend tracking",
-      "Responsive dashboard cards for mobile and desktop"
+      "Real-world exam simulations",
+      "Detailed step-by-step solutions",
+      "Video explanation library",
+      "Multi-platform progress tracking"
     ],
     "comparison": {
       "traditional": [
-        "Dense dashboards with too many metrics",
-        "Slow, cluttered reporting screens",
-        "Hard to interpret for non-analysts"
+        "Generic, non-adaptive study",
+        "Static practice books",
+        "Delayed feedback on errors"
       ],
       "withTechWisdom": [
-        "Focused conversion-first reporting",
-        "Quick-glance dashboard layout",
-        "Clear views for growth decisions"
+        "Adaptive, AI-driven curriculum",
+        "Instant performance feedback",
+        "Focus on exam-ready accuracy"
       ]
     },
-    "builtFor": "Founders, growth teams, and operators who need a clear view of performance.",
-    "status": "Production ready"
-  },
-  {
-    "id": "forms-flow",
-    "title": "FormsFlow",
-    "tagline": "Smart forms and workflows",
-    "summary": "No-code form builder with conditional flows, webhooks and submission pipelines.",
-    "heroImage": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+    "builtFor": "Students preparing for GRE, SAT, IELTS, and other competitive exams.",
+    "status": "Available in Private Beta",
+    "pricing": [
+      {
+        "plan": "Standard",
+        "price": "$29/mo",
+        "features": [
+          "Section Practice",
+          "Score Tracker",
+          "Mobile App"
+        ],
+        "cta": "Start Prep"
+      },
+      {
+        "plan": "Premium",
+        "price": "$59/mo",
+        "features": [
+          "10 Full Mock Exams",
+          "Video Solutions",
+          "AI Weak Point Analysis"
+        ],
+        "cta": "Get Premium",
+        "popular": true
+      },
+      {
+        "plan": "Intensive",
+        "price": "$129/mo",
+        "features": [
+          "Live Tutor Support",
+          "Unlimited Mocks",
+          "Score Guarantee"
+        ],
+        "cta": "Join Intensive"
+      }
     ],
-    "overview": "FormsFlow turns static forms into guided workflows. It is built for teams that need capture, qualification, and routing in one clean experience, with conditional logic and integrations handled behind the scenes.",
-    "highlights": [
-      "Conditional logic and branching",
-      "Webhook and pipeline ready outputs",
-      "Designed for fast qualification flows"
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
     ],
-    "capabilities": [
-      "Multi-step form structures",
-      "Conditional fields and branching logic",
-      "Webhook-ready submission routing",
-      "Reusable form blocks for websites and portals"
-    ],
-    "comparison": {
-      "traditional": [
-        "One-size-fits-all contact forms",
-        "Manual lead routing",
-        "No branching logic or follow-up control"
-      ],
-      "withTechWisdom": [
-        "Multi-step guided intake",
-        "Webhook-ready workflow routing",
-        "Conditional logic that qualifies users faster"
-      ]
-    },
-    "builtFor": "Lead capture, intake, and workflow-heavy teams that want less friction.",
-    "status": "Available as a buildable module"
+    "webAppUrl": "https://myprep.techwisdom.site",
+    "appStoreUrl": "https://apps.apple.com/app/myprep",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.techwisdom.myprep"
   }
 ]
