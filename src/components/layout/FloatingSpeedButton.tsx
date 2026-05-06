@@ -5,15 +5,18 @@ import {
   MessageCircle, 
   X, 
   Phone, 
-  Mail, 
-  FileText, 
   Calculator, 
-  CreditCard, 
-  LifeBuoy,   
-  Headphones,
-  Bot,
   Layers,
-  CalendarDays
+  CalendarDays,
+  Sparkles,
+  ArrowUpRight,
+  ShieldCheck,
+  Zap,
+  CreditCard,
+  LifeBuoy,
+  FileText,
+  Mail,
+  MoreHorizontal
 } from 'lucide-react';
 import data from '@/data.json'; 
 import RequirementAssistantDialog from './RequirementAssistantDialog';
@@ -45,163 +48,184 @@ const FloatingSpeedButton = () => {
     setAssistantOpen(true);
   };
 
-  const ACTIONS = [
+  const BENTO_ACTIONS = [
     {
       id: 'ai-assistant',
-      label: 'AI Assistant',
-      icon: Bot,
-      gradient: 'from-blue-600 to-cyan-500',
+      label: 'AI Strategy Assistant',
+      icon: Zap,
+      className: 'col-span-2 row-span-2 bg-blue-600/10 border-blue-500/20',
+      iconClass: 'text-yellow-400 bg-yellow-400/10',
       action: handleAiAssistantClick,
     },
     { 
       id: 'estimator', 
-      label: 'Cost Estimator', 
+      label: 'Calculator', 
       icon: Calculator, 
-      gradient: 'from-blue-600 to-indigo-600', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-blue-400 bg-blue-400/10',
       action: handleEstimatorClick 
-    },
-    {
-      id: 'live-walkthrough',
-      label: 'Book Walkthrough',
-      icon: CalendarDays,
-      gradient: 'from-blue-600 to-cyan-500',
-      action: () => {
-        setIsOpen(false);
-        navigate('/contact#live-walkthrough');
-      },
-    },
-    {
-      id: 'demo-compare',
-      label: 'Demo Compare',
-      icon: Layers,
-      gradient: 'from-blue-600 to-indigo-600',
-      action: () => {
-        setIsOpen(false);
-        navigate('/demo-projects');
-      },
     },
     { 
       id: 'pricing', 
-      label: 'Pricing Plans', 
+      label: 'Pricing', 
       icon: CreditCard, 
-      gradient: 'from-blue-600 to-indigo-600', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-indigo-400 bg-indigo-400/10',
       action: () => { setIsOpen(false); navigate('/pricing'); } 
     },
-    { 
-      id: 'support', 
-      label: 'Get Support', 
-      icon: LifeBuoy, 
-      gradient: 'from-blue-600 to-indigo-600', 
-      action: () => { setIsOpen(false); navigate('/contact'); } 
+    {
+      id: 'demo-projects',
+      label: 'Showcase',
+      icon: Layers,
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-purple-400 bg-purple-400/10',
+      action: () => { setIsOpen(false); navigate('/demo-projects'); },
+    },
+    {
+      id: 'live-walkthrough',
+      label: 'Book Demo',
+      icon: CalendarDays,
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-emerald-400 bg-emerald-400/10',
+      action: () => { setIsOpen(false); navigate('/contact#live-walkthrough'); },
     },
     { 
       id: 'quote', 
-      label: 'Request Quote', 
+      label: 'Get Quote', 
       icon: FileText, 
-      gradient: 'from-blue-600 to-indigo-600', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-orange-400 bg-orange-400/10',
+      action: () => { setIsOpen(false); navigate('/contact'); } 
+    },
+    { 
+      id: 'support', 
+      label: 'Support', 
+      icon: LifeBuoy, 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-rose-400 bg-rose-400/10',
       action: () => { setIsOpen(false); navigate('/contact'); } 
     },
     { 
       id: 'whatsapp', 
       label: 'WhatsApp', 
       icon: MessageCircle, 
-      gradient: 'from-green-500 to-emerald-600', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-green-400 bg-green-400/10',
       action: () => window.open(`https://wa.me/${cleanPhone(data.site.phone)}`, '_blank') 
     },
     { 
       id: 'phone', 
       label: 'Call Us', 
       icon: Phone, 
-      gradient: 'from-sky-500 to-blue-600', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-sky-400 bg-sky-400/10',
       action: () => window.open(`tel:${data.site.phone}`, '_self') 
     },
     { 
       id: 'email', 
       label: 'Email Us', 
       icon: Mail, 
-      gradient: 'from-orange-500 to-amber-500', 
+      className: 'col-span-1 row-span-1',
+      iconClass: 'text-pink-400 bg-pink-400/10',
       action: () => window.open(`mailto:${data.site.email}`, '_self') 
     }
   ];
 
   return (
-    <div className="fixed bottom-6 left-6 z-[9999] flex flex-col items-start gap-4 font-sans">
+    <div className="fixed bottom-8 left-8 z-[9999] font-sans print:hidden">
       
-      {/* --- POPUP MENU ITEMS --- */}
-      <AnimatePresence>
-
       <RequirementAssistantDialog
         open={assistantOpen}
         onOpenChange={setAssistantOpen}
       />
-        {isOpen && (
-          <div className="grid grid-cols-2 gap-3 mb-2 ml-1 max-w-[320px]">
-            {ACTIONS.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, x: -20, scale: 0.5 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -20, scale: 0.5, transition: { duration: 0.1 } }}
-                transition={{ 
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 20,
-                  delay: 0.05 + (index * 0.03) 
-                }}
-                className="flex items-center gap-2 cursor-pointer group"
-                onClick={item.action}
-              >
-                {/* Icon Button */}
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white shadow-lg bg-gradient-to-br ${item.gradient} ring-2 ring-white/10 group-hover:scale-110 group-hover:ring-white/30 transition-all duration-300 relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
-                  <item.icon size={18} className="relative z-10" />
-                </div>
 
-                {/* Glassmorphic Label */}
-                <div className="px-2.5 py-1.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/10 text-slate-200 text-[11px] font-bold shadow-xl group-hover:bg-slate-800/80 group-hover:text-white group-hover:border-white/20 transition-all origin-left whitespace-nowrap">
-                  {item.label}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 40, filter: 'blur(20px)' }}
+            animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, scale: 0.9, y: 40, filter: 'blur(20px)' }}
+            className="mb-6 p-4 bg-navy/80 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] shadow-[0_40px_120px_rgba(0,0,0,0.7)] w-[90vw] max-w-[480px] max-h-[80vh] overflow-y-auto
+              [&::-webkit-scrollbar]:w-1.5
+              [&::-webkit-scrollbar-track]:bg-white/5
+              [&::-webkit-scrollbar-thumb]:bg-blue-600/50
+              [&::-webkit-scrollbar-thumb]:rounded-full
+              hover:[&::-webkit-scrollbar-thumb]:bg-blue-500/80
+            "
+          >
+            <div className="flex items-center justify-between px-2 mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-blue-600/20 rounded-full flex items-center justify-center border border-blue-500/20">
+                  <ShieldCheck size={16} className="text-blue-400" />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <div>
+                  <h4 className="text-[10px] font-bold text-white tracking-tight uppercase">TechWisdom Control Center</h4>
+                  <span className="text-[8px] font-bold uppercase tracking-[0.2em] text-white/30 italic">Priority Access</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[8px] font-bold text-emerald-400 uppercase tracking-widest">Connected</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-4 gap-2">
+              {BENTO_ACTIONS.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.03 }}
+                  onClick={item.action}
+                  className={`
+                    ${item.className}
+                    relative group cursor-pointer overflow-hidden rounded-2xl border border-white/5 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/20 transition-all duration-500 flex flex-col items-center justify-center p-3 gap-1.5
+                  `}
+                >
+                  <div className={`p-2 rounded-xl transition-transform duration-500 group-hover:scale-110 ${item.iconClass}`}>
+                    <item.icon size={18} />
+                  </div>
+                  
+                  <span className="text-[8px] font-bold text-white/60 group-hover:text-white transition-colors uppercase tracking-tight text-center leading-tight">
+                    {item.label}
+                  </span>
+
+                  <div className="absolute top-1.5 right-1.5 opacity-0 group-hover:opacity-100 transition-all transform translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0">
+                    <ArrowUpRight size={8} className="text-white/40" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
-      {/* --- MAIN TOGGLE BUTTON --- */}
+      {/* Pulse Effect */}
+      {!isOpen && (
+        <>
+          <div className="absolute inset-0 rounded-[1.5rem] bg-blue-500/20 animate-ping duration-[2000ms]" />
+          <div className="absolute inset-0 rounded-[1.5rem] bg-blue-500/10 animate-pulse duration-[3000ms]" />
+        </>
+      )}
+
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.3)] bg-[#020617] border border-white/10 relative z-50 group"
+        className={`w-16 h-16 rounded-[1.5rem] flex items-center justify-center shadow-2xl relative z-50 transition-all duration-500 ${
+          isOpen ? 'bg-white text-navy' : 'bg-navy text-white border border-white/10'
+        }`}
       >
-        {/* Glow Effect */}
-        <div className={`absolute inset-0 rounded-full transition-opacity duration-500 ${isOpen ? 'bg-red-500/20 opacity-100' : 'bg-blue-500/20 opacity-0 group-hover:opacity-100'}`} />
-        
-        {/* Pulse Animation (Only when closed) */}
-        {!isOpen && (
-          <span className="absolute inset-0 rounded-full border border-blue-500/30 animate-ping opacity-75" />
-        )}
-
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           {isOpen ? (
-            <motion.div 
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <X size={24} className="text-red-400" />
+            <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
+              <X size={28} />
             </motion.div>
           ) : (
-            <motion.div 
-              key="open"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Headphones size={24} className="text-blue-400 drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]" />
+            <motion.div key="open" initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 1.5, opacity: 0 }}>
+              <MoreHorizontal size={28} className="text-blue-400" />
             </motion.div>
           )}
         </AnimatePresence>

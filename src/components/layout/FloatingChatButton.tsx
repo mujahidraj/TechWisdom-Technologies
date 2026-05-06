@@ -1,272 +1,197 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User, WifiOff, Zap, Sparkles } from 'lucide-react';
-import data from '@/data.json'; 
+import { Send, X, MessageSquare, Bot, Sparkles } from 'lucide-react';
+import data from '@/data.json';
 
-// --- CONFIGURATION ---
-const API_KEY = import.meta.env.VITE_GROQ_API_KEY; 
+const API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 // --- DATA PREPARATION ---
-// STRICT RULE: Only remove images/icons. Keep ALL text.
 const getTextOnlyData = () => {
   const clean = JSON.parse(JSON.stringify(data));
-  
-  // Recursively remove keys that contain image URLs or Icon names
   const stripImages = (obj: any) => {
     for (const key in obj) {
-      if (typeof obj[key] === 'object' && obj[key] !== null) {
-        stripImages(obj[key]);
-      } else if (
-        key.toLowerCase().includes('image') || 
-        key.toLowerCase().includes('icon') || 
-        key.toLowerCase().includes('img') || 
-        key.toLowerCase().includes('logo')
-      ) {
-        delete obj[key];
-      }
+      if (typeof obj[key] === 'object' && obj[key] !== null) stripImages(obj[key]);
+      else if (['image', 'icon', 'img', 'logo'].some(k => key.toLowerCase().includes(k))) delete obj[key];
     }
   };
-  
   stripImages(clean);
   return clean;
 };
 
 const textData = getTextOnlyData();
-
-const SYSTEM_INSTRUCTION = `
-You are the Senior AI Consultant for "${data.site.name}".
-Your goal is to convert visitors into clients by providing helpful, accurate, and concise information.
-
---- KNOWLEDGE BASE (TEXT ONLY) ---
-${JSON.stringify(textData)}
-
---- GUIDELINES ---
-1. **Tone:** Professional, enthusiastic, and helpful.
-2. **Accuracy:** Use the data provided above. Quote specific pricing numbers, project titles, and descriptions.
-3. **Length:** Keep answers extremely short (2-3 sentences max).
-4. **Unknowns:** If the answer is NOT in the data, ask them to email ${data.site.email}.
-`;
+const SYSTEM_PROMPT = `You are the AI Assistant for TechWisdom. Use this data to answer accurately: ${JSON.stringify(textData)}. Be concise and professional. If you don't know, ask to contact ${data.site.email}.`;
 
 const QUICK_ACTIONS = [
-  { label: "💰 Pricing?", text: "What are your pricing packages?" },
-  { label: "📞 Contact Info", text: "What is your phone number and email?" },
-  { label: "🚀 Start Project", text: "I want to start a new project." },
-  { label: "📂 Portfolio", text: "Show me your recent work." },
+  { label: "🚀 Start Project", text: "I want to start a new project with TechWisdom." },
+  { label: "💰 Pricing", text: "What are your standard pricing packages?" },
+  { label: "🛠️ Services", text: "Can you list all the core services you offer?" },
+  { label: "📅 Book Demo", text: "How can I book a live walkthrough or demo?" }
 ];
-
-type Message = {
-  id: string;
-  text: string;
-  sender: 'user' | 'bot';
-};
 
 const FloatingChatButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [useLocalLogic, setUseLocalLogic] = useState(false);
-  
-  const [messages, setMessages] = useState<Message[]>([
+  const [messages, setMessages] = useState<any[]>([
     {
-      id: '1',
-      text: `👋 Hi! I'm the ${data.site.name} Assistant. I have full access to our project portfolio and pricing. How can I help?`,
-      sender: 'bot'
+      id: 'initial',
+      text: `Welcome to ${data.site.name}. How can I assist you with our services today?`,
+      sender: 'bot',
+      timestamp: new Date()
     }
   ]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => { 
-    if (isOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToBottom = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages, isTyping, isOpen]);
-
-  // --- LOCAL FALLBACK ---
-  const handleLocalResponse = (text: string) => {
-    const lower = text.toLowerCase();
-    let response = "Thanks! Our team will review your message and get back to you shortly.";
-    
-    if (lower.includes('price') || lower.includes('cost')) response = `We offer flexible packages starting from ${data.pricing.projectTiers[0].price} BDT. Check out our Pricing page for details.`;
-    else if (lower.includes('email') || lower.includes('contact') || lower.includes('phone')) response = `You can reach us at 📧 ${data.site.email} or call 📞 ${data.site.phone}.`;
-    else if (lower.includes('service') || lower.includes('offer')) response = `We specialize in ${data.services.slice(0, 3).map((s:any) => s.title).join(', ')} and more.`;
-    else if (lower.includes('location') || lower.includes('address')) response = `We are located at 📍 ${data.site.address}.`;
-
-    setTimeout(() => {
-      setMessages(prev => [...prev, { id: Date.now().toString(), text: response, sender: 'bot' }]);
-      setIsTyping(false);
-    }, 600);
   };
 
-  // --- GROQ API HANDLER ---
+  useEffect(() => { if (isOpen) scrollToBottom(); }, [messages, isTyping, isOpen]);
+
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return;
-    
-    setMessages(prev => [...prev, { id: Date.now().toString(), text, sender: 'user' }]);
+
+    const userMsg = { id: `u-${Date.now()}`, text, sender: 'user', timestamp: new Date() };
+    setMessages(prev => [...prev, userMsg]);
     setInputValue('');
     setIsTyping(true);
 
     if (!API_KEY) {
-      handleLocalResponse(text);
+      setTimeout(() => {
+        setMessages(prev => [...prev, { id: `b-${Date.now()}`, text: "Offline mode active. Please reach out via our contact page.", sender: 'bot', timestamp: new Date() }]);
+        setIsTyping(false);
+      }, 1000);
       return;
     }
 
     try {
       const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${API_KEY}`,
-          "Content-Type": "application/json"
-        },
+        headers: { "Authorization": `Bearer ${API_KEY}`, "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "meta-llama/llama-4-scout-17b-16e-instruct", 
+          model: "meta-llama/llama-4-scout-17b-16e-instruct",
           messages: [
-            { role: "system", content: SYSTEM_INSTRUCTION },
+            { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: text }
           ],
-          temperature: 0.5,
-          max_tokens: 250
+          temperature: 0.6, max_tokens: 250
         })
       });
 
-      if (!response.ok) {
-        setUseLocalLogic(true);
-        handleLocalResponse(text);
-        return;
-      }
-
       const json = await response.json();
-      const botText = json.choices?.[0]?.message?.content;
-      
-      if (!botText) throw new Error("No response text");
+      const botText = json?.choices?.[0]?.message?.content || "I couldn't process that. Please contact support.";
 
-      setMessages(prev => [...prev, { id: Date.now().toString(), text: botText, sender: 'bot' }]);
-
-    } catch (error) {
-      setUseLocalLogic(true); 
-      handleLocalResponse(text);
+      setMessages(prev => [...prev, { id: `b-${Date.now()}`, text: botText, sender: 'bot', timestamp: new Date() }]);
+    } catch (e) {
+      setMessages(prev => [...prev, { id: `e-${Date.now()}`, text: "Connection error. Try again later.", sender: 'bot', timestamp: new Date() }]);
     } finally {
       setIsTyping(false);
     }
   };
 
   return (
- 
-    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4 font-sans">
+    <div className="fixed bottom-6 right-6 z-[9999] font-sans print:hidden">
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20, transformOrigin: "bottom right" }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="w-[90vw] md:w-[24rem] bg-[#020617]/90 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 flex flex-col h-[600px] max-h-[80vh] ring-1 ring-white/5"
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="absolute bottom-20 right-0 w-[320px] h-[min(480px,75vh)] bg-slate-900 border border-white/10 rounded-3xl shadow-2xl overflow-hidden flex flex-col backdrop-blur-xl"
           >
-            {/* HEADER */}
-            <div className="bg-slate-900/50 p-4 flex items-center justify-between shrink-0 border-b border-white/10">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-500/20 ring-1 ring-white/10">
-                    <Bot size={20} />
-                  </div>
-                  <span className={`absolute bottom-0 right-0 w-3 h-3 border-2 border-slate-900 rounded-full ${useLocalLogic ? 'bg-yellow-500' : 'bg-emerald-500 shadow-[0_0_8px_#10b981]'}`}>
-                    {!useLocalLogic && <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75"></span>}
-                  </span>
+            {/* Header */}
+            <div className="p-3 border-b border-white/10 bg-white/5 flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-600/20">
+                  <Bot size={16} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-sm tracking-wide">{data.site.name} AI</h3>
-                  <div className="flex items-center gap-1.5 text-xs">
-                    {useLocalLogic ? (
-                      <span className="text-yellow-400 flex items-center gap-1"><WifiOff size={10} /> Offline Mode</span>
-                    ) : (
-                      <span className="text-emerald-400 flex items-center gap-1"><Zap size={10} /> Online & Ready</span>
-                    )}
-                  </div>
+                  <span className="text-[10px] font-black text-white uppercase tracking-widest block">{data.site.name}</span>
+                  <span className="text-[8px] text-blue-400 font-bold uppercase tracking-tighter flex items-center gap-1">
+                    <Sparkles size={8} /> AI Assistant
+                  </span>
                 </div>
               </div>
-              <button 
-                onClick={() => setIsOpen(false)} 
-                className="text-slate-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full"
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 rounded-full transition-all"
               >
                 <X size={18} />
               </button>
             </div>
-            
-            {/* MESSAGES */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-transparent scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
-              <div className="text-center text-xs text-slate-500 my-4 flex items-center gap-2 justify-center">
-                <Sparkles size={12} /> Powered by TechWisdom AI
-              </div>
 
+            {/* Chat Body */}
+            <div className="flex-1 overflow-y-auto p-3 space-y-3 bg-gradient-to-b from-transparent to-black/20 
+              [&::-webkit-scrollbar]:w-1.5
+              [&::-webkit-scrollbar-track]:bg-white/5
+              [&::-webkit-scrollbar-thumb]:bg-blue-600
+              [&::-webkit-scrollbar-thumb]:rounded-full
+              hover:[&::-webkit-scrollbar-thumb]:bg-blue-500
+              transition-all
+            ">
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`flex items-end gap-2 max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] text-white shadow-sm ${
-                      msg.sender === 'user' 
-                        ? 'bg-slate-700' 
-                        : 'bg-gradient-to-br from-blue-600 to-purple-600'
+                  <div className={`max-w-[85%] px-3 py-2.5 rounded-2xl text-[12px] leading-relaxed shadow-sm ${msg.sender === 'user'
+                      ? 'bg-blue-600 text-white rounded-tr-none'
+                      : 'bg-white/10 text-white/90 rounded-tl-none border border-white/5 backdrop-blur-md'
                     }`}>
-                      {msg.sender === 'user' ? <User size={12} /> : <Bot size={12} />}
-                    </div>
-                    <div className={`rounded-2xl px-4 py-3 text-sm shadow-md leading-relaxed border ${
-                      msg.sender === 'user' 
-                        ? 'bg-blue-600 border-blue-500 text-white rounded-br-none' 
-                        : 'bg-slate-800/80 border-white/10 text-slate-200 rounded-bl-none backdrop-blur-md'
-                    }`}>
-                      <span className="whitespace-pre-wrap">{msg.text}</span>
-                    </div>
+                    {msg.text}
                   </div>
                 </div>
               ))}
-              
               {isTyping && (
-                <div className="flex justify-start">
-                   <div className="bg-slate-800/80 border border-white/10 rounded-2xl rounded-bl-none px-4 py-3 shadow-sm flex gap-1.5 items-center ml-8 backdrop-blur-md">
-                      <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
-                      <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
-                      <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" />
-                   </div>
+                <div className="flex gap-1.5 p-2.5 bg-white/5 rounded-full w-12 justify-center border border-white/5">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-bounce" />
                 </div>
               )}
               <div ref={messagesEndRef} />
             </div>
 
-            {/* QUICK ACTIONS */}
-            <div className="px-4 py-3 bg-slate-900/30 border-t border-white/5 backdrop-blur-sm">
-               <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar mask-fade">
-                  {QUICK_ACTIONS.map((action, i) => (
-                    <button 
-                       key={i}
-                       onClick={() => handleSendMessage(action.text)}
-                       className="whitespace-nowrap flex items-center gap-1.5 px-3 py-1.5 bg-slate-800/60 border border-white/10 text-blue-300 text-xs font-medium rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all shadow-sm hover:shadow-blue-500/20"
-                    >
-                       {action.label}
-                    </button>
-                  ))}
-               </div>
+            {/* Suggestion Pills (Preset Questions) */}
+            <div className="px-3 py-2 bg-black/20 border-t border-white/5">
+              <div className="flex gap-2 overflow-x-auto pb-2 
+                [&::-webkit-scrollbar]:h-1
+                [&::-webkit-scrollbar-track]:bg-white/5
+                [&::-webkit-scrollbar-thumb]:bg-blue-600/50
+                [&::-webkit-scrollbar-thumb]:rounded-full
+                hover:[&::-webkit-scrollbar-thumb]:bg-blue-600
+                transition-all
+              ">
+                {QUICK_ACTIONS.map((action, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleSendMessage(action.text)}
+                    className="whitespace-nowrap px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] text-blue-300 font-bold hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all shadow-sm"
+                  >
+                    {action.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {/* INPUT AREA */}
-            <div className="p-4 bg-slate-900/90 border-t border-white/10 shrink-0 backdrop-blur-xl">
-              <div className="flex items-center gap-2 bg-slate-950 rounded-full px-4 py-2 border border-white/10 focus-within:border-blue-500/50 focus-within:ring-1 focus-within:ring-blue-500/50 transition-all shadow-inner">
+            {/* Input Area */}
+            <div className="p-3 border-t border-white/10 bg-slate-900/80 backdrop-blur-xl">
+              <div className="flex items-center gap-2 bg-white/5 rounded-xl p-1 pl-3 border border-white/10 focus-within:border-blue-500/50 focus-within:ring-1 focus-within:ring-blue-500/20 transition-all">
                 <input
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
                   placeholder="Ask me anything..."
-                  className="flex-1 bg-transparent border-none outline-none text-sm text-slate-200 placeholder:text-slate-500"
+                  className="flex-1 bg-transparent border-none outline-none text-xs text-white placeholder:text-white/20"
                 />
-                <button 
+                <button
                   onClick={() => handleSendMessage()}
                   disabled={!inputValue.trim() || isTyping}
-                  className={`p-2 rounded-full transition-all flex items-center justify-center ${
-                    inputValue.trim() 
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30 hover:bg-blue-500' 
-                      : 'bg-slate-800 text-slate-500 cursor-not-allowed'
-                  }`}
+                  className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all ${inputValue.trim() ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-white/5 text-white/20'
+                    }`}
                 >
-                  <Send size={16} className={inputValue.trim() ? 'translate-x-0.5' : ''} />
+                  <Send size={14} className={inputValue.trim() ? 'translate-x-0.5' : ''} />
                 </button>
               </div>
             </div>
@@ -274,39 +199,33 @@ const FloatingChatButton = () => {
         )}
       </AnimatePresence>
 
-      {/* --- FLOATING TOGGLE BUTTON WITH EXTERNAL PULSE --- */}
-      <div className="relative z-50 group">
-        {/* Pulse Animation (Outside the button to avoid overflow clipping) */}
-        {!isOpen && (
-          <>
-            <span className="absolute inset-0 rounded-full bg-blue-600 opacity-20 animate-ping duration-[1.5s]"></span>
-            <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 animate-pulse duration-[2s]"></span>
-          </>
-        )}
+      {/* Pulse Effect */}
+      {!isOpen && (
+        <>
+          <div className="absolute inset-0 rounded-[1.5rem] bg-blue-500/20 animate-ping duration-[2000ms]" />
+          <div className="absolute inset-0 rounded-[1.5rem] bg-blue-500/10 animate-pulse duration-[3000ms]" />
+        </>
+      )}
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(79,70,229,0.5)] bg-[#0f172a] text-white relative border border-white/10 overflow-hidden"
-        >
-          {/* Animated Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 opacity-20 group-hover:opacity-100 transition-opacity duration-500"></div>
-          
-          {/* Inner Circle for Depth */}
-          <div className="absolute inset-[2px] bg-[#0f172a] rounded-full z-0 flex items-center justify-center">
-             <div className="absolute inset-0 bg-blue-500/20 blur-xl opacity-50 rounded-full"></div>
-          </div>
-
-          <AnimatePresence mode="wait">
-            {isOpen ? (
-              <X size={28} className="relative z-10 text-white" />
-            ) : (
-              <MessageCircle size={28} className="relative z-10 text-blue-400 group-hover:text-white transition-colors fill-current" />
-            )}
-          </AnimatePresence>
-        </motion.button>
-      </div>
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-16 h-16 rounded-[1.5rem] flex items-center justify-center shadow-2xl relative z-50 transition-all duration-500 border border-white/10 ${isOpen ? 'bg-white text-slate-900' : 'bg-slate-900 text-white'
+          }`}
+      >
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
+              <X size={28} />
+            </motion.div>
+          ) : (
+            <motion.div key="open" initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 1.5, opacity: 0 }}>
+              <MessageSquare size={28} className="text-blue-400 fill-blue-400/10" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.button>
     </div>
   );
 };
