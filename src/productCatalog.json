@@ -80,85 +80,108 @@
     "appStoreUrl": "https://apps.apple.com/app/vocabvault",
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.techwisdom.vocabvault"
   },
-  {
-    "id": "myprep",
-    "title": "MyPrep",
-    "developer": "TechWisdom Technologies",
-    "tagline": "The ultimate test preparation OS",
-    "summary": "A high-stakes exam preparation platform for GRE, SAT, and IELTS, built on the core TechWisdom mastery engine.",
-    "heroImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1400&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
+ {
+  "id": "bookverse",
+  "title": "BookVerse",
+  "developer": "TechWisdom Technologies",
+  "tagline": "Unleash imagination through immersive reading and storytelling",
+  "summary": "The flagship digital library and storytelling platform featuring a multi-dimensional reader dashboard, author monetization, interactive book clubs, and gamified reading stats.",
+  "heroImage": "https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&w=1400&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
+  ],
+  "overview": "BookVerse represents the pinnacle of TechWisdom's digital literature philosophy. Combining a state-of-the-art PDF/EPUB reader with a powerful publishing dashboard, BookVerse bridges the gap between passive consumption and active creation. Readers are supported with cognitive features like text-to-speech (TTS), contextual definition popups, reading streaks, and interactive genre-based book clubs. Authors can establish newsletters, analyze reader engagement in real-time, organize books into sequential series, and monetize their work through direct book pricing or premium subscription tiers. Everything is wrapped in a highly polished, responsive interface optimized for distraction-free reading.",
+  "highlights": [
+    "Multi-Format Reader (PDF/EPUB) with Web Speech TTS & Dictionary Lookup",
+    "Gamified Progress Engine with 90-Day Reading Streaks & Achievements",
+    "Collaborative Book Clubs & Threaded Genre Communities",
+    "AI-Powered Writing Assistant (Mixtral 8x7B) for Creators",
+    "Comprehensive Author Analytics, Newsletters, and Writing Goals",
+    "Direct Reader Monetization via Book Purchases & Premium Tier Subscriptions"
+  ],
+  "capabilities": [
+    "Deep-stack integration using Next.js 16+, Prisma, and PostgreSQL (Supabase)",
+    "Flexible user authentication and database synchronization via Firebase",
+    "AI-assisted text expansion, tone adjustment, and rewriting via Groq API",
+    "Integrated reader features including Web Speech TTS and Free Dictionary API",
+    "Monetization capabilities powered by Stripe Checkout and Resend newsletters",
+    "Advanced content search and index caching with Meilisearch database support"
+  ],
+  "comparison": {
+    "traditional": [
+      "Static PDF/EPUB reading without interactive features",
+      "Fragmented platforms for reading, writing, and community discussion",
+      "No built-in monetization or newsletter systems for independent authors",
+      "Manual, disconnected tracking of reading stats and goals"
     ],
-    "overview": "MyPrep applies the rigor of TechWisdom's mastery-based learning to high-stakes standardized testing. It analyzes student performance in real-time to surface weak points, ensuring every hour of study is spent where it matters most. It features full-length timed mock exams and instant feedback loops.",
-    "highlights": [
-      "Timed Mock Exam Engine",
-      "Weak Point Heatmaps",
-      "Predictive Score Analytics",
-      "Adaptive Learning Paths"
-    ],
-    "capabilities": [
-      "Real-world exam simulations",
-      "Detailed step-by-step solutions",
-      "Video explanation library",
-      "Multi-platform progress tracking"
-    ],
-    "comparison": {
-      "traditional": [
-        "Generic, non-adaptive study",
-        "Static practice books",
-        "Delayed feedback on errors"
+    "withTechWisdom": [
+      "Interactive reader with instant word definitions, TTS, and AI helpers",
+      "Unified ecosystem linking books, author analytics, and book clubs",
+      "Built-in Stripe billing, tips, and automated author newsletters",
+      "Gamified achievements, streaks, and community reading challenges"
+    ]
+  },
+  "builtFor": "Independent authors, avid book clubs, student communities, and everyday readers seeking an immersive, interactive, and gamified reading environment.",
+  "status": "Production ready",
+  "pricing": [
+    {
+      "plan": "Free",
+      "price": "BDT 0/ Month",
+      "features": [
+        "Read unlimited public books",
+        "Create & publish stories",
+        "Join book clubs",
+        "Leave reviews and comments",
+        "Basic profile page",
+        "Community access"
       ],
-      "withTechWisdom": [
-        "Adaptive, AI-driven curriculum",
-        "Instant performance feedback",
-        "Focus on exam-ready accuracy"
-      ]
+      "cta": "Current Plan"
     },
-    "builtFor": "Students preparing for GRE, SAT, IELTS, and other competitive exams.",
-    "status": "Available in Private Beta",
-    "pricing": [
-      {
-        "plan": "Standard",
-        "price": "$29/mo",
-        "features": [
-          "Section Practice",
-          "Score Tracker",
-          "Mobile App"
-        ],
-        "cta": "Start Prep"
-      },
-      {
-        "plan": "Premium",
-        "price": "$59/mo",
-        "features": [
-          "10 Full Mock Exams",
-          "Video Solutions",
-          "AI Weak Point Analysis"
-        ],
-        "cta": "Get Premium",
-        "popular": true
-      },
-      {
-        "plan": "Intensive",
-        "price": "$129/mo",
-        "features": [
-          "Live Tutor Support",
-          "Unlimited Mocks",
-          "Score Guarantee"
-        ],
-        "cta": "Join Intensive"
-      }
-    ],
-    "platforms": [
-      "Web",
-      "iOS",
-      "Android"
-    ],
-    "webAppUrl": "https://myprep.techwisdom.site",
-    "appStoreUrl": "https://apps.apple.com/app/myprep",
-    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.techwisdom.myprep"
-  }
+    {
+      "plan": "Pro",
+      "price": "BDT 499/ Month",
+      "features": [
+        "Everything in Free +",
+        "Ad-free reading experience",
+        "Advanced analytics dashboard",
+        "Priority support",
+        "Custom profile badges",
+        "Early access to new features",
+        "Enhanced author tools",
+        "Monthly reading goals tracking",
+        "Exclusive community events"
+      ],
+      "cta": "Upgrade to Pro",
+      "popular": true
+    },
+    {
+      "plan": "Creator",
+      "price": "BDT 999/ Month",
+      "features": [
+        "Everything in Pro +",
+        "Advanced monetization tools",
+        "Exclusive creator dashboard",
+        "Newsletter management",
+        "Beta reader program access",
+        "Custom landing page",
+        "Revenue analytics",
+        "Premium tier support",
+        "Co-author collaboration",
+        "Advanced formatting options"
+      ],
+      "cta": "Upgrade to Creator"
+    }
+  ],
+  "platforms": [
+    "Web",
+    "Mobile App",
+    "Desktop"
+  ],
+  "webAppUrl": "https://www.bookverse.site",
+  "appStoreUrl": "https://apps.apple.com/app/bookverse",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.techwisdom.bookverse"
+}
+
 ]
